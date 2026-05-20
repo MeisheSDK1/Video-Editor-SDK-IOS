@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1280">	
+	<track source=":1" clipStart="0" clipDuration="4080">
+		
+		<effect name="transform">
+			<param name="anchorX" value="anchorXValue"/>
+			<param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+				<key time="320" value="1"/>
+				<key time="360" value="1.001"/>
+				<key time="400" value="1.004"/>
+				<key time="440" value="1.008"/>
+				<key time="480" value="1.013"/>
+				<key time="520" value="1.019"/>
+				<key time="560" value="1.024"/>
+				<key time="600" value="1.031"/>
+				<key time="640" value="1.041"/>
+				<key time="680" value="1.052"/>
+				<key time="720" value="1.065"/>
+				<key time="760" value="1.086"/>
+				<key time="800" value="1.112"/>
+				<key time="840" value="1.114"/>
+				<key time="880" value="1.172"/>
+				<key time="920" value="1.21"/>
+				<key time="980" value="1.253"/>
+				<key time="1020" value="1.297"/>
+				<key time="1060" value="1.344"/>
+				<key time="1100" value="1.396"/>
+				<key time="1140" value="1.454"/>
+				<key time="1180" value="1.517"/>
+				<key time="1220" value="1.581"/>
+				<key time="1260" value="1.647"/>
+				<key time="1300" value="1.713"/>
+				<key time="1340" value="1.779"/>
+				<key time="1380" value="1.838"/>
+				<key time="1420" value="1.893"/>
+				<key time="1460" value="1.946"/>
+				<key time="1500" value="1.997"/>
+				<key time="1540" value="2.038"/>
+				<key time="1580" value="2.072"/>
+				<key time="1620" value="2.103"/>
+				<key time="1660" value="2.133"/>
+				<key time="1700" value="2.161"/>
+				<key time="1740" value="2.183"/>
+				<key time="1780" value="2.197"/>
+				<key time="1820" value="2.221"/>
+				<key time="1860" value="2.222"/>
+				<key time="1900" value="2.234"/>
+				<key time="1940" value="2.246"/>
+				<key time="1980" value="2.25"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="320" value="1"/>
+				<key time="360" value="1.001"/>
+				<key time="400" value="1.004"/>
+				<key time="440" value="1.008"/>
+				<key time="480" value="1.013"/>
+				<key time="520" value="1.019"/>
+				<key time="560" value="1.024"/>
+				<key time="600" value="1.031"/>
+				<key time="640" value="1.041"/>
+				<key time="680" value="1.052"/>
+				<key time="720" value="1.065"/>
+				<key time="760" value="1.086"/>
+				<key time="800" value="1.112"/>
+				<key time="840" value="1.114"/>
+				<key time="880" value="1.172"/>
+				<key time="920" value="1.21"/>
+				<key time="980" value="1.253"/>
+				<key time="1020" value="1.297"/>
+				<key time="1060" value="1.344"/>
+				<key time="1100" value="1.396"/>
+				<key time="1140" value="1.454"/>
+				<key time="1180" value="1.517"/>
+				<key time="1220" value="1.581"/>
+				<key time="1260" value="1.647"/>
+				<key time="1300" value="1.713"/>
+				<key time="1340" value="1.779"/>
+				<key time="1380" value="1.838"/>
+				<key time="1420" value="1.893"/>
+				<key time="1460" value="1.946"/>
+				<key time="1500" value="1.997"/>
+				<key time="1540" value="2.038"/>
+				<key time="1580" value="2.072"/>
+				<key time="1620" value="2.103"/>
+				<key time="1660" value="2.133"/>
+				<key time="1700" value="2.161"/>
+				<key time="1740" value="2.183"/>
+				<key time="1780" value="2.197"/>
+				<key time="1820" value="2.221"/>
+				<key time="1860" value="2.222"/>
+				<key time="1900" value="2.234"/>
+				<key time="1940" value="2.246"/>
+				<key time="1980" value="2.25"/>
+			</animation>
+		</effect>
+	</track>
+	
+	<track source="color.caf" width="720" height="1520" cafLoopMode="repeatLastFrame" clipStart="1840" clipDuration="2240"/>
+	<track source="lizi.caf" width="720" height="1520" clipStart="2720" clipDuration="1360" blendingMode="screen"/>
+</storyboard>	

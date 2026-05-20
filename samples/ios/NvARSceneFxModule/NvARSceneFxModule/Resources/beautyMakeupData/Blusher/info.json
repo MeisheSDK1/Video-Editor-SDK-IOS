@@ -1,0 +1,31 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"no",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"泰系学姐腮红",
+        "displayName":"泰系学姐腮红",
+        "packagePath":"Blusher/ECB98AA0-58CD-43EE-A913-852A5E32D2C6.4",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"ECB98AA0-58CD-43EE-A913-852A5E32D2C6",
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"点痣腮红",
+        "displayName":"点痣腮红",
+        "packagePath":"Blusher/8D6109AC-5FD6-4BE6-AB97-53517B4DA5F6.2",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"8D6109AC-5FD6-4BE6-AB97-53517B4DA5F6",
+        "coverImage":""
+    }
+]

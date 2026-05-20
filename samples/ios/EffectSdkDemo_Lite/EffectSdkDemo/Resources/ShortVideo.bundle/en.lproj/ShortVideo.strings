@@ -1,0 +1,29 @@
+/* 
+  NvShortVideo.strings
+  NvShortVideo
+
+  Created by chengww on 2021/11/2.
+  
+*/
+"photo" = "photo";
+"shoot" = "shoot";
+"Caption" = "Caption";
+"capture.beauty" = "beauty";
+"Filter" = "Filter";
+"More" = "More";
+"zoom" = "zoom";
+"exposure" = "exposure";
+"flash" = "flash";
+"Props" = "Props";
+"Stickers" = "Stickers";
+"CompoundCaption" = "CompoundCaption";
+"Transition" = "Transition";
+"Makeup" = "Makeup";
+"Picture zoom" = "Picture zoom";
+"Exposure compensation" = "Exposure compensation";
+"cancel" = "cancel";
+"choose" = "choose";
+"CaptionText" = "Please enter caption text";
+"Sure" = "Sure";
+
+

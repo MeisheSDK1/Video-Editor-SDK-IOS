@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsAudioToneProcessor.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsAudioToneProcessor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsAudioToneProcessor_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2023. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Jan 6 . 2023</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCommonDef_8h.html">NvsCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ad8953863ebc59704758665b6677287fc">   19</a></span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ad8953863ebc59704758665b6677287fc">NvsAudioToneProcessorToneMode_Male</a> = 0,</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac8a4c0ac7888bde00c7cc0d5fb6f7919">   20</a></span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac8a4c0ac7888bde00c7cc0d5fb6f7919">NvsAudioToneProcessorToneMode_Female</a> = 1,</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac3aacdbd0b23a69482244fc556b5ce87">   21</a></span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac3aacdbd0b23a69482244fc556b5ce87">NvsAudioToneProcessorToneMode_Cartoon</a> = 2,</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a32e2f2ccf35c0bc7c9501b550c512a4a">   22</a></span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a32e2f2ccf35c0bc7c9501b550c512a4a">NvsAudioToneProcessorToneMode_FastCartoon</a> = 3,</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a2832c2c20928ceb0ebc23821d361f2b2">   23</a></span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a2832c2c20928ceb0ebc23821d361f2b2">NvsAudioToneProcessorToneMode_Monster</a> = 4,</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1afd8ec8a0caca312c911ae4a773e4ebf6">   24</a></span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1afd8ec8a0caca312c911ae4a773e4ebf6">NvsAudioToneProcessorToneMode_Custom</a> = 5,</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a0d76ad18dc7fd3b362494bd1967cb362">   25</a></span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a0d76ad18dc7fd3b362494bd1967cb362">NvsAudioToneProcessorToneMode_Echo</a> = 6,</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a38b420c4429c9370ade23c09b5403714">   26</a></span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a38b420c4429c9370ade23c09b5403714">NvsAudioToneProcessorToneMode_Wahwah</a> = 7,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac927707655c9ed8b5523406947b72304">NvsAudioToneProcessorToneMode_Reverb</a> = 8</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac927707655c9ed8b5523406947b72304">   28</a></span>&#160;} <a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1">NvsAudioToneProcessorToneMode</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="interfaceNvsAudioToneProcessor.html#afb855a545976a3498885bd8ce9127ea4">   30</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsAudioToneProcessor.html">NvsAudioToneProcessor</a> : NSObject</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;- (instancetype)initWithToneMode:(<a class="code" href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1">NvsAudioToneProcessorToneMode</a>)toneMode;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;- (void)<a class="code" href="interfaceNvsAudioToneProcessor.html#af3a20977104919ec7d9a1c466851c706">dealloc</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;- (void)processAudioSample:(<a class="code" href="structNvsAudioSampleBuffers.html">NvsAudioSampleBuffers</a> *)audioSamples;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;- (void)<a class="code" href="interfaceNvsAudioToneProcessor.html#aa5f66db0c1ba3671c4834858792db04f">clearRemainSamples</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;- (void)setCustomToneModeParamTempoDelta:(<span class="keywordtype">float</span>)tempoDelta</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                            pictchDelta:(<span class="keywordtype">float</span>)pitchDelta</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                              rateDelta:(<span class="keywordtype">float</span>)rateDelta</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                 speech:(<span class="keywordtype">bool</span>)speech;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterfaceNvsAudioToneProcessor_html_aa5f66db0c1ba3671c4834858792db04f"><div class="ttname"><a href="interfaceNvsAudioToneProcessor.html#aa5f66db0c1ba3671c4834858792db04f">-[NvsAudioToneProcessor clearRemainSamples]</a></div><div class="ttdeci">void clearRemainSamples()</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1a0d76ad18dc7fd3b362494bd1967cb362"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a0d76ad18dc7fd3b362494bd1967cb362">NvsAudioToneProcessorToneMode_Echo</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_Echo</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:25</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1ac927707655c9ed8b5523406947b72304"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac927707655c9ed8b5523406947b72304">NvsAudioToneProcessorToneMode_Reverb</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_Reverb</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:27</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1ac3aacdbd0b23a69482244fc556b5ce87"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac3aacdbd0b23a69482244fc556b5ce87">NvsAudioToneProcessorToneMode_Cartoon</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_Cartoon</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:21</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1ac8a4c0ac7888bde00c7cc0d5fb6f7919"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ac8a4c0ac7888bde00c7cc0d5fb6f7919">NvsAudioToneProcessorToneMode_Female</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_Female</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:20</div></div>
+<div class="ttc" id="ainterfaceNvsAudioToneProcessor_html"><div class="ttname"><a href="interfaceNvsAudioToneProcessor.html">NvsAudioToneProcessor</a></div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:31</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1">NvsAudioToneProcessorToneMode</a></div><div class="ttdeci">NvsAudioToneProcessorToneMode</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:18</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="ainterfaceNvsAudioToneProcessor_html_af3a20977104919ec7d9a1c466851c706"><div class="ttname"><a href="interfaceNvsAudioToneProcessor.html#af3a20977104919ec7d9a1c466851c706">-[NvsAudioToneProcessor dealloc]</a></div><div class="ttdeci">void dealloc()</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1ad8953863ebc59704758665b6677287fc"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1ad8953863ebc59704758665b6677287fc">NvsAudioToneProcessorToneMode_Male</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_Male</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:19</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1afd8ec8a0caca312c911ae4a773e4ebf6"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1afd8ec8a0caca312c911ae4a773e4ebf6">NvsAudioToneProcessorToneMode_Custom</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_Custom</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:24</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html"><div class="ttname"><a href="NvsCommonDef_8h.html">NvsCommonDef.h</a></div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1a38b420c4429c9370ade23c09b5403714"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a38b420c4429c9370ade23c09b5403714">NvsAudioToneProcessorToneMode_Wahwah</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_Wahwah</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:26</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1a2832c2c20928ceb0ebc23821d361f2b2"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a2832c2c20928ceb0ebc23821d361f2b2">NvsAudioToneProcessorToneMode_Monster</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_Monster</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:23</div></div>
+<div class="ttc" id="astructNvsAudioSampleBuffers_html"><div class="ttname"><a href="structNvsAudioSampleBuffers.html">NvsAudioSampleBuffers</a></div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:487</div></div>
+<div class="ttc" id="aNvsAudioToneProcessor_8h_html_aae67cf755eff243cf4d746706a17f8e1a32e2f2ccf35c0bc7c9501b550c512a4a"><div class="ttname"><a href="NvsAudioToneProcessor_8h.html#aae67cf755eff243cf4d746706a17f8e1a32e2f2ccf35c0bc7c9501b550c512a4a">NvsAudioToneProcessorToneMode_FastCartoon</a></div><div class="ttdeci">@ NvsAudioToneProcessorToneMode_FastCartoon</div><div class="ttdef"><b>Definition:</b> NvsAudioToneProcessor.h:22</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

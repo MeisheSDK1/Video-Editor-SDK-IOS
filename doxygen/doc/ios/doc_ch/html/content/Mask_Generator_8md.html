@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: Mask Generator 技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Mask Generator 技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>Mask Generator文档 </h1>
+<p>Mask Generator，中文意为蒙版。视频编辑技术的增强，需要精细化视频处理。视频技术增强的一个要求是加强界面部分区域的编辑与控制，强调细腻的视频处理，蒙版技术为局部精细化处理提供支持。</p>
+<p><img src="c79a6ba32d6b2975060679728fba5d7c.png" alt="" class="inline"/>   </p>
+<p>SDK提供了方便的编程接口，用户根据自己的需求，快捷实现Mask Generator。开发者可以根据客观需求，开发广阔应用。</p>
+<p>蒙版包括字幕蒙版和形状蒙版，两者编程方式不同。形状蒙版需要用户定义区域，字幕蒙版不需要用户定义区域。后面主题会有介绍。下图是蒙版的两大组成部分。</p>
+<p><img src="7671b6f3144576ba0c39fcc58e0c0df9.png" alt="" class="inline"/>   </p>
+<p>形状蒙版包含：线性、镜面、圆形、矩形、心形，星形。蒙版整体构成如下：</p>
+<p><img src="e1ceece3674f24bcf7c35e5fe3732ea6.png" alt="" class="inline"/>   </p>
+<h2>1、编程原理 </h2>
+<p>Mask Generator技术属于视频特效范围，通过视频特效进行控制。</p>
+<p>首先开启Mask Generator特效；设定区域范围；应用蒙版特效。</p>
+<p>Mask Generator属于对视频区域的精细化处理，必然对视频区域范围进行指定。对区域进行数学化的描述，是Mask Generator编程的难点与核心所在。</p>
+<p>技术人员通过窗口的范围、蒙版层的范围、中心点、数学公式等因素，最终决定蒙版的区域。</p>
+<h2>2、SDK支持 </h2>
+<p>下面接口参考api相关文档：Matrix、Path、PointF、Rect、RectF、NvsVideoFx、NvsMaskRegionInfo、NvsPosition2D、RegionInfo。</p>
+<h2>3、参数ID </h2>
+<p>通过参数ID，对蒙版属性进行控制。参数ID应用和AR Scene类似。</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>序号</b> </th><th class="markdownTableHeadNone"><b>参 数</b> </th><th class="markdownTableHeadNone"><b>类 型</b> </th><th class="markdownTableHeadNone"><b>最 大 值</b> </th><th class="markdownTableHeadNone"><b>最 小 值</b> </th><th class="markdownTableHeadNone"><b>默 认 值</b> </th><th class="markdownTableHeadNone"><b>说 明</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">001 </td><td class="markdownTableBodyNone">Region Info </td><td class="markdownTableBodyNone">ARBDATA </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">区域信息  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">002 </td><td class="markdownTableBodyNone">Feather Width </td><td class="markdownTableBodyNone">FLOAT </td><td class="markdownTableBodyNone">1000.0 </td><td class="markdownTableBodyNone">0.0 </td><td class="markdownTableBodyNone">0.0 </td><td class="markdownTableBodyNone">羽化宽度  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">003 </td><td class="markdownTableBodyNone">Keep RGB </td><td class="markdownTableBodyNone">BOOL </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">FALSE </td><td class="markdownTableBodyNone">保持RGB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">004 </td><td class="markdownTableBodyNone">Inverse Region </td><td class="markdownTableBodyNone">BOOL </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">FALSE </td><td class="markdownTableBodyNone">区域反转  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">005 </td><td class="markdownTableBodyNone">Coordinate System </td><td class="markdownTableBodyNone">STRING </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">ndc </td><td class="markdownTableBodyNone">坐标类型  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">006 </td><td class="markdownTableBodyNone">Feather Compensation </td><td class="markdownTableBodyNone">BOOL </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">True </td><td class="markdownTableBodyNone">羽化补偿  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">007 </td><td class="markdownTableBodyNone">Text Mask Description String </td><td class="markdownTableBodyNone">STRING </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">文本遮罩描述文件  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">008 </td><td class="markdownTableBodyNone">Is Caption </td><td class="markdownTableBodyNone">BOOL </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">false </td><td class="markdownTableBodyNone">是否是字幕  </td></tr>
+</table>
+<h2>4、NvsMaskReginInfo </h2>
+<p>应用Mask Generator的时间，核心是生成蒙版区域信息对象。也即NvsMaskRegionInfo对象。4.2主题中，会讲述典型区域对象的生成。</p>
+<p>Mask Generator结构，参考下图。详细描述参考官网文档。</p>
+<p><img src="afa3694ae8307b1b33b1ef9eb9fa130c.png" alt="" class="inline"/>   </p>
+<p>区域对象的生成，是坐标定位的结果。美摄SDK坐标系分为如下两种。</p>
+<p><img src="a4dfe771ebbe40e81f5b470503083067.png" alt="" class="inline"/>   </p>
+<h2>4.1、区域对象生成说明</h2>
+<p>第一步：生成NvsMaskReginInfo对象。</p>
+<p>第二步：生成内部类ReginInfo对象。</p>
+<p>第三步：给ReginInfo对象进行相关设置。</p>
+<p>第四步：把ReginInfo对象注入到NvsMaskReginInfo对象中。</p>
+<h2>4.2、典型Mask区域NvsMaskRegionInfo对象生成（详细代码参考SdkDemo）</h2>
+<p>开发过程中，技术人员如果能确定坐标点精确位置，直接形成NvsMaskRegionInfo对象，来实现蒙版效果。</p>
+<p>也可以通过导入的视频宽高，依据视频属性、中心点、蒙版层大小等因素，来计算精确位置。本文档案例就是根据相关属性进行定位。</p>
+<p>本主题提供的技术思路，作为形状蒙版的技术参考。技术人员可以实现更加炫酷的蒙版效果。</p>
+<h2>4.2.1、线性蒙版</h2>
+<p>由于线性蒙版形状特点，相对简单。根据相关属性，得到点数组，根据点数组，形成蒙版对象。</p>
+<p>下面函数通过视频中心点，蒙版区域宽高和角度形成蒙版边界点数组。</p>
+<div class="fragment"><div class="line">A、点数组形成</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> PointF[] buildLineMaskPoint(PointF center, <span class="keywordtype">int</span> maskWidth, <span class="keywordtype">int</span> maskHeight, <span class="keywordtype">float</span> angle) {</div>
+<div class="line">    PointF leftTopPoint = <span class="keyword">new</span> PointF(center.x - maskWidth, center.y - maskHeight);</div>
+<div class="line"> </div>
+<div class="line">    PointF rightTopPoint = <span class="keyword">new</span> PointF(center.x + maskWidth, center.y - maskHeight);</div>
+<div class="line"> </div>
+<div class="line">    PointF rightBottomPoint = <span class="keyword">new</span> PointF(center.x + maskWidth, center.y);</div>
+<div class="line"> </div>
+<div class="line">    PointF leftBottomPoint = <span class="keyword">new</span> PointF(center.x - maskWidth, center.y);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> PointF[]{getPointByAngle(leftTopPoint, center, angle), getPointByAngle(rightTopPoint, center, angle),</div>
+<div class="line">            getPointByAngle(rightBottomPoint, center, angle), getPointByAngle(leftBottomPoint, center, angle)};</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">B、根据上面函数形成的点数组，及流媒体窗口相关信息与实际显示的宽高，生成线性蒙版区域信息对象。</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> buildPolygonMaskRegionInfo(PointF[] pointFList, <a class="code" href="interfaceNvsLiveWindow.html">NvsLiveWindow</a> liveWindow, PointF size) {</div>
+<div class="line">    List&lt;NvsPosition2D&gt; nvsPosition2DS = buildNvsPositionListFromPointFList(pointFList, liveWindow, size);</div>
+<div class="line">    <span class="comment">//蒙版特效区域信息</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> nvsMaskRegionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>();</div>
+<div class="line">    <span class="comment">//设置类型</span></div>
+<div class="line">    <span class="comment">// 椭圆   MASK_REGION_TYPE_ELLIPSE2D</span></div>
+<div class="line">    <span class="comment">// 多边形 MASK_REGION_TYPE_POLYGON</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo regionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.MASK_REGION_TYPE_POLYGON);</div>
+<div class="line">    <span class="comment">//参数意义</span></div>
+<div class="line">    regionInfo.setPoints(nvsPosition2DS);</div>
+<div class="line">    nvsMaskRegionInfo.addRegionInfo(regionInfo);</div>
+<div class="line">    <span class="keywordflow">return</span> nvsMaskRegionInfo;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>4.2.2、镜面蒙版</h2>
+<p>根据相关属性，计算出点数组，根据点数组，生成蒙版区域信息对象</p>
+<p>根据蒙版宽高，中心点，角度，生成区域点数组。</p>
+<div class="fragment"><div class="line">A、获取关键点数组</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> PointF[] buildMirrorMaskPoint(<span class="keywordtype">int</span> maskWidth, PointF center, <span class="keywordtype">int</span> maskHeight, <span class="keywordtype">float</span> angle) {</div>
+<div class="line">    PointF leftTopPoint = <span class="keyword">new</span> PointF(center.x - maskWidth / 2, center.y - maskHeight / 2);</div>
+<div class="line">    PointF rightTopPoint = <span class="keyword">new</span> PointF(center.x + maskWidth / 2, center.y - maskHeight / 2);</div>
+<div class="line">    PointF rightBottomPoint = <span class="keyword">new</span> PointF(center.x + maskWidth / 2, center.y + maskHeight / 2);</div>
+<div class="line">    PointF leftBottomPoint = <span class="keyword">new</span> PointF(center.x - maskWidth / 2, center.y + maskHeight / 2);</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> PointF[]{getPointByAngle(leftTopPoint, center, angle), getPointByAngle(rightTopPoint, center, angle),</div>
+<div class="line">            getPointByAngle(rightBottomPoint, center, angle), getPointByAngle(leftBottomPoint, center, angle)};</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">B、根据区域数组、流媒体窗口属性及蒙版实际宽高，生成蒙版区域信息对象。</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> buildPolygonMaskRegionInfo(PointF[] pointFList, <a class="code" href="interfaceNvsLiveWindow.html">NvsLiveWindow</a> liveWindow, PointF size) {</div>
+<div class="line">    List&lt;NvsPosition2D&gt; nvsPosition2DS = buildNvsPositionListFromPointFList(pointFList, liveWindow, size);</div>
+<div class="line">    <span class="comment">//蒙版特效区域信息</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> nvsMaskRegionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>();</div>
+<div class="line">    <span class="comment">//设置类型</span></div>
+<div class="line">    <span class="comment">// 椭圆   MASK_REGION_TYPE_ELLIPSE2D</span></div>
+<div class="line">    <span class="comment">// 多边形 MASK_REGION_TYPE_POLYGON</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo regionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.MASK_REGION_TYPE_POLYGON);</div>
+<div class="line">    <span class="comment">//参数意义</span></div>
+<div class="line">    regionInfo.setPoints(nvsPosition2DS);</div>
+<div class="line">    nvsMaskRegionInfo.addRegionInfo(regionInfo);</div>
+<div class="line">    <span class="keywordflow">return</span> nvsMaskRegionInfo;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>4.2.3、圆形蒙版</h2>
+<p>根据相关属性，生成区域信息对象，生成蒙版区域信息对象，把区域信息对象注入到蒙版区域信息对象中。实现算法与流程参考下面代码。</p>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> buildCircleMaskRegionInfo(PointF center, <span class="keywordtype">float</span> maskWidth, <span class="keywordtype">float</span> maskHeight,</div>
+<div class="line">                                                          <span class="keywordtype">float</span> angle, <a class="code" href="interfaceNvsLiveWindow.html">NvsLiveWindow</a> liveWindow,</div>
+<div class="line">                                                          PointF size) {</div>
+<div class="line">    <span class="keywordtype">float</span> widthPercent = 0, heightPercent = 0;</div>
+<div class="line">    widthPercent = maskWidth * 1.0f / size.x;</div>
+<div class="line">    heightPercent = maskHeight * 1.0f / size.y;</div>
+<div class="line">    center = mapViewToNormalized(center, liveWindow, size);</div>
+<div class="line">    <span class="comment">//蒙版特效区域信息</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> nvsMaskRegionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>();</div>
+<div class="line">    <span class="comment">//设置类型</span></div>
+<div class="line">    <span class="comment">// 椭圆   MASK_REGION_TYPE_ELLIPSE2D</span></div>
+<div class="line">    <span class="comment">// 多边形 MASK_REGION_TYPE_POLYGON</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo regionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.MASK_REGION_TYPE_ELLIPSE2D);</div>
+<div class="line">    <span class="comment">//参数意义</span></div>
+<div class="line"><span class="comment"></span>    regionInfo.setEllipse2D(<span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.Ellipse2D(<span class="keyword">new</span> <a class="code" href="structNvsPosition2D.html">NvsPosition2D</a>(center.x, center.y), widthPercent, heightPercent, 0));</div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.Transform2D transform2D = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.Transform2D();</div>
+<div class="line">    transform2D.setRotation(-angle);</div>
+<div class="line">    transform2D.setAnchor(<span class="keyword">new</span> <a class="code" href="structNvsPosition2D.html">NvsPosition2D</a>(center.x, center.y));</div>
+<div class="line">    regionInfo.setTransform2D(transform2D);</div>
+<div class="line">    nvsMaskRegionInfo.addRegionInfo(regionInfo);</div>
+<div class="line">    <span class="keywordflow">return</span> nvsMaskRegionInfo;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>4.2.4、矩形蒙版</h2>
+<p>根据相关属性，生成区域信息对象，生成蒙版区域信息对象，把区域信息对象注入到蒙版区域信息对象中。实现算法与流程参考如下代码。</p>
+<div class="fragment"><div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> buildRectMaskRegionInfo(PointF center, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height,</div>
+<div class="line">                                                            <span class="keywordtype">float</span> angle, <a class="code" href="interfaceNvsLiveWindow.html">NvsLiveWindow</a> liveWindow,</div>
+<div class="line">                                                            <span class="keywordtype">float</span> cornerRadiusRate, PointF size) {</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//        center = liveWindow.mapViewToNormalized(center);</span></div>
+<div class="line">        <span class="comment">//蒙版特效区域信息</span></div>
+<div class="line">        <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> nvsMaskRegionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>();</div>
+<div class="line">        <span class="comment">//设置类型</span></div>
+<div class="line">        <span class="comment">// 椭圆   MASK_REGION_TYPE_ELLIPSE2D</span></div>
+<div class="line">        <span class="comment">// 多边形 MASK_REGION_TYPE_POLYGON</span></div>
+<div class="line">        <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo regionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.MASK_REGION_TYPE_CUBIC_CURVE);</div>
+<div class="line">        <span class="comment">//获取最小边 获取 圆角的半径</span></div>
+<div class="line">        <span class="keywordtype">int</span> minSize = width &gt; height ? height : width;</div>
+<div class="line">        <span class="keywordtype">int</span> arcRadius = (int) (cornerRadiusRate * minSize * 0.5f);</div>
+<div class="line">        <span class="keywordtype">int</span> controlPointDis = (int) (arcRadius * 0.45);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//第一个点</span></div>
+<div class="line">        PointF nextPoint1 = <span class="keyword">new</span> PointF(center.x - width * 0.5f, center.y - height * 0.5f + controlPointDis);</div>
+<div class="line">        PointF curPoint1 = <span class="keyword">new</span> PointF(center.x - width * 0.5f, center.y - height * 0.5f + arcRadius);</div>
+<div class="line">        PointF prePoint1 = <span class="keyword">new</span> PointF(center.x - width * 0.5f, center.y + height * 0.5f - arcRadius);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point 1 c1.x:&quot;</span> + curPoint1.x + <span class="stringliteral">&quot; y:&quot;</span> + curPoint1.y + <span class="stringliteral">&quot; n1.x:&quot;</span> + nextPoint1.x</div>
+<div class="line">                + <span class="stringliteral">&quot; y:&quot;</span> + nextPoint1.y + <span class="stringliteral">&quot; p1.x:&quot;</span> + prePoint1.x + <span class="stringliteral">&quot; y:&quot;</span> + prePoint1.y + <span class="stringliteral">&quot; aD:&quot;</span> + arcRadius + <span class="stringliteral">&quot;cD:&quot;</span> + controlPointDis);</div>
+<div class="line">        maskRegionInfoAddPoints(regionInfo, getPointByAngle(curPoint1, center, angle),</div>
+<div class="line">                getPointByAngle(nextPoint1, center, angle), getPointByAngle(prePoint1, center, angle), liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//第二点</span></div>
+<div class="line">        PointF nextPoint2 = <span class="keyword">new</span> PointF(center.x - width * 0.5f, center.y - height * 0.5f + arcRadius);</div>
+<div class="line">        PointF curPoint2 = <span class="keyword">new</span> PointF(center.x - width * 0.5f, center.y + height * 0.5f - arcRadius);</div>
+<div class="line">        PointF prePoint2 = <span class="keyword">new</span> PointF(center.x - width * 0.5f, center.y + height * 0.5f - controlPointDis);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point 2 c2.x:&quot;</span> + curPoint2.x + <span class="stringliteral">&quot; y:&quot;</span> + curPoint2.y + <span class="stringliteral">&quot; n2.x:&quot;</span> + nextPoint2.x</div>
+<div class="line">                + <span class="stringliteral">&quot; y:&quot;</span> + nextPoint2.y + <span class="stringliteral">&quot; p2.x:&quot;</span> + prePoint2.x + <span class="stringliteral">&quot; y:&quot;</span> + prePoint2.y);</div>
+<div class="line">        maskRegionInfoAddPoints(regionInfo, getPointByAngle(curPoint2, center, angle),</div>
+<div class="line">                getPointByAngle(nextPoint2, center, angle), getPointByAngle(prePoint2, center, angle), liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//第三点</span></div>
+<div class="line">        PointF nextPoint3 = <span class="keyword">new</span> PointF(center.x - width * 0.5f + controlPointDis, center.y + height * 0.5f);</div>
+<div class="line">        PointF curPoint3 = <span class="keyword">new</span> PointF(center.x - width * 0.5f + arcRadius, center.y + height * 0.5f);</div>
+<div class="line">        PointF prePoint3 = <span class="keyword">new</span> PointF(center.x + width * 0.5f - arcRadius, center.y + height * 0.5f);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point 3 c3.x:&quot;</span> + curPoint3.x + <span class="stringliteral">&quot; y:&quot;</span> + curPoint3.y + <span class="stringliteral">&quot; n3.x:&quot;</span> + nextPoint3.x</div>
+<div class="line">                + <span class="stringliteral">&quot; y:&quot;</span> + nextPoint3.y + <span class="stringliteral">&quot; p1.x:&quot;</span> + prePoint3.x + <span class="stringliteral">&quot; y:&quot;</span> + prePoint3.y);</div>
+<div class="line">        maskRegionInfoAddPoints(regionInfo, getPointByAngle(curPoint3, center, angle),</div>
+<div class="line">                getPointByAngle(nextPoint3, center, angle), getPointByAngle(prePoint3, center, angle), liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//第四点</span></div>
+<div class="line">        PointF nextPoint4 = <span class="keyword">new</span> PointF(center.x - width * 0.5f + arcRadius, center.y + height * 0.5f);</div>
+<div class="line">        PointF curPoint4 = <span class="keyword">new</span> PointF(center.x + width * 0.5f - arcRadius, center.y + height * 0.5f);</div>
+<div class="line">        PointF prePoint4 = <span class="keyword">new</span> PointF(center.x + width * 0.5f - controlPointDis, center.y + height * 0.5f);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point 4 c4.x:&quot;</span> + curPoint4.x + <span class="stringliteral">&quot; y:&quot;</span> + curPoint4.y + <span class="stringliteral">&quot; n4.x:&quot;</span> + nextPoint4.x</div>
+<div class="line">                + <span class="stringliteral">&quot; y:&quot;</span> + nextPoint4.y + <span class="stringliteral">&quot; p4.x:&quot;</span> + prePoint4.x + <span class="stringliteral">&quot; y:&quot;</span> + prePoint4.y);</div>
+<div class="line">        maskRegionInfoAddPoints(regionInfo, getPointByAngle(curPoint4, center, angle),</div>
+<div class="line">                getPointByAngle(nextPoint4, center, angle), getPointByAngle(prePoint4, center, angle), liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//第五点</span></div>
+<div class="line">        PointF nextPoint5 = <span class="keyword">new</span> PointF(center.x + width * 0.5f, center.y + height * 0.5f - controlPointDis);</div>
+<div class="line">        PointF curPoint5 = <span class="keyword">new</span> PointF(center.x + width * 0.5f, center.y + height * 0.5f - arcRadius);</div>
+<div class="line">        PointF prePoint5 = <span class="keyword">new</span> PointF(center.x + width * 0.5f, center.y - height * 0.5f + arcRadius);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point 5 c5.x:&quot;</span> + curPoint5.x + <span class="stringliteral">&quot; y:&quot;</span> + curPoint5.y + <span class="stringliteral">&quot; n5.x:&quot;</span> + nextPoint5.x</div>
+<div class="line">                + <span class="stringliteral">&quot; y:&quot;</span> + nextPoint5.y + <span class="stringliteral">&quot; p5.x:&quot;</span> + prePoint5.x + <span class="stringliteral">&quot; y:&quot;</span> + prePoint5.y);</div>
+<div class="line">        maskRegionInfoAddPoints(regionInfo, getPointByAngle(curPoint5, center, angle),</div>
+<div class="line">                getPointByAngle(nextPoint5, center, angle), getPointByAngle(prePoint5, center, angle), liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//第六点</span></div>
+<div class="line">        PointF nextPoint6 = <span class="keyword">new</span> PointF(center.x + width * 0.5f, center.y + height * 0.5f - arcRadius);</div>
+<div class="line">        PointF curPoint6 = <span class="keyword">new</span> PointF(center.x + width * 0.5f, center.y - height * 0.5f + arcRadius);</div>
+<div class="line">        PointF prePoint6 = <span class="keyword">new</span> PointF(center.x + width * 0.5f, center.y - height * 0.5f + controlPointDis);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point 6 c6.x:&quot;</span> + curPoint6.x + <span class="stringliteral">&quot; y:&quot;</span> + curPoint6.y + <span class="stringliteral">&quot; n6.x:&quot;</span> + nextPoint6.x</div>
+<div class="line">                + <span class="stringliteral">&quot; y:&quot;</span> + nextPoint6.y + <span class="stringliteral">&quot; p6.x:&quot;</span> + prePoint6.x + <span class="stringliteral">&quot; y:&quot;</span> + prePoint6.y);</div>
+<div class="line">        maskRegionInfoAddPoints(regionInfo, getPointByAngle(curPoint6, center, angle),</div>
+<div class="line">                getPointByAngle(nextPoint6, center, angle), getPointByAngle(prePoint6, center, angle), liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//第七点</span></div>
+<div class="line">        PointF nextPoint7 = <span class="keyword">new</span> PointF(center.x + width * 0.5f - controlPointDis, center.y - height * 0.5f);</div>
+<div class="line">        PointF curPoint7 = <span class="keyword">new</span> PointF(center.x + width * 0.5f - arcRadius, center.y - height * 0.5f);</div>
+<div class="line">        PointF prePoint7 = <span class="keyword">new</span> PointF(center.x - width * 0.5f + arcRadius, center.y - height * 0.5f);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point 7 c7.x:&quot;</span> + curPoint7.x + <span class="stringliteral">&quot; y:&quot;</span> + curPoint7.y + <span class="stringliteral">&quot; n7.x:&quot;</span> + nextPoint7.x</div>
+<div class="line">                + <span class="stringliteral">&quot; y:&quot;</span> + nextPoint7.y + <span class="stringliteral">&quot; p1.x:&quot;</span> + prePoint7.x + <span class="stringliteral">&quot; y:&quot;</span> + prePoint7.y);</div>
+<div class="line">        maskRegionInfoAddPoints(regionInfo, getPointByAngle(curPoint7, center, angle),</div>
+<div class="line">                getPointByAngle(nextPoint7, center, angle), getPointByAngle(prePoint7, center, angle), liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//第八点</span></div>
+<div class="line">        PointF nextPoint8 = <span class="keyword">new</span> PointF(center.x + width * 0.5f - arcRadius, center.y - height * 0.5f);</div>
+<div class="line">        PointF curPoint8 = <span class="keyword">new</span> PointF(center.x - width * 0.5f + arcRadius, center.y - height * 0.5f);</div>
+<div class="line">        PointF prePoint8 = <span class="keyword">new</span> PointF(center.x - width * 0.5f + controlPointDis, center.y - height * 0.5f);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point 8 c8.x:&quot;</span> + curPoint8.x + <span class="stringliteral">&quot; y:&quot;</span> + curPoint8.y + <span class="stringliteral">&quot; n8.x:&quot;</span> + nextPoint8.x</div>
+<div class="line">                + <span class="stringliteral">&quot; y:&quot;</span> + nextPoint8.y + <span class="stringliteral">&quot; p8.x:&quot;</span> + prePoint8.x + <span class="stringliteral">&quot; y:&quot;</span> + prePoint8.y);</div>
+<div class="line">        maskRegionInfoAddPoints(regionInfo, getPointByAngle(curPoint8, center, angle),</div>
+<div class="line">                getPointByAngle(nextPoint8, center, angle), getPointByAngle(prePoint8, center, angle), liveWindow, size);</div>
+<div class="line">        Log.d(TAG, <span class="stringliteral">&quot;point ====================================================================================&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        nvsMaskRegionInfo.addRegionInfo(regionInfo);</div>
+<div class="line">        <span class="keywordflow">return</span> nvsMaskRegionInfo;</div>
+<div class="line">    }</div>
+</div><!-- fragment --><h2>4.2.5、爱心蒙版</h2>
+<p>依据相关属性，计算点数组，根据点数组，生成区域信息对象，生成蒙版信息对象，把区域对象注入到蒙版信息对象中。具体实现算法与流程参考下面代码。</p>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> buildHeartMaskRegionInfo(PointF center, <span class="keywordtype">int</span> radius, <span class="keywordtype">float</span> angle,</div>
+<div class="line">                                                         <a class="code" href="interfaceNvsLiveWindow.html">NvsLiveWindow</a> liveWindow, PointF size) {</div>
+<div class="line">    <span class="comment">//蒙版特效区域信息</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> nvsMaskRegionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>();</div>
+<div class="line">    <span class="comment">//设置类型</span></div>
+<div class="line">    <span class="comment">// 椭圆   MASK_REGION_TYPE_ELLIPSE2D</span></div>
+<div class="line">    <span class="comment">// 多边形 MASK_REGION_TYPE_POLYGON</span></div>
+<div class="line">    <span class="comment">// 贝塞尔曲线MASK_REGION_TYPE_CUBIC_CURVE+</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo regionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.MASK_REGION_TYPE_CUBIC_CURVE);</div>
+<div class="line"> </div>
+<div class="line">    PointF topIntersectionPoint = <span class="keyword">new</span> PointF(center.x, center.y - radius * (2 * 1.0f / 6));</div>
+<div class="line">    PointF bottomIntersectionPoint = <span class="keyword">new</span> PointF(center.x, center.y + radius);</div>
+<div class="line"> </div>
+<div class="line">    PointF prePoint = getPointByAngle(<span class="keyword">new</span> PointF(center.x + 5 * 1.0f / 7 * radius, center.y - 0.8f * radius), center, angle);</div>
+<div class="line">    PointF curPoint = getPointByAngle(topIntersectionPoint, center, angle);</div>
+<div class="line">    PointF nextPoint = getPointByAngle(<span class="keyword">new</span> PointF(center.x - 5 * 1.0f / 7 * radius, center.y - 0.8f * radius), center, angle);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    PointF prePoint1 = getPointByAngle(<span class="keyword">new</span> PointF(center.x - 16 * 1.0f / 13 * radius, center.y + 0.1f * radius), center, angle);</div>
+<div class="line">    PointF curPoint1 = getPointByAngle(bottomIntersectionPoint, center, angle);</div>
+<div class="line">    PointF nextPoint1 = getPointByAngle(<span class="keyword">new</span> PointF(center.x + 16 * 1.0f / 13 * radius, center.y + 0.1f * radius), center, angle);</div>
+<div class="line"> </div>
+<div class="line">    PointF[] pointFS = <span class="keyword">new</span> PointF[]{curPoint, nextPoint, prePoint, curPoint1, nextPoint1, prePoint1};</div>
+<div class="line">    List&lt;NvsPosition2D&gt; nvsPosition2DS = buildNvsPositionListFromPointFList(pointFS, liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">    regionInfo.setPoints(nvsPosition2DS);</div>
+<div class="line">    nvsMaskRegionInfo.addRegionInfo(regionInfo);</div>
+<div class="line">    <span class="keywordflow">return</span> nvsMaskRegionInfo;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>4.2.6、星形蒙版</h2>
+<p>依据相关属性，计算出点数组，根据点数组，生成区域信息对象，生成蒙版信息对象，把区域对象注入到蒙版信息对象中。具体实现算法与流程参考如下代码。</p>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> buildStarMaskRegionInfo(PointF center, <span class="keywordtype">int</span> width, <span class="keywordtype">float</span> rotation, <a class="code" href="interfaceNvsLiveWindow.html">NvsLiveWindow</a> liveWindow, PointF size) {</div>
+<div class="line">    <span class="comment">//蒙版特效区域信息</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> nvsMaskRegionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>();</div>
+<div class="line">    <span class="comment">//设置类型</span></div>
+<div class="line">    <span class="comment">// 椭圆   MASK_REGION_TYPE_ELLIPSE2D</span></div>
+<div class="line">    <span class="comment">// 多边形 MASK_REGION_TYPE_POLYGON</span></div>
+<div class="line">    <span class="comment">// 贝塞尔曲线MASK_REGION_TYPE_CUBIC_CURVE+</span></div>
+<div class="line">    <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo regionInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.RegionInfo(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>.MASK_REGION_TYPE_POLYGON);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//外圆</span></div>
+<div class="line">    <span class="keywordtype">float</span> radius = width / 2.0f;</div>
+<div class="line">    <span class="keywordtype">float</span> angel = (float) (Math.PI * 2 / 5);</div>
+<div class="line">    PointF[] outPoints = <span class="keyword">new</span> PointF[5];</div>
+<div class="line">    <span class="comment">//这里是获取五角星的五个定点的坐标点位置</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; 6; i++) {</div>
+<div class="line">        <span class="keywordtype">float</span> x = (float) (center.x - Math.sin(i * angel) * radius);</div>
+<div class="line">        <span class="keywordtype">float</span> y = (float) (center.y - Math.cos(i * angel) * radius);</div>
+<div class="line">        outPoints[i - 1] = <span class="keyword">new</span> PointF(x, y);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">float</span> radiusRate = 0.5f; <span class="comment">//2/5</span></div>
+<div class="line">    <span class="comment">//内圆</span></div>
+<div class="line">    <span class="keywordtype">float</span> internalRadius = radius * radiusRate;</div>
+<div class="line">    <span class="keywordtype">float</span> internalAngel = (float) (Math.PI * 2 / 5);</div>
+<div class="line">    PointF[] inPoints = <span class="keyword">new</span> PointF[5];</div>
+<div class="line">    <span class="comment">//这里是获取五角星的五个定点的坐标点位置</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; 6; i++) {</div>
+<div class="line">        <span class="keywordtype">float</span> x = (float) (center.x - Math.sin(i * internalAngel + Math.PI / 2 - Math.PI * 3 / 10) * internalRadius);</div>
+<div class="line">        <span class="keywordtype">float</span> y = (float) (center.y - Math.cos(i * internalAngel + Math.PI / 2 - Math.PI * 3 / 10) * internalRadius);</div>
+<div class="line">        inPoints[i - 1] = <span class="keyword">new</span> PointF(x, y);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//加入到一个集合中 一外一内的顺序</span></div>
+<div class="line">    PointF[] allPoints = <span class="keyword">new</span> PointF[10];</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++) {</div>
+<div class="line">        PointF out = getPointByAngle(outPoints[i], center, rotation);</div>
+<div class="line">        PointF in = getPointByAngle(inPoints[i], center, rotation);</div>
+<div class="line">        allPoints[i * 2] = out;</div>
+<div class="line">        allPoints[i * 2 + 1] = in;</div>
+<div class="line">    }</div>
+<div class="line">    List&lt;NvsPosition2D&gt; position2DList = buildNvsPositionListFromPointFList(allPoints, liveWindow, size);</div>
+<div class="line"> </div>
+<div class="line">    regionInfo.setPoints(position2DList);</div>
+<div class="line">    nvsMaskRegionInfo.addRegionInfo(regionInfo);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> nvsMaskRegionInfo;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>5、根据区域信息，进行设置 </h2>
+<p>环境搭建、对象生成、视频特效对象生成、区域设置、特效添加。</p>
+<h2>5.1、蒙版设置</h2>
+<p>生成特效对象 </p><pre class="fragment">maskFx = videoClip.appendRawBuiltinFx(NvsConstants.KEY_MASK_GENERATOR);
+</pre><h2>5.1.1、设置方式</h2>
+<p>SDK对蒙版的设置有两种方式，本质一样。实际应用中，两种方式可以混用。</p>
+<h2>5.1.1.1、参数调整</h2>
+<p>常规方式是通过参数调整。示例代码如下：</p>
+<div class="fragment"><div class="line">maskFx.setIntVal(“参数ID”,相应值);</div>
+<div class="line">maskFx.setFloatVal(“Feather Width”, 相应值);</div>
+<div class="line">maskFx.setStringVal(“Coordinate System”, 相应值);</div>
+<div class="line">maskFx.setBooleanVal(“Keep RGB”,相应值);</div>
+<div class="line">maskFx.setArbDataVal(“Region Info”,相应值);    </div>
+</div><!-- fragment --><h2>5.1.1.2、函数方式</h2>
+<p>也可以通过相关函数进行硬编码。示例代码如下：</p>
+<div class="fragment"><div class="line"><span class="comment">//设置区域羽化宽度，参数自己调节</span></div>
+<div class="line">maskFx.setInverseRegion(<span class="keyword">false</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//是否忽略背景</span></div>
+<div class="line">maskFx.setIgnoreBackground(<span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//设置是否为局部</span></div>
+<div class="line">maskFx.setRegional(<span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">maskFx.setRegionInfo(maskRegionInfo);</div>
+</div><!-- fragment --><h2>5.1.2、参考代码</h2>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (maskFx != <span class="keyword">null</span>) {<span class="comment">//如果找到蒙版特效</span></div>
+<div class="line"><span class="comment">//设置区域羽化宽度，参数自己调节</span></div>
+<div class="line">    maskFx.setRegionalFeatherWidth(10);</div>
+<div class="line"><span class="comment">//设置区域反转，根据需要进行设置</span></div>
+<div class="line">    maskFx.setInverseRegion(<span class="keyword">false</span>);</div>
+<div class="line"><span class="comment">//是否忽略背景</span></div>
+<div class="line">    maskFx.setIgnoreBackground(<span class="keyword">true</span>);</div>
+<div class="line"><span class="comment">//设置是否为局部</span></div>
+<div class="line">    maskFx.setRegional(<span class="keyword">true</span>);</div>
+<div class="line"><span class="comment">//如果是字幕蒙版</span></div>
+<div class="line">    <span class="keywordflow">if</span> (infoData.getMaskType() == MaskInfoData.MaskType.TEXT) {</div>
+<div class="line">        maskFx.setStringVal(NvsConstants.KEY_MASK_STORYBOARD_DESC, infoData.getTextStoryboard());</div>
+<div class="line"><span class="comment">//区域信息数据设置为空</span></div>
+<div class="line">        maskFx.setRegionInfo(<span class="keyword">null</span>);</div>
+<div class="line">    } </div>
+<div class="line"><span class="comment">//如果不是字幕蒙版</span></div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line"><span class="comment">//故事板描述设置为空                </span></div>
+<div class="line">maskFx.setStringVal(NvsConstants.KEY_MASK_STORYBOARD_DESC, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//设置区域信息数据</span></div>
+<div class="line">maskFx.setRegionInfo(infoData.getMaskRegionInfo());</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>5.2、特别说明</h2>
+<h2>5.2.1、非字幕蒙版</h2>
+<p>故事板描述设置为空字符串，区域信息设置具体的值。</p>
+<p>代码示例： </p><div class="fragment"><div class="line">maskFx.setStringVal(NvsConstants.KEY_MASK_STORYBOARD_DESC, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="comment">//蒙版区域信息对象，4.2主题讲述过该对象的生成</span></div>
+<div class="line"><a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> nvsMaskRegionInfo;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//根据蒙版区域信息对象，应用蒙版</span></div>
+<div class="line">maskFx.setRegionInfo(nvsMaskRegionInfo);</div>
+</div><!-- fragment --><h2>5.2.2、字幕蒙版</h2>
+<p>字幕蒙版相对简单，不需要生成蒙版区域对象和区域对象。只需要进行NvsConstants.*KEY_MASK_STORYBOARD_DESC参数ID设置就可以。*</p>
+<p>给故事板描述设置具体字符串，区域信息设置为空。</p>
+<p>代码示例：</p>
+<div class="fragment"><div class="line">String captionInfo = “美摄字幕蒙版测试字符串”;</div>
+<div class="line">maskFx.setStringVal(NvsConstants.KEY_MASK_STORYBOARD_DESC, captionInfo);</div>
+<div class="line">maskFx.setRegionInfo(<span class="keyword">null</span>);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="ainterfaceNvsMaskRegionInfo_html"><div class="ttname"><a href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a></div><div class="ttdoc">蒙版区域信息</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:98</div></div>
+<div class="ttc" id="ainterfaceNvsLiveWindow_html"><div class="ttname"><a href="interfaceNvsLiveWindow.html">NvsLiveWindow</a></div><div class="ttdoc">实时拍摄预览窗口</div><div class="ttdef"><b>Definition:</b> NvsLiveWindow.h:40</div></div>
+<div class="ttc" id="astructNvsPosition2D_html"><div class="ttname"><a href="structNvsPosition2D.html">NvsPosition2D</a></div><div class="ttdoc">二维坐标结构</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:423</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

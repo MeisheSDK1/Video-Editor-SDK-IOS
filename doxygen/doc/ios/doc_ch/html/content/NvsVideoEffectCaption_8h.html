@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsVideoEffectCaption.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a>  </div>
+  <div class="headertitle">
+<div class="title">NvsVideoEffectCaption.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#import &quot;<a class="el" href="NvsEffect_8h_source.html">NvsEffect.h</a>&quot;</code><br />
+<code>#import &lt;CoreGraphics/CGGeometry.h&gt;</code><br />
+</div>
+<p><a href="NvsVideoEffectCaption_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNvsVideoEffectCaption.html">NvsVideoEffectCaption</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">字幕  <a href="interfaceNvsVideoEffectCaption.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+字幕种类</h2></td></tr>
+<tr class="memitem:a985f84e12d2b1dd4868cc0ef34cef9cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#a985f84e12d2b1dd4868cc0ef34cef9cb">NvsVideoEffectCategory</a> { <a class="el" href="NvsVideoEffectCaption_8h.html#a985f84e12d2b1dd4868cc0ef34cef9cba1f69cbeec70d23a0a6edd6c1958e105e">NvsVideoEffectDefaultCategory</a>, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#a985f84e12d2b1dd4868cc0ef34cef9cbadf837fce3926a685e2a9cf5d668e133a">NvsVideoEffectUserCategory</a>, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#a985f84e12d2b1dd4868cc0ef34cef9cba20f7e7d28e0b8962e561cb39944e5bcc">NvsVideoEffectThemeCategory</a>
+ }</td></tr>
+<tr class="separator:a985f84e12d2b1dd4868cc0ef34cef9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add01da154e808cc7ed148704d396ce62"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62">NvsVideoEffectRoleInTheme</a> { <a class="el" href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62a2d889dea60e7407c6910ab08bea02831">NvsVideoEffectRoleInThemeGeneral</a>, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62af10e759a7c815f6d26754ee1ebce243f">NvsVideoEffectRoleInThemeTitle</a>, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62af2827b111da65a0fb88865612657b090">NvsVideoEffectRoleInThemeTrailer</a>
+ }</td></tr>
+<tr class="memdesc:add01da154e808cc7ed148704d396ce62"><td class="mdescLeft">&#160;</td><td class="mdescRight">片段在主题中的角色  <a href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62">更多...</a><br /></td></tr>
+<tr class="separator:add01da154e808cc7ed148704d396ce62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f4796dc45a24bfda9bce33ddb36d87"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87">NvsVideoEffectTextAlignment</a> { <br />
+&#160;&#160;<a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87a3511b8e57d2c4adb0810df09bba23932">NvsVideoEffectTextAlignmentLeft</a> = 0, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87ac0ba2e1b0cf75f09d02a7aab7145510a">NvsVideoEffectTextAlignmentCenter</a>, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87ab3c5d252211cf2a23003871b89a00c08">NvsVideoEffectTextAlignmentRight</a>, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87a3ce683dfd65b905b5049b85443966833">NvsVideoEffectTextAlignmentTop</a>, 
+<br />
+&#160;&#160;<a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87a96bafdf608e9a27dca9879586f2b2aa2">NvsVideoEffectTextAlignmentBottom</a>, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87ac59bc4958df74baed6ebd1494df8dda6">NvsVideoEffectTextAlignmentVCenter</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ad9f4796dc45a24bfda9bce33ddb36d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">字幕对齐方式  <a href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87">更多...</a><br /></td></tr>
+<tr class="separator:ad9f4796dc45a24bfda9bce33ddb36d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c012eb4567b2846ff13756ee50ef0f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#a2c012eb4567b2846ff13756ee50ef0f1">NvsVideoEffectAssetDefaultParam</a> { <a class="el" href="NvsVideoEffectCaption_8h.html#a2c012eb4567b2846ff13756ee50ef0f1a2db596c4d89025445976a6349680e96f">VIDEO_EFFECT_USE_ASSET_DEFAULT_PARAM</a> = 0, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#a2c012eb4567b2846ff13756ee50ef0f1a8ec50ef8b4b23f5c818ab26ec49570fe">VIDEO_EFFECT_NOT_USE_ASSET_DEFAULT_PARAM</a>
+ }</td></tr>
+<tr class="memdesc:a2c012eb4567b2846ff13756ee50ef0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用默认的字幕包属性  <a href="NvsVideoEffectCaption_8h.html#a2c012eb4567b2846ff13756ee50ef0f1">更多...</a><br /></td></tr>
+<tr class="separator:a2c012eb4567b2846ff13756ee50ef0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad75a949abe90167350f00bbbf19b2103"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#a985f84e12d2b1dd4868cc0ef34cef9cb">NvsVideoEffectCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#ad75a949abe90167350f00bbbf19b2103">NvsVideoEffectCategory</a></td></tr>
+<tr class="separator:ad75a949abe90167350f00bbbf19b2103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e0b08b536879a5e059562dfee7a693"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62">NvsVideoEffectRoleInTheme</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#a16e0b08b536879a5e059562dfee7a693">NvsVideoEffectRoleInTheme</a></td></tr>
+<tr class="memdesc:a16e0b08b536879a5e059562dfee7a693"><td class="mdescLeft">&#160;</td><td class="mdescRight">片段在主题中的角色  <a href="NvsVideoEffectCaption_8h.html#a16e0b08b536879a5e059562dfee7a693">更多...</a><br /></td></tr>
+<tr class="separator:a16e0b08b536879a5e059562dfee7a693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd1b298ab5ae4e549600907a7e9bf35"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87">NvsVideoEffectTextAlignment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#afdd1b298ab5ae4e549600907a7e9bf35">NvsVideoEffectTextAlignment</a></td></tr>
+<tr class="memdesc:afdd1b298ab5ae4e549600907a7e9bf35"><td class="mdescLeft">&#160;</td><td class="mdescRight">字幕对齐方式  <a href="NvsVideoEffectCaption_8h.html#afdd1b298ab5ae4e549600907a7e9bf35">更多...</a><br /></td></tr>
+<tr class="separator:afdd1b298ab5ae4e549600907a7e9bf35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0bce80c36fd6e24b2bd99e44e1617b"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#a2c012eb4567b2846ff13756ee50ef0f1">NvsVideoEffectAssetDefaultParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#a4a0bce80c36fd6e24b2bd99e44e1617b">NvsVideoEffectAssetDefaultParam</a></td></tr>
+<tr class="memdesc:a4a0bce80c36fd6e24b2bd99e44e1617b"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用默认的字幕包属性  <a href="NvsVideoEffectCaption_8h.html#a4a0bce80c36fd6e24b2bd99e44e1617b">更多...</a><br /></td></tr>
+<tr class="separator:a4a0bce80c36fd6e24b2bd99e44e1617b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+边框类型</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrpe5af6612f35b0a9f68434dce8af812a6"></a><a class="anchor" id="BOUNDING_TYPE"></a> </p>
+</td></tr>
+<tr class="memitem:ad5bd445e82204388740b064ac8b4e268"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#ad5bd445e82204388740b064ac8b4e268">NvsVideoEffectBoundingType</a> { <br />
+&#160;&#160;<a class="el" href="NvsVideoEffectCaption_8h.html#ad5bd445e82204388740b064ac8b4e268a203e2cdb5fbb5c5ac43fe32a712988b6">NvsVideoEffectBoundingType_Text</a> = 0, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#ad5bd445e82204388740b064ac8b4e268aaafa923b0dd3822dd4d34e6383c07fcf">NvsVideoEffectBoundingType_Text_Frame</a> = 1, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#ad5bd445e82204388740b064ac8b4e268a933e05a1551b67784b10b0eb5cde3ffa">NvsVideoEffectBoundingType_Frame</a> = 2, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#ad5bd445e82204388740b064ac8b4e268ac7a0a019dff0be1a09b3f8a226588b1d">NvsVideoEffectBoundingType_Text_Origin_Frame</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="NvsVideoEffectCaption_8h.html#ad5bd445e82204388740b064ac8b4e268a44cd99013dcc01ed613055ef2bcdb390">NvsVideoEffectBoundingType_Typographic_Text</a> = 4
+<br />
+ }</td></tr>
+<tr class="separator:ad5bd445e82204388740b064ac8b4e268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62dbb07b5aaf859e3a5ba93939c254bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#a62dbb07b5aaf859e3a5ba93939c254bd">NvsVideoEffectLetterSpacingType</a> { <a class="el" href="NvsVideoEffectCaption_8h.html#a62dbb07b5aaf859e3a5ba93939c254bda75f8f4bab02c468ea4b82221f1476d5b">NvsVideoEffectLetterSpacingTypePercentage</a> = 0, 
+<a class="el" href="NvsVideoEffectCaption_8h.html#a62dbb07b5aaf859e3a5ba93939c254bdae01ca3f31863e590e10a7fce8dd6e887">NvsVideoEffectLetterSpacingTypeAbsolute</a>
+ }</td></tr>
+<tr class="memdesc:a62dbb07b5aaf859e3a5ba93939c254bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">字间距类型  <a href="NvsVideoEffectCaption_8h.html#a62dbb07b5aaf859e3a5ba93939c254bd">更多...</a><br /></td></tr>
+<tr class="separator:a62dbb07b5aaf859e3a5ba93939c254bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac50554cc0e737c74bbea15f4e93447"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#a62dbb07b5aaf859e3a5ba93939c254bd">NvsVideoEffectLetterSpacingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsVideoEffectCaption_8h.html#acac50554cc0e737c74bbea15f4e93447">NvsVideoEffectLetterSpacingType</a></td></tr>
+<tr class="memdesc:acac50554cc0e737c74bbea15f4e93447"><td class="mdescLeft">&#160;</td><td class="mdescRight">字间距类型  <a href="NvsVideoEffectCaption_8h.html#acac50554cc0e737c74bbea15f4e93447">更多...</a><br /></td></tr>
+<tr class="separator:acac50554cc0e737c74bbea15f4e93447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a4a0bce80c36fd6e24b2bd99e44e1617b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0bce80c36fd6e24b2bd99e44e1617b">&#9670;&nbsp;</a></span>NvsVideoEffectAssetDefaultParam</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#a2c012eb4567b2846ff13756ee50ef0f1">NvsVideoEffectAssetDefaultParam</a> <a class="el" href="NvsVideoEffectCaption_8h.html#a2c012eb4567b2846ff13756ee50ef0f1">NvsVideoEffectAssetDefaultParam</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用默认的字幕包属性 </p>
+
+</div>
+</div>
+<a id="ad75a949abe90167350f00bbbf19b2103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75a949abe90167350f00bbbf19b2103">&#9670;&nbsp;</a></span>NvsVideoEffectCategory</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#a985f84e12d2b1dd4868cc0ef34cef9cb">NvsVideoEffectCategory</a> <a class="el" href="NvsVideoEffectCaption_8h.html#a985f84e12d2b1dd4868cc0ef34cef9cb">NvsVideoEffectCategory</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acac50554cc0e737c74bbea15f4e93447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac50554cc0e737c74bbea15f4e93447">&#9670;&nbsp;</a></span>NvsVideoEffectLetterSpacingType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#a62dbb07b5aaf859e3a5ba93939c254bd">NvsVideoEffectLetterSpacingType</a> <a class="el" href="NvsVideoEffectCaption_8h.html#a62dbb07b5aaf859e3a5ba93939c254bd">NvsVideoEffectLetterSpacingType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>字间距类型 </p>
+
+</div>
+</div>
+<a id="a16e0b08b536879a5e059562dfee7a693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e0b08b536879a5e059562dfee7a693">&#9670;&nbsp;</a></span>NvsVideoEffectRoleInTheme</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62">NvsVideoEffectRoleInTheme</a> <a class="el" href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62">NvsVideoEffectRoleInTheme</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>片段在主题中的角色 </p>
+
+</div>
+</div>
+<a id="afdd1b298ab5ae4e549600907a7e9bf35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd1b298ab5ae4e549600907a7e9bf35">&#9670;&nbsp;</a></span>NvsVideoEffectTextAlignment</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87">NvsVideoEffectTextAlignment</a> <a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87">NvsVideoEffectTextAlignment</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>字幕对齐方式 </p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a2c012eb4567b2846ff13756ee50ef0f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c012eb4567b2846ff13756ee50ef0f1">&#9670;&nbsp;</a></span>NvsVideoEffectAssetDefaultParam</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsVideoEffectCaption_8h.html#a2c012eb4567b2846ff13756ee50ef0f1">NvsVideoEffectAssetDefaultParam</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用默认的字幕包属性 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a2c012eb4567b2846ff13756ee50ef0f1a2db596c4d89025445976a6349680e96f"></a>VIDEO_EFFECT_USE_ASSET_DEFAULT_PARAM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2c012eb4567b2846ff13756ee50ef0f1a8ec50ef8b4b23f5c818ab26ec49570fe"></a>VIDEO_EFFECT_NOT_USE_ASSET_DEFAULT_PARAM&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad5bd445e82204388740b064ac8b4e268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5bd445e82204388740b064ac8b4e268">&#9670;&nbsp;</a></span>NvsVideoEffectBoundingType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsVideoEffectCaption_8h.html#ad5bd445e82204388740b064ac8b4e268">NvsVideoEffectBoundingType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ad5bd445e82204388740b064ac8b4e268a203e2cdb5fbb5c5ac43fe32a712988b6"></a>NvsVideoEffectBoundingType_Text&#160;</td><td class="fielddoc"><p>文字的实际边框 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad5bd445e82204388740b064ac8b4e268aaafa923b0dd3822dd4d34e6383c07fcf"></a>NvsVideoEffectBoundingType_Text_Frame&#160;</td><td class="fielddoc"><p>文字框的边框 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad5bd445e82204388740b064ac8b4e268a933e05a1551b67784b10b0eb5cde3ffa"></a>NvsVideoEffectBoundingType_Frame&#160;</td><td class="fielddoc"><p>包括装饰在内的整体边框 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad5bd445e82204388740b064ac8b4e268ac7a0a019dff0be1a09b3f8a226588b1d"></a>NvsVideoEffectBoundingType_Text_Origin_Frame&#160;</td><td class="fielddoc"><p>没有经过变换的文字框的边框 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad5bd445e82204388740b064ac8b4e268a44cd99013dcc01ed613055ef2bcdb390"></a>NvsVideoEffectBoundingType_Typographic_Text&#160;</td><td class="fielddoc"><p>文字的排版边框 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a985f84e12d2b1dd4868cc0ef34cef9cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985f84e12d2b1dd4868cc0ef34cef9cb">&#9670;&nbsp;</a></span>NvsVideoEffectCategory</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsVideoEffectCaption_8h.html#a985f84e12d2b1dd4868cc0ef34cef9cb">NvsVideoEffectCategory</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a985f84e12d2b1dd4868cc0ef34cef9cba1f69cbeec70d23a0a6edd6c1958e105e"></a>NvsVideoEffectDefaultCategory&#160;</td><td class="fielddoc"><p>默认类型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a985f84e12d2b1dd4868cc0ef34cef9cbadf837fce3926a685e2a9cf5d668e133a"></a>NvsVideoEffectUserCategory&#160;</td><td class="fielddoc"><p>用户自定义类型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a985f84e12d2b1dd4868cc0ef34cef9cba20f7e7d28e0b8962e561cb39944e5bcc"></a>NvsVideoEffectThemeCategory&#160;</td><td class="fielddoc"><p>主题类型 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a62dbb07b5aaf859e3a5ba93939c254bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62dbb07b5aaf859e3a5ba93939c254bd">&#9670;&nbsp;</a></span>NvsVideoEffectLetterSpacingType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsVideoEffectCaption_8h.html#a62dbb07b5aaf859e3a5ba93939c254bd">NvsVideoEffectLetterSpacingType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>字间距类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a62dbb07b5aaf859e3a5ba93939c254bda75f8f4bab02c468ea4b82221f1476d5b"></a>NvsVideoEffectLetterSpacingTypePercentage&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a62dbb07b5aaf859e3a5ba93939c254bdae01ca3f31863e590e10a7fce8dd6e887"></a>NvsVideoEffectLetterSpacingTypeAbsolute&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="add01da154e808cc7ed148704d396ce62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add01da154e808cc7ed148704d396ce62">&#9670;&nbsp;</a></span>NvsVideoEffectRoleInTheme</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsVideoEffectCaption_8h.html#add01da154e808cc7ed148704d396ce62">NvsVideoEffectRoleInTheme</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>片段在主题中的角色 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="add01da154e808cc7ed148704d396ce62a2d889dea60e7407c6910ab08bea02831"></a>NvsVideoEffectRoleInThemeGeneral&#160;</td><td class="fielddoc"><p>通用 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add01da154e808cc7ed148704d396ce62af10e759a7c815f6d26754ee1ebce243f"></a>NvsVideoEffectRoleInThemeTitle&#160;</td><td class="fielddoc"><p>片头 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add01da154e808cc7ed148704d396ce62af2827b111da65a0fb88865612657b090"></a>NvsVideoEffectRoleInThemeTrailer&#160;</td><td class="fielddoc"><p>片尾 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad9f4796dc45a24bfda9bce33ddb36d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f4796dc45a24bfda9bce33ddb36d87">&#9670;&nbsp;</a></span>NvsVideoEffectTextAlignment</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsVideoEffectCaption_8h.html#ad9f4796dc45a24bfda9bce33ddb36d87">NvsVideoEffectTextAlignment</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>字幕对齐方式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ad9f4796dc45a24bfda9bce33ddb36d87a3511b8e57d2c4adb0810df09bba23932"></a>NvsVideoEffectTextAlignmentLeft&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9f4796dc45a24bfda9bce33ddb36d87ac0ba2e1b0cf75f09d02a7aab7145510a"></a>NvsVideoEffectTextAlignmentCenter&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9f4796dc45a24bfda9bce33ddb36d87ab3c5d252211cf2a23003871b89a00c08"></a>NvsVideoEffectTextAlignmentRight&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9f4796dc45a24bfda9bce33ddb36d87a3ce683dfd65b905b5049b85443966833"></a>NvsVideoEffectTextAlignmentTop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9f4796dc45a24bfda9bce33ddb36d87a96bafdf608e9a27dca9879586f2b2aa2"></a>NvsVideoEffectTextAlignmentBottom&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9f4796dc45a24bfda9bce33ddb36d87ac59bc4958df74baed6ebd1494df8dda6"></a>NvsVideoEffectTextAlignmentVCenter&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

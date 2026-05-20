@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsMediaFileConvertor.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle">
+<div class="title">NvsMediaFileConvertor.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#import &lt;UIKit/UIImage.h&gt;</code><br />
+<code>#import &quot;<a class="el" href="NvsCommonDef_8h_source.html">NvsCommonDef.h</a>&quot;</code><br />
+</div>
+<p><a href="NvsMediaFileConvertor_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">protocol &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocolNvsMediaFileConvertorDelegate-p.html">&lt;NvsMediaFileConvertorDelegate&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNvsMediaFileConvertor.html">NvsMediaFileConvertor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">转码配置</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="CONVERTOR_CONFIGURATIONS"></a> </p>
+</div></td></tr>
+<tr class="memitem:a4be99863292307139a5f54d50562302d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a4be99863292307139a5f54d50562302d">NVS_MEDIA_CONVERTOR_CUSTOM_HEIGHT</a>&#160;&#160;&#160;@&quot;custom-video-height&quot;</td></tr>
+<tr class="memdesc:a4be99863292307139a5f54d50562302d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置自定义视频输出高度，宽度会等比例自动缩放。类型：int  <a href="NvsMediaFileConvertor_8h.html#a4be99863292307139a5f54d50562302d">更多...</a><br /></td></tr>
+<tr class="separator:a4be99863292307139a5f54d50562302d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be3bfb4846329b16bb5c43ddcd398fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a4be3bfb4846329b16bb5c43ddcd398fc">NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_SAMPLE_RATE</a>&#160;&#160;&#160;@&quot;custom-audio-sample-rate&quot;</td></tr>
+<tr class="memdesc:a4be3bfb4846329b16bb5c43ddcd398fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置自定义音频采样率，类型：int  <a href="NvsMediaFileConvertor_8h.html#a4be3bfb4846329b16bb5c43ddcd398fc">更多...</a><br /></td></tr>
+<tr class="separator:a4be3bfb4846329b16bb5c43ddcd398fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2785d9d9570cbce64a4fb79cd270a4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#aa2785d9d9570cbce64a4fb79cd270a4f">NVS_MEDIA_CONVERTOR_NO_VIDEO</a>&#160;&#160;&#160;@&quot;convertor-no-video&quot;</td></tr>
+<tr class="memdesc:aa2785d9d9570cbce64a4fb79cd270a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">只进行音频转码，类型：bool  <a href="NvsMediaFileConvertor_8h.html#aa2785d9d9570cbce64a4fb79cd270a4f">更多...</a><br /></td></tr>
+<tr class="separator:aa2785d9d9570cbce64a4fb79cd270a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f90dac92b107f5b5ea7ffa5f001ada"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#ac1f90dac92b107f5b5ea7ffa5f001ada">NVS_MEDIA_CONVERTOR_NO_AUDIO</a>&#160;&#160;&#160;@&quot;convertor-no-audio&quot;</td></tr>
+<tr class="memdesc:ac1f90dac92b107f5b5ea7ffa5f001ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">只进行视频转码，类型：bool  <a href="NvsMediaFileConvertor_8h.html#ac1f90dac92b107f5b5ea7ffa5f001ada">更多...</a><br /></td></tr>
+<tr class="separator:ac1f90dac92b107f5b5ea7ffa5f001ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67d48f92ede22e1858262819c074d47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#ac67d48f92ede22e1858262819c074d47">NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_CHANNEL</a>&#160;&#160;&#160;@&quot;custom-audio-channel&quot;</td></tr>
+<tr class="memdesc:ac67d48f92ede22e1858262819c074d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置自定义音频通道数，类型：int  <a href="NvsMediaFileConvertor_8h.html#ac67d48f92ede22e1858262819c074d47">更多...</a><br /></td></tr>
+<tr class="separator:ac67d48f92ede22e1858262819c074d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e085dc23ca82ec234eca24dafad7382"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a1e085dc23ca82ec234eca24dafad7382">NVS_MEDIA_CONVERTOR_REVERSE_AUDIO_STREAM</a>&#160;&#160;&#160;@&quot;convertor-reverse-audio&quot;</td></tr>
+<tr class="memdesc:a1e085dc23ca82ec234eca24dafad7382"><td class="mdescLeft">&#160;</td><td class="mdescRight">倒放音频流，类型：bool  <a href="NvsMediaFileConvertor_8h.html#a1e085dc23ca82ec234eca24dafad7382">更多...</a><br /></td></tr>
+<tr class="separator:a1e085dc23ca82ec234eca24dafad7382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a48127bd30d1666d892c8b2db2e9c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a46a48127bd30d1666d892c8b2db2e9c0">NVS_MEDIA_CONVERTOR_MAX_CACHE_SIZE_IN_MEMORY</a>&#160;&#160;&#160;@&quot;max_cache_size_in_memory&quot;</td></tr>
+<tr class="memdesc:a46a48127bd30d1666d892c8b2db2e9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">在内存中缓存的视频帧数量，类型：int  <a href="NvsMediaFileConvertor_8h.html#a46a48127bd30d1666d892c8b2db2e9c0">更多...</a><br /></td></tr>
+<tr class="separator:a46a48127bd30d1666d892c8b2db2e9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731ba2f856674d988bedd617d4437a5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a731ba2f856674d988bedd617d4437a5c">NVS_MEDIA_CONVERTOR_CUSTOM_FRAME_RATE</a>&#160;&#160;&#160;@&quot;custom-video-frame-rate&quot;</td></tr>
+<tr class="memdesc:a731ba2f856674d988bedd617d4437a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置自定义视频帧率，类型：int  <a href="NvsMediaFileConvertor_8h.html#a731ba2f856674d988bedd617d4437a5c">更多...</a><br /></td></tr>
+<tr class="separator:a731ba2f856674d988bedd617d4437a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e50adb5b67f2e61af5fe78d9ee0d27b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a5e50adb5b67f2e61af5fe78d9ee0d27b">NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_PCM_FILE</a>&#160;&#160;&#160;@&quot;custom-audio-pcm-file&quot;</td></tr>
+<tr class="memdesc:a5e50adb5b67f2e61af5fe78d9ee0d27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置输出音频PCM文件，类型：bool  <a href="NvsMediaFileConvertor_8h.html#a5e50adb5b67f2e61af5fe78d9ee0d27b">更多...</a><br /></td></tr>
+<tr class="separator:a5e50adb5b67f2e61af5fe78d9ee0d27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cecb005268a86407f85a88582b3dddd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a2cecb005268a86407f85a88582b3dddd">NVS_MEDIA_CONVERTOR_COMPILE_GOP_SIZE</a>&#160;&#160;&#160;@&quot;gopsize&quot;</td></tr>
+<tr class="memdesc:a2cecb005268a86407f85a88582b3dddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成视频GOP SIZE。类型：整型  <a href="NvsMediaFileConvertor_8h.html#a2cecb005268a86407f85a88582b3dddd">更多...</a><br /></td></tr>
+<tr class="separator:a2cecb005268a86407f85a88582b3dddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6730911c42d40b85483d05410c0e8e25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a6730911c42d40b85483d05410c0e8e25">NVS_MEDIA_CONVERTOR_COMPILE_BITRATE</a>&#160;&#160;&#160;@&quot;bitrate&quot;</td></tr>
+<tr class="memdesc:a6730911c42d40b85483d05410c0e8e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成视频码率，单位bps。类型：整型  <a href="NvsMediaFileConvertor_8h.html#a6730911c42d40b85483d05410c0e8e25">更多...</a><br /></td></tr>
+<tr class="separator:a6730911c42d40b85483d05410c0e8e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a576ae6ca3fa7f16aefeec602beeef0f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a576ae6ca3fa7f16aefeec602beeef0f2">NVS_MEDIA_CONVERTOR_COMPILE_AUDIO_BITRATE</a>&#160;&#160;&#160;@&quot;audio bitrate&quot;</td></tr>
+<tr class="memdesc:a576ae6ca3fa7f16aefeec602beeef0f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成音频码率，单位bps。类型：整型  <a href="NvsMediaFileConvertor_8h.html#a576ae6ca3fa7f16aefeec602beeef0f2">更多...</a><br /></td></tr>
+<tr class="separator:a576ae6ca3fa7f16aefeec602beeef0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed2e61a380717f011af23e42e0c2592"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a0ed2e61a380717f011af23e42e0c2592">NVS_EDIA_CONVERTOR_VIDEO_ENCODEC_NAME</a>&#160;&#160;&#160;@&quot;video encoder name&quot;</td></tr>
+<tr class="memdesc:a0ed2e61a380717f011af23e42e0c2592"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定视频压缩格式，类型：string，目前支持hevc(h.265)，默认h.264  <a href="NvsMediaFileConvertor_8h.html#a0ed2e61a380717f011af23e42e0c2592">更多...</a><br /></td></tr>
+<tr class="separator:a0ed2e61a380717f011af23e42e0c2592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238d5607848e5375a3fe913ef0f4fe73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a238d5607848e5375a3fe913ef0f4fe73">NVS_EDIA_CONVERTOR_AUDIO_ENCODEC_NAME</a>&#160;&#160;&#160;@&quot;audio encoder name&quot;</td></tr>
+<tr class="separator:a238d5607848e5375a3fe913ef0f4fe73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a1c22b36904d85555d4c97ec7c0cad12c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12c">NvsMediaConvertorErrorType</a> { <br />
+&#160;&#160;<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12ca3e7905614da3dc97acc920466c359887">keNvsMediaConvertorErrorType_NoError</a> = 0, 
+<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12ca2625cae28647e74be75bbe979c69c64d">keNvsMediaConvertorErrorType_Cancled</a>, 
+<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12cab9fe327e044e97095a3098feaf35d238">keNvsMediaConvertorErrorType_HardwareVideoEncoderSetupError</a>, 
+<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12cae8f83a9484bc8d66f6f134c2180f263c">keNvsMediaConvertorErrorType_HardwareVideoEncodingError</a>, 
+<br />
+&#160;&#160;<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12ca4b189a186a0b35b9c2108e3c194af8d1">keNvsMediaConvertorErrorType_HardwareVideoDecoderSetupError</a>, 
+<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12ca5843c1dbcf3bffc76a3eb8192e1a6217">keNvsMediaConvertorErrorType_HardwareVideoDecodingError</a>, 
+<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12caf2642a551016f2e108c70c2bbc8c03d2">keNvsMediaConvertorErrorType_ProcessVideoError</a>, 
+<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12caa1f7a0e9bc8bb829b0ae7c39bb3cdcde">keNvsMediaConvertorErrorType_ProcessAudioError</a>, 
+<br />
+&#160;&#160;<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12ca0838a7bde89de96f1609a0e6929454fe">keNvsMediaConvertorErrorType_ReadFileEof</a>, 
+<a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12ca97a4041e32ff02e0a2a257a30956b2de">keNvsMediaConvertorErrorType_UnkownError</a> = 65535
+<br />
+ }</td></tr>
+<tr class="memdesc:a1c22b36904d85555d4c97ec7c0cad12c"><td class="mdescLeft">&#160;</td><td class="mdescRight">转码错误  <a href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12c">更多...</a><br /></td></tr>
+<tr class="separator:a1c22b36904d85555d4c97ec7c0cad12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a238d5607848e5375a3fe913ef0f4fe73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238d5607848e5375a3fe913ef0f4fe73">&#9670;&nbsp;</a></span>NVS_EDIA_CONVERTOR_AUDIO_ENCODEC_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_EDIA_CONVERTOR_AUDIO_ENCODEC_NAME&#160;&#160;&#160;@&quot;audio encoder name&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定音频压缩格式，类型：string，目前支持“mp3”，"amr-wb"，默认"aac" </p>
+
+</div>
+</div>
+<a id="a0ed2e61a380717f011af23e42e0c2592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed2e61a380717f011af23e42e0c2592">&#9670;&nbsp;</a></span>NVS_EDIA_CONVERTOR_VIDEO_ENCODEC_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_EDIA_CONVERTOR_VIDEO_ENCODEC_NAME&#160;&#160;&#160;@&quot;video encoder name&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定视频压缩格式，类型：string，目前支持hevc(h.265)，默认h.264 </p>
+
+</div>
+</div>
+<a id="a576ae6ca3fa7f16aefeec602beeef0f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576ae6ca3fa7f16aefeec602beeef0f2">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_COMPILE_AUDIO_BITRATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_COMPILE_AUDIO_BITRATE&#160;&#160;&#160;@&quot;audio bitrate&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成音频码率，单位bps。类型：整型 </p>
+
+</div>
+</div>
+<a id="a6730911c42d40b85483d05410c0e8e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6730911c42d40b85483d05410c0e8e25">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_COMPILE_BITRATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_COMPILE_BITRATE&#160;&#160;&#160;@&quot;bitrate&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成视频码率，单位bps。类型：整型 </p>
+
+</div>
+</div>
+<a id="a2cecb005268a86407f85a88582b3dddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cecb005268a86407f85a88582b3dddd">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_COMPILE_GOP_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_COMPILE_GOP_SIZE&#160;&#160;&#160;@&quot;gopsize&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成视频GOP SIZE。类型：整型 </p>
+
+</div>
+</div>
+<a id="ac67d48f92ede22e1858262819c074d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67d48f92ede22e1858262819c074d47">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_CHANNEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_CHANNEL&#160;&#160;&#160;@&quot;custom-audio-channel&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置自定义音频通道数，类型：int </p>
+
+</div>
+</div>
+<a id="a5e50adb5b67f2e61af5fe78d9ee0d27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e50adb5b67f2e61af5fe78d9ee0d27b">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_PCM_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_PCM_FILE&#160;&#160;&#160;@&quot;custom-audio-pcm-file&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置输出音频PCM文件，类型：bool </p>
+
+</div>
+</div>
+<a id="a4be3bfb4846329b16bb5c43ddcd398fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be3bfb4846329b16bb5c43ddcd398fc">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_SAMPLE_RATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_CUSTOM_AUDIO_SAMPLE_RATE&#160;&#160;&#160;@&quot;custom-audio-sample-rate&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置自定义音频采样率，类型：int </p>
+
+</div>
+</div>
+<a id="a731ba2f856674d988bedd617d4437a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731ba2f856674d988bedd617d4437a5c">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_CUSTOM_FRAME_RATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_CUSTOM_FRAME_RATE&#160;&#160;&#160;@&quot;custom-video-frame-rate&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置自定义视频帧率，类型：int </p>
+
+</div>
+</div>
+<a id="a4be99863292307139a5f54d50562302d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be99863292307139a5f54d50562302d">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_CUSTOM_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_CUSTOM_HEIGHT&#160;&#160;&#160;@&quot;custom-video-height&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置自定义视频输出高度，宽度会等比例自动缩放。类型：int </p>
+
+</div>
+</div>
+<a id="a46a48127bd30d1666d892c8b2db2e9c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a48127bd30d1666d892c8b2db2e9c0">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_MAX_CACHE_SIZE_IN_MEMORY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_MAX_CACHE_SIZE_IN_MEMORY&#160;&#160;&#160;@&quot;max_cache_size_in_memory&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在内存中缓存的视频帧数量，类型：int </p>
+
+</div>
+</div>
+<a id="ac1f90dac92b107f5b5ea7ffa5f001ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f90dac92b107f5b5ea7ffa5f001ada">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_NO_AUDIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_NO_AUDIO&#160;&#160;&#160;@&quot;convertor-no-audio&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>只进行视频转码，类型：bool </p>
+
+</div>
+</div>
+<a id="aa2785d9d9570cbce64a4fb79cd270a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2785d9d9570cbce64a4fb79cd270a4f">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_NO_VIDEO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_NO_VIDEO&#160;&#160;&#160;@&quot;convertor-no-video&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>只进行音频转码，类型：bool </p>
+
+</div>
+</div>
+<a id="a1e085dc23ca82ec234eca24dafad7382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e085dc23ca82ec234eca24dafad7382">&#9670;&nbsp;</a></span>NVS_MEDIA_CONVERTOR_REVERSE_AUDIO_STREAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVS_MEDIA_CONVERTOR_REVERSE_AUDIO_STREAM&#160;&#160;&#160;@&quot;convertor-reverse-audio&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>倒放音频流，类型：bool </p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a1c22b36904d85555d4c97ec7c0cad12c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c22b36904d85555d4c97ec7c0cad12c">&#9670;&nbsp;</a></span>NvsMediaConvertorErrorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsMediaFileConvertor_8h.html#a1c22b36904d85555d4c97ec7c0cad12c">NvsMediaConvertorErrorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>转码错误 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12ca3e7905614da3dc97acc920466c359887"></a>keNvsMediaConvertorErrorType_NoError&#160;</td><td class="fielddoc"><p>没有错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12ca2625cae28647e74be75bbe979c69c64d"></a>keNvsMediaConvertorErrorType_Cancled&#160;</td><td class="fielddoc"><p>当前任务已经取消 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12cab9fe327e044e97095a3098feaf35d238"></a>keNvsMediaConvertorErrorType_HardwareVideoEncoderSetupError&#160;</td><td class="fielddoc"><p>视频编码器设置错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12cae8f83a9484bc8d66f6f134c2180f263c"></a>keNvsMediaConvertorErrorType_HardwareVideoEncodingError&#160;</td><td class="fielddoc"><p>视频编码器编码过程中出现错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12ca4b189a186a0b35b9c2108e3c194af8d1"></a>keNvsMediaConvertorErrorType_HardwareVideoDecoderSetupError&#160;</td><td class="fielddoc"><p>视频解码器设置过程中出现错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12ca5843c1dbcf3bffc76a3eb8192e1a6217"></a>keNvsMediaConvertorErrorType_HardwareVideoDecodingError&#160;</td><td class="fielddoc"><p>视频解码器解码过程中出现错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12caf2642a551016f2e108c70c2bbc8c03d2"></a>keNvsMediaConvertorErrorType_ProcessVideoError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12caa1f7a0e9bc8bb829b0ae7c39bb3cdcde"></a>keNvsMediaConvertorErrorType_ProcessAudioError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12ca0838a7bde89de96f1609a0e6929454fe"></a>keNvsMediaConvertorErrorType_ReadFileEof&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1c22b36904d85555d4c97ec7c0cad12ca97a4041e32ff02e0a2a257a30956b2de"></a>keNvsMediaConvertorErrorType_UnkownError&#160;</td><td class="fielddoc"><p>出现没有定义的错误 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

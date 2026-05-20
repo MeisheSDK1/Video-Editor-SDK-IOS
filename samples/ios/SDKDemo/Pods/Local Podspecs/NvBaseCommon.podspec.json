@@ -1,0 +1,38 @@
+{
+  "name": "NvBaseCommon",
+  "version": "0.1.0",
+  "summary": "A short description of NvBaseCommon.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chuyang009@163.com/NvBaseCommon",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chuyang009@163.com": "liu_dongxu@cdv.com"
+  },
+  "source": {
+    "git": "https://github.com/chuyang009@163.com/NvBaseCommon.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "NvBaseCommon/Classes/**/*",
+  "resources": "NvBaseCommon/Assets/*",
+  "public_header_files": "Pod/Classes/**/*.h",
+  "dependencies": {
+    "AFNetworking": [
+
+    ],
+    "MBProgressHUD": [
+      "~> 1.1.0"
+    ],
+    "Masonry": [
+      "~> 1.1.0"
+    ],
+    "YYWebImage": [
+      "~> 1.0.5"
+    ]
+  }
+}

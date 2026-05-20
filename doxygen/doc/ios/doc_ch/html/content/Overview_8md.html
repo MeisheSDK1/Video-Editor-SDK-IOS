@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 基础结构与概念</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">基础结构与概念 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h3>模块结构</h3>
+<p>美摄SDK核心模块包括流媒体上下文、时间线、字幕、动画贴纸、轨道、音/视频片段等。</p>
+<p>流媒体上下文是SDK中最基础的模块，它负责生成、保存并维护SDK引擎运行时的上下文环境。时间线由流媒体上下文生成，包含字幕，动画贴纸以及多个音视频轨道，各模块协同工作以生成最终的视频效果。其中每条音/视频轨道上可以添加若干个音/视频片段，片段上可以添加各种特效，片段之间可以设置不同的转场效果。</p>
+<p><img src="structure.png" alt="" class="inline" title="美摄SDK总体结构"/>   </p>
+<h3>数据流</h3>
+<p>美摄SDK支持两种媒体输入方式，标准媒体文件与摄像头采集。</p>
+<p>当输入为一个或多个媒体文件时，SDK会首先从文件中提取出对应的音频与视频片段，这些片段可以理解为对原音频流与视频流的裁剪与封装。以视频为例，在编辑过程中，用户可以对这些视频片段进行任意拼接，放到对应轨道上，轨道再放到时间线上。每一个轨道可以类比成一个图层，SDK引擎对轨道渲染的顺序是自下到上的，各层轨道之间可以通过设置透明度等参数来实现一些特殊的效果。SDK引擎支持对时间线、轨道与音/视频片段添加特效，包括音/视频特效、转场、字幕、动画贴纸以及主题等，其中主题可以当成是上述特效的一个闭包。SDK默认提供若干内置的编辑特效，更多的特效资源包可以在<a href="http://www.meishesdk.com">美摄官网</a>下载。编辑后的视频可以通过SDK提供的预览窗口进行预览，或者直接打包生成媒体文件。</p>
+<p>当使用摄像头设备作为输入时，SDK引擎只能对其添加采集特效与包特效，不能使用转场、字幕、动画贴纸等其他特效。生成的视频同样可以通过SDK提供的预览窗口进行预览，或者直接打包生成媒体文件。</p>
+<p><img src="dfd.png" alt="" class="inline" title="美摄SDK数据流图"/>   </p>
+<p><br  />
+ <br  />
+ <br  />
+ <img src="dfd-child.png" alt="" class="inline" title="美摄SDK数据流图"/>    </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

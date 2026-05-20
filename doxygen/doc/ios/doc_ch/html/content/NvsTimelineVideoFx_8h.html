@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsTimelineVideoFx.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a>  </div>
+  <div class="headertitle">
+<div class="title">NvsTimelineVideoFx.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#import &quot;<a class="el" href="NvsFx_8h_source.html">NvsFx.h</a>&quot;</code><br />
+<code>#include &lt;CoreGraphics/CGGeometry.h&gt;</code><br />
+</div>
+<p><a href="NvsTimelineVideoFx_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间线视频特效 时间线视频特效是作用于时间线实例上的视频特效。 时间线视频特效分为內建特效、包裹特效和自定义特效三种类型。 內建特效是集成在sdk内部的，不需要授权即可直接使用。包裹特效是将特效资源整合成了特效包，每个特效包都有其一一对应的授权文件，并且要先安装再使用，具体情况请参见<a class="el" href="EngineChange_8md.html">素材包安装</a> 自定义特效是用户通过编写代码实现的特效 时间线视频特效包含特效入点和出点，通过入点和出点我们可以指定特效作用于时间线的位置和长度，入点要小于出点，单位为微秒。 时间线视频特效允许叠加，渲染顺序通过预设Z值控制。  <a href="interfaceNvsTimelineVideoFx.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">时间线视频特效类型</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="TIMELINE_VIDEOFX_TYPE"></a> </p>
+</div></td></tr>
+<tr class="memitem:aee1b3061954e2b3d07e9520df6ce45ac"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsTimelineVideoFx_8h.html#aee1b3061954e2b3d07e9520df6ce45ac">NvsTimelineVideoFxType</a> { <a class="el" href="NvsTimelineVideoFx_8h.html#aee1b3061954e2b3d07e9520df6ce45aca45de1182bafbc009bd06ca21f7ccc138">NvsTimelineVideoFxType_Builtin</a> = 0, 
+<a class="el" href="NvsTimelineVideoFx_8h.html#aee1b3061954e2b3d07e9520df6ce45acab3cee900d784fe65edf8e99d73ef9195">NvsTimelineVideoFxType_Package</a>, 
+<a class="el" href="NvsTimelineVideoFx_8h.html#aee1b3061954e2b3d07e9520df6ce45aca28b746cca66f19468d61a2edd17c138c">NvsTimelineVideoFxType_Custom</a>
+ }</td></tr>
+<tr class="separator:aee1b3061954e2b3d07e9520df6ce45ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="aee1b3061954e2b3d07e9520df6ce45ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1b3061954e2b3d07e9520df6ce45ac">&#9670;&nbsp;</a></span>NvsTimelineVideoFxType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsTimelineVideoFx_8h.html#aee1b3061954e2b3d07e9520df6ce45ac">NvsTimelineVideoFxType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aee1b3061954e2b3d07e9520df6ce45aca45de1182bafbc009bd06ca21f7ccc138"></a>NvsTimelineVideoFxType_Builtin&#160;</td><td class="fielddoc"><p>内建视频特效类型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aee1b3061954e2b3d07e9520df6ce45acab3cee900d784fe65edf8e99d73ef9195"></a>NvsTimelineVideoFxType_Package&#160;</td><td class="fielddoc"><p>包裹视频特效类型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aee1b3061954e2b3d07e9520df6ce45aca28b746cca66f19468d61a2edd17c138c"></a>NvsTimelineVideoFxType_Custom&#160;</td><td class="fielddoc"><p>自定义视频特效类型 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

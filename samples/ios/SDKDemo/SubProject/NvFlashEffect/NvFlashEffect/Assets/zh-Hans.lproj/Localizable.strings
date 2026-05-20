@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  SDKDemo
+
+  Created by ms20180425 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+//displayName
+"fxStrength" = "强度";
+"Style" = "样式";
+"NvFlashFx" = "闪光特效";
+"Tips" = "提示";
+"Know" = "知道了";
+"camera.microphone.permissions" = "需要打开摄像头和麦克风权限 请在手机设置中进行允许";
+"Saved to album" = "已保存至相册";
+"star3" = "星3";
+"star4" = "星4";
+"star5" = "星5";

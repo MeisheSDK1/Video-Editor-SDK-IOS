@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 模板使用技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">模板使用技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>美摄模板使用说明</h1>
+<p>美摄模板资源包的使用分三个步骤：安装、获取模板信息、创建timeline。本文档适用于IOS，Android参考相关文档。</p>
+<h2>1、安装</h2>
+<p>和其它资源包的使用一样，调用assetPackageManager上的install接口安装，只是模板的安装必须是异步安装，有安装完成回调。</p>
+<p><img src="aa19f97eaf4a8fd1e019abf95e3089d2.png" alt="" class="inline"/>   </p>
+<h2>2、设置所需的模板画幅比例（非必要步骤）</h2>
+<p>模板是可以支持多画幅的，如果想使用非默认的画幅，按照如下方式进行。</p>
+<p>可以调用assetPackageManager上的changeTemplateAspectRatio接口设置所需的模板画幅。</p>
+<p><img src="b33e8397df7b87633c716f0b28442838.png" alt="" class="inline"/>   </p>
+<p>模板所支持的画幅比例可以通过assetPackageManager的如下接口查询：</p>
+<p>getAssetPackageSupportedAspectRatio</p>
+<p><img src="885eff96118c61ca39e529d7716ee1f2.png" alt="" class="inline"/>   </p>
+<h2>3、获取模板信息</h2>
+<p>调用assetPackageManager上的相关接口获取模板信息。目前提供获取模板的素材列表、模板的可替换字幕列表。按产品需求，可以增加相应的接口来获取模板信息。</p>
+<h3>3.1、获取模板的素材列表：</h3>
+<p>调用getTemplateFootages接口，传入安装后的模板资源包的UUID，返回模板的素材列表。</p>
+<p>- (NSArray &lt;<a class="el" href="interfaceNvsTemplateFootageDesc.html" title="模板资源包里footage信息">NvsTemplateFootageDesc</a> *&gt;*)getTemplateFootages:(NSString *)uuidString;</p>
+<p>素材信息类：</p>
+<p><img src="9015e4fb4c88010d91c4dd1f0869e2d6.png" alt="" class="inline"/>   </p>
+<h3>3.2、获取模板的可替换字幕列表：</h3>
+<p>调用getTemplateCaptions接口，传入安装后的模板资源包的UUID，返回可替换的字幕列表。</p>
+<p>-(NSArray &lt;<a class="el" href="interfaceNvsTemplateCaptionDesc.html" title="模板资源包里footage对应的字幕信息。如果trackIndex和clipIndex都是-1，表示该字幕是timeline字幕。如果仅clipIndex为-1，表示该字幕是轨道字幕。如果两者都不为-1...">NvsTemplateCaptionDesc</a> *&gt;*)getTemplateCaptions:</p>
+<p>(NSString *)uuidString;</p>
+<p>字幕信息类：</p>
+<p>NVS_EXPORT @interface <a class="el" href="interfaceNvsTemplateCaptionDesc.html" title="模板资源包里footage对应的字幕信息。如果trackIndex和clipIndex都是-1，表示该字幕是timeline字幕。如果仅clipIndex为-1，表示该字幕是轨道字幕。如果两者都不为-1...">NvsTemplateCaptionDesc</a> : <a class="el" href="classNSObject-p.html">NSObject</a></p>
+<p>@property (nonatomic, strong) NSString *replaceId;</p>
+<p>@property (nonatomic, strong) NSString *text;</p>
+<p>@end</p>
+<p>如果需要替换文字内容，那么遍历timeline上的字幕对象，找到字幕对象的id和这个replaceId匹配的字幕对象，然后调用字幕类上的setText方法设置文字内容。</p>
+<p><img src="749cd5dd49fcb57250b1f88c8d20d79e.png" alt="" class="inline"/>   </p>
+<h2>4、创建timeline</h2>
+<p>调用streamingContext上的createTimeline方法，传入安装后的模板资源包的UUID，以及需要替换的footage的列表，返回模板对应的timeline。</p>
+<p><img src="f1712e46cb53d01a869f7a09d76ca2f0.png" alt="" class="inline"/>   </p>
+<p><img src="591a72c44d5f19a07124088b029b7aa3.png" alt="" class="inline"/>   </p>
+<p>至此，应用层就可以播放这个timeline，或者进行二次编辑了。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

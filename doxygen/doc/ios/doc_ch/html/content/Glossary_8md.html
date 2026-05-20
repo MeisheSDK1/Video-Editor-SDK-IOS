@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 名词解释</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">名词解释 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="StreamingContext"></a> </p><h3>流媒体上下文(Streaming Context)</h3>
+<p>包含时间线、预览窗口、采集、资源包管理等相关信息集合的对象，Context被销毁之后，SDk视频制作框架也随之不复存在。</p>
+<p><a class="anchor" id="Seek"></a> </p><h3>定位(Seek)</h3>
+<p>渲染出指定位置的画面，并更新时间线的时间戳。</p>
+<p><a class="anchor" id="Compile"></a></p><h3>生成(Compile)</h3>
+<p>以指定码率、帧速率和压缩格式输出文件。</p>
+<p><a class="anchor" id="Capture"></a></p><h3>采集(Capture)</h3>
+<p>捕获摄像头设备画面。</p>
+<p><a class="anchor" id="Record"></a></p><h3>录制(Record)</h3>
+<p>输出采集画面到指定格式文件中。</p>
+<p><a class="anchor" id="Timeline"></a> </p><h3>时间线(Timeline)</h3>
+<p>编辑场景的时间轴实体，由轨道组成，可以有多个视频轨道和音频轨道，由视频轨道决定长度。</p>
+<p><a class="anchor" id="Track"></a> </p><h3>轨道(Track)</h3>
+<p>容纳片段的实体，分为视频轨道(Video Track)和音频轨道(Audio Track)，可随片段的增加不断延展。</p>
+<p><a class="anchor" id="Clip"></a></p><h3>片段(Clip)</h3>
+<p>容纳音视频内容的实体，分为视频片段(Video Clip)和音频片段(Audio Clip)，视频片段可以是图片或者视频。</p>
+<p><a class="anchor" id="CaptureVideoFx"></a> </p><h3>采集视频特效(Capture Video Fx)</h3>
+<p>一种应用在采集中的视频特效。</p>
+<p><a class="anchor" id="VideoFx"></a></p><h3>视频特效(Video Fx)</h3>
+<p>一种视频图像的特殊效果，可能改变视频图像的整体或局部的颜色、亮度、透明度等信息，使视频显示特殊的效果。</p>
+<p><a class="anchor" id="AudioFx"></a></p><h3>音频特效(Audio Fx)</h3>
+<p>一种音频的特殊效果，可能改变音频的声调、速率等信息。</p>
+<p><a class="anchor" id="VideoTransition"></a></p><h3>视频转场(Video Transition)</h3>
+<p>片段间切换的特效，从一个视频到另一个视频的播放衔接过渡效果。添加转场后，片段在转场时间内可能有重叠效果。</p>
+<p><a class="anchor" id="Theme"></a></p><h3>主题(Theme)</h3>
+<p>一系列特效应用的集合，包括片头、片尾、视频特效、视频转场、音乐、字幕样式等。</p>
+<p><a class="anchor" id="Caption"></a></p><h3>字幕(Caption)</h3>
+<p>视频上叠加的自定义文字，可以设置字号和颜色等样式。</p>
+<p><a class="anchor" id="CaptionStyle"></a></p><h3>字幕样式(Caption Style)</h3>
+<p>预定义字幕属性集合，包括字号和颜色等。</p>
+<p><a class="anchor" id="AnimatedSticker"></a></p><h3>动画贴纸(Animated Sticker)</h3>
+<p>带有动画效果的贴纸，叠加在视频上产生一些特殊效果。</p>
+<p><a class="anchor" id="LiveWindow"></a></p><h3>预览窗口(Live Window)</h3>
+<p>实时显示时间线或者采集图像的窗口。</p>
+<p><a class="anchor" id="VideoResolution"></a></p><h3>视频解析度(Video Resolution)</h3>
+<p>视频的基本信息，包括图像宽高和<a class="el" href="Glossary_8md.html#PixelAspectRatio">像素横纵比</a>等。</p>
+<p><a class="anchor" id="AudioResolution"></a></p><h3>音频解析度(Audio Resolution)</h3>
+<p>音频的基本信息，包括采样率和声道数等。</p>
+<p><a class="anchor" id="PanAndScan"></a></p><h3>摇摄和扫描(Pan and Scan)</h3>
+<p>一种调整图像适配的方法，可以横向剪切和纵向平移。</p>
+<p><a class="anchor" id="AssetPackage"></a></p><h3>资源包(Asset Package)</h3>
+<p>一种需要安装的特效资源，安装后可以作为特效使用，包括视频特效、视频转场、主题、字幕样式、动画贴纸。</p>
+<p><a class="anchor" id="AssetPackageID"></a></p><h3>资源包ID(Asset Package ID)</h3>
+<p>资源包的唯一标识，安装资源包成功后获得，添加特效时使用。</p>
+<p><a class="anchor" id="TrimIn"></a></p><h3>裁剪入点(Trim In)</h3>
+<p>裁剪片段的起始点。对于裁剪入点，裁剪出点，入点，出点的详细解释，请参见<a class="el" href="TrimInOut_8md.html">裁剪入点与出点(trimIn and trimOut)专题</a></p>
+<p><a class="anchor" id="TrimOut"></a></p><h3>裁剪出点(Trim Out)</h3>
+<p>裁剪片段的终止点。</p>
+<p><a class="anchor" id="InPoint"></a></p><h3>入点(In Point)</h3>
+<p>片段在时间线的起始点。</p>
+<p><a class="anchor" id="OutPoint"></a></p><h3>出点(Out Point)</h3>
+<p>片段在时间线上的终止点。</p>
+<p><a class="anchor" id="Speed"></a> </p><h3>播放速度(Speed)</h3>
+<p>片段播放的速度，速度没有改变的情况下，(出点-入点)=(裁剪出点-裁剪入点)，如果播放速度为2倍速，(出点-入点)*2=(裁剪出点-裁剪入点)。</p>
+<p><a class="anchor" id="Bitrate"></a> </p><h3>码率(Bitrate)</h3>
+<p>每秒传送的比特数，码率越高，视频质量越好。</p>
+<p><a class="anchor" id="SampleRate"></a> </p><h3>采样率(Sample Rate)</h3>
+<p>每秒从连续信号中采集的离散信号个数。</p>
+<p><a class="anchor" id="FrameRate"></a> </p><h3>帧速率(Frame Rate)</h3>
+<p>每秒刷新图像的帧数，帧速率越高，视频的连续性越好。</p>
+<p><a class="anchor" id="AspectRatio"></a> </p><h3>横纵比(Aspect Ratio)</h3>
+<p>图像的横向尺寸与纵向尺寸的比例。</p>
+<p><a class="anchor" id="PixelAspectRatio"></a> </p><h3>像素横纵比(Pixel Aspect Ratio)</h3>
+<p>一个像素点的宽与高的比例。SDK中仅支持1:1。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

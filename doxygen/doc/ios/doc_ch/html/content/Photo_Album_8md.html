@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 美摄影集技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">美摄影集技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>美摄影集使用说明</h1>
+<h2>1、功能描述</h2>
+<p>根据影集模板要求，用户选择一定数量的图片，把影集素材的文件地址、授权文件地址、影集模板目录和图片列表等参数传入美摄提供的接口中，得到一个有影集效果的timeline，然后使用livewindow就可以预览效果。</p>
+<h2>2、模板主要文件介绍</h2>
+<p>info.json：模板描述信息，可以获取模板名称和需要替换的图片的最小数量和最大数量；</p>
+<p>cover.jpg：影集封面图；</p>
+<p>cover.mp4：影集封面视频；</p>
+<p>fx9v16.msphotoalbum：影集模板文件；</p>
+<p>368a621a-0d67-2a8a-d2d4-33fe1848b77c.lic：影集模板授权文件；</p>
+<h2>3、接入方法（以android为例）</h2>
+<ol type="1">
+<li>把美摄提供的NvPhotoAlbumHelperLib.jar放入android工程的app/libs目录下；</li>
+</ol>
+<ol type="1">
+<li>用户需要读取info.json文件获取需要替换的图片的最小数量和最大数量，然后根据数量去选择图片，选择完图片之后，根据需求调用如下的任何一个接口：</li>
+</ol>
+<h3>接口一：</h3>
+<p><b>说明：图片Crop方式9:16显示；如果图片数量小于最大数量，会循环利用这些图片，例如最多可以选5张，用户选了3张，显示结果是1,2,3,1,2。</b></p>
+<p>createPhotoAlbumTimeline（Context context, String filePath, String licFile, String resourceDir, ArrayList&lt;String&gt; replaceFileList）接口：</p>
+<p>参数说明：</p>
+<p>Context：activity的context就可以；</p>
+<p>filePath：fx9v16.msphotoalbum文件地址；</p>
+<p>licFile：后缀是lic的文件地址；</p>
+<p>resourceDir：影集模板解压缩之后的目录；</p>
+<p>replaceFileList： 选择的需要替换的图片列表；</p>
+<h3>接口二：</h3>
+<p><b>说明：图片Crop方式9:16显示；图片数量处理逻辑同接口一，这个接口只是增加了字幕list，用户可以在影集模板中显示一些字幕。</b></p>
+<p>createPhotoAlbumTimeline（Context context, String filePath, String licFile, String resourceDir, ArrayList&lt;String&gt; replaceFileList, ArrayList&lt;String&gt; captionList）接口：</p>
+<p>参数说明：</p>
+<p>Context：activity的context就可以；</p>
+<p>filePath：fx9v16.msphotoalbum文件地址；</p>
+<p>licFile：后缀是lic的文件地址；</p>
+<p>resourceDir：影集模板解压缩之后的目录；</p>
+<p>replaceFileList： 选择的需要替换的图片列表；</p>
+<p>captionList： 需要替换的文字列表；</p>
+<h3>接口三：</h3>
+<p><b>说明：图片Crop方式9:16显示；图片数量处理逻辑与前两个接口不同，如果图片数量超过最大数量，会循环使用模板，例如最多可以选3张，用户选了8张，显示结果是123，456，787，其中123、456和787都是同样的模板效果。</b></p>
+<p>createIgnoreMaxPhotoNumberLimitPhotoAlbumTimeline（Context context, String filePath, String licFile, String resourceDir, ArrayList&lt;String&gt; replaceFileList, ArrayList&lt;String&gt; captionList,</p>
+<p>boolean ignoreMaxPhotoNumberLimit）接口：</p>
+<p>参数说明：</p>
+<p>Context：activity的context就可以；</p>
+<p>filePath：fx9v16.msphotoalbum文件地址；</p>
+<p>licFile：后缀是lic的文件地址；</p>
+<p>resourceDir：影集模板解压缩之后的目录；</p>
+<p>replaceFileList： 选择的需要替换的图片列表；</p>
+<p>captionList： 需要替换的文字列表；</p>
+<p>ignoreMaxPhotoNumberLimit：是否忽略照片最大数量限制，如果是，才说本接口说明的方式处理，反之则用接口一中的图片数量处理逻辑；</p>
+<h3>接口四：</h3>
+<p>**说明：图片Fit方式9:16显示；**图片数量处理逻辑与接口一相同，图片需要全图显示，内部会根据用户输入的一个照片截取一张9:16全图显示的图片，所以需要外界传入一个图片缓存目录，交由用户去管理缓存目录。</p>
+<p>createPhotoAlbumLetterBoxTimeline（Context context, String filePath, String licFile, String resourceDir, ArrayList&lt;String&gt; replaceFileList, String cacheImagePath）接口：</p>
+<p>参数说明：</p>
+<p>Context：activity的context就可以；</p>
+<p>filePath：fx9v16.msphotoalbum文件地址；</p>
+<p>licFile：后缀是lic的文件地址；</p>
+<p>resourceDir：影集模板解压缩之后的目录；</p>
+<p>replaceFileList： 选择的需要替换的图片列表；</p>
+<p>cacheImagePath： 截取图片的缓存路径；</p>
+<p>3）接口返回一个NvsTimeline，用户拿到timeline之后连接livewindow即可预览影集效果； </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

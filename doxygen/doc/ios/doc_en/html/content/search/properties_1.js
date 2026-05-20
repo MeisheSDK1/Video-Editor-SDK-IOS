@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['b_5056',['b',['../interfaceNvsCaptionColorSpan.html#a8cc566e12df8d805cdc0b06e25acb940',1,'NvsCaptionColorSpan::b()'],['../interfaceNvsCaptionOutlineColorSpan.html#a5766c68248b1cd123c7e043b529328dc',1,'NvsCaptionOutlineColorSpan::b()']]],
+  ['backgroundcliparray_5057',['backgroundClipArray',['../interfaceNvsCaptureSceneInfo.html#aef058085fd26a5788ef81b9e4a308cc6',1,'NvsCaptureSceneInfo']]],
+  ['backwardcontrolpoint_5058',['backwardControlPoint',['../interfaceNvsControlPointPair.html#a1b5386799b37635fc9e804e5b4fdb0dd',1,'NvsControlPointPair']]],
+  ['backwardcontrolpointmode_5059',['backwardControlPointMode',['../interfaceNvsControlPointModePair.html#adc96c655105128ae864b4d1b301836b7',1,'NvsControlPointModePair']]],
+  ['blendingmode_5060',['blendingMode',['../interfaceNvsMakeupEffectLayer3D.html#a778c9212de2351d8947c667ea9c45a0a',1,'NvsMakeupEffectLayer3D']]],
+  ['bodyopacity_5061',['bodyOpacity',['../interfaceNvsCaptionBodyOpacitySpan.html#ac70e0c9e09d9da1e0134d69594686e9d',1,'NvsCaptionBodyOpacitySpan']]],
+  ['boneopinfo_5062',['boneOpInfo',['../interfaceNvsStoryboard3DBoneOpInfo.html#af7606de9de8fc0d8e4ac723b2a5b4ed0',1,'NvsStoryboard3DBoneOpInfo']]],
+  ['boolparam_5063',['boolParam',['../interfaceNvsExpressionBOOLParam.html#a2532101b3bbd8dc77d7afda10deffcf3',1,'NvsExpressionBOOLParam']]],
+  ['boundingbox_5064',['boundingBox',['../interfaceNvsFaceFeatureInfo.html#a4840827be3baabb53268304f636e8c7e',1,'NvsFaceFeatureInfo::boundingBox()'],['../interfaceNvsHandFeatureInfo.html#a9551786c8a8598f035026bc73669b352',1,'NvsHandFeatureInfo::boundingBox()']]],
+  ['builtinname_5065',['builtinName',['../interfaceNvsVideoEffect.html#a9dac051ec78702760d4b5506dd9192d9',1,'NvsVideoEffect::builtinName()'],['../interfaceNvsVideoEffectTransition.html#a0b6191bf90f50e61d4ae9c5ce51f5fbd',1,'NvsVideoEffectTransition::builtinName()']]],
+  ['bultinaudiofxname_5066',['bultinAudioFxName',['../interfaceNvsAudioFx.html#a151367ef5bc09411d23ad32d4b7c3900',1,'NvsAudioFx::bultinAudioFxName()'],['../interfaceNvsCaptureAudioFx.html#a797dc90f780c3f084eb882571625265c',1,'NvsCaptureAudioFx::bultinAudioFxName()']]],
+  ['bultincapturevideofxname_5067',['bultinCaptureVideoFxName',['../interfaceNvsCaptureVideoFx.html#ad9e0b8404592c6dad6bb0ac794eefc05',1,'NvsCaptureVideoFx']]],
+  ['bultintimelinevideofxname_5068',['bultinTimelineVideoFxName',['../interfaceNvsTimelineVideoFx.html#a935e055a01e6af1ecd68a43e62e2470b',1,'NvsTimelineVideoFx']]],
+  ['bultintrackvideofxname_5069',['bultinTrackVideoFxName',['../interfaceNvsTrackVideoFx.html#aa341543d0fcd3c47fe0c10e30451222e',1,'NvsTrackVideoFx']]],
+  ['bultinvideofxname_5070',['bultinVideoFxName',['../interfaceNvsVideoFx.html#aa5976da7ef6088b0e7d2016058b21b7e',1,'NvsVideoFx']]],
+  ['bultinvideotransitionname_5071',['bultinVideoTransitionName',['../interfaceNvsVideoTransition.html#adc734bf945b3fa9e3a3aff24a3443cd3',1,'NvsVideoTransition']]]
+];

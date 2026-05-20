@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsCaptureVideoFx.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsCaptureVideoFx.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsCaptureVideoFx_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2017. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Jan 18. 2017</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsFx_8h.html">NvsFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &lt;CoreGraphics/CGGeometry.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46af1d8567716110f9a133008553bfae587">   27</a></span>&#160;    <a class="code" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46af1d8567716110f9a133008553bfae587">NvsCaptureVideoFxType_Builtin</a> = 0,    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46a56be0dcfdb90de297453be29d1e97051">   28</a></span>&#160;    <a class="code" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46a56be0dcfdb90de297453be29d1e97051">NvsCaptureVideoFxType_Package</a>,        </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46adeeb41b81342829edab015683fbeaf02">NvsCaptureVideoFxType_Custom</a>          </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46adeeb41b81342829edab015683fbeaf02">   30</a></span>&#160;} <a class="code" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46">NvsCaptureVideoFxType</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="interfaceNvsCaptureVideoFx.html">   44</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsCaptureVideoFx.html">NvsCaptureVideoFx</a> : <a class="code" href="interfaceNvsFx.html">NvsFx</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="interfaceNvsCaptureVideoFx.html#a793a5bb58b8ac8bb6ab132f409852343">   46</a></span>&#160;<span class="keyword">@property</span> (readonly) <a class="code" href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46">NvsCaptureVideoFxType</a> <a class="code" href="interfaceNvsCaptureVideoFx.html#a793a5bb58b8ac8bb6ab132f409852343">captureVideoFxType</a>;  </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="interfaceNvsCaptureVideoFx.html#ad9e0b8404592c6dad6bb0ac794eefc05">   47</a></span>&#160;<span class="keyword">@property</span> (readonly) NSString *<a class="code" href="interfaceNvsCaptureVideoFx.html#ad9e0b8404592c6dad6bb0ac794eefc05">bultinCaptureVideoFxName</a>;        </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="interfaceNvsCaptureVideoFx.html#a5d8c51b9a74b8391824f4ef475ea9945">   48</a></span>&#160;<span class="keyword">@property</span> (readonly) NSString *<a class="code" href="interfaceNvsCaptureVideoFx.html#a5d8c51b9a74b8391824f4ef475ea9945">captureVideoFxPackageId</a>;         </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="interfaceNvsCaptureVideoFx.html#a7eaea2b1c2199b896a39495473e8ddfd">   49</a></span>&#160;<span class="keyword">@property</span> (readonly) <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="interfaceNvsCaptureVideoFx.html#a7eaea2b1c2199b896a39495473e8ddfd">index</a>;                        </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="interfaceNvsCaptureVideoFx.html#a78ae0a3a491996c4c7055f56a603bdd2">   51</a></span>&#160;<span class="keyword">@property</span> (readonly) int64_t <a class="code" href="interfaceNvsCaptureVideoFx.html#a78ae0a3a491996c4c7055f56a603bdd2">offsetPoint</a>;         </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="interfaceNvsCaptureVideoFx.html#a121321656d8792833fe13cd496cf6be8">   52</a></span>&#160;<span class="keyword">@property</span> (readonly) int64_t <a class="code" href="interfaceNvsCaptureVideoFx.html#a37fbada3e79f57988f62cf0cbc21e564">duration</a>;         </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;- (CGPoint)mapPointFromImageCoordToParticleSystemCoord:(<span class="keywordtype">int</span>)imageWidth withHeight:(<span class="keywordtype">int</span>)imageHeight withPtImage:(CGPoint)ptImage;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;- (int64_t)changeOffsetPoint:(int64_t)newOffset;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;- (int64_t)changeDuration:(int64_t)newOutPoint;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;- (void)setStartTime:(int64_t)startTime;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;- (void)<a class="code" href="interfaceNvsCaptureVideoFx.html#a074e95a864f435025a7b42634652e468">resetStartTime</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html_a5d8c51b9a74b8391824f4ef475ea9945"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html#a5d8c51b9a74b8391824f4ef475ea9945">NvsCaptureVideoFx::captureVideoFxPackageId</a></div><div class="ttdeci">NSString * captureVideoFxPackageId</div><div class="ttdoc">采集视频特效资源包ID。如果不是资源包采集视频特效返回nil</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:48</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html_ad9e0b8404592c6dad6bb0ac794eefc05"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html#ad9e0b8404592c6dad6bb0ac794eefc05">NvsCaptureVideoFx::bultinCaptureVideoFxName</a></div><div class="ttdeci">NSString * bultinCaptureVideoFxName</div><div class="ttdoc">内嵌采集视频特效名字。如果不是内嵌采集视频特效返回nil</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:47</div></div>
+<div class="ttc" id="aNvsCaptureVideoFx_8h_html_a469c53fd838b3a14e56c5f29cd7aba46a56be0dcfdb90de297453be29d1e97051"><div class="ttname"><a href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46a56be0dcfdb90de297453be29d1e97051">NvsCaptureVideoFxType_Package</a></div><div class="ttdeci">@ NvsCaptureVideoFxType_Package</div><div class="ttdoc">包裹采集类型</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:28</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html"><div class="ttname"><a href="interfaceNvsFx.html">NvsFx</a></div><div class="ttdoc">特效类</div><div class="ttdef"><b>Definition:</b> NvsFx.h:83</div></div>
+<div class="ttc" id="aNvsCaptureVideoFx_8h_html_a469c53fd838b3a14e56c5f29cd7aba46adeeb41b81342829edab015683fbeaf02"><div class="ttname"><a href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46adeeb41b81342829edab015683fbeaf02">NvsCaptureVideoFxType_Custom</a></div><div class="ttdeci">@ NvsCaptureVideoFxType_Custom</div><div class="ttdoc">自定义采集类型</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:29</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html_a78ae0a3a491996c4c7055f56a603bdd2"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html#a78ae0a3a491996c4c7055f56a603bdd2">NvsCaptureVideoFx::offsetPoint</a></div><div class="ttdeci">int64_t offsetPoint</div><div class="ttdoc">特效偏移时间（单位微秒）</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:51</div></div>
+<div class="ttc" id="aNvsCaptureVideoFx_8h_html_a469c53fd838b3a14e56c5f29cd7aba46"><div class="ttname"><a href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46">NvsCaptureVideoFxType</a></div><div class="ttdeci">NvsCaptureVideoFxType</div><div class="ttdoc">采集视频特效类型</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:26</div></div>
+<div class="ttc" id="aNvsCaptureVideoFx_8h_html_a469c53fd838b3a14e56c5f29cd7aba46af1d8567716110f9a133008553bfae587"><div class="ttname"><a href="NvsCaptureVideoFx_8h.html#a469c53fd838b3a14e56c5f29cd7aba46af1d8567716110f9a133008553bfae587">NvsCaptureVideoFxType_Builtin</a></div><div class="ttdeci">@ NvsCaptureVideoFxType_Builtin</div><div class="ttdoc">内建采集类型</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:27</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html_a37fbada3e79f57988f62cf0cbc21e564"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html#a37fbada3e79f57988f62cf0cbc21e564">NvsCaptureVideoFx::duration</a></div><div class="ttdeci">int64_t duration</div><div class="ttdoc">特效的持续时间（单位微秒）</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:52</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html_a074e95a864f435025a7b42634652e468"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html#a074e95a864f435025a7b42634652e468">-[NvsCaptureVideoFx resetStartTime]</a></div><div class="ttdeci">void resetStartTime()</div><div class="ttdoc">重置特效的起始时间</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html_a793a5bb58b8ac8bb6ab132f409852343"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html#a793a5bb58b8ac8bb6ab132f409852343">NvsCaptureVideoFx::captureVideoFxType</a></div><div class="ttdeci">NvsCaptureVideoFxType captureVideoFxType</div><div class="ttdoc">采集视频特效类型</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:46</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html">NvsCaptureVideoFx</a></div><div class="ttdoc">采集视频特效</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:45</div></div>
+<div class="ttc" id="aNvsFx_8h_html"><div class="ttname"><a href="NvsFx_8h.html">NvsFx.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html_a7eaea2b1c2199b896a39495473e8ddfd"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html#a7eaea2b1c2199b896a39495473e8ddfd">NvsCaptureVideoFx::index</a></div><div class="ttdeci">unsigned int index</div><div class="ttdoc">视频特效索引</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:49</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

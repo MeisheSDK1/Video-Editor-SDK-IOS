@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: NvsTrack类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">构造函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="interfaceNvsTrack-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">NvsTrack类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>轨道，容纳片段的实体  
+ <a href="interfaceNvsTrack.html#details">更多...</a></p>
+
+<p><code>#import &lt;<a class="el" href="NvsTrack_8h_source.html">NvsTrack.h</a>&gt;</code></p>
+<div class="dynheader">
+类 NvsTrack 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="interfaceNvsTrack.png" usemap="#NvsTrack_map" alt=""/>
+  <map id="NvsTrack_map" name="NvsTrack_map">
+<area href="interfaceNvsObject.html" title="NvsObject类，继承自object-c里的NSObject类。" alt="NvsObject" shape="rect" coords="54,56,153,80"/>
+<area href="interfaceNvsAudioTrack.html" title="音频轨道，音频片段的集合" alt="NvsAudioTrack" shape="rect" coords="0,168,99,192"/>
+<area href="interfaceNvsVideoTrack.html" title="视频轨道，视频片段的集合" alt="NvsVideoTrack" shape="rect" coords="109,168,208,192"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+构造函数</h2></td></tr>
+<tr class="memitem:a40084d155a08671bd65f029777547a25"><td class="memItemLeft" align="right" valign="top">(int64_t)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#a40084d155a08671bd65f029777547a25">changeInPoint:newInPoint:</a></td></tr>
+<tr class="memdesc:a40084d155a08671bd65f029777547a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">修改片段在时间线上的入点.如果clip没有此函数授权返回当前的inpoint,newInpoint如果小于前一个clip的outpoint，直接返回前一个clip的outpoint，如果当前clip是第0个clip，则newInPoint最小为0。此函数内部会根据newinpoint计算出一个新的trimIn,并修改clip的trimIn，如果新的trimIn小于0时会返回trimIn为0时对应的Inpoint值，如果newinpoint大于trimOut则返回trimOut-1对应的inPoint值  <a href="interfaceNvsTrack.html#a40084d155a08671bd65f029777547a25">更多...</a><br /></td></tr>
+<tr class="separator:a40084d155a08671bd65f029777547a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203c1892d50b41a914626bbb0e941ad1"><td class="memItemLeft" align="right" valign="top">(int64_t)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#a203c1892d50b41a914626bbb0e941ad1">changeOutPoint:newOutPoint:</a></td></tr>
+<tr class="memdesc:a203c1892d50b41a914626bbb0e941ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">修改片段在时间线上的出点,如果clip没有此函数授权返回当前的outpoint,如果newOutpoint小于clip的outPoint则newOutPoint不会小于inpoint+1，如果clip后面还有nextclip，则newOutPoint不会大于nextClip的inpoint，当前clip如果是最后一个clip最终outpoint的就是timeline的duration，如果newOutPoint大于clip的outpoint则视频末尾会静帧。此函数内部会根据newOutpoint计算出一个新的trimOut，如果clip的inpoint不等于下一个clip的outpoint会移除中间的转场.  <a href="interfaceNvsTrack.html#a203c1892d50b41a914626bbb0e941ad1">更多...</a><br /></td></tr>
+<tr class="separator:a203c1892d50b41a914626bbb0e941ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8af4f00b9071ad6f8ae20ae7106e724"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#ab8af4f00b9071ad6f8ae20ae7106e724">splitClip:splitPoint:</a></td></tr>
+<tr class="memdesc:ab8af4f00b9071ad6f8ae20ae7106e724"><td class="mdescLeft">&#160;</td><td class="mdescRight">分割指定的片段  <a href="interfaceNvsTrack.html#ab8af4f00b9071ad6f8ae20ae7106e724">更多...</a><br /></td></tr>
+<tr class="separator:ab8af4f00b9071ad6f8ae20ae7106e724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838c491b2fc339a4b45fbba65d935d14"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#a838c491b2fc339a4b45fbba65d935d14">removeClip:keepSpace:</a></td></tr>
+<tr class="memdesc:a838c491b2fc339a4b45fbba65d935d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除指定的片段，主题的片头片尾是不允许移除的  <a href="interfaceNvsTrack.html#a838c491b2fc339a4b45fbba65d935d14">更多...</a><br /></td></tr>
+<tr class="separator:a838c491b2fc339a4b45fbba65d935d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46bc10b723cc4720130ffbe4ca3189ef"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#a46bc10b723cc4720130ffbe4ca3189ef">removeRange:endTimelinePos:keepSpace:</a></td></tr>
+<tr class="memdesc:a46bc10b723cc4720130ffbe4ca3189ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除指定的区间内的所有片段，如果片段只有部分与该区间重合则调整其时间线入点或者出点，如果片段包含主题片头片尾部分，会移除失败,startTimelinePos &lt; 0 或者 endTimelinePos &lt;= startTimelinePos 也会移除失败  <a href="interfaceNvsTrack.html#a46bc10b723cc4720130ffbe4ca3189ef">更多...</a><br /></td></tr>
+<tr class="separator:a46bc10b723cc4720130ffbe4ca3189ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e93f43a88075deca2e3553f6a7f19f7"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#a8e93f43a88075deca2e3553f6a7f19f7">moveClip:destClipIndex:</a></td></tr>
+<tr class="memdesc:a8e93f43a88075deca2e3553f6a7f19f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动指定的片段,主题的片头片尾不能移动，clipIndex和destClipIndex不能于等于clipcount  <a href="interfaceNvsTrack.html#a8e93f43a88075deca2e3553f6a7f19f7">更多...</a><br /></td></tr>
+<tr class="separator:a8e93f43a88075deca2e3553f6a7f19f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578e2b684373328a709c85536d5b6f05"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#a578e2b684373328a709c85536d5b6f05">moveClip:targetTimelinePos:isInsertTarget:keepSpace:</a></td></tr>
+<tr class="memdesc:a578e2b684373328a709c85536d5b6f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动指定的片段到输入的位置，clipIndex大于等于clipcount会移除失败，targetTimelinePos等于0时，会被移动到0的位置，主题的片头片尾不能被移动。  <a href="interfaceNvsTrack.html#a578e2b684373328a709c85536d5b6f05">更多...</a><br /></td></tr>
+<tr class="separator:a578e2b684373328a709c85536d5b6f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6baa48d4acb439898ad1fbf8c8ddda"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#a8e6baa48d4acb439898ad1fbf8c8ddda">removeAllClips</a></td></tr>
+<tr class="memdesc:a8e6baa48d4acb439898ad1fbf8c8ddda"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除所有片段  <a href="interfaceNvsTrack.html#a8e6baa48d4acb439898ad1fbf8c8ddda">更多...</a><br /></td></tr>
+<tr class="separator:a8e6baa48d4acb439898ad1fbf8c8ddda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1174903b1a7504d635fa26e03eab844"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#ae1174903b1a7504d635fa26e03eab844">setVolumeGain:rightVolumeGain:</a></td></tr>
+<tr class="memdesc:ae1174903b1a7504d635fa26e03eab844"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置音量，最终的音量值是track音量乘以clip音量  <a href="interfaceNvsTrack.html#ae1174903b1a7504d635fa26e03eab844">更多...</a><br /></td></tr>
+<tr class="separator:ae1174903b1a7504d635fa26e03eab844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7eb32667efe875ae1108a46637eb358"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsTrack.html#aa7eb32667efe875ae1108a46637eb358">getVolumeGain:rightVolumeGain:</a></td></tr>
+<tr class="memdesc:aa7eb32667efe875ae1108a46637eb358"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取音量，最终的音量值是track音量乘以clip音量  <a href="interfaceNvsTrack.html#aa7eb32667efe875ae1108a46637eb358">更多...</a><br /></td></tr>
+<tr class="separator:aa7eb32667efe875ae1108a46637eb358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_interfaceNvsObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interfaceNvsObject')"><img src="closed.png" alt="-"/>&#160;构造函数 继承自 <a class="el" href="interfaceNvsObject.html">NvsObject</a></td></tr>
+<tr class="memitem:a0c4627ba6d14539763eab5e5aa8301ad inherit pub_methods_interfaceNvsObject"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsObject.html#a0c4627ba6d14539763eab5e5aa8301ad">setAttachment:forKey:</a></td></tr>
+<tr class="memdesc:a0c4627ba6d14539763eab5e5aa8301ad inherit pub_methods_interfaceNvsObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">给NvsObject对象添加附件，用来标识NvsObject的对象或者用于其他用途  <a href="interfaceNvsObject.html#a0c4627ba6d14539763eab5e5aa8301ad">更多...</a><br /></td></tr>
+<tr class="separator:a0c4627ba6d14539763eab5e5aa8301ad inherit pub_methods_interfaceNvsObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e13126029fc5595a5e33bbfb4e2600 inherit pub_methods_interfaceNvsObject"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsObject.html#a17e13126029fc5595a5e33bbfb4e2600">setTemplateAttachment:forKey:</a></td></tr>
+<tr class="memdesc:a17e13126029fc5595a5e33bbfb4e2600 inherit pub_methods_interfaceNvsObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">为NvsObject对象添加模板资源的附加数据，用来标识NvsObject的模板数据  <a href="interfaceNvsObject.html#a17e13126029fc5595a5e33bbfb4e2600">更多...</a><br /></td></tr>
+<tr class="separator:a17e13126029fc5595a5e33bbfb4e2600 inherit pub_methods_interfaceNvsObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5318e9346236ec67976936da775a974e inherit pub_methods_interfaceNvsObject"><td class="memItemLeft" align="right" valign="top">(NSObject *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsObject.html#a5318e9346236ec67976936da775a974e">getAttachment:</a></td></tr>
+<tr class="memdesc:a5318e9346236ec67976936da775a974e inherit pub_methods_interfaceNvsObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取已经添加的附件  <a href="interfaceNvsObject.html#a5318e9346236ec67976936da775a974e">更多...</a><br /></td></tr>
+<tr class="separator:a5318e9346236ec67976936da775a974e inherit pub_methods_interfaceNvsObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05e6e3e91583bcf39508e0fe48dc0487 inherit pub_methods_interfaceNvsObject"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsObject.html#a05e6e3e91583bcf39508e0fe48dc0487">getTemplateAttachment:</a></td></tr>
+<tr class="memdesc:a05e6e3e91583bcf39508e0fe48dc0487 inherit pub_methods_interfaceNvsObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取NvsObject的模板资源附件  <a href="interfaceNvsObject.html#a05e6e3e91583bcf39508e0fe48dc0487">更多...</a><br /></td></tr>
+<tr class="separator:a05e6e3e91583bcf39508e0fe48dc0487 inherit pub_methods_interfaceNvsObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:afd2132851af32a722f21b0b1aa65adb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="NvsTrack_8h.html#ad15b5c9b5ffa8c577f49277513feecaa">NvsTrackType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNvsTrack.html#afd2132851af32a722f21b0b1aa65adb7">type</a></td></tr>
+<tr class="memdesc:afd2132851af32a722f21b0b1aa65adb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">轨道类型  <a href="interfaceNvsTrack.html#afd2132851af32a722f21b0b1aa65adb7">更多...</a><br /></td></tr>
+<tr class="separator:afd2132851af32a722f21b0b1aa65adb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa977f9bc2e830011c881f2409ad4b138"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNvsTrack.html#aa977f9bc2e830011c881f2409ad4b138">index</a></td></tr>
+<tr class="memdesc:aa977f9bc2e830011c881f2409ad4b138"><td class="mdescLeft">&#160;</td><td class="mdescRight">轨道索引  <a href="interfaceNvsTrack.html#aa977f9bc2e830011c881f2409ad4b138">更多...</a><br /></td></tr>
+<tr class="separator:aa977f9bc2e830011c881f2409ad4b138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52272208c5c7f4837eca3f2d51be1b2d"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNvsTrack.html#a52272208c5c7f4837eca3f2d51be1b2d">duration</a></td></tr>
+<tr class="memdesc:a52272208c5c7f4837eca3f2d51be1b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">轨道长度(单位微秒)  <a href="interfaceNvsTrack.html#a52272208c5c7f4837eca3f2d51be1b2d">更多...</a><br /></td></tr>
+<tr class="separator:a52272208c5c7f4837eca3f2d51be1b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae199dcb7e3ef2e102b0ab632ac812e1c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNvsTrack.html#ae199dcb7e3ef2e102b0ab632ac812e1c">clipCount</a></td></tr>
+<tr class="memdesc:ae199dcb7e3ef2e102b0ab632ac812e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">轨道上的片段数量  <a href="interfaceNvsTrack.html#ae199dcb7e3ef2e102b0ab632ac812e1c">更多...</a><br /></td></tr>
+<tr class="separator:ae199dcb7e3ef2e102b0ab632ac812e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>轨道，容纳片段的实体 </p>
+<p>轨道可视作片段的集合,分为音频轨道(Audio Track)和视频轨道(Video Track)。创建时间线实例后，可添加或移除多条轨道。在每一条轨道上，可以添加多个要编辑的视音频片段，并对片段进行音量设置，也可以进行移除和位置移动。 </p><dl class="section warning"><dt>警告</dt><dd>NvsTrack类中，所有public API都在UI线程使用！！！ </dd></dl>
+</div><h2 class="groupheader">函数文档</h2>
+<a id="a40084d155a08671bd65f029777547a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40084d155a08671bd65f029777547a25">&#9670;&nbsp;</a></span>changeInPoint:newInPoint:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int64_t) changeInPoint: </td>
+          <td></td>
+          <td class="paramtype">(unsigned int)&#160;</td>
+          <td class="paramname"><em>clipIndex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">newInPoint:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>newInPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>修改片段在时间线上的入点.如果clip没有此函数授权返回当前的inpoint,newInpoint如果小于前一个clip的outpoint，直接返回前一个clip的outpoint，如果当前clip是第0个clip，则newInPoint最小为0。此函数内部会根据newinpoint计算出一个新的trimIn,并修改clip的trimIn，如果新的trimIn小于0时会返回trimIn为0时对应的Inpoint值，如果newinpoint大于trimOut则返回trimOut-1对应的inPoint值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clipIndex</td><td>片段索引 </td></tr>
+    <tr><td class="paramname">newInPoint</td><td>时间线上新的入点（单位微秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回实际可到达的时间线上的入点（单位微秒）。注意：实际可达到的时间线上的入点范围在前一个片段的时间线出点与此片段的时间线出点的开区间内 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>此接口会引发流媒体引擎状态跳转到引擎停止状态，具体情况请参见<a class="el" href="EngineChange_8md.html">引擎变化专题</a>。 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>1.6.0 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="interfaceNvsTrack.html#a203c1892d50b41a914626bbb0e941ad1" title="修改片段在时间线上的出点,如果clip没有此函数授权返回当前的outpoint,如果newOutpoint小于clip的outPoint则newOutPoint不会小于inpoint+1，如果clip后...">- changeOutPoint:newOutPoint:</a> </dd></dl>
+
+</div>
+</div>
+<a id="a203c1892d50b41a914626bbb0e941ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203c1892d50b41a914626bbb0e941ad1">&#9670;&nbsp;</a></span>changeOutPoint:newOutPoint:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int64_t) changeOutPoint: </td>
+          <td></td>
+          <td class="paramtype">(unsigned int)&#160;</td>
+          <td class="paramname"><em>clipIndex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">newOutPoint:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>newOutPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>修改片段在时间线上的出点,如果clip没有此函数授权返回当前的outpoint,如果newOutpoint小于clip的outPoint则newOutPoint不会小于inpoint+1，如果clip后面还有nextclip，则newOutPoint不会大于nextClip的inpoint，当前clip如果是最后一个clip最终outpoint的就是timeline的duration，如果newOutPoint大于clip的outpoint则视频末尾会静帧。此函数内部会根据newOutpoint计算出一个新的trimOut，如果clip的inpoint不等于下一个clip的outpoint会移除中间的转场. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clipIndex</td><td>片段索引 </td></tr>
+    <tr><td class="paramname">newOutPoint</td><td>新时间线上的出点（单位微秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回实际可到达的时间线上的出点（单位微秒）。注意：实际可达到的时间线上的出点范围在此片段的时间线入点与后一个片段的时间线入点的开区间内。 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>此接口会引发流媒体引擎状态跳转到引擎停止状态，具体情况请参见<a class="el" href="EngineChange_8md.html">引擎变化专题</a>。 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>1.6.0 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="interfaceNvsTrack.html#a40084d155a08671bd65f029777547a25" title="修改片段在时间线上的入点.如果clip没有此函数授权返回当前的inpoint,newInpoint如果小于前一个clip的outpoint，直接返回前一个clip的outpoint，如果当前clip是第...">- changeInPoint:newInPoint:</a> </dd></dl>
+
+</div>
+</div>
+<a id="aa7eb32667efe875ae1108a46637eb358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7eb32667efe875ae1108a46637eb358">&#9670;&nbsp;</a></span>getVolumeGain:rightVolumeGain:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) getVolumeGain: </td>
+          <td></td>
+          <td class="paramtype">(float *)&#160;</td>
+          <td class="paramname"><em>leftVolumeGain</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">rightVolumeGain:</td>
+          <td></td>
+          <td class="paramtype">(float *)&#160;</td>
+          <td class="paramname"><em>rightVolumeGain</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取音量，最终的音量值是track音量乘以clip音量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">leftVolumeGain</td><td>输出音量的左声道 </td></tr>
+    <tr><td class="paramname">rightVolumeGain</td><td>输出音量的右声道 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="interfaceNvsTrack.html#ae1174903b1a7504d635fa26e03eab844" title="设置音量，最终的音量值是track音量乘以clip音量">- setVolumeGain:rightVolumeGain:</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8e93f43a88075deca2e3553f6a7f19f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e93f43a88075deca2e3553f6a7f19f7">&#9670;&nbsp;</a></span>moveClip:destClipIndex:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) moveClip: </td>
+          <td></td>
+          <td class="paramtype">(unsigned int)&#160;</td>
+          <td class="paramname"><em>clipIndex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">destClipIndex:</td>
+          <td></td>
+          <td class="paramtype">(unsigned int)&#160;</td>
+          <td class="paramname"><em>destClipIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移动指定的片段,主题的片头片尾不能移动，clipIndex和destClipIndex不能于等于clipcount </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clipIndex</td><td>片段索引 </td></tr>
+    <tr><td class="paramname">destClipIndex</td><td>片段移动的目标索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>判断是否移动成功。返回YES为移动成功，NO则失败。 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>此接口会引发流媒体引擎状态跳转到引擎停止状态，具体情况请参见<a class="el" href="EngineChange_8md.html">引擎变化专题</a>。 </dd></dl>
+
+</div>
+</div>
+<a id="a578e2b684373328a709c85536d5b6f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578e2b684373328a709c85536d5b6f05">&#9670;&nbsp;</a></span>moveClip:targetTimelinePos:isInsertTarget:keepSpace:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) moveClip: </td>
+          <td></td>
+          <td class="paramtype">(unsigned int)&#160;</td>
+          <td class="paramname"><em>clipIndex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">targetTimelinePos:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>targetTimelinePos</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">isInsertTarget:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>isInsertTarget</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">keepSpace:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>keepSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移动指定的片段到输入的位置，clipIndex大于等于clipcount会移除失败，targetTimelinePos等于0时，会被移动到0的位置，主题的片头片尾不能被移动。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clipIndex</td><td>需要移动的片段索引 </td></tr>
+    <tr><td class="paramname">targetTimelinePos</td><td>片段移动到的时间线位置，单位为微秒 </td></tr>
+    <tr><td class="paramname">isInsertTarget</td><td>是否采取插入的形式移动片段,false代表使用覆盖的方式。 </td></tr>
+    <tr><td class="paramname">keepSpace</td><td>片段移动过程中是否保留空间，保留的空间为黑色片段。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回移动操作是否成功 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>此接口会引发流媒体引擎状态跳转到引擎停止状态，具体情况请参见<a class="el" href="EngineChange_8md.html">引擎变化专题</a>。 </dd></dl>
+
+</div>
+</div>
+<a id="a8e6baa48d4acb439898ad1fbf8c8ddda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6baa48d4acb439898ad1fbf8c8ddda">&#9670;&nbsp;</a></span>removeAllClips</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) removeAllClips </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除所有片段 </p>
+<dl class="section return"><dt>返回</dt><dd>判断是否移除成功。返回YES为移除成功，NO则失败。 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>此接口会引发流媒体引擎状态跳转到引擎停止状态，具体情况请参见<a class="el" href="EngineChange_8md.html">引擎变化专题</a>。 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="interfaceNvsTrack.html#a838c491b2fc339a4b45fbba65d935d14" title="移除指定的片段，主题的片头片尾是不允许移除的">- removeClip:keepSpace:</a> </dd></dl>
+
+</div>
+</div>
+<a id="a838c491b2fc339a4b45fbba65d935d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a838c491b2fc339a4b45fbba65d935d14">&#9670;&nbsp;</a></span>removeClip:keepSpace:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) removeClip: </td>
+          <td></td>
+          <td class="paramtype">(unsigned int)&#160;</td>
+          <td class="paramname"><em>clipIndex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">keepSpace:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>keepSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除指定的片段，主题的片头片尾是不允许移除的 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clipIndex</td><td>片段索引 </td></tr>
+    <tr><td class="paramname">keepSpace</td><td>片段移除后，是否保留该片段在轨道上的空间。值为true则保留，false则不保留。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>判断是否移除成功。返回YES则移除成功，NO则失败。 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>此接口会引发流媒体引擎状态跳转到引擎停止状态，具体情况请参见<a class="el" href="EngineChange_8md.html">引擎变化专题</a>。 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="interfaceNvsTrack.html#a8e6baa48d4acb439898ad1fbf8c8ddda" title="移除所有片段">- removeAllClips</a> </dd></dl>
+
+</div>
+</div>
+<a id="a46bc10b723cc4720130ffbe4ca3189ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46bc10b723cc4720130ffbe4ca3189ef">&#9670;&nbsp;</a></span>removeRange:endTimelinePos:keepSpace:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) removeRange: </td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>startTimelinePos</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">endTimelinePos:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>endTimelinePos</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">keepSpace:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>keepSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除指定的区间内的所有片段，如果片段只有部分与该区间重合则调整其时间线入点或者出点，如果片段包含主题片头片尾部分，会移除失败,startTimelinePos &lt; 0 或者 endTimelinePos &lt;= startTimelinePos 也会移除失败 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startTimelinePos</td><td>区间的起始时间线位置（单位微秒） </td></tr>
+    <tr><td class="paramname">endTimelinePos</td><td>区间的结束时间线位置（单位微秒） </td></tr>
+    <tr><td class="paramname">keepSpace</td><td>区间内的片段移除后，是否保留该区间所占轨道上的空间。值为true则保留，false则不保留 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否移除成功。返回true则移除成功，false则移除不成功 </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>此接口会引发流媒体引擎状态跳转到引擎停止状态，具体情况请参见<a class="el" href="EngineChange_8md.html">引擎变化专题</a>。 </dd></dl>
+
+</div>
+</div>
+<a id="ae1174903b1a7504d635fa26e03eab844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1174903b1a7504d635fa26e03eab844">&#9670;&nbsp;</a></span>setVolumeGain:rightVolumeGain:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setVolumeGain: </td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>leftVolumeGain</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">rightVolumeGain:</td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>rightVolumeGain</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置音量，最终的音量值是track音量乘以clip音量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">leftVolumeGain</td><td>设置音量的左声道，取值范围[0,4)。 </td></tr>
+    <tr><td class="paramname">rightVolumeGain</td><td>设置音量的右声道，取值范围[0,4)。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="interfaceNvsTrack.html#aa7eb32667efe875ae1108a46637eb358" title="获取音量，最终的音量值是track音量乘以clip音量">- getVolumeGain:rightVolumeGain:</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab8af4f00b9071ad6f8ae20ae7106e724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8af4f00b9071ad6f8ae20ae7106e724">&#9670;&nbsp;</a></span>splitClip:splitPoint:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) splitClip: </td>
+          <td></td>
+          <td class="paramtype">(unsigned int)&#160;</td>
+          <td class="paramname"><em>clipIndex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">splitPoint:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>splitPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分割指定的片段 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clipIndex</td><td>片段索引 </td></tr>
+    <tr><td class="paramname">splitPoint</td><td>分割点（单位微秒）取值范围是（clip.inpoint, clip.outpoint）,超出取值范围会切割失败。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>判断是否分割成功，YES为分割成功； NO则不成功</dd></dl>
+<p>分割片段，即对指定索引值的片段进行分割而变为两个片段的操作，对应的轨道上片段的索引值也会进行相应变化。</p>
+<p>示例如下:</p>
+<p><img src="TrackClip.PNG" alt="" class="inline"/>   </p>
+<p>上图中轨道上有三个视频片段C1、C2、C3，对片段C2进行分割，分割后的片段分别命名为C2和C4。通过获取轨道上当前片段数来判定是否分割成功，分割成功则C2和C4索引值对应为1和2。</p>
+<p>结果如下图： <img src="afterSplitClip.PNG" alt="" class="inline"/>   </p>
+<dl class="section warning"><dt>警告</dt><dd>此接口会引发流媒体引擎状态跳转到引擎停止状态，具体情况请参见<a class="el" href="EngineChange_8md.html">引擎变化专题</a>。 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>removeClip </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a id="ae199dcb7e3ef2e102b0ab632ac812e1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae199dcb7e3ef2e102b0ab632ac812e1c">&#9670;&nbsp;</a></span>clipCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (unsigned int) clipCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>轨道上的片段数量 </p>
+
+</div>
+</div>
+<a id="a52272208c5c7f4837eca3f2d51be1b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52272208c5c7f4837eca3f2d51be1b2d">&#9670;&nbsp;</a></span>duration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int64_t) duration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>轨道长度(单位微秒) </p>
+
+</div>
+</div>
+<a id="aa977f9bc2e830011c881f2409ad4b138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa977f9bc2e830011c881f2409ad4b138">&#9670;&nbsp;</a></span>index</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (unsigned int) index</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>轨道索引 </p>
+
+</div>
+</div>
+<a id="afd2132851af32a722f21b0b1aa65adb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2132851af32a722f21b0b1aa65adb7">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsTrack_8h.html#ad15b5c9b5ffa8c577f49277513feecaa">NvsTrackType</a>) type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>轨道类型 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/sdkcore/ios/<a class="el" href="NvsTrack_8h_source.html">NvsTrack.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

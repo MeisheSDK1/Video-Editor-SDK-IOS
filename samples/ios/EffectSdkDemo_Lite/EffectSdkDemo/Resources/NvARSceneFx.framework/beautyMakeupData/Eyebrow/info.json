@@ -1,0 +1,31 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"无",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"点痣眉毛",
+        "displayName":"点痣眉毛",
+        "packagePath":"Eyebrow/D94413DF-81E8-4297-BB1F-267479AA10B1.3",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"D94413DF-81E8-4297-BB1F-267479AA10B1",
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"泰系学姐眉毛",
+        "displayName":"泰系学姐眉毛",
+        "packagePath":"Eyebrow/3F67E9CD-AA4E-43DC-B001-92B68A4171C2.5",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"3F67E9CD-AA4E-43DC-B001-92B68A4171C2",
+        "coverImage":""
+    }
+]

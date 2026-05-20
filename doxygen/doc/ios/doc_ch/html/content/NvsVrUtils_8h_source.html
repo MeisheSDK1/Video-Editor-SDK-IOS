@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsVrUtils.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsVrUtils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsVrUtils_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2023. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Jan 6 . 2023</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCommonDef_8h.html">NvsCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interfaceNvsVertex3D.html">   18</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsVertex3D.html">NvsVertex3D</a> : NSObject</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="interfaceNvsVertex3D.html#ae0dc8ef46f0aa8450bc8ea83d62c7d82">   19</a></span>&#160;    <span class="keyword">@property</span>(assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsVertex3D.html#ae0dc8ef46f0aa8450bc8ea83d62c7d82">x</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="interfaceNvsVertex3D.html#a650f3e51f1c62233f833012c804fc14a">   20</a></span>&#160;    <span class="keyword">@property</span>(assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsVertex3D.html#a650f3e51f1c62233f833012c804fc14a">y</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="interfaceNvsVertex3D.html#a3113fe2efeb046818c6463c481802fc2">   21</a></span>&#160;    <span class="keyword">@property</span>(assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsVertex3D.html#a3113fe2efeb046818c6463c481802fc2">z</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interfaceNvsVertexSpherical.html">   23</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsVertexSpherical.html">NvsVertexSpherical</a> : NSObject</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interfaceNvsVertexSpherical.html#a8e482b4c952b344bd4c28735be702a3f">   24</a></span>&#160;    <span class="keyword">@property</span>(assign) <span class="keywordtype">float</span> polarAngle;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="interfaceNvsVrUtils.html#a548325481a32f56b6d10443cda5a6bd9">   25</a></span>&#160;    <span class="keyword">@property</span>(assign) <span class="keywordtype">float</span> azimuthAngle;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="interfaceNvsVrUtils.html">   28</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsVrUtils.html">NvsVrUtils</a> : NSObject</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;+ (NSArray&lt;<a class="code" href="interfaceNvsVertex3D.html">NvsVertex3D</a> *&gt; *) mapPanoramicVerticesFromLocateToWorldLocateSpcaeRotation:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                    (<span class="keywordtype">float</span>)locateSpaceRotaion</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                                    locateSpaceScale:(<a class="code" href="structNvsPosition2D.html">NvsPosition2D</a>)locateSpaceScale</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                                    locateSpaceCenter:(<a class="code" href="structNvsPosition2D.html">NvsPosition2D</a>)locateSpaceCenter</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                                    locateVertices:(NSArray&lt;<a class="code" href="interfaceNvsVertexSpherical.html">NvsVertexSpherical</a> *&gt; *)locateVertices;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;+ (NSArray&lt;<a class="code" href="interfaceNvsVertexSpherical.html">NvsVertexSpherical</a> *&gt; *) mapPanoramicVerticesFromWorldToLocateLocateSpcaeRotation:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                                    (<span class="keywordtype">float</span>)locateSpaceRotaion</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                                    locateSpaceScale:(<a class="code" href="structNvsPosition2D.html">NvsPosition2D</a>)locateSpaceScale</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                                    locateSpaceCenter:(<a class="code" href="structNvsPosition2D.html">NvsPosition2D</a>)locateSpaceCenter</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                                    locateVertices:(NSArray&lt;<a class="code" href="interfaceNvsVertex3D.html">NvsVertex3D</a>*&gt; *)worldVertices;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterfaceNvsVertexSpherical_html"><div class="ttname"><a href="interfaceNvsVertexSpherical.html">NvsVertexSpherical</a></div><div class="ttdef"><b>Definition:</b> NvsVrUtils.h:24</div></div>
+<div class="ttc" id="ainterfaceNvsVertex3D_html_a650f3e51f1c62233f833012c804fc14a"><div class="ttname"><a href="interfaceNvsVertex3D.html#a650f3e51f1c62233f833012c804fc14a">NvsVertex3D::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> NvsVrUtils.h:20</div></div>
+<div class="ttc" id="ainterfaceNvsVrUtils_html"><div class="ttname"><a href="interfaceNvsVrUtils.html">NvsVrUtils</a></div><div class="ttdef"><b>Definition:</b> NvsVrUtils.h:29</div></div>
+<div class="ttc" id="ainterfaceNvsVertex3D_html_ae0dc8ef46f0aa8450bc8ea83d62c7d82"><div class="ttname"><a href="interfaceNvsVertex3D.html#ae0dc8ef46f0aa8450bc8ea83d62c7d82">NvsVertex3D::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> NvsVrUtils.h:19</div></div>
+<div class="ttc" id="ainterfaceNvsVertex3D_html_a3113fe2efeb046818c6463c481802fc2"><div class="ttname"><a href="interfaceNvsVertex3D.html#a3113fe2efeb046818c6463c481802fc2">NvsVertex3D::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> NvsVrUtils.h:21</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html"><div class="ttname"><a href="NvsCommonDef_8h.html">NvsCommonDef.h</a></div></div>
+<div class="ttc" id="astructNvsPosition2D_html"><div class="ttname"><a href="structNvsPosition2D.html">NvsPosition2D</a></div><div class="ttdoc">二维坐标结构</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:423</div></div>
+<div class="ttc" id="ainterfaceNvsVertex3D_html"><div class="ttname"><a href="interfaceNvsVertex3D.html">NvsVertex3D</a></div><div class="ttdef"><b>Definition:</b> NvsVrUtils.h:19</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

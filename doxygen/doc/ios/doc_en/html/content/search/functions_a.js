@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['needinputbuddyframe_3710',['needInputBuddyFrame',['../protocolNvsCustomVideoFxRenderer-p.html#acc064a5c5f023226202d03874a54322f',1,'NvsCustomVideoFxRenderer-p']]],
+  ['notifycustomavatarrealtimeresourcespreloaded_3a_3711',['notifyCustomAvatarRealtimeResourcesPreloaded:',['../protocolNvsARSceneManipulateDelegate-p.html#a6106488ac4fc23dcd953bf1bde0f144d',1,'NvsARSceneManipulateDelegate-p']]],
+  ['notifydetectedaction_3a_3712',['notifyDetectedAction:',['../protocolNvsARFaceContextDelegate-p.html#a0770628ec018d6f17fc6af5621e20496',1,'NvsARFaceContextDelegate-p']]],
+  ['notifydetectiontimecost_3a_3713',['notifyDetectionTimeCost:',['../protocolNvsARSceneManipulateDelegate-p.html#ab4667e6a5b202b1646f517cfdda24d8d',1,'NvsARSceneManipulateDelegate-p']]],
+  ['notifyfaceboundingrectwithid_3aboundingrect_3afacecount_3a_3714',['notifyFaceBoundingRectWithId:boundingRect:faceCount:',['../protocolNvsARSceneManipulateDelegate-p.html#a502c23e67c6f93094d0170f81790c96b',1,'NvsARSceneManipulateDelegate-p']]],
+  ['notifyfacefeatureinfos_3a_3715',['notifyFaceFeatureInfos:',['../protocolNvsARSceneManipulateDelegate-p.html#a1519e4e57fda463492782dc6859fd694',1,'NvsARSceneManipulateDelegate-p']]],
+  ['notifyfaceitemloadingbegin_3a_3716',['notifyFaceItemLoadingBegin:',['../protocolNvsARFaceContextDelegate-p.html#a21865c45a05dbbef0cfd7671ca27ced1',1,'NvsARFaceContextDelegate-p']]],
+  ['notifyfaceitemloadingfailed_3aerror_3a_3717',['notifyFaceItemLoadingFailed:error:',['../protocolNvsARFaceContextDelegate-p.html#a373a833e2ad682a518592bcf5c215eff',1,'NvsARFaceContextDelegate-p']]],
+  ['notifyfaceitemloadingfinish_3718',['notifyFaceItemLoadingFinish',['../protocolNvsARFaceContextDelegate-p.html#ae545d29ef1c875ee027c84bd1e53b72f',1,'NvsARFaceContextDelegate-p']]],
+  ['notifyfinsih_3aerrortype_3a_3719',['notifyFinsih:errorType:',['../protocolNvsMediaFileVideoRetrieverDelegate-p.html#ac0cdcb087497a34e0029e85c68d0536c',1,'NvsMediaFileVideoRetrieverDelegate-p']]],
+  ['notifyhandfeatureinfos_3a_3720',['notifyHandFeatureInfos:',['../protocolNvsARSceneManipulateDelegate-p.html#a89015c63a7e20136663df42785078d6c',1,'NvsARSceneManipulateDelegate-p']]],
+  ['notifyobjectlandmark_3asize_3atype_3atimestamp_3a_3721',['notifyObjectLandmark:size:type:timeStamp:',['../protocolNvsARFaceContextDelegate-p.html#a7b1b71944018c8c835a55c193bff8f1e',1,'NvsARFaceContextDelegate-p']]],
+  ['notifyprogress_3aprogress_3a_3722',['notifyProgress:progress:',['../protocolNvsMediaFileVideoRetrieverDelegate-p.html#a82e1036a13a4014b4ef8313b46a03c65',1,'NvsMediaFileVideoRetrieverDelegate-p']]],
+  ['notifysengmentdata_3adata_3awidth_3aheight_3arotation_3avideoframesize_3a_3723',['notifySengmentData:data:width:height:rotation:videoFrameSize:',['../protocolNvsMediaFileVideoRetrieverDelegate-p.html#a2a077ebe8ae9ede47ba60a823c4b6af8',1,'NvsMediaFileVideoRetrieverDelegate-p']]],
+  ['notifysengmentdata_3avideoframeinfo_3a_3724',['notifySengmentData:videoFrameInfo:',['../protocolNvsMediaFileVideoRetrieverDelegate-p.html#ab3ca8995807a3aa03394a6f72d10b972',1,'NvsMediaFileVideoRetrieverDelegate-p']]],
+  ['notifytotaltimecost_3a_3725',['notifyTotalTimeCost:',['../protocolNvsARSceneManipulateDelegate-p.html#a062a5c4084d8084e5141fe241592980c',1,'NvsARSceneManipulateDelegate-p']]],
+  ['notifywaveformdatafailed_3asamplespergroup_3a_3726',['notifyWaveformDataFailed:samplesPerGroup:',['../interfaceNvsWaveformDataGenerator.html#a8b0218451b06539d9bba167cd54be28e',1,'NvsWaveformDataGenerator']]],
+  ['notifywaveformdataready_3asamplespergroup_3aleftwaveformdata_3arightwaveformdata_3a_3727',['notifyWaveformDataReady:samplesPerGroup:leftWaveformData:rightWaveformData:',['../interfaceNvsWaveformDataGenerator.html#a2d6935ac938701db4cf8de7b4036bf9c',1,'NvsWaveformDataGenerator']]],
+  ['ns_5fenum_3728',['NS_ENUM',['../NvsARSceneManipulate_8h.html#a87db5542508eeeea772fbdd0df6d9734',1,'NS_ENUM(NSInteger, NvsFaceActionType):&#160;NvsARSceneManipulate.h'],['../NvsARSceneManipulate_8h.html#ad76e8c6922db8cab0f9705e8c6a4e30c',1,'NS_ENUM(NSInteger, NvsAvatarActionType):&#160;NvsARSceneManipulate.h'],['../NvsARSceneManipulate_8h.html#adfaa4fdcfe355bb8b03a8c5f798793b3',1,'NS_ENUM(NSInteger, NvsToBeCheckedFunctionType):&#160;NvsARSceneManipulate.h'],['../NvsARSceneManipulate_8h.html#a559c3ff498ed5f2f37d59c5fb92ce6f5',1,'NS_ENUM(NSInteger, NvsHandActionType):&#160;NvsARSceneManipulate.h'],['../NvsVideoClip_8h.html#a59c335bdc1e3e95297ebe17688db8dfd',1,'NS_ENUM(NSInteger, NvsClipRawFilterProcessesMode):&#160;NvsVideoClip.h']]],
+  ['nveffectgputextureinfomake_3729',['NvEffectGPUTextureInfoMake',['../NvsEffectRenderCore_8h.html#a6c52a09a1011554710c572bbb0665687',1,'NvsEffectRenderCore.h']]],
+  ['nveffectgputexturemake_3730',['NvEffectGPUTextureMake',['../NvsEffectRenderCore_8h.html#a3010ecf99fc8069a685b0e02141a6fcf',1,'NvsEffectRenderCore.h']]]
+];

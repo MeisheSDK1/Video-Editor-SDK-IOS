@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: HDR</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">HDR </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>HDR</h1>
+<h2>HDR相关说明：</h2>
+<p>美摄SDK支持HDR视频的导入、编辑和导出，即全流程的HDR视频处理。相比普通的SDR视频处理，在以下几步需要特殊设置：</p>
+<p>初始化SDK，创建timeline，设置liveWindow展示，导出HDR。</p>
+<h2>获取本机HDR支持能力：</h2>
+<p>通过NvsStreamingContext类上的getEngineHDRCaps()接口可以获取本机的HDR支持能力，返回值含义如下： </p><pre class="fragment">public static final int HDR_CAPABILITY_FLAG_SUPPORTED_BY_IMPORTER = 1;  (导入)
+public static final int HDR_CAPABILITY_FLAG_SUPPORTED_BY_EDITING = 2;   (编辑)
+public static final int HDR_CAPABILITY_FLAG_SUPPORTED_BY_EXPORTER = 4;  (导出)
+public static final int HDR_CAPABILITY_FLAG_SUPPORTED_BY_LIVEWINDOW = 8;(屏幕支持)
+</pre><h2>1、初始化配置：</h2>
+<p>HDR功能需要添加下面标记： </p><pre class="fragment">NvsStreamingContext.STREAMING_CONTEXT_FLAG_ENABLE_HDR_DISPLAY_WHEN_SUPPORTED
+</pre><blockquote class="doxtable">
+<p></p>
+<p></p>
+</blockquote>
+<p>String licensePath = "assets:/meishesdk.lic"; NvsStreamingContext.init(mContext, licensePath, NvsStreamingContext.STREAMING_CONTEXT_FLAG_SUPPORT_4K_EDIT|NvsStreamingContext.S TREAMING_CONTEXT_FLAG_ENABLE_HDR_DISPLAY_WHEN_SUPPORTED);</p>
+<h2>2、创建timeline：</h2>
+<p>创建timeline需要指定NvsVideoResolution的bitDepth属性，该属性有3个参数：</p>
+<blockquote class="doxtable">
+<p>VIDEO_RESOLUTION_BIT_DEPTH_8_BIT （SDR编辑） </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>VIDEO_RESOLUTION_BIT_DEPTH_16_BIT_FLOAT（HDR编辑） </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>VIDEO_RESOLUTION_BIT_DEPTH_AUTO （自动适配机型） </p>
+</blockquote>
+<pre class="fragment">//创建timeline
+videoEditRes.bitDepth = XXXX
+mStreamingContext.createTimeline(videoEditRes, videoFps, audioEditRes);
+</pre><h2>3、设置livewindow：</h2>
+<p>livewindow有3种支持模式，可以通过setHDRDisplayMode()配置： </p><pre class="fragment">HDR_DISPLAY_MODE_SDR （按SDR模式显示，对于HDR的视频不做处理，画面可能过爆）
+HDR_DISPLAY_MODE_DEPEND_DEVICE （依据设备自动适配）
+HDR_DISPLAY_MODE_TONE_MAP_SDR（将HDR视频转换成SDR再显示，画面不会过爆）
+</pre><h2>4、生成配置：</h2>
+<p>通过配置compileConfigurations来支持HDR的导出，需要设置两个参数： </p><pre class="fragment">1.  key为：NvsStreamingContext.COMPILE_VIDEO_ENCODER_NAME  value为："hevc"
+2.  key为：NvsStreamingContext.COMPILE_VIDEO_HDR_COLOR_TRANSFER  value为："none"或者"st2084"或者"hlg"
+</pre><blockquote class="doxtable">
+<p></p>
+<p></p>
+</blockquote>
+<pre class="fragment">Hashtable&lt;String, Object&gt; compileConfigurations = new Hashtable&lt;&gt;(); 
+compileConfigurations.put(NvsStreamingContext.COMPILE_VIDEO_ENCODER_NAME,Constants.HDR_EXPORT_HEVC);
+compileConfigurations.put(NvsStreamingContext.COMPILE_VIDEO_HDR_COLOR_TRANSFER, settingValues.getExportConfig());
+
+mStreamingContext.setCompileConfigurations(compileConfigurations);
+</pre><h2>5、色彩增益处理：</h2>
+<p>调整在SDR向HDR转换时候色彩增益，默认：0。 </p><pre class="fragment">/*! \if ENGLISH
+*  \brief 
+*  \param 
+*  \else
+*  \brief 设置在SDR向HDR转换时候色彩增益
+*  \param gain 为色彩增益 范围是【1.0，10.0】
+*  \endif
+*  \since 2.23.0
+*  \sa getColorGainForSDRToHDR
+*/
+void com.meicam.sdk.NvsStreamingContext.setColorGainForSDRToHDR(float gain)
+
+/*! \if ENGLISH
+*  \brief 
+*  \return 
+*  \else
+*  \brief 获取在SDR向HDR转换时候色彩增益
+*  \return 返回色彩增益值 范围是【1.0，10.0】
+*  \endif
+*  \since 2.23.0
+*  \sa setColorGainForSDRToHDR
+*/
+float com.meicam.sdk.NvsStreamingContext.getColorGainForSDRToHDR()  
+</pre><p>录制参数与导出参数：NVS_RECORD_VIDEO_ENCODEC_NAME，NVS_RECORD_HDR_VIDEO_COLOR_TRANSFER。</p>
+<h2>其他：</h2>
+<p>媒体格式分为几类 SDR、HDR、HDR10、HDR10+、Dolby Vision。</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>类型</b> </th><th class="markdownTableHeadNone"><b>颜色转换曲线名称</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">SDR </td><td class="markdownTableBodyNone">none  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">HDR </td><td class="markdownTableBodyNone">hlg  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HDR10/HDR10+ </td><td class="markdownTableBodyNone">st2084(PQ视频)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Dolby Vision（仅IOS支持） </td><td class="markdownTableBodyNone">hlg dolby vision（仅IOS支持）  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

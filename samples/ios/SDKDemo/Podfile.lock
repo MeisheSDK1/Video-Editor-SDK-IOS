@@ -1,0 +1,276 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - AudioEqualizer (0.1.0):
+    - NvAlbum
+    - NvBaseCommon
+    - NvSDKCommon
+  - IQKeyboardManager (6.5.19)
+  - JXCategoryView (1.5.9)
+  - JXPagingView/Pager (2.1.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.5.0)
+  - NvAlbum (0.2.0):
+    - Masonry (~> 1.1.0)
+    - MBProgressHUD (~> 1.1.0)
+    - NvBaseCommon
+  - NvBaseCommon (0.1.0):
+    - AFNetworking
+    - Masonry (~> 1.1.0)
+    - MBProgressHUD (~> 1.1.0)
+    - YYWebImage (~> 1.0.5)
+  - NvBoomerang (0.1.0):
+    - AFNetworking
+    - Masonry (= 1.1.0)
+    - NvBaseCommon
+    - NvSDKCommon
+  - NvFlashEffect (0.1.0):
+    - Masonry (~> 1.1.0)
+    - MBProgressHUD (~> 1.1.0)
+    - NvBaseCommon
+  - NvMimo (0.2.0):
+    - AFNetworking
+    - Masonry (~> 1.1.0)
+    - MBProgressHUD (~> 1.1.0)
+    - NvAlbum
+    - NvBaseCommon
+    - NvSDKCommon
+    - Reachability (~> 3.2.0)
+    - SSZipArchive (~> 2.2.2)
+    - YYModel (~> 1.0.4)
+    - YYWebImage (~> 1.0.5)
+  - NvPackagingTemplate (0.1.0):
+    - Masonry (~> 1.1.0)
+    - NvAlbum
+    - NvBaseCommon
+    - NvSDKCommon
+    - NvTemplate
+  - NvSDKCommon (0.1.0):
+    - AFNetworking
+    - Masonry (~> 1.1.0)
+    - NvBaseCommon
+    - SSZipArchive
+  - NvTemplate (0.2.0):
+    - AFNetworking
+    - MJRefresh (~> 3.5.0)
+    - NvAlbum
+    - NvBaseCommon
+    - NvSDKCommon
+    - SnapKit
+    - YYWebImage (~> 1.0.5)
+  - QuickSplicing (0.1.0):
+    - Masonry (~> 1.1.0)
+    - NvAlbum
+    - NvBaseCommon
+    - NvSDKCommon
+    - YYWebImage (~> 1.0.5)
+  - Reachability (3.2)
+  - SnapKit (4.2.0)
+  - SSZipArchive (2.2.2)
+  - UMAPM (2.0.0):
+    - UMCommon
+  - UMCommon (7.5.0):
+    - UMDevice
+  - UMDevice (3.4.0)
+  - Virtual (0.1.0):
+    - Masonry (~> 1.1.0)
+    - NvAlbum
+    - NvBaseCommon
+    - NvSDKCommon
+    - YYWebImage (~> 1.0.5)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYImage/WebP (1.0.4):
+    - YYImage/Core
+  - YYModel (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - AFNetworking (from `https://gitee.com/mirrors/AFNetworking.git`)
+  - AudioEqualizer (from `SubProject/AudioEqualizer/`)
+  - IQKeyboardManager
+  - JXCategoryView (from `https://gitee.com/liaoyp/JXCategoryView.git`)
+  - JXPagingView/Pager (from `https://gitee.com/liaoyp/JXPagingView.git`)
+  - Masonry (from `https://gitee.com/mirrors/ios-masonry.git`, tag `v1.1.0`)
+  - MBProgressHUD (from `https://gitee.com/mirrors/MBProgressHUD.git`, tag `1.1.0`)
+  - MJRefresh (from `https://gitee.com/mirrors/MJRefresh.git`, tag `3.5.0`)
+  - NvAlbum (from `SubProject/NvAlbum/`)
+  - NvBaseCommon (from `SubProject/NvBaseCommon/`)
+  - NvBoomerang (from `SubProject/NvBoomerang/`)
+  - NvFlashEffect (from `SubProject/NvFlashEffect/`)
+  - NvMimo (from `SubProject/NvMimo/`)
+  - NvPackagingTemplate (from `SubProject/NvPackagingTemplate/`)
+  - NvSDKCommon (from `SubProject/NvSDKCommon/`)
+  - NvTemplate (from `SubProject/NvTemplate/`)
+  - QuickSplicing (from `SubProject/QuickSplicing/`)
+  - Reachability (from `https://gitee.com/mirrors/Reachability.git`, tag `v3.2`)
+  - SnapKit (from `https://gitee.com/mirrors/SnapKit.git`, tag `4.2.0`)
+  - SSZipArchive (from `https://github.com/ZipArchive/ZipArchive.git`, tag `2.2.2`)
+  - UMAPM
+  - UMCommon
+  - UMDevice
+  - Virtual (from `SubProject/Virtual/`)
+  - YYCache (from `https://gitee.com/idol-group/YYCache.git`, tag `1.0.4`)
+  - YYImage/WebP (from `https://gitee.com/idol-group/YYImage.git`, tag `1.0.4`)
+  - YYModel (from `https://gitee.com/mirrors/YYModel.git`, tag `1.0.4`)
+  - YYWebImage (from `https://gitee.com/mirrors/YYWebImage.git`, tag `1.0.5`)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManager
+    - UMAPM
+    - UMCommon
+    - UMDevice
+
+EXTERNAL SOURCES:
+  AFNetworking:
+    :git: https://gitee.com/mirrors/AFNetworking.git
+  AudioEqualizer:
+    :path: SubProject/AudioEqualizer/
+  JXCategoryView:
+    :git: https://gitee.com/liaoyp/JXCategoryView.git
+  JXPagingView:
+    :git: https://gitee.com/liaoyp/JXPagingView.git
+  Masonry:
+    :git: https://gitee.com/mirrors/ios-masonry.git
+    :tag: v1.1.0
+  MBProgressHUD:
+    :git: https://gitee.com/mirrors/MBProgressHUD.git
+    :tag: 1.1.0
+  MJRefresh:
+    :git: https://gitee.com/mirrors/MJRefresh.git
+    :tag: 3.5.0
+  NvAlbum:
+    :path: SubProject/NvAlbum/
+  NvBaseCommon:
+    :path: SubProject/NvBaseCommon/
+  NvBoomerang:
+    :path: SubProject/NvBoomerang/
+  NvFlashEffect:
+    :path: SubProject/NvFlashEffect/
+  NvMimo:
+    :path: SubProject/NvMimo/
+  NvPackagingTemplate:
+    :path: SubProject/NvPackagingTemplate/
+  NvSDKCommon:
+    :path: SubProject/NvSDKCommon/
+  NvTemplate:
+    :path: SubProject/NvTemplate/
+  QuickSplicing:
+    :path: SubProject/QuickSplicing/
+  Reachability:
+    :git: https://gitee.com/mirrors/Reachability.git
+    :tag: v3.2
+  SnapKit:
+    :git: https://gitee.com/mirrors/SnapKit.git
+    :tag: 4.2.0
+  SSZipArchive:
+    :git: https://github.com/ZipArchive/ZipArchive.git
+    :tag: 2.2.2
+  Virtual:
+    :path: SubProject/Virtual/
+  YYCache:
+    :git: https://gitee.com/idol-group/YYCache.git
+    :tag: 1.0.4
+  YYImage:
+    :git: https://gitee.com/idol-group/YYImage.git
+    :tag: 1.0.4
+  YYModel:
+    :git: https://gitee.com/mirrors/YYModel.git
+    :tag: 1.0.4
+  YYWebImage:
+    :git: https://gitee.com/mirrors/YYWebImage.git
+    :tag: 1.0.5
+
+CHECKOUT OPTIONS:
+  AFNetworking:
+    :commit: d9f589cc2c1fe9d55eb5eea00558010afea7a41e
+    :git: https://gitee.com/mirrors/AFNetworking.git
+  JXCategoryView:
+    :commit: 126b99ebeb6173dd061ff094347a3e20df67faa9
+    :git: https://gitee.com/liaoyp/JXCategoryView.git
+  JXPagingView:
+    :commit: ce74925719406edbdce9bc4ec2d270cf57377e04
+    :git: https://gitee.com/liaoyp/JXPagingView.git
+  Masonry:
+    :git: https://gitee.com/mirrors/ios-masonry.git
+    :tag: v1.1.0
+  MBProgressHUD:
+    :git: https://gitee.com/mirrors/MBProgressHUD.git
+    :tag: 1.1.0
+  MJRefresh:
+    :git: https://gitee.com/mirrors/MJRefresh.git
+    :tag: 3.5.0
+  Reachability:
+    :git: https://gitee.com/mirrors/Reachability.git
+    :tag: v3.2
+  SnapKit:
+    :git: https://gitee.com/mirrors/SnapKit.git
+    :tag: 4.2.0
+  SSZipArchive:
+    :git: https://github.com/ZipArchive/ZipArchive.git
+    :tag: 2.2.2
+  YYCache:
+    :git: https://gitee.com/idol-group/YYCache.git
+    :tag: 1.0.4
+  YYImage:
+    :git: https://gitee.com/idol-group/YYImage.git
+    :tag: 1.0.4
+  YYModel:
+    :git: https://gitee.com/mirrors/YYModel.git
+    :tag: 1.0.4
+  YYWebImage:
+    :git: https://gitee.com/mirrors/YYWebImage.git
+    :tag: 1.0.5
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AudioEqualizer: 57be0baa2129f073e0e796954b1b45ca62db6ca8
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  JXCategoryView: 2ef9ecfd3735158d009ce02d1f29811aa822da65
+  JXPagingView: ef48a5a2392252c68db7999de38f4761a2707e2a
+  Masonry: 890751a1008d6f33a97b032f4ecad4870d7eed3a
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  NvAlbum: d65e2a12e4f207fdacbf010fda6ca3e28ca4b5df
+  NvBaseCommon: 2d1651b810193fde57d40e028940800087b29471
+  NvBoomerang: 703aaffa40e548025565206fc2f3bd1aecf7e16c
+  NvFlashEffect: fea35431d13e9970e3abd2e0d4055ee88ad7e00d
+  NvMimo: 63402d827373dec3d3526fcb68ab8a493aad6aff
+  NvPackagingTemplate: 7727c55471cf331027103feb81666a3909ef9818
+  NvSDKCommon: 81af41efb18883c0682901ad20103d3d20b352e4
+  NvTemplate: 4564f2600223f2dc77e7356c821c78287c9b162d
+  QuickSplicing: 0aaf3c6361f8a88ca815c9b9461093d7f752947d
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SnapKit: 77e8f61982be3de35316498ef730d44b1614b3c7
+  SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
+  UMAPM: 37b8635030b23fe2d75b078d2d33b401de7c5df5
+  UMCommon: 9bfb19a2f40c2521901dacb579bccb0b1cdba8da
+  UMDevice: dcdf7ec167387837559d149fbc7d793d984faf82
+  Virtual: d6eb7e1df823876812ce8b161f88690b02d68ca6
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+
+PODFILE CHECKSUM: 195690afe880f6e5b5fc7b274defbe5c1152c85c
+
+COCOAPODS: 1.15.2

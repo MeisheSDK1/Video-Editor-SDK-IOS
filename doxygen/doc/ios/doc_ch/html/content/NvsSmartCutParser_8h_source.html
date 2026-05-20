@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsSmartCutParser.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsSmartCutParser.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsSmartCutParser_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2019. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Aug 21. 2019</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCommonDef_8h.html">NvsCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsInferenceScheme.html">NvsInferenceScheme</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#ad2ab205fae6c1cd99f7ceabb94a372b6">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#ad2ab205fae6c1cd99f7ceabb94a372b6aa29e84d31aa2f9170f06bab8b741a5fb">NvsSmartCutParserFlag_None</a> = 0</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#ad2ab205fae6c1cd99f7ceabb94a372b6aa29e84d31aa2f9170f06bab8b741a5fb">   29</a></span>&#160;} <a class="code" href="NvsSmartCutParser_8h.html#ad2ab205fae6c1cd99f7ceabb94a372b6">NvsSmartCutParserFlag</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4f">   38</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fab29a3d27b31bf905f694501a4f0b1195">   39</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fab29a3d27b31bf905f694501a4f0b1195">NvsFrameworkTypeFlag_Unknown</a> = -1,</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4faaabb3a48adebb0af758be5a91d2cf877">   40</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4faaabb3a48adebb0af758be5a91d2cf877">NvsFrameworkTypeFlag_General</a> = 0,</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fac60378cc2ff902046a43999979e74c1a">   41</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fac60378cc2ff902046a43999979e74c1a">NvsFrameworkTypeFlag_MobileGeneral</a> = 1,</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4facc449a203d9427e8da7ffaf2c505f8a4">   42</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4facc449a203d9427e8da7ffaf2c505f8a4">NvsFrameworkTypeFlag_Huawei</a> = 2,</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4faa676524ec2e81e8f43fa95fec0bf6537">   43</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4faa676524ec2e81e8f43fa95fec0bf6537">NvsFrameworkTypeFlag_Qualcomm</a> = 3,</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fa773df41829b9cd629bd3cecb938d6ca2">   44</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fa773df41829b9cd629bd3cecb938d6ca2">NvsFrameworkTypeFlag_Mediatek</a> = 4,</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fae4a1947d338e8fbfe638bd0c4bf2ee06">   45</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fae4a1947d338e8fbfe638bd0c4bf2ee06">NvsFrameworkTypeFlag_Nnapi</a> = 5,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4f">NvsFrameworkTypeFlag</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5">   55</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a39a628ab7c7c951b50ec8b3423229211">   56</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a39a628ab7c7c951b50ec8b3423229211">NvsDeviceTypeFlag_Unknown</a> = -1,</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5ac4770c11c139c5c9c61d085d06dedb9c">   57</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5ac4770c11c139c5c9c61d085d06dedb9c">NvsDeviceTypeFlag_Cpu</a> = 0,</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a46ebaea505d51d7d8837ddf615c900f8">   58</a></span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a46ebaea505d51d7d8837ddf615c900f8">NvsDeviceTypeFlag_Gpu</a> = 1,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a84a4f332bc50fd46c910bf5e05a6bc23">NvsDeviceTypeFlag_Npu</a> = 2</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a84a4f332bc50fd46c910bf5e05a6bc23">   60</a></span>&#160;} <a class="code" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5">NvsDeviceTypeFlag</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="protocolNvsSmartCutParserDelegate-p.html">   62</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocolNvsSmartCutParserDelegate-p.html">NvsSmartCutParserDelegate</a> &lt;NSObject&gt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">@optional</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;- (void)didDetectStarted:(NSString*)mediaPath taskId:(int64_t)taskId;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;- (void)didDetectFinished:(NSString*)mediaPath scdPath:(NSString*)scdPath;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;- (void)didDetectError:(<span class="keywordtype">int</span>)errorType;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;- (void)didDetectProgress:(NSString*)mediaPath progress:(<span class="keywordtype">float</span>)progress;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="interfaceNvsSmartCutParser.html">  122</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsSmartCutParser.html">NvsSmartCutParser</a> : NSObject</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="interfaceNvsSmartCutParser.html#afe849a5403baf87cc263f85aff27c8e0">  124</a></span>&#160;<span class="keyword">@property</span> (atomic, weak) id&lt;NvsSmartCutParserDelegate&gt; <a class="code" href="interfaceNvsSmartCutParser.html#afb9a26e35c859fffd7537258cec1c400">delegate</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;+ (NSArray *)<a class="code" href="interfaceNvsSmartCutParser.html#a380a01bdfc6eefaf7fbfdf742117dc1a">querySupportedSchemes</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;+ (<a class="code" href="interfaceNvsSmartCutParser.html">NvsSmartCutParser</a> *)init:(<a class="code" href="interfaceNvsInferenceScheme.html">NvsInferenceScheme</a> *)scheme sceneModelPath:(NSString *)sceneModelPath placeModelPath:(NSString *) placeModelPath;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;+ (<a class="code" href="interfaceNvsSmartCutParser.html">NvsSmartCutParser</a> *)init:(<a class="code" href="interfaceNvsInferenceScheme.html">NvsInferenceScheme</a> *)scheme sceneModelPath:(NSString *)sceneModelPath placeModelPath:(NSString *) placeModelPath flags:(int)flags;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;+ (void)<a class="code" href="interfaceNvsSmartCutParser.html#a77f70b332494674fb80e6e74762702dc">close</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;+ (BOOL)initHumanDetection:(NSString *)modelFilePath</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;           licenseFilePath:(NSString *)licenseFilePath</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                  features:(<span class="keywordtype">int</span>)features;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;+ (<a class="code" href="interfaceNvsSmartCutParser.html">NvsSmartCutParser</a> *)<a class="code" href="interfaceNvsSmartCutParser.html#a4191c1d28f5d154d39fc70484ff4e00f">getInstance</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;- (Boolean)setMaxThreadCount:(<span class="keywordtype">int</span>)threadCount;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;- (Boolean)detectMediaFiles:(NSArray *)dataArray;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;- (void)cancelTask:(int64_t)taskId;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;- (void)<a class="code" href="interfaceNvsSmartCutParser.html#a7240938c24ac4db71437922dd4aef524">cancelAllTasks</a>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;- (void)<a class="code" href="interfaceNvsSmartCutParser.html#afe849a5403baf87cc263f85aff27c8e0">suspend</a>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;- (void)<a class="code" href="interfaceNvsSmartCutParser.html#a36b1dec9ef654341634185cf76753d42">resume</a>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="interfaceNvsInferenceScheme.html">  285</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsInferenceScheme.html">NvsInferenceScheme</a> : NSObject</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="interfaceNvsInferenceScheme.html#ae691a777cc81df3910aaf3e32dcc184d">  287</a></span>&#160;<span class="keyword">@property</span> (nonatomic) <a class="code" href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4f">NvsFrameworkTypeFlag</a> frameworkType;            </div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="interfaceNvsInferenceScheme.html#a8cea92b8b075d6d14a97178e735d7538">  288</a></span>&#160;<span class="keyword">@property</span> (nonatomic) <a class="code" href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5">NvsDeviceTypeFlag</a> deviceType;               </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="protocolNvsSmartCutParserDelegate-p.html#a60f27279f7fb1089eedc19446ff85655">  299</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsDetectData.html">NvsDetectData</a> : NSObject</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* mediaPath;    </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="keyword">@property</span> (nonatomic) <span class="keywordtype">int</span> frameSpace;      </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keyword">@property</span> (nonatomic) <a class="code" href="structNvsSize.html">NvsSize</a> detectSize;      </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aNvsSmartCutParser_8h_html_aa620f696e96d579075b990f40f7b06d5ac4770c11c139c5c9c61d085d06dedb9c"><div class="ttname"><a href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5ac4770c11c139c5c9c61d085d06dedb9c">NvsDeviceTypeFlag_Cpu</a></div><div class="ttdeci">@ NvsDeviceTypeFlag_Cpu</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:57</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_a3f75f8be7b668919b5fb1fd6dea16f4fac60378cc2ff902046a43999979e74c1a"><div class="ttname"><a href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fac60378cc2ff902046a43999979e74c1a">NvsFrameworkTypeFlag_MobileGeneral</a></div><div class="ttdeci">@ NvsFrameworkTypeFlag_MobileGeneral</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:41</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_a3f75f8be7b668919b5fb1fd6dea16f4faaabb3a48adebb0af758be5a91d2cf877"><div class="ttname"><a href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4faaabb3a48adebb0af758be5a91d2cf877">NvsFrameworkTypeFlag_General</a></div><div class="ttdeci">@ NvsFrameworkTypeFlag_General</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:40</div></div>
+<div class="ttc" id="ainterfaceNvsSmartCutParser_html_a36b1dec9ef654341634185cf76753d42"><div class="ttname"><a href="interfaceNvsSmartCutParser.html#a36b1dec9ef654341634185cf76753d42">-[NvsSmartCutParser resume]</a></div><div class="ttdeci">void resume()</div><div class="ttdoc">恢复所有检测任务</div></div>
+<div class="ttc" id="ainterfaceNvsSmartCutParser_html_afb9a26e35c859fffd7537258cec1c400"><div class="ttname"><a href="interfaceNvsSmartCutParser.html#afb9a26e35c859fffd7537258cec1c400">NvsSmartCutParser::delegate</a></div><div class="ttdeci">id&lt; NvsSmartCutParserDelegate &gt; delegate</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:124</div></div>
+<div class="ttc" id="ainterfaceNvsSmartCutParser_html"><div class="ttname"><a href="interfaceNvsSmartCutParser.html">NvsSmartCutParser</a></div><div class="ttdoc">智能剪辑类</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:123</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_aa620f696e96d579075b990f40f7b06d5"><div class="ttname"><a href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5">NvsDeviceTypeFlag</a></div><div class="ttdeci">NvsDeviceTypeFlag</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:55</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_a3f75f8be7b668919b5fb1fd6dea16f4fae4a1947d338e8fbfe638bd0c4bf2ee06"><div class="ttname"><a href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fae4a1947d338e8fbfe638bd0c4bf2ee06">NvsFrameworkTypeFlag_Nnapi</a></div><div class="ttdeci">@ NvsFrameworkTypeFlag_Nnapi</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:45</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_ad2ab205fae6c1cd99f7ceabb94a372b6"><div class="ttname"><a href="NvsSmartCutParser_8h.html#ad2ab205fae6c1cd99f7ceabb94a372b6">NvsSmartCutParserFlag</a></div><div class="ttdeci">NvsSmartCutParserFlag</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:27</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_a3f75f8be7b668919b5fb1fd6dea16f4f"><div class="ttname"><a href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4f">NvsFrameworkTypeFlag</a></div><div class="ttdeci">NvsFrameworkTypeFlag</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:38</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_aa620f696e96d579075b990f40f7b06d5a39a628ab7c7c951b50ec8b3423229211"><div class="ttname"><a href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a39a628ab7c7c951b50ec8b3423229211">NvsDeviceTypeFlag_Unknown</a></div><div class="ttdeci">@ NvsDeviceTypeFlag_Unknown</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:56</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_a3f75f8be7b668919b5fb1fd6dea16f4fab29a3d27b31bf905f694501a4f0b1195"><div class="ttname"><a href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fab29a3d27b31bf905f694501a4f0b1195">NvsFrameworkTypeFlag_Unknown</a></div><div class="ttdeci">@ NvsFrameworkTypeFlag_Unknown</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:39</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_aa620f696e96d579075b990f40f7b06d5a46ebaea505d51d7d8837ddf615c900f8"><div class="ttname"><a href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a46ebaea505d51d7d8837ddf615c900f8">NvsDeviceTypeFlag_Gpu</a></div><div class="ttdeci">@ NvsDeviceTypeFlag_Gpu</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:58</div></div>
+<div class="ttc" id="ainterfaceNvsSmartCutParser_html_afe849a5403baf87cc263f85aff27c8e0"><div class="ttname"><a href="interfaceNvsSmartCutParser.html#afe849a5403baf87cc263f85aff27c8e0">-[NvsSmartCutParser suspend]</a></div><div class="ttdeci">void suspend()</div><div class="ttdoc">挂起检测任务</div></div>
+<div class="ttc" id="ainterfaceNvsDetectData_html"><div class="ttname"><a href="interfaceNvsDetectData.html">NvsDetectData</a></div><div class="ttdoc">智能检测数据类</div><div class="ttdef"><b>Definition:</b> NvsAIParser.h:33</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_a3f75f8be7b668919b5fb1fd6dea16f4faa676524ec2e81e8f43fa95fec0bf6537"><div class="ttname"><a href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4faa676524ec2e81e8f43fa95fec0bf6537">NvsFrameworkTypeFlag_Qualcomm</a></div><div class="ttdeci">@ NvsFrameworkTypeFlag_Qualcomm</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:43</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html"><div class="ttname"><a href="NvsCommonDef_8h.html">NvsCommonDef.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsInferenceScheme_html"><div class="ttname"><a href="interfaceNvsInferenceScheme.html">NvsInferenceScheme</a></div><div class="ttdoc">推理方案</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:286</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_aa620f696e96d579075b990f40f7b06d5a84a4f332bc50fd46c910bf5e05a6bc23"><div class="ttname"><a href="NvsSmartCutParser_8h.html#aa620f696e96d579075b990f40f7b06d5a84a4f332bc50fd46c910bf5e05a6bc23">NvsDeviceTypeFlag_Npu</a></div><div class="ttdeci">@ NvsDeviceTypeFlag_Npu</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:59</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_a3f75f8be7b668919b5fb1fd6dea16f4fa773df41829b9cd629bd3cecb938d6ca2"><div class="ttname"><a href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4fa773df41829b9cd629bd3cecb938d6ca2">NvsFrameworkTypeFlag_Mediatek</a></div><div class="ttdeci">@ NvsFrameworkTypeFlag_Mediatek</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:44</div></div>
+<div class="ttc" id="ainterfaceNvsSmartCutParser_html_a77f70b332494674fb80e6e74762702dc"><div class="ttname"><a href="interfaceNvsSmartCutParser.html#a77f70b332494674fb80e6e74762702dc">+[NvsSmartCutParser close]</a></div><div class="ttdeci">void close()</div><div class="ttdoc">销毁智能剪辑类实例。注意: 销毁之后可以再次创建及获取</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_a3f75f8be7b668919b5fb1fd6dea16f4facc449a203d9427e8da7ffaf2c505f8a4"><div class="ttname"><a href="NvsSmartCutParser_8h.html#a3f75f8be7b668919b5fb1fd6dea16f4facc449a203d9427e8da7ffaf2c505f8a4">NvsFrameworkTypeFlag_Huawei</a></div><div class="ttdeci">@ NvsFrameworkTypeFlag_Huawei</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:42</div></div>
+<div class="ttc" id="ainterfaceNvsSmartCutParser_html_a380a01bdfc6eefaf7fbfdf742117dc1a"><div class="ttname"><a href="interfaceNvsSmartCutParser.html#a380a01bdfc6eefaf7fbfdf742117dc1a">+[NvsSmartCutParser querySupportedSchemes]</a></div><div class="ttdeci">NSArray * querySupportedSchemes()</div><div class="ttdoc">获取支持的推理方案</div></div>
+<div class="ttc" id="astructNvsSize_html"><div class="ttname"><a href="structNvsSize.html">NvsSize</a></div><div class="ttdoc">尺寸</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:360</div></div>
+<div class="ttc" id="aprotocolNvsSmartCutParserDelegate-p_html"><div class="ttname"><a href="protocolNvsSmartCutParserDelegate-p.html">NvsSmartCutParserDelegate-p</a></div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:62</div></div>
+<div class="ttc" id="ainterfaceNvsSmartCutParser_html_a7240938c24ac4db71437922dd4aef524"><div class="ttname"><a href="interfaceNvsSmartCutParser.html#a7240938c24ac4db71437922dd4aef524">-[NvsSmartCutParser cancelAllTasks]</a></div><div class="ttdeci">void cancelAllTasks()</div><div class="ttdoc">取消所有检测任务</div></div>
+<div class="ttc" id="ainterfaceNvsSmartCutParser_html_a4191c1d28f5d154d39fc70484ff4e00f"><div class="ttname"><a href="interfaceNvsSmartCutParser.html#a4191c1d28f5d154d39fc70484ff4e00f">+[NvsSmartCutParser getInstance]</a></div><div class="ttdeci">NvsSmartCutParser * getInstance()</div><div class="ttdoc">获取智能剪辑类的单例实例(必须进行初始化后才能使用)</div></div>
+<div class="ttc" id="aNvsSmartCutParser_8h_html_ad2ab205fae6c1cd99f7ceabb94a372b6aa29e84d31aa2f9170f06bab8b741a5fb"><div class="ttname"><a href="NvsSmartCutParser_8h.html#ad2ab205fae6c1cd99f7ceabb94a372b6aa29e84d31aa2f9170f06bab8b741a5fb">NvsSmartCutParserFlag_None</a></div><div class="ttdeci">@ NvsSmartCutParserFlag_None</div><div class="ttdef"><b>Definition:</b> NvsSmartCutParser.h:28</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

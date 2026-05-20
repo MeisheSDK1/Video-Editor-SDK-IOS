@@ -1,0 +1,11 @@
+{
+	"translation": [
+		{
+			"originalText": "Dot mole Blusher",
+			"targetLanguage": "zh_CN",
+			"targetText": "点痣腮红"
+		}
+	],
+	"className": "Makeup Blusher Package Id", 
+	"makeupId": "Blusher"
+}

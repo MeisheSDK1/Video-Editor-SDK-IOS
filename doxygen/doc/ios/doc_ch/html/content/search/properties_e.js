@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['r_5275',['r',['../interfaceNvsCaptionColorSpan.html#a252aa128cdbe0ffc0c80d9bf57458a60',1,'NvsCaptionColorSpan::r()'],['../interfaceNvsCaptionOutlineColorSpan.html#a5b4873591b0ad5d49396a6f83415e98c',1,'NvsCaptionOutlineColorSpan::r()']]],
+  ['rawfilterprocessesmode_5276',['rawFilterProcessesMode',['../interfaceNvsVideoClip.html#ae90d45d08a8b5ba0bef250a3d27e46b3',1,'NvsVideoClip']]],
+  ['recordvideobitratemultiplier_5277',['recordVideoBitrateMultiplier',['../interfaceNvsStreamingContext.html#a4a48b67b06f45d7a5891dea1f0f980db',1,'NvsStreamingContext']]],
+  ['refbounding_5278',['refBounding',['../interfaceNvsMeshWarpInfo.html#a804a450b5463c3b9b23935514403fea6',1,'NvsMeshWarpInfo']]],
+  ['reflectiontexture_5279',['reflectionTexture',['../interfaceNvsMaterialInfoDetail.html#a6c37b71423b08fd53f1e2f4df6f59002',1,'NvsMaterialInfoDetail']]],
+  ['reflectivity_5280',['reflectivity',['../interfaceNvsMaterialInfoDetail.html#a5833cc2889d4e1f8a92053fe43c80e6b',1,'NvsMaterialInfoDetail']]],
+  ['regioninfoarray_5281',['regionInfoArray',['../interfaceNvsMaskRegionInfo.html#af2537bcd5ae3a5db4281300994ffc466',1,'NvsMaskRegionInfo']]],
+  ['rendererid_5282',['rendererId',['../interfaceNvsCaptionRendererIdSpan.html#a409897d822fba8c67e355338fd5a5186',1,'NvsCaptionRendererIdSpan']]],
+  ['replaceid_5283',['replaceId',['../interfaceNvsTemplateCaptionDesc.html#a739288a7dcffd9be137579d6c702090c',1,'NvsTemplateCaptionDesc::replaceId()'],['../interfaceNvsTemplateCompoundCaptionDesc.html#a7dc7767ff41360ae3897522a3cd83411',1,'NvsTemplateCompoundCaptionDesc::replaceId()']]],
+  ['resizenone_5284',['resizeNone',['../interfaceNvsThumbnailSequenceDesc.html#ad6f36f3c519037926676b47bd4d5234a',1,'NvsThumbnailSequenceDesc']]],
+  ['reversefilepath_5285',['reverseFilePath',['../interfaceNvsTemplateFootageInfo.html#abc3ccfc1d96602aec622fb6069640ebe',1,'NvsTemplateFootageInfo']]],
+  ['roleintheme_5286',['roleInTheme',['../interfaceNvsCaption.html#a0aecb2b79956ff911b7c307ce9ead047',1,'NvsCaption::roleInTheme()'],['../interfaceNvsVideoClip.html#ae1e7409cd8dbd551beba91e0a1ebb57e',1,'NvsVideoClip::roleInTheme()'],['../interfaceNvsVideoEffectCaption.html#ad9361f57f99cbedb0b30ba2722823b61',1,'NvsVideoEffectCaption::roleInTheme()']]],
+  ['roll_5287',['roll',['../interfaceNvsFaceFeatureInfo.html#a0b5faf49f6c6be456feedcd60bd2171a',1,'NvsFaceFeatureInfo']]],
+  ['rotation_5288',['rotation',['../interfaceNvsFaceFeatureInfo.html#aafed45d927625e5191174d1b3c3ecfce',1,'NvsFaceFeatureInfo']]],
+  ['rotation3d_5289',['rotation3D',['../interfaceNvsBoneOpInfo.html#a3407be21a29b5f049e55bda7e7966664',1,'NvsBoneOpInfo']]],
+  ['roughness_5290',['roughness',['../interfaceNvsMaterialInfoDetail.html#a5aab048ad13c88903f8e342ea3517f7d',1,'NvsMaterialInfoDetail']]],
+  ['roughnesstexture_5291',['roughnessTexture',['../interfaceNvsMaterialInfoDetail.html#a63e60add447cbbf28ffb9ae5af521495',1,'NvsMaterialInfoDetail']]],
+  ['rows_5292',['rows',['../interfaceNvsMeshWarpInfo.html#aed35f34df9265cb65e957ce3723f5a87',1,'NvsMeshWarpInfo']]]
+];

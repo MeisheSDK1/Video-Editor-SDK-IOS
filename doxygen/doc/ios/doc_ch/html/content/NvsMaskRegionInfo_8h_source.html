@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsMaskRegionInfo.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsMaskRegionInfo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsMaskRegionInfo_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2016. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Jul 21. 2020</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCommonDef_8h.html">NvsCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsArbitraryData_8h.html">NvsArbitraryData.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38f">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa10f1bc865ecf169c03470e36f73c6bb9">   27</a></span>&#160;    <a class="code" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa10f1bc865ecf169c03470e36f73c6bb9">NvsMaskRegionType_Polygon</a> = 0,      </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa0e6a0bb722d8498d6ff78b1ef5f482c0">   28</a></span>&#160;    <a class="code" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa0e6a0bb722d8498d6ff78b1ef5f482c0">NvsMaskRegionType_CubicCurve</a>,       </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa88cf4903df5e0d4494377e67723e2fbb">   29</a></span>&#160;    <a class="code" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa88cf4903df5e0d4494377e67723e2fbb">NvsMaskRegionType_Ellipse2D</a>,        </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa7289b1f1060e101f52b96e2136805b92">   30</a></span>&#160;    <a class="code" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa7289b1f1060e101f52b96e2136805b92">NvsMaskRegionType_Mirror</a>,           </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;} <a class="code" href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38f">NvsMaskRegionType</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structNvsMaskEllipse2D.html">   40</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structNvsMaskEllipse2D.html#a81371ecca6aa2f0c88bfd52dea6eb7b7">   41</a></span>&#160;    <a class="code" href="structNvsPosition2D.html">NvsPosition2D</a> <a class="code" href="structNvsMaskEllipse2D.html#a81371ecca6aa2f0c88bfd52dea6eb7b7">center</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structNvsMaskEllipse2D.html#a575ab17e1368b2a750466ea29b0e2a1e">   42</a></span>&#160;    <span class="keywordtype">float</span> a, b, <a class="code" href="structNvsMaskEllipse2D.html#a575ab17e1368b2a750466ea29b0e2a1e">theta</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <a class="code" href="structNvsMaskEllipse2D.html">NvsMaskEllipse2D</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structNvsMaskMirror.html">   52</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structNvsMaskMirror.html#a52babe83f145f608b2579ffa282f6150">   53</a></span>&#160;    <a class="code" href="structNvsPosition2D.html">NvsPosition2D</a> <a class="code" href="structNvsMaskMirror.html#a52babe83f145f608b2579ffa282f6150">center</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structNvsMaskMirror.html#ad828f21aaf7210902f284365f017fbdf">   54</a></span>&#160;    <span class="keywordtype">float</span> distance, <a class="code" href="structNvsMaskMirror.html#ad828f21aaf7210902f284365f017fbdf">theta</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;} <a class="code" href="structNvsMaskMirror.html">NvsMaskMirror</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structNvsMaskTransform2D.html">   64</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structNvsMaskTransform2D.html#ab2cda4bfa6d43ac251cb98f7b94e9a8c">   65</a></span>&#160;    <a class="code" href="structNvsPosition2D.html">NvsPosition2D</a> <a class="code" href="structNvsMaskTransform2D.html#ab2cda4bfa6d43ac251cb98f7b94e9a8c">anchor</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structNvsMaskTransform2D.html#a0fa26c1bec4afda112c14832cea4e665">   66</a></span>&#160;    <a class="code" href="structNvsPosition2D.html">NvsPosition2D</a> <a class="code" href="structNvsMaskTransform2D.html#a0fa26c1bec4afda112c14832cea4e665">scale</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structNvsMaskTransform2D.html#a597f444b1d32ff025864325fa3a96571">   67</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structNvsMaskTransform2D.html#a597f444b1d32ff025864325fa3a96571">rotation</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structNvsMaskTransform2D.html#ad4a58183bfc53371972276d65e123ed2">   68</a></span>&#160;    <a class="code" href="structNvsPosition2D.html">NvsPosition2D</a> <a class="code" href="structNvsMaskTransform2D.html#ad4a58183bfc53371972276d65e123ed2">translation</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <a class="code" href="structNvsMaskTransform2D.html">NvsMaskTransform2D</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="interfaceNvsMaskSubRegionInfo.html">   80</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsMaskSubRegionInfo.html">NvsMaskSubRegionInfo</a> : NSObject</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="interfaceNvsMaskSubRegionInfo.html#aa0ef7f625a64e92a86cb7363dedf70d5">   82</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">int</span> <a class="code" href="interfaceNvsMaskSubRegionInfo.html#aa0ef7f625a64e92a86cb7363dedf70d5">type</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="interfaceNvsMaskSubRegionInfo.html#ac620f8a0d781cccdb88356e19d03e6b7">   83</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSMutableArray&lt;NSValue *&gt; *<a class="code" href="interfaceNvsMaskSubRegionInfo.html#ac620f8a0d781cccdb88356e19d03e6b7">points</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="interfaceNvsMaskSubRegionInfo.html#af487b454972d6d7823ccfef3ad1063bc">   84</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <a class="code" href="structNvsMaskEllipse2D.html">NvsMaskEllipse2D</a> <a class="code" href="interfaceNvsMaskSubRegionInfo.html#af487b454972d6d7823ccfef3ad1063bc">ellipse2d</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="interfaceNvsMaskSubRegionInfo.html#a3efc275f7dded3f598f4c4655d5f2c0d">   85</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <a class="code" href="structNvsMaskMirror.html">NvsMaskMirror</a> <a class="code" href="interfaceNvsMaskSubRegionInfo.html#a3efc275f7dded3f598f4c4655d5f2c0d">mirror</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="interfaceNvsMaskSubRegionInfo.html#a1b615b8273fe34bedb6f61f9df372a84">   86</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <a class="code" href="structNvsMaskTransform2D.html">NvsMaskTransform2D</a> <a class="code" href="interfaceNvsMaskSubRegionInfo.html#a1b615b8273fe34bedb6f61f9df372a84">transform2d</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="interfaceNvsMaskRegionInfo.html">   97</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> : <a class="code" href="interfaceNvsArbitraryData.html">NvsArbitraryData</a></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="interfaceNvsMaskRegionInfo.html#af2537bcd5ae3a5db4281300994ffc466">   98</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSMutableArray&lt;NvsMaskSubRegionInfo *&gt; *regionInfoArray;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aNvsMaskRegionInfo_8h_html_a40de170b95fe6066edad08864f60b38f"><div class="ttname"><a href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38f">NvsMaskRegionType</a></div><div class="ttdeci">NvsMaskRegionType</div><div class="ttdoc">构成蒙版的区域类型</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:26</div></div>
+<div class="ttc" id="ainterfaceNvsMaskSubRegionInfo_html_aa0ef7f625a64e92a86cb7363dedf70d5"><div class="ttname"><a href="interfaceNvsMaskSubRegionInfo.html#aa0ef7f625a64e92a86cb7363dedf70d5">NvsMaskSubRegionInfo::type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:82</div></div>
+<div class="ttc" id="astructNvsMaskMirror_html"><div class="ttname"><a href="structNvsMaskMirror.html">NvsMaskMirror</a></div><div class="ttdoc">镜面</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:52</div></div>
+<div class="ttc" id="astructNvsMaskTransform2D_html"><div class="ttname"><a href="structNvsMaskTransform2D.html">NvsMaskTransform2D</a></div><div class="ttdoc">二维变换</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:64</div></div>
+<div class="ttc" id="astructNvsMaskMirror_html_ad828f21aaf7210902f284365f017fbdf"><div class="ttname"><a href="structNvsMaskMirror.html#ad828f21aaf7210902f284365f017fbdf">NvsMaskMirror::theta</a></div><div class="ttdeci">float theta</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:54</div></div>
+<div class="ttc" id="aNvsMaskRegionInfo_8h_html_a40de170b95fe6066edad08864f60b38fa0e6a0bb722d8498d6ff78b1ef5f482c0"><div class="ttname"><a href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa0e6a0bb722d8498d6ff78b1ef5f482c0">NvsMaskRegionType_CubicCurve</a></div><div class="ttdeci">@ NvsMaskRegionType_CubicCurve</div><div class="ttdoc">三阶贝塞尔曲线围成的区域</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:28</div></div>
+<div class="ttc" id="ainterfaceNvsMaskRegionInfo_html"><div class="ttname"><a href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a></div><div class="ttdoc">蒙版区域信息</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:98</div></div>
+<div class="ttc" id="astructNvsMaskTransform2D_html_ad4a58183bfc53371972276d65e123ed2"><div class="ttname"><a href="structNvsMaskTransform2D.html#ad4a58183bfc53371972276d65e123ed2">NvsMaskTransform2D::translation</a></div><div class="ttdeci">NvsPosition2D translation</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:68</div></div>
+<div class="ttc" id="astructNvsMaskTransform2D_html_a597f444b1d32ff025864325fa3a96571"><div class="ttname"><a href="structNvsMaskTransform2D.html#a597f444b1d32ff025864325fa3a96571">NvsMaskTransform2D::rotation</a></div><div class="ttdeci">float rotation</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:67</div></div>
+<div class="ttc" id="astructNvsMaskTransform2D_html_ab2cda4bfa6d43ac251cb98f7b94e9a8c"><div class="ttname"><a href="structNvsMaskTransform2D.html#ab2cda4bfa6d43ac251cb98f7b94e9a8c">NvsMaskTransform2D::anchor</a></div><div class="ttdeci">NvsPosition2D anchor</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:65</div></div>
+<div class="ttc" id="astructNvsMaskEllipse2D_html"><div class="ttname"><a href="structNvsMaskEllipse2D.html">NvsMaskEllipse2D</a></div><div class="ttdoc">椭圆</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:40</div></div>
+<div class="ttc" id="aNvsArbitraryData_8h_html"><div class="ttname"><a href="NvsArbitraryData_8h.html">NvsArbitraryData.h</a></div></div>
+<div class="ttc" id="astructNvsMaskEllipse2D_html_a81371ecca6aa2f0c88bfd52dea6eb7b7"><div class="ttname"><a href="structNvsMaskEllipse2D.html#a81371ecca6aa2f0c88bfd52dea6eb7b7">NvsMaskEllipse2D::center</a></div><div class="ttdeci">NvsPosition2D center</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:41</div></div>
+<div class="ttc" id="aNvsMaskRegionInfo_8h_html_a40de170b95fe6066edad08864f60b38fa7289b1f1060e101f52b96e2136805b92"><div class="ttname"><a href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa7289b1f1060e101f52b96e2136805b92">NvsMaskRegionType_Mirror</a></div><div class="ttdeci">@ NvsMaskRegionType_Mirror</div><div class="ttdoc">镜面区域</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:30</div></div>
+<div class="ttc" id="astructNvsMaskTransform2D_html_a0fa26c1bec4afda112c14832cea4e665"><div class="ttname"><a href="structNvsMaskTransform2D.html#a0fa26c1bec4afda112c14832cea4e665">NvsMaskTransform2D::scale</a></div><div class="ttdeci">NvsPosition2D scale</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:66</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="ainterfaceNvsMaskSubRegionInfo_html_ac620f8a0d781cccdb88356e19d03e6b7"><div class="ttname"><a href="interfaceNvsMaskSubRegionInfo.html#ac620f8a0d781cccdb88356e19d03e6b7">NvsMaskSubRegionInfo::points</a></div><div class="ttdeci">NSMutableArray&lt; NSValue * &gt; * points</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:83</div></div>
+<div class="ttc" id="astructNvsMaskEllipse2D_html_a575ab17e1368b2a750466ea29b0e2a1e"><div class="ttname"><a href="structNvsMaskEllipse2D.html#a575ab17e1368b2a750466ea29b0e2a1e">NvsMaskEllipse2D::theta</a></div><div class="ttdeci">float theta</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:42</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html"><div class="ttname"><a href="NvsCommonDef_8h.html">NvsCommonDef.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsMaskSubRegionInfo_html_a3efc275f7dded3f598f4c4655d5f2c0d"><div class="ttname"><a href="interfaceNvsMaskSubRegionInfo.html#a3efc275f7dded3f598f4c4655d5f2c0d">NvsMaskSubRegionInfo::mirror</a></div><div class="ttdeci">NvsMaskMirror mirror</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:85</div></div>
+<div class="ttc" id="ainterfaceNvsMaskSubRegionInfo_html_af487b454972d6d7823ccfef3ad1063bc"><div class="ttname"><a href="interfaceNvsMaskSubRegionInfo.html#af487b454972d6d7823ccfef3ad1063bc">NvsMaskSubRegionInfo::ellipse2d</a></div><div class="ttdeci">NvsMaskEllipse2D ellipse2d</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:84</div></div>
+<div class="ttc" id="aNvsMaskRegionInfo_8h_html_a40de170b95fe6066edad08864f60b38fa88cf4903df5e0d4494377e67723e2fbb"><div class="ttname"><a href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa88cf4903df5e0d4494377e67723e2fbb">NvsMaskRegionType_Ellipse2D</a></div><div class="ttdeci">@ NvsMaskRegionType_Ellipse2D</div><div class="ttdoc">椭圆区域</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:29</div></div>
+<div class="ttc" id="astructNvsPosition2D_html"><div class="ttname"><a href="structNvsPosition2D.html">NvsPosition2D</a></div><div class="ttdoc">二维坐标结构</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:423</div></div>
+<div class="ttc" id="ainterfaceNvsMaskSubRegionInfo_html"><div class="ttname"><a href="interfaceNvsMaskSubRegionInfo.html">NvsMaskSubRegionInfo</a></div><div class="ttdoc">子区域信息   points是CGPoint的数组</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:81</div></div>
+<div class="ttc" id="astructNvsMaskMirror_html_a52babe83f145f608b2579ffa282f6150"><div class="ttname"><a href="structNvsMaskMirror.html#a52babe83f145f608b2579ffa282f6150">NvsMaskMirror::center</a></div><div class="ttdeci">NvsPosition2D center</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:53</div></div>
+<div class="ttc" id="ainterfaceNvsMaskSubRegionInfo_html_a1b615b8273fe34bedb6f61f9df372a84"><div class="ttname"><a href="interfaceNvsMaskSubRegionInfo.html#a1b615b8273fe34bedb6f61f9df372a84">NvsMaskSubRegionInfo::transform2d</a></div><div class="ttdeci">NvsMaskTransform2D transform2d</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:86</div></div>
+<div class="ttc" id="ainterfaceNvsArbitraryData_html"><div class="ttname"><a href="interfaceNvsArbitraryData.html">NvsArbitraryData</a></div><div class="ttdoc">特技的一种自定义参数结构</div><div class="ttdef"><b>Definition:</b> NvsArbitraryData.h:29</div></div>
+<div class="ttc" id="aNvsMaskRegionInfo_8h_html_a40de170b95fe6066edad08864f60b38fa10f1bc865ecf169c03470e36f73c6bb9"><div class="ttname"><a href="NvsMaskRegionInfo_8h.html#a40de170b95fe6066edad08864f60b38fa10f1bc865ecf169c03470e36f73c6bb9">NvsMaskRegionType_Polygon</a></div><div class="ttdeci">@ NvsMaskRegionType_Polygon</div><div class="ttdoc">多边形区域</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:27</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

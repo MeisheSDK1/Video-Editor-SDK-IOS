@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsTimeline.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsTimeline.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsTimeline_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2016. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Dec 29. 2016</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCommonDef_8h.html">NvsCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsObject_8h.html">NvsObject.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsLiveWindow_8h.html">NvsLiveWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCustomVideoFx_8h.html">NvsCustomVideoFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTimelineCompoundCaption_8h.html">NvsTimelineCompoundCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTimelineGraphCompositor_8h.html">NvsTimelineGraphCompositor.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsVideoTrack.html">NvsVideoTrack</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsAudioTrack.html">NvsAudioTrack</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsClip.html">NvsClip</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsCaption.html">NvsCaption</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcde">   36</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea25085a435d738377d891ff1a9d82dbab">   37</a></span>&#160;    <a class="code" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea25085a435d738377d891ff1a9d82dbab">NvsTimelineWatermarkPosition_TopRight</a> = 0,        </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea5c0478c4ced67ebc5d799dafafec17a8">   38</a></span>&#160;    <a class="code" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea5c0478c4ced67ebc5d799dafafec17a8">NvsTimelineWatermarkPosition_TopLeft</a> = 1,         </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdeaae6863082b67ca3802f5dbe1b5224858">   39</a></span>&#160;    <a class="code" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdeaae6863082b67ca3802f5dbe1b5224858">NvsTimelineWatermarkPosition_BottomLeft</a> = 2,      </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea4243be9b24d309bccc8700eb52c32e86">NvsTimelineWatermarkPosition_BottomRight</a> = 3      </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea4243be9b24d309bccc8700eb52c32e86">   41</a></span>&#160;} <a class="code" href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcde">NvsTimelineWatermarkPosition</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="interfaceNvsPlaybackRateControlRegion.html">   43</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsPlaybackRateControlRegion.html">NvsPlaybackRateControlRegion</a> : NSObject</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="interfaceNvsPlaybackRateControlRegion.html#aba57b28d970b5229ec8f6f7eecb63503">   45</a></span>&#160;    <span class="keyword">@property</span> (nonatomic, assign) int64_t <a class="code" href="interfaceNvsPlaybackRateControlRegion.html#aba57b28d970b5229ec8f6f7eecb63503">startTime</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="interfaceNvsPlaybackRateControlRegion.html#a521aa4b62dcd05dcf9f4bb9a5e22fcd7">   46</a></span>&#160;    <span class="keyword">@property</span> (nonatomic, assign) int64_t <a class="code" href="interfaceNvsPlaybackRateControlRegion.html#a521aa4b62dcd05dcf9f4bb9a5e22fcd7">endTime</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="interfaceNvsPlaybackRateControlRegion.html#a6ff8a1899f472122c7c5aa34ab2c33d0">   47</a></span>&#160;    <span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsPlaybackRateControlRegion.html#a6ff8a1899f472122c7c5aa34ab2c33d0">playbackRate</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="interfaceNvsPlaybackRateControlRegion.html#a59f2fbca26955306b22f15aa927bd791">   48</a></span>&#160;    <span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsPlaybackRateControlRegion.html#a59f2fbca26955306b22f15aa927bd791">audioGain</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="interfaceNvsCaptionBoundingVerticesInfo.html">   52</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsCaptionBoundingVerticesInfo.html">NvsCaptionBoundingVerticesInfo</a> : NSObject</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="interfaceNvsCaptionBoundingVerticesInfo.html#add89171ce74df5be3e66c984bf396d86">   54</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) <a class="code" href="interfaceNvsCaption.html">NvsCaption</a>* caption;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="interfaceNvsCaptionBoundingVerticesInfo.html#a87345d0e94291aedcb4af5c92d4e0844">   55</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSArray&lt;NSValue*&gt;* values; <span class="comment">// CGPoint</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="interfaceNvsClipBoundingVerticesInfo.html">   59</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsClipBoundingVerticesInfo.html">NvsClipBoundingVerticesInfo</a> : NSObject</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="interfaceNvsClipBoundingVerticesInfo.html#aa5498de3ce654a5f7d3ce0125a74701f">   61</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) <a class="code" href="interfaceNvsClip.html">NvsClip</a>* clip;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="interfaceNvsClipBoundingVerticesInfo.html#a53a16ab9bf0a8e3a5766bcbe0e5bdb3e">   62</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSArray&lt;NSValue*&gt;* values; <span class="comment">// CGPoint</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="interfaceNvsTimeline.html">   84</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsTimeline.html">NvsTimeline</a> : <a class="code" href="interfaceNvsObject.html">NvsObject</a></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="interfaceNvsTimeline.html#addcde862d96e73484ea197ab909bfe08">   86</a></span>&#160;<span class="keyword">@property</span> (readonly) <a class="code" href="structNvsVideoResolution.html">NvsVideoResolution</a> videoRes;           </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="interfaceNvsTimeline.html#a219118f49f2642a6fd54047232dadc93">   88</a></span>&#160;<span class="keyword">@property</span> (readonly) <a class="code" href="structNvsAudioResolution.html">NvsAudioResolution</a> audioRes;           </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="interfaceNvsTimeline.html#a54b185b89bdf051274ec87990b4dbf75">   90</a></span>&#160;<span class="keyword">@property</span> (readonly) <a class="code" href="structNvsRational.html">NvsRational</a> videoFps;                  </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="interfaceNvsTimeline.html#a424ed5e2f3e4860657b44056bab3aef7">   92</a></span>&#160;<span class="keyword">@property</span> (readonly) int64_t duration;                      </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="interfaceNvsTimeline.html#a7af00806b27a983e26af9437605f91bd">   94</a></span>&#160;<span class="keyword">@property</span> (nonatomic) int64_t audioFadeOutDuration;         </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;-(int)getCreationFlags;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;- (<a class="code" href="interfaceNvsVideoTrack.html">NvsVideoTrack</a> *)appendVideoTrack;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;- (<a class="code" href="interfaceNvsAudioTrack.html">NvsAudioTrack</a> *)appendAudioTrack;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;- (<a class="code" href="interfaceNvsVideoTrack.html">NvsVideoTrack</a> *)insertVideoTrack:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)clipIndex;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;- (<a class="code" href="interfaceNvsAudioTrack.html">NvsAudioTrack</a> *)insertAudioTrack:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)clipIndex;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;- (BOOL)removeVideoTrack:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)trackIndex;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;- (BOOL)removeAudioTrack:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)trackIndex;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;- (<span class="keywordtype">unsigned</span> int)videoTrackCount;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;- (<span class="keywordtype">unsigned</span> int)audioTrackCount;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;- (<a class="code" href="interfaceNvsVideoTrack.html">NvsVideoTrack</a> *)getVideoTrackByIndex:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)trackIndex;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;- (<a class="code" href="interfaceNvsAudioTrack.html">NvsAudioTrack</a> *)getAudioTrackByIndex:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)trackIndex;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;- (BOOL)changeVideoSize:(<span class="keywordtype">int</span>)videoWidth videoHeight:(<span class="keywordtype">int</span>)videoHeight;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;- (BOOL)changeVideoBitDepth:(<a class="code" href="NvsCommonDef_8h.html#af007843ed3bf3c4b70f9fa38731b3560">NvsVideoResolutionBitDepth</a>)newBitDepth;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;- (void)setCaptionBoundingRectInActualMode:(BOOL)isActualBoundingRect;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;- (void)enableRenderOrderByZValue:(BOOL)enable;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;- (BOOL)isRenderOrderByZValueEnabled;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;- (<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)getFirstCaption;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;- (<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)getLastCaption;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;- (<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)getPrevCaption:(<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)caption;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;- (<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)getNextCaption:(<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)caption;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;- (NSArray *)getCaptionsByTimelinePosition:(int64_t)timelinePos;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;- (<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)addCaption:(NSString *)captionText inPoint:(int64_t)inPoint duration:(int64_t)duration captionStylePackageId:(NSString *)captionStylePackageId;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;- (<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)addPanoramicCaption:(NSString *)captionText inPoint:(int64_t)inPoint duration:(int64_t)duration captionStylePackageId:(NSString *)captionStylePackageId;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;- (<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)addModularCaption:(NSString *)captionText inPoint:(int64_t)inPoint duration:(int64_t)duration;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;- (<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)removeCaption:(<a class="code" href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a> *)caption;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;- (<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)getFirstCompoundCaption;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160; </div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;- (<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)getLastCompoundCaption;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160; </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;- (<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)getPrevCompoundCaption:(<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)caption;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160; </div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;- (<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)getNextCompoundCaption:(<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)caption;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160; </div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;- (NSArray&lt;<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a>*&gt; *)getCompoundCaptionsByTimelinePosition:(int64_t)timelinePos;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160; </div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;- (<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)addCompoundCaption:(int64_t)inPoint</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                                          duration:(int64_t)duration</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                          compoundCaptionPackageId:(NSString *)compoundCaptionPackageId;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160; </div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;- (<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)addPanoramicCompoundCaption:(int64_t)inPoint</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                                          duration:(int64_t)duration</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                          compoundCaptionPackageId:(NSString *)compoundCaptionPackageId;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160; </div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;- (<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)removeCompoundCaption:(<a class="code" href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a> *)caption;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160; </div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)getFirstAnimatedSticker;</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160; </div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)getLastAnimatedSticker;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160; </div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)getPrevAnimatedSticker:(<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)animatedSticker;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160; </div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)getNextAnimatedSticker:(<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)animatedSticker;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160; </div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;- (NSArray *)getAnimatedStickersByTimelinePosition:(int64_t)timelinePos;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)addAnimatedSticker:(int64_t)inPoint duration:(int64_t)duration animatedStickerPackageId:(NSString *)animatedStickerPackageId;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160; </div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)addPanoramicAnimatedSticker:(int64_t)inPoint duration:(int64_t)duration animatedStickerPackageId:(NSString *)animatedStickerPackageId;</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)addCustomAnimatedSticker:(int64_t)inPoint duration:(int64_t)duration animatedStickerPackageId:(NSString *)animatedStickerPackageId customImagePath:(NSString *)customImagePath;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; </div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)addCustomPanoramicAnimatedSticker:(int64_t)inPoint duration:(int64_t)duration animatedStickerPackageId:(NSString *)animatedStickerPackageId customImagePath:(NSString *)customImagePath;</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160; </div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;- (<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)removeAnimatedSticker:(<a class="code" href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a> *)animatedSticker;</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160; </div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;- (<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)getFirstTimelineVideoFx;</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160; </div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;- (<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)getLastTimelineVideoFx;</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160; </div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;- (<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)getPrevTimelineVideoFx:(<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)videoFx;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160; </div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;- (<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)getNextTimelineVideoFx:(<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)videoFx;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160; </div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;- (NSArray *)getTimelineVideoFxByTimelinePosition:(int64_t)timelinePos;</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160; </div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;- (<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)addBuiltinTimelineVideoFx:(int64_t)inPoint duration:(int64_t)duration videoFxName:(NSString *)videoFxName;</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160; </div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;- (<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)addPackagedTimelineVideoFx:(int64_t)inPoint duration:(int64_t)duration videoFxPackageId:(NSString *)videoFxPackageId;</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160; </div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;- (<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)addCustomTimelineVideoFx:(int64_t)inPoint</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                                        duration:(int64_t)duration</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;                             customVideoFxRender:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocolNvsCustomVideoFxRenderer-p.html">NvsCustomVideoFxRenderer</a>&gt;)customVideoFxRender;</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160; </div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;- (<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)removeTimelineVideoFx:(<a class="code" href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a> *)videoFx;</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160; </div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;- (NSString *)getCurrentThemeId;</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160; </div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;- (BOOL)applyTheme:(NSString *)themeId;</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160; </div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;- (void)removeCurrentTheme;</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160; </div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;- (void)setThemeTitleCaptionText:(NSString *)text;</div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160; </div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;- (void)setThemeTrailerCaptionText:(NSString *)text;</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160; </div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;- (void)setThemeMusicVolumeGain:(<span class="keywordtype">float</span>)leftVolumeGain rightVolumeGain:(<span class="keywordtype">float</span>)rightVolumeGain;</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160; </div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;- (void)getThemeMusicVolumeGain:(<span class="keywordtype">float</span> *)leftVolumeGain rightVolumeGain:(<span class="keywordtype">float</span> *)rightVolumeGain;</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160; </div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;- (bool)addWatermark:(NSString*)watermarkFilePath displayWidth:(<span class="keywordtype">int</span>)displayWidth displayHeight:(<span class="keywordtype">int</span>)displayHeight opacity:(<span class="keywordtype">float</span>)opacity position:(<span class="keywordtype">int</span>)position marginX:(<span class="keywordtype">int</span>)marginX marginY:(<span class="keywordtype">int</span>)marginY;</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160; </div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;- (void)deleteWatermark;</div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160; </div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;- (bool)setWatermarkOpacity:(<span class="keywordtype">float</span>)opacity;</div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160; </div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;- (bool)setTimelineEndingLogo:(NSString*)logoFilePath displayWidth:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)displayWidth displayHeight:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)displayHeight centerX:(<span class="keywordtype">int</span>)centerX centerY:(<span class="keywordtype">int</span>)centerY;</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160; </div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;- (void)removeTimelineEndingLogo;</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160; </div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;- (void)setPlaybackRateControl:(NSArray *) arrayPlaybackRateControlRegion;</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160; </div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;- (NSArray *)getPlaybackRateControl;</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160; </div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;- (BOOL)moveVideoTrackIndex:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)srcTrackIndex dstTrackIndex:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)dstTrackIndex;</div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160; </div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;- (<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a> *)getFirstTimelineGraphCompositor;</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160; </div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;- (<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a> *)getLastTimelineGraphCompositor;</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160; </div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;- (<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a> *)getPrevTimelineGraphCompositor:(<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a>*)graphCompositor;</div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160; </div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;- (<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a> *)getNextTimelineGraphCompositor:(<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a>*)graphCompositor;</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160; </div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;- (<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a> *)getTimelineGraphCompositorByTimelinePosition:(int64_t)timelinePos;</div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160; </div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;- (<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a> *)addTimelineGraphCompositor:(int64_t)inPoint duration:(int64_t)duration graphDescStr:(NSString *)graphDescStr;</div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160; </div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;- (<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a> *)addTimelineGraphCompositor:(int64_t)inPoint duration:(int64_t)duration graphDescStr:(NSString *)graphDescStr buddyTrackIndex:(<span class="keywordtype">int</span>)buddyTrackIndex;</div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160; </div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160; </div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;- (<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a> *)removeTimelineGraphCompositor:(<a class="code" href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a>*)graphCompositor;</div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160; </div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;- (<span class="keywordtype">unsigned</span> int)creationFlags;</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160; </div>
+<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;- (bool)applyThemeTemplate:(NSString *)templateId;</div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160; </div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;- (NSArray&lt;<a class="code" href="interfaceNvsCaptionBoundingVerticesInfo.html">NvsCaptionBoundingVerticesInfo</a>*&gt;*)getCaptionsBoundingVerticesRecursively:(<a class="code" href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1">NvsBoundingType</a>)boundingType timelinePosition:(int64_t)timelinePosition;</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160; </div>
+<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;- (NSArray&lt;<a class="code" href="interfaceNvsClipBoundingVerticesInfo.html">NvsClipBoundingVerticesInfo</a>*&gt;*)getVideoClipBoundingVerticesRecursively:(int64_t)timelinePosition;</div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160; </div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterfaceNvsTimeline_html"><div class="ttname"><a href="interfaceNvsTimeline.html">NvsTimeline</a></div><div class="ttdoc">时间线，编辑场景的时间轴实体</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:85</div></div>
+<div class="ttc" id="ainterfaceNvsCaptionBoundingVerticesInfo_html"><div class="ttname"><a href="interfaceNvsCaptionBoundingVerticesInfo.html">NvsCaptionBoundingVerticesInfo</a></div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:53</div></div>
+<div class="ttc" id="aNvsTimeline_8h_html_af978c0eb362245e78c1e13ccab7fbcdea25085a435d738377d891ff1a9d82dbab"><div class="ttname"><a href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea25085a435d738377d891ff1a9d82dbab">NvsTimelineWatermarkPosition_TopRight</a></div><div class="ttdeci">@ NvsTimelineWatermarkPosition_TopRight</div><div class="ttdoc">水印显示在右上角</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:37</div></div>
+<div class="ttc" id="aNvsTimeline_8h_html_af978c0eb362245e78c1e13ccab7fbcdeaae6863082b67ca3802f5dbe1b5224858"><div class="ttname"><a href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdeaae6863082b67ca3802f5dbe1b5224858">NvsTimelineWatermarkPosition_BottomLeft</a></div><div class="ttdeci">@ NvsTimelineWatermarkPosition_BottomLeft</div><div class="ttdoc">水印显示在左下角</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:39</div></div>
+<div class="ttc" id="ainterfaceNvsPlaybackRateControlRegion_html_a521aa4b62dcd05dcf9f4bb9a5e22fcd7"><div class="ttname"><a href="interfaceNvsPlaybackRateControlRegion.html#a521aa4b62dcd05dcf9f4bb9a5e22fcd7">NvsPlaybackRateControlRegion::endTime</a></div><div class="ttdeci">int64_t endTime</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:46</div></div>
+<div class="ttc" id="ainterfaceNvsVideoTrack_html"><div class="ttname"><a href="interfaceNvsVideoTrack.html">NvsVideoTrack</a></div><div class="ttdoc">视频轨道，视频片段的集合</div><div class="ttdef"><b>Definition:</b> NvsVideoTrack.h:64</div></div>
+<div class="ttc" id="ainterfaceNvsPlaybackRateControlRegion_html_aba57b28d970b5229ec8f6f7eecb63503"><div class="ttname"><a href="interfaceNvsPlaybackRateControlRegion.html#aba57b28d970b5229ec8f6f7eecb63503">NvsPlaybackRateControlRegion::startTime</a></div><div class="ttdeci">int64_t startTime</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:45</div></div>
+<div class="ttc" id="aNvsTimeline_8h_html_af978c0eb362245e78c1e13ccab7fbcdea5c0478c4ced67ebc5d799dafafec17a8"><div class="ttname"><a href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea5c0478c4ced67ebc5d799dafafec17a8">NvsTimelineWatermarkPosition_TopLeft</a></div><div class="ttdeci">@ NvsTimelineWatermarkPosition_TopLeft</div><div class="ttdoc">水印显示在左上角</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:38</div></div>
+<div class="ttc" id="ainterfaceNvsObject_html"><div class="ttname"><a href="interfaceNvsObject.html">NvsObject</a></div><div class="ttdoc">NvsObject类，继承自object-c里的NSObject类。</div><div class="ttdef"><b>Definition:</b> NvsObject.h:78</div></div>
+<div class="ttc" id="astructNvsRational_html"><div class="ttname"><a href="structNvsRational.html">NvsRational</a></div><div class="ttdoc">比例值</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:349</div></div>
+<div class="ttc" id="aNvsCompoundCaption_8h_html_af1c29cd0ab719be1e06864845d4ba4b1"><div class="ttname"><a href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1">NvsBoundingType</a></div><div class="ttdeci">NvsBoundingType</div><div class="ttdef"><b>Definition:</b> NvsCompoundCaption.h:44</div></div>
+<div class="ttc" id="ainterfaceNvsPlaybackRateControlRegion_html"><div class="ttname"><a href="interfaceNvsPlaybackRateControlRegion.html">NvsPlaybackRateControlRegion</a></div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:44</div></div>
+<div class="ttc" id="ainterfaceNvsTimelineCompoundCaption_html"><div class="ttname"><a href="interfaceNvsTimelineCompoundCaption.html">NvsTimelineCompoundCaption</a></div><div class="ttdoc">时间线复合字幕</div><div class="ttdef"><b>Definition:</b> NvsTimelineCompoundCaption.h:36</div></div>
+<div class="ttc" id="ainterfaceNvsTimelineGraphCompositor_html"><div class="ttname"><a href="interfaceNvsTimelineGraphCompositor.html">NvsTimelineGraphCompositor</a></div><div class="ttdoc">时间线合成器 时间线合成器是作用于时间线实例上的时间线合成器。</div><div class="ttdef"><b>Definition:</b> NvsTimelineGraphCompositor.h:29</div></div>
+<div class="ttc" id="aNvsTimeline_8h_html_af978c0eb362245e78c1e13ccab7fbcde"><div class="ttname"><a href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcde">NvsTimelineWatermarkPosition</a></div><div class="ttdeci">NvsTimelineWatermarkPosition</div><div class="ttdoc">水印位置标识</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:36</div></div>
+<div class="ttc" id="aprotocolNvsCustomVideoFxRenderer-p_html"><div class="ttname"><a href="protocolNvsCustomVideoFxRenderer-p.html">NvsCustomVideoFxRenderer-p</a></div><div class="ttdoc">自定义视频特效渲染器接口</div><div class="ttdef"><b>Definition:</b> NvsCustomVideoFx.h:52</div></div>
+<div class="ttc" id="ainterfaceNvsTimelineCaption_html"><div class="ttname"><a href="interfaceNvsTimelineCaption.html">NvsTimelineCaption</a></div><div class="ttdoc">时间线字幕</div><div class="ttdef"><b>Definition:</b> NvsTimelineCaption.h:32</div></div>
+<div class="ttc" id="ainterfaceNvsTimelineAnimatedSticker_html"><div class="ttname"><a href="interfaceNvsTimelineAnimatedSticker.html">NvsTimelineAnimatedSticker</a></div><div class="ttdoc">时间线动画贴纸类</div><div class="ttdef"><b>Definition:</b> NvsTimelineAnimatedSticker.h:36</div></div>
+<div class="ttc" id="aNvsObject_8h_html"><div class="ttname"><a href="NvsObject_8h.html">NvsObject.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsCaption_html"><div class="ttname"><a href="interfaceNvsCaption.html">NvsCaption</a></div><div class="ttdoc">时间线字幕</div><div class="ttdef"><b>Definition:</b> NvsCaption.h:34</div></div>
+<div class="ttc" id="ainterfaceNvsTimelineVideoFx_html"><div class="ttname"><a href="interfaceNvsTimelineVideoFx.html">NvsTimelineVideoFx</a></div><div class="ttdoc">时间线视频特效 时间线视频特效是作用于时间线实例上的视频特效。 时间线视频特效分为內建特效、包裹特效和自定义特效三种类型。 內建特效是集成在sdk内部的，不需要授权即可直接使用。包裹特效是将特效资源整合...</div><div class="ttdef"><b>Definition:</b> NvsTimelineVideoFx.h:53</div></div>
+<div class="ttc" id="aNvsTimeline_8h_html_af978c0eb362245e78c1e13ccab7fbcdea4243be9b24d309bccc8700eb52c32e86"><div class="ttname"><a href="NvsTimeline_8h.html#af978c0eb362245e78c1e13ccab7fbcdea4243be9b24d309bccc8700eb52c32e86">NvsTimelineWatermarkPosition_BottomRight</a></div><div class="ttdeci">@ NvsTimelineWatermarkPosition_BottomRight</div><div class="ttdoc">水印显示在右下角</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:40</div></div>
+<div class="ttc" id="astructNvsAudioResolution_html"><div class="ttname"><a href="structNvsAudioResolution.html">NvsAudioResolution</a></div><div class="ttdoc">音频解析度</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:384</div></div>
+<div class="ttc" id="aNvsTimelineGraphCompositor_8h_html"><div class="ttname"><a href="NvsTimelineGraphCompositor_8h.html">NvsTimelineGraphCompositor.h</a></div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="astructNvsVideoResolution_html"><div class="ttname"><a href="structNvsVideoResolution.html">NvsVideoResolution</a></div><div class="ttdoc">视频解析度</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:396</div></div>
+<div class="ttc" id="ainterfaceNvsClipBoundingVerticesInfo_html"><div class="ttname"><a href="interfaceNvsClipBoundingVerticesInfo.html">NvsClipBoundingVerticesInfo</a></div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:60</div></div>
+<div class="ttc" id="ainterfaceNvsClip_html"><div class="ttname"><a href="interfaceNvsClip.html">NvsClip</a></div><div class="ttdoc">片段，音视频文件的具体描述</div><div class="ttdef"><b>Definition:</b> NvsClip.h:66</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html"><div class="ttname"><a href="NvsCommonDef_8h.html">NvsCommonDef.h</a></div></div>
+<div class="ttc" id="aNvsCustomVideoFx_8h_html"><div class="ttname"><a href="NvsCustomVideoFx_8h.html">NvsCustomVideoFx.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsPlaybackRateControlRegion_html_a6ff8a1899f472122c7c5aa34ab2c33d0"><div class="ttname"><a href="interfaceNvsPlaybackRateControlRegion.html#a6ff8a1899f472122c7c5aa34ab2c33d0">NvsPlaybackRateControlRegion::playbackRate</a></div><div class="ttdeci">float playbackRate</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:47</div></div>
+<div class="ttc" id="aNvsLiveWindow_8h_html"><div class="ttname"><a href="NvsLiveWindow_8h.html">NvsLiveWindow.h</a></div></div>
+<div class="ttc" id="aNvsTimelineCompoundCaption_8h_html"><div class="ttname"><a href="NvsTimelineCompoundCaption_8h.html">NvsTimelineCompoundCaption.h</a></div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_af007843ed3bf3c4b70f9fa38731b3560"><div class="ttname"><a href="NvsCommonDef_8h.html#af007843ed3bf3c4b70f9fa38731b3560">NvsVideoResolutionBitDepth</a></div><div class="ttdeci">NvsVideoResolutionBitDepth</div><div class="ttdoc">视频帧像素格式</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:279</div></div>
+<div class="ttc" id="ainterfaceNvsPlaybackRateControlRegion_html_a59f2fbca26955306b22f15aa927bd791"><div class="ttname"><a href="interfaceNvsPlaybackRateControlRegion.html#a59f2fbca26955306b22f15aa927bd791">NvsPlaybackRateControlRegion::audioGain</a></div><div class="ttdeci">float audioGain</div><div class="ttdef"><b>Definition:</b> NvsTimeline.h:48</div></div>
+<div class="ttc" id="ainterfaceNvsAudioTrack_html"><div class="ttname"><a href="interfaceNvsAudioTrack.html">NvsAudioTrack</a></div><div class="ttdoc">音频轨道，音频片段的集合</div><div class="ttdef"><b>Definition:</b> NvsAudioTrack.h:39</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

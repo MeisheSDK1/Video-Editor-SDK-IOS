@@ -1,0 +1,84 @@
+{
+  "name": "NvMimo",
+  "version": "0.2.0",
+  "summary": "A short description of NvMimo.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chuyang009@163.com/NvMimo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chuyang009@163.com": "liudongxu@meishesdk.com"
+  },
+  "source": {
+    "git": "https://github.com/chuyang009@163.com/NvMimo.git",
+    "tag": "0.2.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "NvMimo/Classes/**/*",
+  "resources": "NvMimo/Assets/*",
+  "private_header_files": [
+    "NvMimo/Classes/Configuration/*.h",
+    "NvMimo/Classes/FileConvert/*.h",
+    "NvMimo/Classes/Library/Album/**/*.h",
+    "NvMimo/Classes/ThemeManager/*.h",
+    "NvMimo/Classes/Utils/*.h",
+    "NvMimo/Classes/Clip/Model/*.h",
+    "NvMimo/Classes/Clip/View/*.h",
+    "NvMimo/Classes/Clip/Controller/NvMimoCompileViewController.h",
+    "NvMimo/Classes/Clip/Controller/NvMimoEditTailoringViewController.h",
+    "NvMimo/Classes/Clip/Controller/NvPreviewViewController.h",
+    "NvMimo/Classes/Clip/AlbumSelect/*.h"
+  ],
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  },
+  "vendored_frameworks": "NvStreamingSdkCore.framework",
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios/",
+      "$(SRCROOT)/../../../../../../../lib/ios/",
+      "$(SRCROOT)/../../../../lib/ios/"
+    ],
+    "HEADER_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../lib/ios/NvStreamingSdkCore.framework/Headers"
+    ]
+  },
+  "dependencies": {
+    "AFNetworking": [
+
+    ],
+    "SSZipArchive": [
+      "~> 2.2.2"
+    ],
+    "YYWebImage": [
+      "~> 1.0.5"
+    ],
+    "MBProgressHUD": [
+      "~> 1.1.0"
+    ],
+    "YYModel": [
+      "~> 1.0.4"
+    ],
+    "Masonry": [
+      "~> 1.1.0"
+    ],
+    "Reachability": [
+      "~> 3.2.0"
+    ],
+    "NvBaseCommon": [
+
+    ],
+    "NvSDKCommon": [
+
+    ],
+    "NvAlbum": [
+
+    ]
+  }
+}

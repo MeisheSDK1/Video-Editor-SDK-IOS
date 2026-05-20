@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: effectSDK使用讲解</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">effectSDK使用讲解 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>美摄SDK effectSDK使用方式如下：</p>
+<p>NvsEffectSdkContext特效上下文类可视作整个SDK框架的入口。开发过程中，NvsEffectSdkContext提供了静态sharedInstance接口创建effectSDK上下文的唯一实例。 通过这个实例对象，我们可以一个或者多个特效的处理。整个使用完成后，要销毁特效上下文的对象实例。 添加素材资源包(采集特效包，场景资源包等)，都得先安装，安装成功后获取packageId才能使用，而内建采集特效(builtin)只需获取特效名称即可使用。 <br  />
+sdk接口中凡是需要传入资源、授权等文件路径时一定是全路径。 </p><dl class="section warning"><dt>警告</dt><dd>NvsEffectSdkContext类中，所有public API都在UI线程使用！！！ </dd>
+<dd>
+NvsEffectRenderCore类中，所有public API都在OpenGL线程使用！！！</dd></dl>
+<p>1.初始化EffectSDK，全局只需一次，NvsEffectSdkContext是特效的上下文类。Context是安卓Context对象，sdkLicenseFilePath是授权文件路径，flags 标志字段，如果无特殊需求请填写0。 <br  />
+NvsEffectRenderCore是特效渲染类整个SDK的特效渲染入口，所有public API都必须在OpenGL线程使用！！！。 <br  />
+初始化代码： </p><pre class="fragment">        NSString *licPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"3-2-3d2c1a947b969a7f7ef4e2eb380c8f44.lic"];
+        if (![NvsEffectSdkContext verifySdkLicenseFile:licPath]) {
+            NSLog(@"Invalid license!");
+        }
+        self.renderCore = [self.effectContext createEffectRenderCore];
+</pre><p>2.创建视频特效对象。 <br  />
+fxIds 特效id。对于内嵌视频特效，就是特效的名字，如果是资源包特效，就是资源包id，aspectRatio 特效的宽幅比。视频特效可以同时添加多个，搭配使用。 <br  />
+视频特效NvsVideoEffect是NvsEffect的派生类，可以通过它进行视频特效的添加，移除和获取等操作。 <br  />
+相应代码如下： </p><pre class="fragment">        NvsEffectRational aspectRatio = {9, 16};
+        self.faceEffect = [self.effectContext createVideoEffect:@"Specific Warp Effect" aspectRatio:aspectRatio];
+</pre><p>3.设置特效的相关参数。fxParam是对应的参数名称，val是参数的值。 <br  />
+相应代码如下： </p><pre class="fragment">        [self.faceEffect setFloatVal:"Saturation" val:0];//饱和度
+        [self.faceEffect setFloatVal:"Brightness" val:0];//亮度
+        [self.faceEffect setFloatVal:"Contrast" val:0];//对比度
+</pre><p>4.除了内置特效还有需要安装资源包的外置特效。assetPackageFilePath是资源包的路径，必须是全路径。licenseFilePath是授权文件路径，如果没有可以写null。type是资源包的类型。 <br  />
+synchronous是是否同步的标准，assetPackageId是安装后的资源包id。 <br  />
+相应代码如下： </p><pre class="fragment">        NSString *fxPackagePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"D41B1BC6-23AC-4508-9C8A-F6430BB37C3F.videofx"];
+        self.assetPackageId = [[NSMutableString alloc] init];
+        NvsEffectAssetPackageManagerError err = [self.effectContext.assetPackageManager installAssetPackage:fxPackagePath license:nil type:NvsEffectAssetPackageType_VideoFx sync:YES assetPackageId:self.assetPackageId];
+        if (err != NvsEffectAssetPackageManagerError_NoError
+            &amp;&amp; err != NvsEffectAssetPackageManagerError_AlreadyInstalled) {
+            NSLog(@"Failed to install package!");
+}
+</pre><p>5.使用完成，销毁视频特效。清除特效中携带的OPenGL资源，effect表示要清除的特效对象。 <br  />
+相应代码如下： </p><pre class="fragment">        [self.renderCore clearCacheResources];
+        [self.renderCore clearEffectResources:self.effect];
+        [self.renderCore cleanUp];
+</pre><p>6.退出时销毁。相应代码如下： </p><pre class="fragment">        [NvsEffectSdkContext destroyInstance];
+</pre> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

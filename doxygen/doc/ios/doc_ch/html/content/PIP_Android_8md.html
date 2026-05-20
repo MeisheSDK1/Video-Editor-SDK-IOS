@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 美摄画中画技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">美摄画中画技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h3>1.创建时间线</h3>
+<h3>2.添加与需求相匹配的视频轨道。</h3>
+<p>（例如两个视频/图片的画中画效果，时间线需要添加两个视频轨道。）</p>
+<div class="fragment"><div class="line">NvsVideoTrack mVideoTrack = mTimeline.appendVideoTrack();</div>
+<div class="line">NvsVideoTrack mPipVideoTrack = mTimeline.appendVideoTrack();</div>
+</div><!-- fragment --><h3>3.相关视频轨道分别添加素材。(这里以两个素材为例进行展示)</h3>
+<div class="fragment"><div class="line">NvsVideoTrack  mVideoTrack = mTimeline.getVideoTrackByIndex(0);</div>
+<div class="line">NvsVideoClip mVideoClip = mVideoTrack.appendClip(firstMediaPath);</div>
+<div class="line">//如果添加的素材是图片，可设置禁止图片运动，可根据需求决定是否添加</div>
+<div class="line">mVideoClip.setImageMotionAnimationEnabled(false);</div>
+<div class="line"> </div>
+<div class="line">NvsVideoTrack  mPipVideoTrack = mTimeline.getVideoTrackByIndex(1);</div>
+<div class="line">NvsVideoClip mPipVideoClip = mPipVideoTrack.appendClip(secondMediaPath);</div>
+<div class="line">//如果添加的素材是图片，可设置禁止图片运动，可根据需求决定是否添加</div>
+<div class="line">mPipVideoClip.setImageMotionAnimationEnabled(false);</div>
+</div><!-- fragment --><h3>4.clip 片段添加"Transform 2D” 特效。</h3>
+<p>此特效针对需要移动的clip 来添加，这里以移动第二个clip 为例。如果第一个素材需要移动的话，那么第一个clip也需要添加"Transform 2D” 特效</p>
+<div class="fragment"><div class="line">NvsVideoFx mVideoFx = mPipVideoClip.appendBuiltinFx(&quot;Transform 2D&quot;);</div>
+</div><!-- fragment --><h3>5.针对具体需求对"Transform 2D” 特效对象设置相应属性值（这里以手势拖动第二个clip 为例）</h3>
+<p>*需要注意的是，偏移值需转换为时间线偏移 </p><div class="fragment"><div class="line">//视图坐标转换成时间线坐标</div>
+<div class="line">PointF pointF1 = mLiveWindow.mapViewToCanonical(currentPoint);</div>
+<div class="line">PointF pointF2 = mLiveWindow.mapViewToCanonical(previousPoint);</div>
+<div class="line">double transX = mVideoFx.getFloatVal(&quot;Trans X&quot;);</div>
+<div class="line">double transY = mVideoFx.getFloatVal(&quot;Trans Y&quot;);</div>
+<div class="line">mVideoFx.setFloatVal(&quot;Trans X&quot;, transX + (pointF1.x - pointF2.x));</div>
+<div class="line">mVideoFx.setFloatVal(&quot;Trans Y&quot;, transY + (pointF1.y - pointF2.y));</div>
+</div><!-- fragment --><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">属性 </th><th class="markdownTableHeadNone">含义  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Trans X </td><td class="markdownTableBodyNone">X 轴偏移  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Trans Y </td><td class="markdownTableBodyNone">Y 轴偏移  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Scale X </td><td class="markdownTableBodyNone">X 轴缩放  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Scale Y </td><td class="markdownTableBodyNone">Y 轴缩放  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rotation </td><td class="markdownTableBodyNone">旋转  </td></tr>
+</table>
+<p>上面属性表中其他属性均可根据需求按照偏移示例代码进行赋值和应用。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

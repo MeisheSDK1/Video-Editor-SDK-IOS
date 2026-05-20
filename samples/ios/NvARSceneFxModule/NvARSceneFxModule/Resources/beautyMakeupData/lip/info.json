@@ -1,0 +1,21 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"no",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"泰系学姐口红",
+        "displayName":"泰系学姐口红",
+        "packagePath":"lip/6F32E0D2-A9FA-493C-95E3-9005E7B5DE2A.8",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"6F32E0D2-A9FA-493C-95E3-9005E7B5DE2A",
+        "coverImage":""
+    }
+]

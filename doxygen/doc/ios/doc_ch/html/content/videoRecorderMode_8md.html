@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 视频录制方式</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">视频录制方式 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>美摄SDK目前提供两种方式来采集录制视频，用户可根据需要选择使用任意一种。简单来说，一种是使用系统采集设备来采集信号进行视频录制，录制的视频不带特效，且其横纵比也不是我们预设的横纵比值。 另一种是带特效的视频采集录制，录制完成，会得到我们预设的横纵比的视频，同时特效也会写进录制的视频中。</p>
+<p>两种录制方式实现如下： 第一种是调用NvsStreamingContext的<a class="el" href="interfaceNvsStreamingContext.html#af5a7fff8fc9e2c76698f675bcc0a01a6">startRecording()</a>接口来来启动录制。而第二种是调用NvsStreamingContext的<a class="el" href="interfaceNvsStreamingContext.html#a1606cafa73548034e76431cceaed44a4">startRecordingWithFx()</a>接口来启动录制。</p>
+<p>两种方式对比如下： <br  />
+对于第一种方式，整个录制过程不加特效，不会出现丢帧，对用户来说这是比较好的方面。缺点是录制完毕，无法得到期望横纵比的视频（比如想录制1:1视频，结果会得到9:16的视频）。要生成带美颜，特效以及期望横纵比的视频，则需要设置包括图像宽高， 像素比等相关参数(如生成1:1视频，则图像宽高设为同一值)来创建时间线，然后添加轨道，片段，及相应的特效，最后生成预期的视频。而第二种方式在录制过程中就会加上美颜，视频特效等素材，录制完成后，就可以得到预期横纵比的视频。相比第一种方式，没有后续的视频编辑及生成。 但是这种录制方式跟当前用户手机有很大的关系。手机性能配置不同，带特效录制时可能会出现不一样的效果，因此合理的选择所要添加的特效的数量，是很重要的。对于一个低性能的手机来说，如果添加的特效过多，处理起来过于复杂，可能会导致录制的视频卡顿，丢帧。 在这种情况下，预览所录制的视频时会发现视频画面会从一帧跳跃到不衔接的另一帧，跟期望录制的视频效果反差很大，很显然这不是我们期望的结果。所以请慎重，在使用这种录制方式时，要确保特效的处理对于当前用户手机是完全可以实时处理的，即能够实时完整的写进录制的视频当中，不会造成卡顿，丢帧现象。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

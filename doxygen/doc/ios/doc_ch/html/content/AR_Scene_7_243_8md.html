@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: AR Scene 技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">AR Scene 技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>1. 概述</h1>
+<p>AR Scene是美摄SDK中用于展示AR效果的特技，现支持道具，美颜，美型，美妆等功能。</p>
+<h1>2. 使用</h1>
+<h2>2.1 资源加载</h2>
+<p>AR Scene 中由于使用了人体检测相关的技术，在程序初始化阶段需要加载一些模型以及数据包资源。</p>
+<h3>2.1.1 模型加载</h3>
+<p>首先判断该SDK是否包含AR功能，不包含AR功能的SDK无法加载人体检测模型。</p>
+<div class="fragment"><div class="line"><span class="comment">// 检测SDK包是否有AR模块</span></div>
+<div class="line"><span class="keywordtype">bool</span> hasAR = <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.<a class="code" href="interfaceNvsStreamingContext.html#afb12eeff94c75d5226eb7e4e57cf7185">hasARModule</a>();</div>
+</div><!-- fragment --><p>人体检测模型的加载通过调用 InitHumanDetection 和 InitHumanDetectionExt 实现。InitHumanDetection 指定主模型的加载，只能调用一次。InitHumanDetectionExt 指定扩展模型的加载，可以通过多次调用加载多个扩展模型。一般情况下我们使用人脸点位模型作为主模型。</p>
+<p>如下是加载人脸点位模型与眼眼球轮廓模型的示例。</p>
+<div class="fragment"><div class="line"><span class="comment">// 人脸点位模型加载，使能“视频检测模式”</span></div>
+<div class="line"><span class="keywordtype">boolean</span> initSuccess = <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.initHumanDetection(</div>
+<div class="line">        MSApplication.getContext(), </div>
+<div class="line">        landmarksModelPath, </div>
+<div class="line">        <span class="keyword">null</span>, </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_FACE_LANDMARK | </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_FACE_ACTION | </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_VIDEO_MODE);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 眼球轮廓模型加载，使能“视频检测模式”，与人脸模型的检测模式对齐</span></div>
+<div class="line">initSuccess = <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.initHumanDetectionExt（</div>
+<div class="line">        MSApplication.getContext(), </div>
+<div class="line">        eyeballModelPath, </div>
+<div class="line">        <span class="keyword">null</span>,</div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_EYEBALL_LANDMARK |</div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_VIDEO_MODE);</div>
+</div><!-- fragment --><p>在程序销毁时还需调用 closeHumanDetection 来卸载安装过的所有模型以及数据包。</p>
+<div class="fragment"><div class="line"><a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.<a class="code" href="interfaceNvsStreamingContext.html#af11b34f7c8dfe6f6395cd1b7d229f181">closeHumanDetection</a>();</div>
+</div><!-- fragment --><p>注：</p>
+<ul>
+<li>模型初始化操作涉及文件拷贝耗时操作，建议放在子线程去出处理。</li>
+<li><b>modelFilePath指定模型加载路径，不支持ASSET路径；</b></li>
+<li>使用美摄自研点位SDK licenseFilePath为空；</li>
+<li>features项指定模型类型以及所有支持的检测模式；</li>
+<li>所有InitHumanDetection 和InitHumanDetectionExt 调用中的检测模式，建议设置成相同模式，不同检测模式会影响程序运行效率。</li>
+</ul>
+<h4>2.1.1.1 模型类型</h4>
+<p>模型分为两种，普通模型与复合模型。普通模型只支持单一的功能，复合模型可以支持多项功能。例如人脸检测模型就是复合模型，同时支持点位检测以及人脸动作检测。</p>
+<p>SDK现支持具体如下：</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">模型 </th><th class="markdownTableHeadNone">命名 </th><th class="markdownTableHeadNone">复合模型 </th><th class="markdownTableHeadNone">Flag  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">106人脸检测模型 </td><td class="markdownTableBodyNone">ms_face_vX.X.X.model </td><td class="markdownTableBodyNone">是 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_FACE_LANDMARK">HUMAN_DETECTION_FEATURE_FACE_LANDMARK</a>&#160;| <a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_FACE_ACTION">HUMAN_DETECTION_FEATURE_FACE_ACTION</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">240人脸检测模型 </td><td class="markdownTableBodyNone">ms_face240_vX.X.X.model </td><td class="markdownTableBodyNone">是 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_FACE_LANDMARK">HUMAN_DETECTION_FEATURE_FACE_LANDMARK</a>&#160;| <a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_FACE_ACTION">HUMAN_DETECTION_FEATURE_FACE_ACTION</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">眼球轮廓检测模型 </td><td class="markdownTableBodyNone">ms_eyecontour_vX.X.X.model </td><td class="markdownTableBodyNone">否 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_EYEBALL_LANDMARK">HUMAN_DETECTION_FEATURE_EYEBALL_LANDMARK</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">表情检测模型 </td><td class="markdownTableBodyNone">ms_avatar_vX.X.X.model </td><td class="markdownTableBodyNone">否 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_AVATAR_EXPRESSION">HUMAN_DETECTION_FEATURE_AVATAR_EXPRESSION</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">手势检测模型 </td><td class="markdownTableBodyNone">ms_hand_vX.X.X.model </td><td class="markdownTableBodyNone">是 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_HAND_LANDMARK">HUMAN_DETECTION_FEATURE_HAND_LANDMARK</a>&#160;| <a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_HAND_ACTION">HUMAN_DETECTION_FEATURE_HAND_ACTION</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">背景分割模型 </td><td class="markdownTableBodyNone">ms_humanseg_vX.X.X.model </td><td class="markdownTableBodyNone">否 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_SEGMENTATION_BACKGROUND">HUMAN_DETECTION_FEATURE_SEGMENTATION_BACKGROUND</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">天空分割模型 </td><td class="markdownTableBodyNone">ms_skyseg_vX.X.X.model </td><td class="markdownTableBodyNone">否 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_SEGMENTATION_SKY">HUMAN_DETECTION_FEATURE_SEGMENTATION_SKY</a>  </td></tr>
+</table>
+<p>注：</p>
+<ul>
+<li>106人脸检测模型与240人脸检测模型只能选用一个；</li>
+<li>可以使用240模型，但只使用其中的106点位检测功能，不影响检测效率；</li>
+<li>对于复合模型，某个功能项没有或上，那么，AR Scene或其他使用到该功能项的特技将无法正常运行。</li>
+</ul>
+<h4>2.1.1.2 检测模式</h4>
+<p>检测模式：</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">模式 </th><th class="markdownTableHeadNone">Flag </th><th class="markdownTableHeadNone">描述  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">视频检测模式 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_VIDEO_MODE">HUMAN_DETECTION_FEATURE_VIDEO_MODE</a> </td><td class="markdownTableBodyNone">适用于拍摄场景，效率最高，视频间检测结果连续，但首帧通常无检测出来  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">图片检测模式 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_IMAGE_MODE">HUMAN_DETECTION_FEATURE_IMAGE_MODE</a> </td><td class="markdownTableBodyNone">适用于编辑模式，效率一般，检测结果不连续，首帧能够检测出来  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">半图片检测模式 </td><td class="markdownTableBodyNone"><a href="\ref&nbsp;com.meicam.sdk.NvsStreamingContext.HUMAN_DETECTION_FEATURE_SEMI_IMAGE_MODE">HUMAN_DETECTION_FEATURE_SEMI_IMAGE_MODE</a> </td><td class="markdownTableBodyNone">适用于拍摄模式与编辑模式，效率较高，检测结果连续，首帧能够检测出来线程模式：  </td></tr>
+</table>
+<p>在调用InitHumanDetection 和 InitHumanDetectionExt 时features参数需要或上所有支持的检测模式。同时在AR Scene使用时，需要通过 setDetectionMode 指定该特技实例具体使用哪种检测模式。</p>
+<p>例如，如下代码在模型加载阶段同时或上了“视频检测模式”和“图片检测模式”，在 AR Scene 特技使用时指定检测模型为“图片检测模式”。</p>
+<div class="fragment"><div class="line"><span class="comment">// 人脸点位模型加载，同时使能“视频检测模式”与“图片检测模式”</span></div>
+<div class="line"><span class="keywordtype">boolean</span> initSuccess = <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.initHumanDetection(</div>
+<div class="line">        MSApplication.getContext(), </div>
+<div class="line">        landmarksModelPath, </div>
+<div class="line">        <span class="keyword">null</span>, </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_FACE_LANDMARK | </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_FACE_ACTION | </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_VIDEO_MODE|</div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_IMAGE_MODE</div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line">....</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// AR Scene 特技选择使用“图片检测模式”进行检测</span></div>
+<div class="line"><a class="code" href="interfaceNvsARSceneManipulate.html">NvsARSceneManipulate</a> arSceneManipulate = mArSceneEffect.getARSceneManipulate();</div>
+<div class="line"><span class="keywordflow">if</span> (arSceneManipulate != <span class="keyword">null</span>) {</div>
+<div class="line">    arSceneManipulate.setDetectionMode(<a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_IMAGE_MODE);</div>
+</div><!-- fragment --><h3>2.1.2 数据包加载</h3>
+<p>数据包使用 setupHumanDetectionData 来加载。如下代码展示美妆数据包的加载过程。</p>
+<div class="fragment"><div class="line"><span class="comment">// 加载美妆数据包</span></div>
+<div class="line"><span class="keywordtype">boolean</span> setupSuccess = <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.setupHumanDetectionData(</div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_DATA_TYPE_MAKEUP2, </div>
+<div class="line">        makeupDataFile);</div>
+</div><!-- fragment --><p>数据包类型：</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">数据包 </th><th class="markdownTableHeadNone">命名 </th><th class="markdownTableHeadNone">类型 </th><th class="markdownTableHeadNone">描述  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">假脸数据包 </td><td class="markdownTableBodyNone">fakeface.dat </td><td class="markdownTableBodyNone">HUMAN_DETECTION_DATA_TYPE_FAKE_FACE </td><td class="markdownTableBodyNone">假脸数据，用于AR Scene的人脸道具中，道具紧贴人脸，随面部表情变化而变化  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">美妆数据包（Deprecated） </td><td class="markdownTableBodyNone">makeup2_240_vX.X.X.dat </td><td class="markdownTableBodyNone">HUMAN_DETECTION_DATA_TYPE_MAKEUP2 </td><td class="markdownTableBodyNone">美妆相关数据，用于美妆以及美妆道具中（已废弃, 需替换成人脸通用数据包）  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">人脸通用数据包 </td><td class="markdownTableBodyNone">facecommon_vX.X.X.dat </td><td class="markdownTableBodyNone">HUMAN_DETECTION_DATA_TYPE_FACE_COMMON </td><td class="markdownTableBodyNone">人脸通用数据包，用于美妆以及高级美颜  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">高级美颜数据包 </td><td class="markdownTableBodyNone">advancedbeauty_vX.X.X.dat </td><td class="markdownTableBodyNone">HUMAN_DETECTION_DATA_TYPE_ADVANCED_BEAUTY </td><td class="markdownTableBodyNone">高级美颜相关数据  </td></tr>
+</table>
+<p>注：使用美妆需设置人脸通用数据包，使用高级颜需同时设置人脸通用数据包以及高级美颜数据包。</p>
+<h2>2.2 特技使用</h2>
+<h3>2.2.1 特技创建</h3>
+<p>AR Scene 是内建特技，对应特技名称为“AR Scene”。可以使用美摄SDK内建特技的标准创建方式进行创建。例如拍摄模式下：</p>
+<div class="fragment"><div class="line"><a class="code" href="interfaceNvsVideoFx.html">NvsVideoFx</a> mArSceneEffect = mStreamingContext.appendBuiltinCaptureVideoFx(<span class="stringliteral">&quot;AR Scene&quot;</span>);</div>
+</div><!-- fragment --><p><a class="anchor" id="settings"></a></p>
+<h3>2.2.2 其他设置</h3>
+<p>检测类特技，如AR Scene需要进行buddy buffer相关设置。分为以下几类情况：</p>
+<h4>拍摄模式</h4>
+<p>预览开启时需要设置buddy buffer相关flags，STREAMING_ENGINE_CAPTURE_FLAG_CAPTURE_BUDDY_HOST_VIDEO_FRAME。</p>
+<div class="fragment"><div class="line">mStreamingContext.startCapturePreview(mCurrentDeviceIndex, captureResolutionGrade,  </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_CAPTURE_FLAG_DONT_USE_SYSTEM_RECORDER |  </div>
+<div class="line">                <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_CAPTURE_FLAG_CAPTURE_BUDDY_HOST_VIDEO_FRAME |  </div>
+<div class="line">                <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_CAPTURE_FLAG_ENABLE_TAKE_PICTURE |  </div>
+<div class="line">                <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_CAPTURE_FLAG_STRICT_PREVIEW_VIDEO_SIZE, <span class="keyword">null</span>);</div>
+</div><!-- fragment --><h4>编辑模式</h4>
+<p>检测类特效推荐以 Raw Filter 形式添加，效率更高。</p>
+<p>播放时需要分别设置buddy buffer相关flags，STREAMING_ENGINE_PLAYBACK_FLAG_BUDDY_HOST_VIDEO_FRAME。</p>
+<p>需要注意的是，如果特技是以 Raw Filter 的形式添加，flags 上才能够且必须或上STREAMING_ENGINE_PLAYBACK_FLAG_BUDDY_ORIGIN_VIDEO_FRAME，否则会造成部分效果异常。</p>
+<div class="fragment"><div class="line">mStreamingContext.playbackTimeline(mTimeLine, startTime, endTime, <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.VIDEO_PREVIEW_SIZEMODE_LIVEWINDOW_SIZE, <span class="keyword">true</span>,  </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_PLAYBACK_FLAG_BUDDY_HOST_VIDEO_FRAME | </div>
+<div class="line">        <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_PLAYBACK_FLAG_BUDDY_ORIGIN_VIDEO_FRAME | </div>
+<div class="line">        NvsStreamingContext.STREAMING_ENGINE_PLAYBACK_FLAG_LOW_PIPELINE_SIZE);</div>
+</div><!-- fragment --><p>Seek时需要分别设置buddy buffer相关flags。STREAMING_ENGINE_SEEK_FLAG_BUDDY_HOST_VIDEO_FRAME。</p>
+<p>需要注意的是，如果特技是以 Raw Filter 的形式添加，flags 上才能够且必须或上STREAMING_ENGINE_SEEK_FLAG_BUDDY_ORIGIN_VIDEO_FRAME，否则会造成部分效果异常。</p>
+<div class="fragment"><div class="line">mStreamingContext.seekTimeline(mTimeLine, timestamp, <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.VIDEO_PREVIEW_SIZEMODE_LIVEWINDOW_SIZE,</div>
+<div class="line">                seekShowMode | </div>
+<div class="line">                <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_SEEK_FLAG_BUDDY_HOST_VIDEO_FRAME |</div>
+<div class="line">                STREAMING_ENGINE_SEEK_FLAG_BUDDY_ORIGIN_VIDEO_FRAME);</div>
+</div><!-- fragment --><p>Compile时需要分别设置buddy buffer相关flags。STREAMING_ENGINE_COMPILE_FLAG_BUDDY_HOST_VIDEO_FRAME。</p>
+<p>需要注意的是，如果特技是以 Raw Filter 的形式添加，flags 上才能够且必须或上STREAMING_ENGINE_COMPILE_FLAG_BUDDY_ORIGIN_VIDEO_FRAME，否则会造成部分效果异常。</p>
+<div class="fragment"><div class="line">mStreamingContext.compileTimeline(timeline, startTime, endTime, compileVideoPath, videoResolutionGrade, <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.COMPILE_BITRATE_GRADE_HIGH, </div>
+<div class="line">                 encoderFlag | </div>
+<div class="line">                 <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_COMPILE_FLAG_BUDDY_HOST_VIDEO_FRAME |</div>
+<div class="line">                 <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.STREAMING_ENGINE_COMPILE_FLAG_BUDDY_ORIGIN_VIDEO_FRAME);</div>
+</div><!-- fragment --><h2>2.3 特技功能</h2>
+<h3>2.3.1 道具</h3>
+<p>AR Scene 道具的应用，需要先安装道具包，再把返回的包ID设置给 AR Scene 特技。例如：</p>
+<div class="fragment"><div class="line"><span class="comment">// 道具安装</span></div>
+<div class="line"><a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a> assetPackageManager = mStreamingContext.getAssetPackageManager();</div>
+<div class="line">StringBuilder sceneId = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line">String packagePath = <span class="stringliteral">&quot;assets:/arface/084A6EC1-43AB-40EF-BBD5-D83F692B011B.3.arscene&quot;</span>;</div>
+<div class="line"><span class="keywordtype">int</span> ret = assetPackageManager.installAssetPackage(packagePath , <span class="keyword">null</span>,</div>
+<div class="line">        <a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a>.ASSET_PACKAGE_TYPE_ARSCENE, <span class="keyword">true</span>, sceneId);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 设置道具效果</span></div>
+<div class="line">mArSceneEffect.setStringVal(<span class="stringliteral">&quot;Scene Id&quot;</span>, sceneId);   </div>
+</div><!-- fragment --><p>取消道具“Scene Id”传空。</p>
+<div class="fragment"><div class="line"><span class="comment">// 取消道具效果</span></div>
+<div class="line">mArSceneEffect.setStringVal(<span class="stringliteral">&quot;Scene Id&quot;</span>, “”);   </div>
+</div><!-- fragment --><p>注：道具包使用前，需加载该包要求的人体检测模型以及数据包。各个包的具体要求参见美摄素材平台。</p>
+<h3>2.3.2 美颜</h3>
+<p>美颜功能分为普通美颜与高级美颜，普通美颜不需要人体检测的支持，高级美颜需要。</p>
+<p><b>高级美颜与普通美颜都有磨皮的功能，如果同时开启，高级美颜的磨皮效果会覆盖普通美颜效果。</b></p>
+<h4>2.3.2.1 普通美颜</h4>
+<p>普通美颜功能包括：磨皮，Lut，美白，红润，锐化等功能。</p>
+<p>具体参数参见 <a class="el" href="FxNameList_8md.html#AR_SCENE_BEAUTY_PARAMS">美颜参数</a></p>
+<h4>2.3.2.2 高级美颜</h4>
+<p>高级美颜功能包括：高级磨皮，祛黑眼圈，祛法令纹，眼亮，白牙，哑光，人脸Lut，清晰等功能。</p>
+<p>具体参数参见 <a class="el" href="FxNameList_8md.html#AR_SCENE_ADVANCED_BEAUTY_PARAMS">高级美颜参数</a> 。</p>
+<p><b>高级美颜要求加载106人脸点位检测模型或者240人脸点位检测模型，二者在效果上有细微差别。同时需设置人脸通用数据包以及高级美颜数据包。</b></p>
+<h3>2.3.3 美型</h3>
+<p>美型功能能够对面部细节进行一些微调。具体参数参见 <a class="el" href="FxNameList_8md.html#AR_SCENE_FACE_WARP_PARAMS">美型参数 (Warp)</a>与<a class="el" href="FxNameList_8md.html#AR_SCENE_FACE_MESH_PARAMS">美型参数 (Face Mesh)</a> 。</p>
+<p><b>目前支持两套美型方案，Warp以及Face Mesh，通常情况下，我们推荐使用Face Mesh，只有头部缩放操作建议使用Face Warp。</b></p>
+<p><b>美型要求加载106人脸点位检测模型或者240人脸点位检测模型。二者在效果上没有差别。</b></p>
+<p>美型的各项调节有默认的效果，同时也支持自定义美型包的形式。</p>
+<p>如果使用美型包，需要先安装，再把返回的包ID设置给对应的包ID参数。</p>
+<h3>2.3.3.1 美型(Warp)</h3>
+<div class="fragment"><div class="line"><span class="comment">// 自定义头部缩放美型包安装</span></div>
+<div class="line"><a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a> assetPackageManager = mStreamingContext.getAssetPackageManager();</div>
+<div class="line">StringBuilder warpId = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line">String packagePath = <span class="stringliteral">&quot;assets:/facewarp/084A6EC1-43AB-40EF-BBD5-D83F692B011B.3.warp&quot;</span>;</div>
+<div class="line"><span class="keywordtype">int</span> ret = assetPackageManager.installAssetPackage(packagePath , <span class="keyword">null</span>,</div>
+<div class="line">        <a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a>.ASSET_PACKAGE_TYPE_WARP, <span class="keyword">true</span>, warpId );</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 设置自定义头部缩放效果</span></div>
+<div class="line">mArSceneEffect.setStringVal(<span class="stringliteral">&quot;Head Size Warp Custom Package Id&quot;</span>, warpId ); </div>
+</div><!-- fragment --><p>如果要取消自定义美型效果，则对应包ID参数传空。</p>
+<div class="fragment"><div class="line"><span class="comment">// 设置自定义头部缩放效果</span></div>
+<div class="line">mArSceneEffect.setStringVal(<span class="stringliteral">&quot;Head Size Warp Custom Package Id&quot;</span>, <span class="stringliteral">&quot;&quot;</span>); </div>
+</div><!-- fragment --><h3>2.3.3.2 美型(Face Mesh)</h3>
+<div class="fragment"><div class="line"><span class="comment">// 自定义大眼美型包安装</span></div>
+<div class="line"><a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a> assetPackageManager = mStreamingContext.getAssetPackageManager();</div>
+<div class="line">StringBuilder faceMeshId = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line">String packagePath = <span class="stringliteral">&quot;assets:/facemesh/084A6EC1-43AB-40EF-BBD5-D83F692B011B.3.facemesh&quot;</span>;</div>
+<div class="line"><span class="keywordtype">int</span> ret = assetPackageManager.installAssetPackage(packagePath , <span class="keyword">null</span>,</div>
+<div class="line">        <a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a>.ASSET_PACKAGE_TYPE_FACE_MESH, <span class="keyword">true</span>, faceMeshId );</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 设置自定义大眼效果</span></div>
+<div class="line">mArSceneEffect.setStringVal(<span class="stringliteral">&quot;Face Mesh Eye Size Custom Package Id&quot;</span>, faceMeshId ); </div>
+<div class="line">mArSceneEffect.setIntVal(<span class="stringliteral">&quot;Head Size Warp Strategy&quot;</span>, 0x7FFFFFFF ); </div>
+</div><!-- fragment --><p>如果要取消自定义美型效果，则对应包ID参数传空。</p>
+<div class="fragment"><div class="line"><span class="comment">// 设置自定义大眼效果</span></div>
+<div class="line">mArSceneEffect.setStringVal(<span class="stringliteral">&quot;Face Mesh Eye Size Custom Package Id&quot;</span>, <span class="stringliteral">&quot;&quot;</span>); </div>
+</div><!-- fragment --><h3>2.3.4 美妆</h3>
+<p>美妆分为：单妆和妆容。</p>
+<p><b>美妆要求加载240人脸点位检测模型，如果使用美瞳也还需要加载眼球轮廓检测模型。</b></p>
+<p><b>美妆要求加载人脸通用数据包。</b></p>
+<h4>**2.3.4.1 单妆**</h4>
+<p>单妆是单一的美妆效果，现支持的有口红、眉毛、眼影、睫毛、眼线、腮红、高光、修容。</p>
+<p><b>每个单妆需要安装对应单妆包才可使用。</b></p>
+<p>如下是口红包的安装与使用过程。</p>
+<div class="fragment"><div class="line"><span class="comment">// 口红包安装</span></div>
+<div class="line"><a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a> assetPackageManager = mStreamingContext.getAssetPackageManager();</div>
+<div class="line">StringBuilder makeupId = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line">String makeupPath=<span class="stringliteral">&quot;assets:/makeup/07E4CE0F-3AEA-4510-8C23-9267522B7BFE.1.makeup&quot;</span>;</div>
+<div class="line"><span class="keywordtype">int</span> ret = assetPackageManager.installAssetPackage(makeupPath, <span class="keyword">null</span>,</div>
+<div class="line">        <a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a>.ASSET_PACKAGE_TYPE_MAKEUP , <span class="keyword">true</span>, uuid);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 口红应用</span></div>
+<div class="line">mArSceneEffect.setColorVal(<span class="stringliteral">&quot;Makeup Lip Color&quot;</span>, <span class="keyword">new</span> <a class="code" href="structNvsColor.html">NvsColor</a>(1, 0, 0, 1));</div>
+<div class="line">mArSceneEffect.setFloatVal(<span class="stringliteral">&quot;Makeup Lip Intensity&quot;</span>, 1);</div>
+<div class="line">mArSceneEffect.setStringVal(<span class="stringliteral">&quot;Makeup Lip Package Id&quot;</span>, makeupId);</div>
+</div><!-- fragment --><h4>2.3.4.2 妆容</h4>
+<p>妆容是若干单妆、美颜、美型、微整型、滤镜的整体效果。对于妆容的接入，美摄提供一套中间层的接口，具体可参考sdkdemo。</p>
+<h1>3. FAQ</h1>
+<p><b>问：为什么道具没有效果？</b></p>
+<p>答：请做如下确认：</p>
+<ol type="1">
+<li>SDK是否支持美摄的AR功能；</li>
+<li>是否有相应功能的授权；</li>
+<li>道具所需检测模型是否加载成功；</li>
+<li>如果是假脸道具，假脸数据包是否加载成功；</li>
+<li>如果是美妆道具，美妆数据包是否加载成功；</li>
+<li>buddy相关flags是否设置，见文中<a href="#settings">2.2.2</a>；</li>
+<li>道具包是否安装成功；</li>
+<li>是否 AR Scene 指定的检测模式在模型加载阶段没有支持；</li>
+<li>如果是Effect Sdk，渲染时传入的物理角度是否正确；</li>
+<li>图像中人脸是不是过小，目前美摄检测模型支持的最小人脸屏占比为1；</li>
+</ol>
+<p><b>问：为什么高级美颜，美型没有效果？</b></p>
+<p>答：请做如下确认：</p>
+<ol type="1">
+<li>SDK是否支持美摄的AR功能；</li>
+<li>是否有相应功能的授权；</li>
+<li>人脸检测模型是否加载成功；</li>
+<li>人脸通用数据包和高级美颜数据包是否设置（适用高级美颜没效果的情况）；</li>
+<li>buddy相关flags是否设置，见文中<a href="#settings">2.2.2</a>；</li>
+<li>开关是否开启，各子项强度是否大于0；</li>
+<li>是否 AR Scene 指定的检测模式在模型加载阶段没有支持；</li>
+<li>如果是Effect Sdk，渲染时传入的物理角度是否正确；</li>
+<li>图像中人脸是不是过小，目前美摄检测模型支持的最小人脸屏占比为1；</li>
+</ol>
+<p><b>问：为什么单妆没有效果？</b></p>
+<p>答：请做如下确认：</p>
+<ol type="1">
+<li>SDK是否支持美摄的AR功能；</li>
+<li>是否有相应功能的授权；</li>
+<li>240人脸检测模型是否加载成功，**如果使用美瞳，眼球轮廓检测模型是否加载成功**；</li>
+<li>美妆数据包是否加载成功；</li>
+<li>buddy相关flags是否设置，见文中<a href="#settings">2.2.2</a>；</li>
+<li>美妆开关是否开启，美妆强度是否不为0，各子项强度是否大于0；</li>
+<li>美妆包是否安装成功；</li>
+<li>是否 AR Scene 指定的检测模式在模型加载阶段没有支持；</li>
+<li>如果是Effect Sdk，渲染时传入的物理角度是否正确；</li>
+<li>图像中人脸是不是过小，目前美摄检测模型支持的最小人脸屏占比为1；</li>
+</ol>
+<p><b>问：为什么添加AR Scene后，添加的其他特效没有效果？</b></p>
+<p>答：在 <a class="el" href="FxNameList_8md.html#AR_SCENE_SINGLE_BUFFER_PARAMS">单缓冲</a> 模式下，AR Scene之前的特效会失效，需要其他特效移到AR Scene之后，或者改用双缓冲模式。</p>
+<p><b>问：想要自定义美型效果怎么办？</b></p>
+<p>答：AR Scene 支持自定义美型包，请联系美摄设计同学定制。</p>
+<p><b>问：如何确定检没检测到人体信息？</b></p>
+<p>答：通过 setARSceneCallback 设置检测回调，查看检测到的目标个数。前提是，该荐功能已授权。</p>
+<p><b>问：低端机效果卡顿怎么办？</b></p>
+<p>答：需要对低端机做适配，可选配置如下：</p>
+<ol type="1">
+<li>背景分割使用快速模型；</li>
+<li>禁用哑光效果；</li>
+<li>禁用<a class="el" href="FxNameList_8md.html#AR_SCENE_SINGLE_BUFFER_PARAMS">单缓冲</a>模式；</li>
+<li>通过 <a class="el" href="FxNameList_8md.html#ARSCENE_MAX_FACES_PARAMS">Unified Max Faces</a> 和 <a class="el" href="FxNameList_8md.html#ARSCENE_MAX_FACES_RESPECT_MIN_PARAMS">Max Faces Respect Min</a> 限制最大检测人脸数；</li>
+<li>禁用美瞳； </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="ainterfaceNvsVideoFx_html"><div class="ttname"><a href="interfaceNvsVideoFx.html">NvsVideoFx</a></div><div class="ttdoc">视频特效</div><div class="ttdef"><b>Definition:</b> NvsVideoFx.h:48</div></div>
+<div class="ttc" id="ainterfaceNvsARSceneManipulate_html"><div class="ttname"><a href="interfaceNvsARSceneManipulate.html">NvsARSceneManipulate</a></div><div class="ttdoc">AR场景处理接口</div><div class="ttdef"><b>Definition:</b> NvsARSceneManipulate.h:290</div></div>
+<div class="ttc" id="ainterfaceNvsStreamingContext_html_afb12eeff94c75d5226eb7e4e57cf7185"><div class="ttname"><a href="interfaceNvsStreamingContext.html#afb12eeff94c75d5226eb7e4e57cf7185">+[NvsStreamingContext hasARModule]</a></div><div class="ttdeci">int hasARModule()</div><div class="ttdoc">检测当前SDK是否含有AR模块</div></div>
+<div class="ttc" id="ainterfaceNvsStreamingContext_html"><div class="ttname"><a href="interfaceNvsStreamingContext.html">NvsStreamingContext</a></div><div class="ttdoc">流媒体上下文</div><div class="ttdef"><b>Definition:</b> NvsStreamingContext.h:1120</div></div>
+<div class="ttc" id="astructNvsColor_html"><div class="ttname"><a href="structNvsColor.html">NvsColor</a></div><div class="ttdoc">自定义颜色类</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:413</div></div>
+<div class="ttc" id="ainterfaceNvsStreamingContext_html_af11b34f7c8dfe6f6395cd1b7d229f181"><div class="ttname"><a href="interfaceNvsStreamingContext.html#af11b34f7c8dfe6f6395cd1b7d229f181">+[NvsStreamingContext closeHumanDetection]</a></div><div class="ttdeci">void closeHumanDetection()</div><div class="ttdoc">关闭人体检测机制</div></div>
+<div class="ttc" id="ainterfaceNvsAssetPackageManager_html"><div class="ttname"><a href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a></div><div class="ttdoc">资源包管理器，管理视频场景中的资源包</div><div class="ttdef"><b>Definition:</b> NvsAssetPackageManager.h:350</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1440">
+
+    <trackGroup>
+	<track source="daily.jpg" width="720" height="1440" clipStart="0" clipDuration="4600"> 
+       	<effect name="transform">
+	      <param name="scaleX" value="1.935"/>
+	      <param name="scaleY" value="1.935"/>
+	      <param name="transX" value="124"/>
+	      <param name="transY" value="65"/>
+		</effect> 	     
+	</track>
+	
+	
+	<track source=":1" clipStart="0" clipDuration="4600">
+	    <effect name="lut">
+			<param name="dataFileName" value="daily.mslut"/>	
+			<animation paramName="intensity">
+				<key time="0" value="0"/>
+				<key time="900" value="0"/>
+				<key time="2200" value="1"/>				
+				<key time="4600" value="1"/>
+			</animation>
+		</effect>     
+	</track>
+	
+			
+	  <effect name="transform">
+			<animation paramName="scaleX">
+                 <key time="600" value="1" curveMode="inSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="2500" value="0.75" curveMode="outSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="4080" value="0.52"/>
+            </animation>
+			<animation paramName="scaleY">
+                 <key time="600" value="1" curveMode="inSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="2500" value="0.75" curveMode="outSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="4080" value="0.52"/>
+            </animation>
+			<animation paramName="transX">
+                 <key time="900" value="0"/>
+                 <key time="1000" value="1"/>
+                 <key time="1100" value="3.7"/>
+                 <key time="1200" value="7.3"/>
+                 <key time="1300" value="11.6"/>
+                 <key time="1400" value="16.2"/>
+                 <key time="1500" value="21.1"/>
+                 <key time="1600" value="26"/>
+                 <key time="1700" value="30.6"/>
+                 <key time="1800" value="34.9"/>
+                 <key time="1900" value="38.5"/>
+                 <key time="2000" value="41.3"/>
+                 <key time="2100" value="43.1"/>
+                 <key time="2200" value="43.5"/>
+                 <key time="2300" value="42.4"/>
+                 <key time="2400" value="40.2"/>
+                 <key time="2500" value="39" curveMode="outSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="4080" value="-62"/>
+            </animation>
+			<animation paramName="transY">
+                 <key time="900" value="0"/>
+                 <key time="1000" value="-1.1"/>
+                 <key time="1100" value="-4.6"/>
+                 <key time="1200" value="-10.2"/>
+                 <key time="1300" value="-17.8"/>
+                 <key time="1400" value="-27"/>
+                 <key time="1500" value="-37.5"/>
+                 <key time="1600" value="-48.8"/>
+                 <key time="1700" value="-60.6"/>
+                 <key time="1800" value="-72.6"/>
+                 <key time="1900" value="-84.4"/>
+                 <key time="2000" value="-95.6"/>
+                 <key time="2100" value="-105.7"/>
+                 <key time="2200" value="-114.4"/>
+                 <key time="2300" value="-121.1"/>
+                 <key time="2400" value="-124.7"/>
+                 <key time="2500" value="-125.7" curveMode="outSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/> 
+                 <key time="4080" value="-34"/>  
+             </animation>
+		</effect>
+	</trackGroup>
+	
+	
+	
+</storyboard>

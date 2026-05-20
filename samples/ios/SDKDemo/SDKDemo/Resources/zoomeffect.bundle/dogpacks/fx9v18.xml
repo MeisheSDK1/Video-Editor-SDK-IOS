@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1440">	
+	<track source=":1" clipStart="0" clipDuration="4080">
+		
+		<effect name="transform">
+			<param name="anchorX" value="anchorXValue"/>
+			<param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+				<key time="0" value="1"/>
+				<key time="200" value="1"/>
+				<key time="533" value="1.1"/>
+				<key time="1067" value="1.1"/>
+				<key time="1300" value="1.23"/>
+				<key time="1700" value="1.23"/>
+				<key time="1900" value="1.33"/>
+				<key time="2300" value="1.33"/>
+				<key time="2367" value="1.4"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="0" value="1"/>
+				<key time="200" value="1"/>
+				<key time="533" value="1.1"/>
+				<key time="1067" value="1.1"/>
+				<key time="1300" value="1.23"/>
+				<key time="1700" value="1.23"/>
+				<key time="1900" value="1.33"/>
+				<key time="2300" value="1.33"/>
+				<key time="2367" value="1.4"/>
+			</animation>
+		</effect>
+		<effect name="basicCC">
+			<animation paramName="contrast">
+				<key time="0" value="1"/>
+				<key time="680" value="1"/>
+				<key time="720" value="1.03"/>
+				<key time="760" value="1.6"/>
+				<key time="880" value="1.23"/>
+				<key time="920" value="1.05"/>
+				<key time="960" value="1"/>
+				
+				<key time="1320" value="1"/>
+				<key time="1360" value="1.15"/>
+				<key time="1400" value="1.6"/>
+				<key time="1600" value="1"/>
+				
+				<key time="1920" value="1"/>
+				<key time="1960" value="1.08"/>
+				<key time="2000" value="1.6"/>
+				<key time="2200" value="1"/>
+				
+				<key time="2560" value="1"/>
+				<key time="2600" value="1.12"/>
+				<key time="2640" value="1.6"/>
+				<key time="2720" value="1"/>
+				
+				<key time="2960" value="1"/>
+				<key time="3000" value="1.6"/>
+				<key time="3080" value="1"/>
+				
+				<key time="3280" value="1"/>
+				<key time="3320" value="1.1"/>
+				<key time="3360" value="1.6"/>
+				<key time="3400" value="1"/>
+				
+				<key time="3600" value="1"/>
+				<key time="3640" value="1.15"/>
+				<key time="3680" value="1.6"/>
+				<key time="3760" value="1"/>
+				
+			</animation>
+			<animation paramName="mainOffset">
+				<key time="0" value="0"/>
+				<key time="680" value="0"/>
+				<key time="720" value="0.04"/>
+				<key time="760" value="0.7"/>
+				<key time="880" value="0.28"/>
+				<key time="920" value="0.14"/>
+				<key time="960" value="0"/>
+				
+				<key time="1320" value="0"/>
+				<key time="1360" value="0.17"/>
+				<key time="1400" value="0.7"/>
+				<key time="1600" value="0"/>
+				
+				<key time="1920" value="0"/>
+				<key time="1960" value="0.16"/>
+				<key time="2000" value="0.67"/>
+				<key time="2200" value="0"/>
+				
+				<key time="2560" value="0"/>
+				<key time="2600" value="0.17"/>
+				<key time="2640" value="0.66"/>
+				<key time="2680" value="0.46"/>
+				<key time="2720" value="0"/>
+				
+				<key time="2960" value="0"/>
+				<key time="3000" value="0.66"/>
+				<key time="3040" value="0.35"/>
+				<key time="3080" value="0"/>
+				
+				<key time="3280" value="0"/>
+				<key time="3320" value="0.13"/>
+				<key time="3360" value="0.66"/>
+				<key time="3400" value="0"/>
+				
+				<key time="3600" value="0"/>
+				<key time="3640" value="0.25"/>
+				<key time="3680" value="0.7"/>
+				<key time="3720" value="0.4"/>
+				<key time="3760" value="0"/>
+				
+			</animation>
+		</effect>
+	</track>
+	<track source="frame9v18.png" width="720" height="1440" clipStart="0" clipDuration="4080"/>
+</storyboard>	

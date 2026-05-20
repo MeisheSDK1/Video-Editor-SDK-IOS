@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsAnimatedSticker.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsAnimatedSticker.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsAnimatedSticker_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2016. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Jan 29. 2021</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsFx_8h.html">NvsFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &lt;CoreGraphics/CGGeometry.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interfaceNvsAnimatedSticker.html">   34</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsAnimatedSticker.html">NvsAnimatedSticker</a> : <a class="code" href="interfaceNvsFx.html">NvsFx</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interfaceNvsAnimatedSticker.html#a3aa6225b695b38c3f8b0dcfef9ba27a1">   36</a></span>&#160;<span class="keyword">@property</span> (readonly) BOOL <a class="code" href="interfaceNvsAnimatedSticker.html#a3aa6225b695b38c3f8b0dcfef9ba27a1">hasAudio</a>;             </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="interfaceNvsAnimatedSticker.html#a84ed0daafab5d66de19684e286d20db9">   37</a></span>&#160;<span class="keyword">@property</span> (readonly) BOOL <a class="code" href="interfaceNvsAnimatedSticker.html#a84ed0daafab5d66de19684e286d20db9">isPanoramic</a>;          </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="interfaceNvsAnimatedSticker.html#a10ad95b6256332d54bd03f0b7885cf16">   38</a></span>&#160;<span class="keyword">@property</span> (readonly) int64_t <a class="code" href="interfaceNvsAnimatedSticker.html#a10ad95b6256332d54bd03f0b7885cf16">defaultDuration</a>;   </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interfaceNvsAnimatedSticker.html#a557ce05af2baa0d855dedaf05417d7e2">   39</a></span>&#160;<span class="keyword">@property</span> (readonly) NSString* <a class="code" href="interfaceNvsAnimatedSticker.html#a557ce05af2baa0d855dedaf05417d7e2">animatedStickerPeriodAnimationPackageId</a>;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="interfaceNvsAnimatedSticker.html#aeda39127299071b3f131b0af555d29e4">   40</a></span>&#160;<span class="keyword">@property</span> (readonly) NSString* <a class="code" href="interfaceNvsAnimatedSticker.html#aeda39127299071b3f131b0af555d29e4">animatedStickerInAnimationPackageId</a>;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="interfaceNvsAnimatedSticker.html#a3654d1349a3dfd946d499bd213695cbc">   41</a></span>&#160;<span class="keyword">@property</span> (readonly) NSString* <a class="code" href="interfaceNvsAnimatedSticker.html#a30b67bee1443d801a346cb48821e0552">animatedStickerOutAnimationPackageId</a>; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (NSString *)<a class="code" href="interfaceNvsAnimatedSticker.html#a3ade8cbc7f41cc64f0624ecc276424e7">getAnimatedStickerPackageId</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;- (void)setScale:(<span class="keywordtype">float</span>)scale;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;- (void)setSeperatedScaleX:(<span class="keywordtype">float</span>)scaleX;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;- (void)setSeperatedScaleY:(<span class="keywordtype">float</span>)scaleY;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#a69ea77cecd706bab9345a9c17442ddf1">getScale</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#ab390d95835ad22994a9b8f56af8b090d">getSeperatedScaleX</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#a1b0e70c05e1362d5e24be34a03ca748f">getSeperatedScaleY</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;- (void)setHorizontalFlip:(<span class="keywordtype">bool</span>)flip;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;- (BOOL)<a class="code" href="interfaceNvsAnimatedSticker.html#a13c5c374248f2fba61419f97d5c1814e">getHorizontalFlip</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;- (void)setVerticalFlip:(<span class="keywordtype">bool</span>)flip;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;- (BOOL)<a class="code" href="interfaceNvsAnimatedSticker.html#a388df946fde797792fb60c130061ce51">getVerticalFlip</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;- (void)setRotationZ:(<span class="keywordtype">float</span>)angle;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#ae348184ddff1f9b23d33ea75736ac92a">getRotationZ</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;- (void)setTranslation:(CGPoint)translation;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;- (CGPoint)<a class="code" href="interfaceNvsAnimatedSticker.html#ac5ff4f065c7e858fcb68845e663ae5c7">getTransltion</a>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;- (void)translateAnimatedSticker:(CGPoint)translationOffset;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;- (void)scaleAnimatedSticker:(<span class="keywordtype">float</span>)scaleFactor anchor:(CGPoint)anchor;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;- (void)rotateAnimatedSticker:(<span class="keywordtype">float</span>)angle anchor:(CGPoint)anchor;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;- (void)rotateAnimatedSticker:(<span class="keywordtype">float</span>)angle;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;- (<a class="code" href="structNvsRect.html">NvsRect</a>)<a class="code" href="interfaceNvsAnimatedSticker.html#a4c2d60820bdeef3558337e6d12b29802">getOriginalBoundingRect</a>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;- (NSArray *)<a class="code" href="interfaceNvsAnimatedSticker.html#a37b3c9520d3f4f4c547c9abc4d4eb570">getBoundingRectangleVertices</a>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;- (void)setCenterPolarAngle:(<span class="keywordtype">float</span>)centerPolarAngle;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#aecae19936aebe986caacf2284f6a705b">getCenterPolarAngle</a>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;- (void)setCenterAzimuthAngle:(<span class="keywordtype">float</span>)centerAzimuthAngle;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#a5273397db66a2a3f62a3802dbeb61aef">getCenterAzimuthAngle</a>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;- (void)setPolarAngleRange:(<span class="keywordtype">float</span>)polarAngleRange;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#a46f321915d502bb82d3715d8b005135b">getPolarAngleRange</a>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#af4b9e19ba0862c1e822896faa4f845bf">getOrthoAngleRange</a>;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;- (void)setZValue:(<span class="keywordtype">float</span>)value;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#a54ba7875d09785adcc03b64edc1db5ea">getZValue</a>;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;- (void)setVolumeGain:(<span class="keywordtype">float</span>)leftVolumeGain rightVolumeGain:(<span class="keywordtype">float</span>)rightVolumeGain;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;- (void)getVolumeGain:(<span class="keywordtype">float</span> *)leftVolumeGain rightVolumeGain:(<span class="keywordtype">float</span> *)rightVolumeGain;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;- (void)setOpacity:(<span class="keywordtype">float</span>)opacity;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;- (float)<a class="code" href="interfaceNvsAnimatedSticker.html#a07a52a15f1677afab23e839c45677113">getOpacity</a>;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;- (void)setCurrentKeyFrameTime:(int64_t)time;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160; </div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;- (bool)setControlPoint:(NSString *)fxParam controlPointPair:(<a class="code" href="interfaceNvsControlPointPair.html">NvsControlPointPair</a> *)controlPointPair;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160; </div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;- (<a class="code" href="interfaceNvsControlPointPair.html">NvsControlPointPair</a>*)getControlPoint:(NSString*)fxParam;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;-(bool) applyAnimatedStickerPeriodAnimation:(NSString*) animatedStickerPeriodAnimationPackageId;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;-(bool) applyAnimatedStickerInAnimation:(NSString*) animatedStickerInAnimationPackageId;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160; </div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;-(bool) applyAnimatedStickerOutAnimation:(NSString*) animatedStickerOutAnimationPackageId;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160; </div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;-(void) setAnimatedStickerAnimationPeriod:(<span class="keywordtype">int</span>)periodInMS;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;-(int) <a class="code" href="interfaceNvsAnimatedSticker.html#affc2accc1e4d4f82264e31d625a6a322">getAnimatedStickerAnimationPeriod</a>;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160; </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;-(void) setAnimatedStickerInAnimationDuration:(<span class="keywordtype">int</span>)inAnimationDurationInMS;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160; </div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;-(int) <a class="code" href="interfaceNvsAnimatedSticker.html#a4ef691444cb29e063e1d8641271830e1">getAnimatedStickerInAnimationDuration</a>;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160; </div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;-(void) setAnimatedStickerOutAnimationDuration:(<span class="keywordtype">int</span>)outAnimationDurationInMS;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160; </div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;-(int) <a class="code" href="interfaceNvsAnimatedSticker.html#a2c7536ebe6c37d11b070ce3ce8596d33">getAnimatedStickerOutAnimationDuration</a>;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;-(void) enableSeparateProgressMode:(<span class="keywordtype">bool</span>)enable;</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160; </div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;-(bool) <a class="code" href="interfaceNvsAnimatedSticker.html#a17aad83c6723cf66aa7d924caa27960d">isSeparateProgressModeEnabled</a>;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a1b0e70c05e1362d5e24be34a03ca748f"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a1b0e70c05e1362d5e24be34a03ca748f">-[NvsAnimatedSticker getSeperatedScaleY]</a></div><div class="ttdeci">float getSeperatedScaleY()</div><div class="ttdoc">获取动画贴纸的分离式垂直缩放比例。</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a13c5c374248f2fba61419f97d5c1814e"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a13c5c374248f2fba61419f97d5c1814e">-[NvsAnimatedSticker getHorizontalFlip]</a></div><div class="ttdeci">BOOL getHorizontalFlip()</div><div class="ttdoc">获取动画贴纸的水平翻转状态</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a17aad83c6723cf66aa7d924caa27960d"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a17aad83c6723cf66aa7d924caa27960d">-[NvsAnimatedSticker isSeparateProgressModeEnabled]</a></div><div class="ttdeci">bool isSeparateProgressModeEnabled()</div><div class="ttdoc">获取是否开启将特效参数与进程分离模式。</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a10ad95b6256332d54bd03f0b7885cf16"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a10ad95b6256332d54bd03f0b7885cf16">NvsAnimatedSticker::defaultDuration</a></div><div class="ttdeci">int64_t defaultDuration</div><div class="ttdoc">动画贴纸在时间线上的默认长度（单位微秒）</div><div class="ttdef"><b>Definition:</b> NvsAnimatedSticker.h:38</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a37b3c9520d3f4f4c547c9abc4d4eb570"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a37b3c9520d3f4f4c547c9abc4d4eb570">-[NvsAnimatedSticker getBoundingRectangleVertices]</a></div><div class="ttdeci">NSArray * getBoundingRectangleVertices()</div><div class="ttdoc">获取动画贴纸在时间线坐标系下原始包络框的顶点位置。请参见时间线与视图坐标</div></div>
+<div class="ttc" id="ainterfaceNvsControlPointPair_html"><div class="ttname"><a href="interfaceNvsControlPointPair.html">NvsControlPointPair</a></div><div class="ttdoc">关键帧控制点对类。</div><div class="ttdef"><b>Definition:</b> NvsControlPointPair.h:27</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a07a52a15f1677afab23e839c45677113"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a07a52a15f1677afab23e839c45677113">-[NvsAnimatedSticker getOpacity]</a></div><div class="ttdeci">float getOpacity()</div><div class="ttdoc">获取透明度</div></div>
+<div class="ttc" id="astructNvsRect_html"><div class="ttname"><a href="structNvsRect.html">NvsRect</a></div><div class="ttdoc">矩形</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:371</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_affc2accc1e4d4f82264e31d625a6a322"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#affc2accc1e4d4f82264e31d625a6a322">-[NvsAnimatedSticker getAnimatedStickerAnimationPeriod]</a></div><div class="ttdeci">int getAnimatedStickerAnimationPeriod()</div><div class="ttdoc">获取动画贴纸循环动画的周期</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html">NvsAnimatedSticker</a></div><div class="ttdoc">动画贴纸类</div><div class="ttdef"><b>Definition:</b> NvsAnimatedSticker.h:35</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_af4b9e19ba0862c1e822896faa4f845bf"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#af4b9e19ba0862c1e822896faa4f845bf">-[NvsAnimatedSticker getOrthoAngleRange]</a></div><div class="ttdeci">float getOrthoAngleRange()</div><div class="ttdoc">获取动画贴纸与极角垂直的张角。只对全景图动画贴纸有效</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html"><div class="ttname"><a href="interfaceNvsFx.html">NvsFx</a></div><div class="ttdoc">特效类</div><div class="ttdef"><b>Definition:</b> NvsFx.h:83</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a30b67bee1443d801a346cb48821e0552"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a30b67bee1443d801a346cb48821e0552">NvsAnimatedSticker::animatedStickerOutAnimationPackageId</a></div><div class="ttdeci">NSString * animatedStickerOutAnimationPackageId</div><div class="ttdoc">动画贴纸出动画样式包裹ID</div><div class="ttdef"><b>Definition:</b> NvsAnimatedSticker.h:41</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a3ade8cbc7f41cc64f0624ecc276424e7"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a3ade8cbc7f41cc64f0624ecc276424e7">-[NvsAnimatedSticker getAnimatedStickerPackageId]</a></div><div class="ttdeci">NSString * getAnimatedStickerPackageId()</div><div class="ttdoc">获取动画贴纸包ID</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a388df946fde797792fb60c130061ce51"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a388df946fde797792fb60c130061ce51">-[NvsAnimatedSticker getVerticalFlip]</a></div><div class="ttdeci">BOOL getVerticalFlip()</div><div class="ttdoc">获取动画贴纸的竖直翻转状态</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a3aa6225b695b38c3f8b0dcfef9ba27a1"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a3aa6225b695b38c3f8b0dcfef9ba27a1">NvsAnimatedSticker::hasAudio</a></div><div class="ttdeci">BOOL hasAudio</div><div class="ttdoc">是否含有音频</div><div class="ttdef"><b>Definition:</b> NvsAnimatedSticker.h:36</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a4ef691444cb29e063e1d8641271830e1"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a4ef691444cb29e063e1d8641271830e1">-[NvsAnimatedSticker getAnimatedStickerInAnimationDuration]</a></div><div class="ttdeci">int getAnimatedStickerInAnimationDuration()</div><div class="ttdoc">获取动画贴纸入动画的时长</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a4c2d60820bdeef3558337e6d12b29802"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a4c2d60820bdeef3558337e6d12b29802">-[NvsAnimatedSticker getOriginalBoundingRect]</a></div><div class="ttdeci">NvsRect getOriginalBoundingRect()</div><div class="ttdoc">获取动画贴纸在时间线坐标系下的原始包络框。请参见时间线与视图坐标</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a84ed0daafab5d66de19684e286d20db9"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a84ed0daafab5d66de19684e286d20db9">NvsAnimatedSticker::isPanoramic</a></div><div class="ttdeci">BOOL isPanoramic</div><div class="ttdoc">是否为全景图动画贴纸,默认为否</div><div class="ttdef"><b>Definition:</b> NvsAnimatedSticker.h:37</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a5273397db66a2a3f62a3802dbeb61aef"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a5273397db66a2a3f62a3802dbeb61aef">-[NvsAnimatedSticker getCenterAzimuthAngle]</a></div><div class="ttdeci">float getCenterAzimuthAngle()</div><div class="ttdoc">获取动画贴纸中心点的方位角。只对全景图动画贴纸有效</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a557ce05af2baa0d855dedaf05417d7e2"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a557ce05af2baa0d855dedaf05417d7e2">NvsAnimatedSticker::animatedStickerPeriodAnimationPackageId</a></div><div class="ttdeci">NSString * animatedStickerPeriodAnimationPackageId</div><div class="ttdoc">动画贴纸循环动画样式包裹ID</div><div class="ttdef"><b>Definition:</b> NvsAnimatedSticker.h:39</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a46f321915d502bb82d3715d8b005135b"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a46f321915d502bb82d3715d8b005135b">-[NvsAnimatedSticker getPolarAngleRange]</a></div><div class="ttdeci">float getPolarAngleRange()</div><div class="ttdoc">获取动画贴纸极角的张角。只对全景图动画贴纸有效</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_ac5ff4f065c7e858fcb68845e663ae5c7"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#ac5ff4f065c7e858fcb68845e663ae5c7">-[NvsAnimatedSticker getTransltion]</a></div><div class="ttdeci">CGPoint getTransltion()</div><div class="ttdoc">获取动画贴纸在时间线坐标系下的平移坐标</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_ae348184ddff1f9b23d33ea75736ac92a"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#ae348184ddff1f9b23d33ea75736ac92a">-[NvsAnimatedSticker getRotationZ]</a></div><div class="ttdeci">float getRotationZ()</div><div class="ttdoc">获取动画贴纸沿Z轴顺时针旋转的角度值，Z轴垂直于屏幕</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_aecae19936aebe986caacf2284f6a705b"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#aecae19936aebe986caacf2284f6a705b">-[NvsAnimatedSticker getCenterPolarAngle]</a></div><div class="ttdeci">float getCenterPolarAngle()</div><div class="ttdoc">获取动画贴纸中心点的极角。只对全景图动画贴纸有效</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a2c7536ebe6c37d11b070ce3ce8596d33"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a2c7536ebe6c37d11b070ce3ce8596d33">-[NvsAnimatedSticker getAnimatedStickerOutAnimationDuration]</a></div><div class="ttdeci">int getAnimatedStickerOutAnimationDuration()</div><div class="ttdoc">获取动画贴纸出动画的时长</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_aeda39127299071b3f131b0af555d29e4"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#aeda39127299071b3f131b0af555d29e4">NvsAnimatedSticker::animatedStickerInAnimationPackageId</a></div><div class="ttdeci">NSString * animatedStickerInAnimationPackageId</div><div class="ttdoc">动画贴纸入动画样式包裹ID</div><div class="ttdef"><b>Definition:</b> NvsAnimatedSticker.h:40</div></div>
+<div class="ttc" id="aNvsFx_8h_html"><div class="ttname"><a href="NvsFx_8h.html">NvsFx.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a54ba7875d09785adcc03b64edc1db5ea"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a54ba7875d09785adcc03b64edc1db5ea">-[NvsAnimatedSticker getZValue]</a></div><div class="ttdeci">float getZValue()</div><div class="ttdoc">获取贴纸Z值</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_ab390d95835ad22994a9b8f56af8b090d"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#ab390d95835ad22994a9b8f56af8b090d">-[NvsAnimatedSticker getSeperatedScaleX]</a></div><div class="ttdeci">float getSeperatedScaleX()</div><div class="ttdoc">获取动画贴纸的分离式水平缩放比例。</div></div>
+<div class="ttc" id="ainterfaceNvsAnimatedSticker_html_a69ea77cecd706bab9345a9c17442ddf1"><div class="ttname"><a href="interfaceNvsAnimatedSticker.html#a69ea77cecd706bab9345a9c17442ddf1">-[NvsAnimatedSticker getScale]</a></div><div class="ttdeci">float getScale()</div><div class="ttdoc">获取动画贴纸的缩放值</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

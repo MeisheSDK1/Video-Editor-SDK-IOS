@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1280">
+	<track source=":1" clipStart="0" clipDuration="566">
+	    <effect name="transform">
+		    <param name="anchorX" value="anchorXValue"/>
+		    <param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+                 <key time="500" value="1"/>
+                 <key time="566" value="1.3"/>
+            </animation>
+			<animation paramName="scaleY">
+                 <key time="500" value="1"/>
+                 <key time="566" value="1.3"/>
+            </animation>
+		</effect>
+	</track>	
+	
+	<track source=":1" clipStart="566" clipDuration="3514">
+	
+	    <effect name="transform">
+		    <param name="anchorX" value="anchorXValue"/>
+		    <param name="anchorY" value="anchorYValue"/>
+		    <param name="scaleX" value="1.3"/>
+		    <param name="scaleY" value="1.3"/>
+			<animation paramName="transX" wrapMode="intervalRepeat" intervalLength="267">
+                 <key time="0" value="0"/>
+                 <key time="66" value="13"/>
+                 <key time="133" value="13"/>
+                 <key time="200" value="0"/>
+                 <key time="267" value="18"/>
+                 <key time="333" value="18"/>
+            </animation>
+			<animation paramName="transY" wrapMode="intervalRepeat" intervalLength="267">
+                 <key time="0" value="0"/>
+                 <key time="66" value="8"/>
+                 <key time="133" value="-8"/>
+                 <key time="200" value="8"/>
+                 <key time="267" value="0"/>  
+                 <key time="333" value="0"/>  
+            </animation>
+		</effect>	   
+	    <effect name="distortion">
+			<param name="curve" value="(0,0),(0,0),(0.02,0),
+									   (0.07,0.01),(0.04,0.01),(0.11,0.01),
+									   (0.17,-0.005),(0.125,-0.005),(0.2,-0.005),
+									   (0.28,0.005),(0.23,0.005),(0.33,0.005),
+									   (0.38,-0.008),(0.33,-0.008),(0.43,-0.008),
+									   (0.48,0.01),(0.43,0.01),(0.53,0.01),
+									   (0.58,-0.005),(0.53,-0.005),(0.63,-0.005),
+									   (0.68,0.005),(0.63,0.005),(0.73,0.005),
+									   (0.8,-0.005),(0.75,-0.005),(0.85,-0.005),
+									   (0.91,0.012),(0.86,0.012),(0.96,0.012),
+									   (1,0),(0.95,0),(1,0)"/>
+			<param name="isVertical" value="1"/>					   
+			<animation paramName="intensity">
+				<key time="0" value="0.1"/>
+				<key time="120" value="-0.2"/>
+				<key time="240" value="0.1"/>
+				<key time="360" value="0"/>
+				<key time="480" value="0.2"/>
+				<key time="600" value="-0.05"/>
+				<key time="720" value="-0.15"/>
+				<key time="840" value="0"/>
+				<key time="960" value="0.05"/>	
+				<key time="1080" value="-0.1"/>
+				<key time="1200" value="0.2"/>
+				<key time="1320" value="-0.1"/>
+				<key time="1440" value="0.1"/>
+				<key time="1560" value="-0.15"/>
+				<key time="1680" value="0.1"/>
+				<key time="1800" value="-0.1"/>		
+				<key time="1920" value="0.13"/>
+				<key time="2040" value="0"/>
+				<key time="2160" value="-0.1"/>
+				<key time="2280" value="0.15"/>
+				<key time="2400" value="0"/>
+				<key time="2520" value="-0.05"/>
+				<key time="2640" value="0.15"/>
+				<key time="2760" value="-0.1"/>
+				<key time="2880" value="0.15"/>
+				<key time="3000" value="0"/>
+				<key time="3120" value="0.05"/>
+				<key time="3240" value="-0.1"/>
+				<key time="3360" value="0.15"/>
+				<key time="3480" value="0"/>
+				<key time="3514" value="0.05"/>
+			</animation>
+		</effect>	   
+	</track>
+	
+	<track source="pattern.png" width="720" height="1280" clipStart="0" clipDuration="4080">
+	     <effect name="transform">
+		    <animation paramName="scaleX">
+                 <key time="500" value="4.4"/>
+                 <key time="700" value="1"/>
+            </animation>
+			<animation paramName="scaleY">
+                 <key time="500" value="4.4"/>
+                 <key time="700" value="1"/>
+            </animation>
+			<animation paramName="opacity">
+                 <key time="500" value="0"/>
+                 <key time="700" value="0.35"/>
+            </animation>
+		</effect>
+	</track>
+	
+	<track source="fire.caf" width="360" height="640" clipStart="333" clipDuration="300">
+		<effect name="transform">
+		    <param name="scaleX" value="2"/>
+			<param name="scaleY" value="2"/>
+		</effect>
+	</track>
+	
+	<track source="fire2.caf" width="360" height="640" clipStart="533" clipDuration="200">
+		<effect name="transform">
+		    <param name="scaleX" value="2"/>
+			<param name="scaleY" value="2"/>
+		</effect>
+	</track>
+	
+	<track source="fire3.caf" width="360" height="640" clipStart="733" clipDuration="3347" cafLoopMode="repeat">
+		<effect name="transform">
+		    <param name="scaleX" value="2"/>
+			<param name="scaleY" value="2"/>
+		</effect>
+	</track>
+</storyboard>

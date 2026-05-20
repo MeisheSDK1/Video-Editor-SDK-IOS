@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  SDKDemo
+
+  Created by ms20180425 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+//displayName
+"CFBundleDisplayName" = "美摄";
+
+"compile fiald" = "生成失败";
+"compile fiald" = "生成失败";
+"storage" = "请检查手机存储空间";
+"Compile" = "生成";
+"Save Succecs!" = "保存成功！";
+"Cancel" = "取消";
+"Save" = "保存";
+"Know" = "知道了";
+"Packaging template" = "包装模板";
+"Add title" = "添加片头";
+"Add credits" = "添加片尾";

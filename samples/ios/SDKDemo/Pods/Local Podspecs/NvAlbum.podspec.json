@@ -1,0 +1,53 @@
+{
+  "name": "NvAlbum",
+  "version": "0.2.0",
+  "summary": "A short description of NvAlbum.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chuyang009@163.com/NvAlbum",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chuyang009@163.com": "liudongxu@meishesdk.com"
+  },
+  "source": {
+    "git": "https://github.com/chuyang009@163.com/NvAlbum.git",
+    "tag": "0.2.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "NvAlbum/Classes/**/*",
+  "resources": "NvAlbum/Assets/*",
+  "public_header_files": [
+    "Pod/Classes/Controller/NvAlbumViewController.h",
+    "Pod/Classes/Model/NvAlbumItem.h",
+    "Pod/Classes/Controller/NvAlbumSizeViewController.h",
+    "Pod/Classes/NvAlbum.h"
+  ],
+  "private_header_files": [
+    "NvAlbum/Classes/Utils/*.h",
+    "NvAlbum/Classes/Category/*.h",
+    "NvAlbum/Classes/FetchAlbum/*.h",
+    "NvAlbum/Classes/View/*.h",
+    "NvAlbum/Classes/Controller/NvAlbumBaseViewController.h",
+    "NvAlbum/Classes/Controller/NvAlbumSizeViewController.h",
+    "NvAlbum/Classes/Controller/NvAlbumProgressViewController.h"
+  ],
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "MBProgressHUD": [
+      "~> 1.1.0"
+    ],
+    "Masonry": [
+      "~> 1.1.0"
+    ],
+    "NvBaseCommon": [
+
+    ]
+  }
+}

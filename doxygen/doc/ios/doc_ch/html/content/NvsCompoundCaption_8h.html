@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsCompoundCaption.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a>  </div>
+  <div class="headertitle">
+<div class="title">NvsCompoundCaption.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#import &quot;<a class="el" href="NvsFx_8h_source.html">NvsFx.h</a>&quot;</code><br />
+<code>#import &lt;CoreGraphics/CGGeometry.h&gt;</code><br />
+</div>
+<p><a href="NvsCompoundCaption_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNvsCompoundCaption.html">NvsCompoundCaption</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">边框类型</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>复合字幕</p>
+<p>复合字幕是视频上叠加的组合型文字，每个复合字幕包含若干个子字幕。编辑视频时，可以添加和移除复合字幕，并对字幕位置进行调整处理，还可以对字体，颜色属性进行修改。 </p><dl class="section warning"><dt>警告</dt><dd>NvsCompoundCaption类中，所有public API都必须在UI线程使用!!! </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.9.0</dd></dl>
+<p><a class="anchor" id="BOUNDING_TYPE"></a> </p>
+</div></td></tr>
+<tr class="memitem:af1c29cd0ab719be1e06864845d4ba4b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1">NvsBoundingType</a> { <br />
+&#160;&#160;<a class="el" href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1a42af0fddd6e8c12f46ff5289232595c3">NvsBoundingType_Text</a> = 0, 
+<a class="el" href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1a789bccde431ae89cbad42eca528fc188">NvsBoundingType_Text_Frame</a> = 1, 
+<a class="el" href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1aca76e09cfab48fcdde07746f4499f5a1">NvsBoundingType_Frame</a> = 2, 
+<a class="el" href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1ac9e3bcf8e30e01319cf19bf5700c747f">NvsBoundingType_Text_Origin_Frame</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1afce8a7ed3d2bf9d1b0d4f160863fc744">NvsBoundingType_Typographic_Text</a> = 4
+<br />
+ }</td></tr>
+<tr class="separator:af1c29cd0ab719be1e06864845d4ba4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="af1c29cd0ab719be1e06864845d4ba4b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c29cd0ab719be1e06864845d4ba4b1">&#9670;&nbsp;</a></span>NvsBoundingType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="NvsCompoundCaption_8h.html#af1c29cd0ab719be1e06864845d4ba4b1">NvsBoundingType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="af1c29cd0ab719be1e06864845d4ba4b1a42af0fddd6e8c12f46ff5289232595c3"></a>NvsBoundingType_Text&#160;</td><td class="fielddoc"><p>文字的实际边框 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af1c29cd0ab719be1e06864845d4ba4b1a789bccde431ae89cbad42eca528fc188"></a>NvsBoundingType_Text_Frame&#160;</td><td class="fielddoc"><p>文字框的边框 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af1c29cd0ab719be1e06864845d4ba4b1aca76e09cfab48fcdde07746f4499f5a1"></a>NvsBoundingType_Frame&#160;</td><td class="fielddoc"><p>包括装饰在内的整体边框 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af1c29cd0ab719be1e06864845d4ba4b1ac9e3bcf8e30e01319cf19bf5700c747f"></a>NvsBoundingType_Text_Origin_Frame&#160;</td><td class="fielddoc"><p>没有经过变换的文字框的边框 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af1c29cd0ab719be1e06864845d4ba4b1afce8a7ed3d2bf9d1b0d4f160863fc744"></a>NvsBoundingType_Typographic_Text&#160;</td><td class="fielddoc"><p>文字的排版边框 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsARFaceContext.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsARFaceContext.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsARFaceContext_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="protocolNvsARFaceContextDelegate-p.html#a7b1b71944018c8c835a55c193bff8f1e">    1</a></span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2016. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Dec 29. 2016</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9aa2511e23c5348767f6ea4a98e45c5415">   28</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9aa2511e23c5348767f6ea4a98e45c5415">NvsObjectTrackingType_Face</a> = 0,         </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9ad9f34c7931758445a1c9b6214ff4c720">NvsObjectTrackingType_Animal</a>            </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9ad9f34c7931758445a1c9b6214ff4c720">   30</a></span>&#160;} <a class="code" href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9">NvsObjectTrackingType</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834a1e67290b34986bdbf66f73d2f7156ebb">   44</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834a1e67290b34986bdbf66f73d2f7156ebb">NvsObjectLandmarkType_Face</a> = 0,         </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834a31552f292443a42e3d33bc8c637f8656">NvsObjectLandmarkType_Animal</a>            </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834a31552f292443a42e3d33bc8c637f8656">   46</a></span>&#160;} <a class="code" href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834">NvsObjectLandmarkType</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894aaf572ba1641dfbb532fc92ed186ab371">   60</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894aaf572ba1641dfbb532fc92ed186ab371">NvsObjectActionType_Face_Detect</a> = 0x00000001L,              </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a7dd5bce5fbc3845f0f032424a68328b7">   61</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a7dd5bce5fbc3845f0f032424a68328b7">NvsObjectActionType_Face_Lips_Upward</a> = 0x00000040L,         </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad3db21838f084953ad704f5e55bb0479">   62</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad3db21838f084953ad704f5e55bb0479">NvsObjectActionType_Face_Lips_Pouted</a> = 0x00000080L,         </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ab86e417e9a3b21954c8956ad61600838">   63</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ab86e417e9a3b21954c8956ad61600838">NvsObjectActionType_Eye_Blink</a> = 0x00000002L,                </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ae66426f7c70b9171da0b802cc634bc6a">   64</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ae66426f7c70b9171da0b802cc634bc6a">NvsObjectActionType_Mouth_Ah</a> = 0x00000004L,                 </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894aadfaaeb746a272cf6c84c40a8db852e1">   65</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894aadfaaeb746a272cf6c84c40a8db852e1">NvsObjectActionType_Head_Yaw</a> = 0x00000008L,                 </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894adca7c6dab4f7f9a10086c7b10c6359c6">   66</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894adca7c6dab4f7f9a10086c7b10c6359c6">NvsObjectActionType_Head_Pitch</a> = 0x00000010L,               </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894add559208e72977f6c5dc87569620eb67">   67</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894add559208e72977f6c5dc87569620eb67">NvsObjectActionType_Brow_Jump</a> = 0x00000020L,                </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a0ad7e238caa5afb90c2b4eb6f202f212">   69</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a0ad7e238caa5afb90c2b4eb6f202f212">NvsObjectActionType_Hand_Detect</a> = 0x00000100L,              </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ac080b48f1ce3c5b98bcf644514de641c">   70</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ac080b48f1ce3c5b98bcf644514de641c">NvsObjectActionType_Hand_OK</a> = 0x00000200L,                  </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ab0e4ba0b1d655a4790df7c39977ab1d7">   71</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ab0e4ba0b1d655a4790df7c39977ab1d7">NvsObjectActionType_Hand_Scissor</a> = 0x00000400L,             </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a55a23d1295a0e76e06a69f55ea70bdac">   72</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a55a23d1295a0e76e06a69f55ea70bdac">NvsObjectActionType_Hand_Good</a> = 0x00000800L,                </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad08f5083d6d04f034864f251737452e7">   73</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad08f5083d6d04f034864f251737452e7">NvsObjectActionType_Hand_Palm</a> = 0x00001000L,                </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894acc110f09b419dafdfc34161e8e91aa1e">   74</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894acc110f09b419dafdfc34161e8e91aa1e">NvsObjectActionType_Hand_Pistol</a> = 0x00002000L,              </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a5e7c8a6e6c52852d90f229c151cb351e">   75</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a5e7c8a6e6c52852d90f229c151cb351e">NvsObjectActionType_Hand_Love</a> = 0x00004000L,                </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a671f6d38154c90e5bc8860504e37d0fe">   76</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a671f6d38154c90e5bc8860504e37d0fe">NvsObjectActionType_Hand_Holdup</a> = 0x00008000L,              </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a54ed00d6955f7597543e48cf18bc1f7b">   77</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a54ed00d6955f7597543e48cf18bc1f7b">NvsObjectActionType_Hand_Congratulate</a> = 0x00020000L,        </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894af0eee0089e03ebd57c8e59ca29b2f139">   78</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894af0eee0089e03ebd57c8e59ca29b2f139">NvsObjectActionType_Hand_Finger_Heart</a> = 0x00040000L,        </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a1685ce064e1d1c23ffd54152d2ee01e4">   79</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a1685ce064e1d1c23ffd54152d2ee01e4">NvsObjectActionType_Hand_Finger_Index</a> = 0x00100000L,        </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a96d7356bdd17d9519c7212684bc1abdd">   80</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a96d7356bdd17d9519c7212684bc1abdd">NvsObjectActionType_Hand_Fist</a> = 0x00200000L,                </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a417c06f31f065902e9e997bfbb490ec1">   81</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a417c06f31f065902e9e997bfbb490ec1">NvsObjectActionType_Hand_666</a> = 0x00400000L,                 </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad7d990e0c1369b902d60caa0147dce35">   82</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad7d990e0c1369b902d60caa0147dce35">NvsObjectActionType_Hand_Bless</a> = 0x00800000L,               </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a1e12da7a015396b1f930b5113c24c60a">   83</a></span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a1e12da7a015396b1f930b5113c24c60a">NvsObjectActionType_Hand_ILoveYou</a> = 0x010000000000L,        </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a216cfea6b7d1e32d43cc6275e1a76370">NvsObjectActionType_Hand_Ssh</a> = 0x400000000000L              </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a216cfea6b7d1e32d43cc6275e1a76370">   85</a></span>&#160;}<a class="code" href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894">NvsObjectDetectActionType</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="protocolNvsARFaceContextDelegate-p.html">   88</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocolNvsARFaceContextDelegate-p.html">NvsARFaceContextDelegate</a> &lt;NSObject&gt;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">@optional</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (void)notifyFaceItemLoadingBegin:(NSString *)itemPath ;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;- (void)<a class="code" href="protocolNvsARFaceContextDelegate-p.html#ae545d29ef1c875ee027c84bd1e53b72f">notifyFaceItemLoadingFinish</a> ;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;- (void)notifyFaceItemLoadingFailed:(NSString *)itemPath error:(<span class="keywordtype">int</span>) error ;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;- (void)notifyObjectLandmark:(NSArray*)landmark size:(<span class="keywordtype">int</span>)objectCount type:(<a class="code" href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834">NvsObjectLandmarkType</a>)type timeStamp:(int64_t)timestamp;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;- (void)notifyDetectedAction:(<span class="keywordtype">long</span> <span class="keywordtype">long</span>)actionType ;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="interfaceNvsARFaceContext.html">  157</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNvsARFaceContext.html">NvsARFaceContext</a> : NSObject</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="interfaceNvsARFaceContext.html#afbe8e0053f2eeda54fdd9f5f4e696d44">  159</a></span>&#160;<span class="keyword">@property</span> (nonatomic, weak) id&lt;NvsARFaceContextDelegate&gt; <a class="code" href="interfaceNvsARFaceContext.html#ac2d6dccebfb7fa9963aafff854add08a">delegate</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;- (void)setInternalContext:(<span class="keywordtype">void</span> *)internalContext;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;- (bool)<a class="code" href="interfaceNvsARFaceContext.html#a362b42e7066ed303ccb7d1a6b0940b59">isFaceTracking</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;- (bool)isObjectTracking:(<a class="code" href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9">NvsObjectTrackingType</a>)trackingType;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;- (void)<a class="code" href="interfaceNvsARFaceContext.html#afbe8e0053f2eeda54fdd9f5f4e696d44">setReloadCurSticker</a>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a671f6d38154c90e5bc8860504e37d0fe"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a671f6d38154c90e5bc8860504e37d0fe">NvsObjectActionType_Hand_Holdup</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Holdup</div><div class="ttdoc">托手手势</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:76</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894ab0e4ba0b1d655a4790df7c39977ab1d7"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ab0e4ba0b1d655a4790df7c39977ab1d7">NvsObjectActionType_Hand_Scissor</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Scissor</div><div class="ttdoc">剪刀手</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:71</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894aadfaaeb746a272cf6c84c40a8db852e1"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894aadfaaeb746a272cf6c84c40a8db852e1">NvsObjectActionType_Head_Yaw</a></div><div class="ttdeci">@ NvsObjectActionType_Head_Yaw</div><div class="ttdoc">摇头</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:65</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894ac080b48f1ce3c5b98bcf644514de641c"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ac080b48f1ce3c5b98bcf644514de641c">NvsObjectActionType_Hand_OK</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_OK</div><div class="ttdoc">OK手势</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:70</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a763734b46cd2e59e5fb8789877371ed9"><div class="ttname"><a href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9">NvsObjectTrackingType</a></div><div class="ttdeci">NvsObjectTrackingType</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:27</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a54ed00d6955f7597543e48cf18bc1f7b"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a54ed00d6955f7597543e48cf18bc1f7b">NvsObjectActionType_Hand_Congratulate</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Congratulate</div><div class="ttdoc">恭贺（抱拳)</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:77</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a1e12da7a015396b1f930b5113c24c60a"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a1e12da7a015396b1f930b5113c24c60a">NvsObjectActionType_Hand_ILoveYou</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_ILoveYou</div><div class="ttdoc">手势ILoveYou</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:83</div></div>
+<div class="ttc" id="aprotocolNvsARFaceContextDelegate-p_html_ae545d29ef1c875ee027c84bd1e53b72f"><div class="ttname"><a href="protocolNvsARFaceContextDelegate-p.html#ae545d29ef1c875ee027c84bd1e53b72f">-[NvsARFaceContextDelegate-p notifyFaceItemLoadingFinish]</a></div><div class="ttdeci">void notifyFaceItemLoadingFinish()</div><div class="ttdoc">通知人脸道具加载完成。</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a0a062f31907929ff1736797203e5a834"><div class="ttname"><a href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834">NvsObjectLandmarkType</a></div><div class="ttdeci">NvsObjectLandmarkType</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:43</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a7dd5bce5fbc3845f0f032424a68328b7"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a7dd5bce5fbc3845f0f032424a68328b7">NvsObjectActionType_Face_Lips_Upward</a></div><div class="ttdeci">@ NvsObjectActionType_Face_Lips_Upward</div><div class="ttdoc">嘴角上扬</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:61</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894acc110f09b419dafdfc34161e8e91aa1e"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894acc110f09b419dafdfc34161e8e91aa1e">NvsObjectActionType_Hand_Pistol</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Pistol</div><div class="ttdoc">手枪手势</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:74</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894ad7d990e0c1369b902d60caa0147dce35"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad7d990e0c1369b902d60caa0147dce35">NvsObjectActionType_Hand_Bless</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Bless</div><div class="ttdoc">双手合十</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:82</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a763734b46cd2e59e5fb8789877371ed9ad9f34c7931758445a1c9b6214ff4c720"><div class="ttname"><a href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9ad9f34c7931758445a1c9b6214ff4c720">NvsObjectTrackingType_Animal</a></div><div class="ttdeci">@ NvsObjectTrackingType_Animal</div><div class="ttdoc">检测动物</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:29</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a216cfea6b7d1e32d43cc6275e1a76370"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a216cfea6b7d1e32d43cc6275e1a76370">NvsObjectActionType_Hand_Ssh</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Ssh</div><div class="ttdoc">手势嘘</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:84</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a1685ce064e1d1c23ffd54152d2ee01e4"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a1685ce064e1d1c23ffd54152d2ee01e4">NvsObjectActionType_Hand_Finger_Index</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Finger_Index</div><div class="ttdoc">食指指尖</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:79</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894adca7c6dab4f7f9a10086c7b10c6359c6"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894adca7c6dab4f7f9a10086c7b10c6359c6">NvsObjectActionType_Head_Pitch</a></div><div class="ttdeci">@ NvsObjectActionType_Head_Pitch</div><div class="ttdoc">点头</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:66</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a417c06f31f065902e9e997bfbb490ec1"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a417c06f31f065902e9e997bfbb490ec1">NvsObjectActionType_Hand_666</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_666</div><div class="ttdoc">666</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:81</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a0ad7e238caa5afb90c2b4eb6f202f212"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a0ad7e238caa5afb90c2b4eb6f202f212">NvsObjectActionType_Hand_Detect</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Detect</div><div class="ttdoc">检测到手</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:69</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894">NvsObjectDetectActionType</a></div><div class="ttdeci">NvsObjectDetectActionType</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:59</div></div>
+<div class="ttc" id="ainterfaceNvsARFaceContext_html_a362b42e7066ed303ccb7d1a6b0940b59"><div class="ttname"><a href="interfaceNvsARFaceContext.html#a362b42e7066ed303ccb7d1a6b0940b59">-[NvsARFaceContext isFaceTracking]</a></div><div class="ttdeci">bool isFaceTracking()</div><div class="ttdoc">当前是否有人脸跟踪。</div></div>
+<div class="ttc" id="aprotocolNvsARFaceContextDelegate-p_html"><div class="ttname"><a href="protocolNvsARFaceContextDelegate-p.html">NvsARFaceContextDelegate-p</a></div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:88</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a763734b46cd2e59e5fb8789877371ed9aa2511e23c5348767f6ea4a98e45c5415"><div class="ttname"><a href="NvsARFaceContext_8h.html#a763734b46cd2e59e5fb8789877371ed9aa2511e23c5348767f6ea4a98e45c5415">NvsObjectTrackingType_Face</a></div><div class="ttdeci">@ NvsObjectTrackingType_Face</div><div class="ttdoc">检测人脸</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:28</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894add559208e72977f6c5dc87569620eb67"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894add559208e72977f6c5dc87569620eb67">NvsObjectActionType_Brow_Jump</a></div><div class="ttdeci">@ NvsObjectActionType_Brow_Jump</div><div class="ttdoc">眉毛挑动</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:67</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894ab86e417e9a3b21954c8956ad61600838"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ab86e417e9a3b21954c8956ad61600838">NvsObjectActionType_Eye_Blink</a></div><div class="ttdeci">@ NvsObjectActionType_Eye_Blink</div><div class="ttdoc">眨眼</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:63</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a96d7356bdd17d9519c7212684bc1abdd"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a96d7356bdd17d9519c7212684bc1abdd">NvsObjectActionType_Hand_Fist</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Fist</div><div class="ttdoc">拳头手势</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:80</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894ae66426f7c70b9171da0b802cc634bc6a"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ae66426f7c70b9171da0b802cc634bc6a">NvsObjectActionType_Mouth_Ah</a></div><div class="ttdeci">@ NvsObjectActionType_Mouth_Ah</div><div class="ttdoc">嘴巴大张</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:64</div></div>
+<div class="ttc" id="ainterfaceNvsARFaceContext_html_afbe8e0053f2eeda54fdd9f5f4e696d44"><div class="ttname"><a href="interfaceNvsARFaceContext.html#afbe8e0053f2eeda54fdd9f5f4e696d44">-[NvsARFaceContext setReloadCurSticker]</a></div><div class="ttdeci">void setReloadCurSticker()</div><div class="ttdoc">重新加载当前贴纸。</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a0a062f31907929ff1736797203e5a834a1e67290b34986bdbf66f73d2f7156ebb"><div class="ttname"><a href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834a1e67290b34986bdbf66f73d2f7156ebb">NvsObjectLandmarkType_Face</a></div><div class="ttdeci">@ NvsObjectLandmarkType_Face</div><div class="ttdoc">人脸关键点</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:44</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894ad08f5083d6d04f034864f251737452e7"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad08f5083d6d04f034864f251737452e7">NvsObjectActionType_Hand_Palm</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Palm</div><div class="ttdoc">手掌</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:73</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894ad3db21838f084953ad704f5e55bb0479"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894ad3db21838f084953ad704f5e55bb0479">NvsObjectActionType_Face_Lips_Pouted</a></div><div class="ttdeci">@ NvsObjectActionType_Face_Lips_Pouted</div><div class="ttdoc">嘟嘴</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:62</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894aaf572ba1641dfbb532fc92ed186ab371"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894aaf572ba1641dfbb532fc92ed186ab371">NvsObjectActionType_Face_Detect</a></div><div class="ttdeci">@ NvsObjectActionType_Face_Detect</div><div class="ttdoc">检测到脸</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:60</div></div>
+<div class="ttc" id="ainterfaceNvsARFaceContext_html_ac2d6dccebfb7fa9963aafff854add08a"><div class="ttname"><a href="interfaceNvsARFaceContext.html#ac2d6dccebfb7fa9963aafff854add08a">NvsARFaceContext::delegate</a></div><div class="ttdeci">id&lt; NvsARFaceContextDelegate &gt; delegate</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:159</div></div>
+<div class="ttc" id="ainterfaceNvsARFaceContext_html"><div class="ttname"><a href="interfaceNvsARFaceContext.html">NvsARFaceContext</a></div><div class="ttdoc">ARFace上下文</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:158</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a0a062f31907929ff1736797203e5a834a31552f292443a42e3d33bc8c637f8656"><div class="ttname"><a href="NvsARFaceContext_8h.html#a0a062f31907929ff1736797203e5a834a31552f292443a42e3d33bc8c637f8656">NvsObjectLandmarkType_Animal</a></div><div class="ttdeci">@ NvsObjectLandmarkType_Animal</div><div class="ttdoc">动物关键点</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:45</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a55a23d1295a0e76e06a69f55ea70bdac"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a55a23d1295a0e76e06a69f55ea70bdac">NvsObjectActionType_Hand_Good</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Good</div><div class="ttdoc">大拇哥</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:72</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894af0eee0089e03ebd57c8e59ca29b2f139"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894af0eee0089e03ebd57c8e59ca29b2f139">NvsObjectActionType_Hand_Finger_Heart</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Finger_Heart</div><div class="ttdoc">单手比爱心</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:78</div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html_a305c2da6a6cccabd3f2311a727fa8894a5e7c8a6e6c52852d90f229c151cb351e"><div class="ttname"><a href="NvsARFaceContext_8h.html#a305c2da6a6cccabd3f2311a727fa8894a5e7c8a6e6c52852d90f229c151cb351e">NvsObjectActionType_Hand_Love</a></div><div class="ttdeci">@ NvsObjectActionType_Hand_Love</div><div class="ttdoc">爱心手势</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:75</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

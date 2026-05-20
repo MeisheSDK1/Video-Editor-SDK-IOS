@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 详细开发引导</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">详细开发引导 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ul>
+<li>1 <a class="el" href="Tutorial_8md.html#概述">概述</a><ul>
+<li>1.1 <a class="el" href="Tutorial_8md.html#支持格式">支持格式</a></li>
+<li>1.2 <a class="el" href="Tutorial_8md.html#注意事项">注意事项</a><ul>
+<li>1.2.1 <a class="el" href="Tutorial_8md.html#限制">限制</a></li>
+<li>1.2.2 <a class="el" href="Tutorial_8md.html#运行环境">运行环境</a> <br  />
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2 <a class="el" href="Tutorial_8md.html#快速接入">快速接入</a></li>
+<li>3 <a class="el" href="Tutorial_8md.html#使用说明">使用说明</a><ul>
+<li>3.1 <a class="el" href="Tutorial_8md.html#录制">录制</a><ul>
+<li>3.1.1 <a class="el" href="Tutorial_8md.html#NvsStreamingContext类">NvsStreamingContext类</a></li>
+<li>3.1.2 <a class="el" href="Tutorial_8md.html#用NvsLiveWindow类预览">用NvsLiveWindow类预览</a></li>
+<li>3.1.3 <a class="el" href="Tutorial_8md.html#预览前的准备">预览前的准备</a></li>
+<li>3.1.4 <a class="el" href="Tutorial_8md.html#开启预览">开启预览</a> <br  />
+</li>
+<li>3.1.5 <a class="el" href="Tutorial_8md.html#录制与停止录制">录制与停止录制</a></li>
+<li>3.1.6 <a class="el" href="Tutorial_8md.html#录制参数调节">录制参数调节</a></li>
+<li>3.1.7 <a class="el" href="Tutorial_8md.html#美颜">美颜</a></li>
+<li>3.1.8 <a class="el" href="Tutorial_8md.html#采集特效（滤镜）">采集特效（滤镜）</a><ul>
+<li>3.1.8.1 <a class="el" href="Tutorial_8md.html#内建采集特效">内建采集特效</a></li>
+<li>3.1.8.2 <a class="el" href="Tutorial_8md.html#扩展采集特效">扩展采集特效</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3.2 <a class="el" href="Tutorial_8md.html#编辑">编辑</a><ul>
+<li>3.2.1 <a class="el" href="Tutorial_8md.html#创建timeline设定视频尺寸">创建timeline设定视频尺寸</a></li>
+<li>3.2.2 <a class="el" href="Tutorial_8md.html#多段视频、图片混编">多段视频、图片混编</a></li>
+<li>3.2.3 <a class="el" href="Tutorial_8md.html#播放与定位预览">播放与定位预览</a></li>
+<li>3.2.4 <a class="el" href="Tutorial_8md.html#视频裁剪">视频裁剪</a></li>
+<li>3.2.5 <a class="el" href="Tutorial_8md.html#从轨道上移除片段">从轨道上移除片段</a></li>
+<li>3.2.6 <a class="el" href="Tutorial_8md.html#片段排序">片段排序</a></li>
+<li>3.2.7 <a class="el" href="Tutorial_8md.html#图片时长设定">图片时长设定</a></li>
+<li>3.2.8 <a class="el" href="Tutorial_8md.html#移除时间线与轨道">移除时间线与轨道</a></li>
+</ul>
+</li>
+<li>3.3 <a class="el" href="Tutorial_8md.html#音乐">音乐</a><ul>
+<li>3.3.1 <a class="el" href="Tutorial_8md.html#添加音乐">添加音乐</a><ul>
+<li>3.3.2 <a class="el" href="Tutorial_8md.html#音乐裁剪">音乐裁剪</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3.4 <a class="el" href="Tutorial_8md.html#字幕">字幕</a><ul>
+<li>3.4.1 <a class="el" href="Tutorial_8md.html#添加与删除字幕">添加与删除字幕</a></li>
+<li>3.4.2 <a class="el" href="Tutorial_8md.html#获取timeline上的字幕">获取timeline上的字幕</a></li>
+<li>3.4.3 <a class="el" href="Tutorial_8md.html#改变字幕的属性">改变字幕的属性</a></li>
+<li>3.4.4 <a class="el" href="Tutorial_8md.html#改变字幕的入出点">改变字幕的入出点</a></li>
+</ul>
+</li>
+<li>3.5 <a class="el" href="Tutorial_8md.html#动画贴纸">动画贴纸</a><ul>
+<li>3.5.1 <a class="el" href="Tutorial_8md.html#添加与删除动画贴纸">添加与删除动画贴纸</a></li>
+<li>3.5.2 <a class="el" href="Tutorial_8md.html#获取timeline上的动画贴纸">获取timeline上的动画贴纸</a></li>
+<li>3.5.3 <a class="el" href="Tutorial_8md.html#改变动画贴纸的属性">改变动画贴纸的属性</a></li>
+<li>3.5.4 <a class="el" href="Tutorial_8md.html#改变动画贴纸的入出点">改变动画贴纸的入出点</a></li>
+</ul>
+</li>
+<li>3.6 <a class="el" href="Tutorial_8md.html#主题">主题</a><ul>
+<li>3.6.1 <a class="el" href="Tutorial_8md.html#添加与删除主题">添加与删除主题</a></li>
+<li>3.6.2 <a class="el" href="Tutorial_8md.html#获取timeline上的主题">获取timeline上的主题</a></li>
+<li>3.6.3 <a class="el" href="Tutorial_8md.html#改变主题的属性">改变主题的属性</a></li>
+</ul>
+</li>
+<li>3.7 <a class="el" href="Tutorial_8md.html#转场">转场</a></li>
+<li>3.8 <a class="el" href="Tutorial_8md.html#特效">特效</a><ul>
+<li>3.8.1 <a class="el" href="Tutorial_8md.html#视频特效">视频特效</a></li>
+<li>3.8.2 <a class="el" href="Tutorial_8md.html#音频特效">音频特效</a></li>
+<li>3.8.3 <a class="el" href="Tutorial_8md.html#时间线视频特效">时间线视频特效</a><ul>
+<li>3.8.3.1 <a class="el" href="Tutorial_8md.html#添加与删除时间线特效">添加与删除时间线特效</a></li>
+<li>3.8.3.2 <a class="el" href="Tutorial_8md.html#获取时间线特效">获取时间线特效</a></li>
+<li>3.8.3.3 <a class="el" href="Tutorial_8md.html#改变时间线特效的入出点">改变时间线特效的入出点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3.9 <a class="el" href="Tutorial_8md.html#生成">生成</a></li>
+<li>3.10 <a class="el" href="Tutorial_8md.html#素材包管理">素材包管理</a></li>
+<li>3.11 <a class="el" href="Tutorial_8md.html#代理">代理</a></li>
+</ul>
+</li>
+<li>4 <a class="el" href="Tutorial_8md.html#附件">附件</a></li>
+</ul>
+<hr  />
+ <h1><a class="anchor" id="详细内容"></a>
+详细内容</h1>
+<h2><a class="anchor" id="概述"></a>
+1 概述</h2>
+<p>美摄SDK致力于解决移动端视频开发的技术门槛，使仅有ios界面开发经验的程序员，都可以开发出性能优异、渲染效果丰富的的视频录制、编辑功能。我们的优势体现在：</p><ul>
+<li>录制、剪辑不限时长</li>
+<li>行业最高标准的美颜效果</li>
+<li>剪辑、变速实时预览，无需转码</li>
+<li>图片、视频混编<ul>
+<li>生成视频最高支持4K</li>
+</ul>
+</li>
+<li>丰富的转场、滤镜、字幕样式</li>
+<li>独家的主题</li>
+<li>支持4K制作和生成<ul>
+<li>开放的自定义贴纸功能 </li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="支持格式"></a>
+1.1 支持格式</h2>
+<p><br  />
+</p><ul>
+<li>输入规范：<ul>
+<li>视频格式：MP4、MOV、WMV、M2V、MPG</li>
+<li>音频格式：MP3、FLAC、AAC、M4A</li>
+<li>图片格式：JPG、PNG</li>
+<li>视频编码：H264、WMV、MPEG4</li>
+<li>音频编码：MP3、AAC、PCM、FLAC</li>
+</ul>
+</li>
+<li>输出规范：<ul>
+<li>视频格式：MP4、MOV</li>
+<li>视频编码：H264</li>
+<li>音频编码：AAC</li>
+</ul>
+</li>
+<li>扩展包格式（扩展包是美摄用来承载扩展素材的内容包，包括主题、字幕、滤镜、贴纸等）：<ul>
+<li>主题：.theme</li>
+<li>字幕：.captionstyle</li>
+<li>滤镜：.videofx</li>
+<li>贴纸：.animatedsticker</li>
+<li>转场：.videotransition<ul>
+<li>道具：.arscene </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="注意事项"></a>
+1.2 注意事项</h2>
+<h2><a class="anchor" id="限制"></a>
+1.2.1 限制</h2>
+<p>美摄SDK的所有接口必须在UI线程调用，否则可能出现无法预料的错误。只有NvsVideoFrameRetriever类的getFrameAtTime()方法除外。 </p>
+<h2><a class="anchor" id="运行环境"></a>
+1.2.2 运行环境</h2>
+<p>运行环境如下：ios 9.0以上 </p>
+<h2><a class="anchor" id="快速接入"></a>
+2 快速接入</h2>
+<p>如果没有SDK，请从美摄官网：<a href="https://www.meishesdk.com/downloads">https://www.meishesdk.com/downloads</a>下载最新ios开发版本。Xcode编辑器开发流程详见：<a href="https://www.meishesdk.com/ios/doc_ch/html/content/PortingGuide_8md.html">https://www.meishesdk.com/ios/doc_ch/html/content/PortingGuide_8md.html</a>。 </p>
+<h2><a class="anchor" id="使用说明"></a>
+3 使用说明</h2>
+<h2><a class="anchor" id="录制"></a>
+3.1 录制</h2>
+<p>录制的相关接口是在NvsStreamingContext类里，包括采集预览(startCapturePreview:videoResGrade:flags:aspectRatio:)，录制(startRecording:)，添加视频采集特效(appendBuiltinCaptureVideoFx:)等。强调：美摄SDK所有的类都是以“Nvs”开头。 <br  />
+视频录制时需要注意以下两点：</p><ul>
+<li>断点录制：美摄SDK实现断点录制的方式是通过循环调用开始录制(startRecording:)和结束录制(stopRecording)实现的。缺点是录制产生了多个文件，需要用户自己维护和删除视频数据， 并需要通过后续的编辑操作将断点录制的文件生成一个完整的新文件。优点是独立文件之间可以加入各种转场特技，避免了因转换场景而造成的视频画面生硬的切换。</li>
+<li>带特效录制与不带特效录制：带特效录制即所见即所得，所录制文件的效果就是预览的效果。不带特效录制是预览时使用滤镜或者想要录制1:1的视频，但录制出的文件是原始的不带滤镜的16:9或9:16的视频， 需要将视频文件在编辑时，再加上滤镜并裁剪到1:1，编辑并生成后得到的视频才会与预览时的视频完全一致。</li>
+</ul>
+<p>如果查看视频录制的具体功能实现，建议参考SdkDemo的视频拍摄模块。注意: 视频录制和视频生成时只支持输出.mov和.mp4格式的文件 </p>
+<h2><a class="anchor" id="NvsStreamingContext类"></a>
+3.1.1 NvsStreamingContext类</h2>
+<p>NvsStreamingContext是美摄SDK的流媒体上下文类，可视作整个SDK框架的入口。在开始使用美摄SDK的时候，需要先初始化NvsStreamingContext类，然后在其它地方使用时 获取NvsStreamingContext的对象，NvsStreamingContext是单例类。在不再使用美摄SDK或者程序退出前销毁NvsStreamingContext类的对象，请务必保证不要中途销毁NvsStreamingContext类的对象！！！ <br  />
+ NvsStreamingContext初始化代码如下： </p><pre class="fragment">        _context = [NvsStreamingContext sharedInstance];
+</pre><p>NvsStreamingContext销毁代码如下： </p><pre class="fragment">        _context = nil;
+        [NvsStreamingContext destroyInstance];
+</pre><p>注意：NvsStreamingContext初始化前，需要调用verifySdkLicenseFile()验证授权文件。参数sdkLicenseFilePath为授权文件路径，没有授权文件时置为空字符串。 </p>
+<h2><a class="anchor" id="用NvsLiveWindow类预览"></a>
+3.1.2 用NvsLiveWindow类预览</h2>
+<p>NvsLiveWindow类是用来录制时预览或者编辑时预览的。NvsLiveWindow的宽高比应该是1:1，4:3，16:9，9:16等，最好与采集预览startCapturePreview:videoResGrade:flags:aspectRatio:的参数aspectRatio值保持一致。否则，预览的图像是录制完的视频被裁剪后的图像。 <br  />
+NvsLiveWindow的填充模式： </p><pre class="fragment">        typedef enum {
+            //图像按比例均匀填充，必要时进行裁剪(默认模式)
+            NvsLiveWindowFillModePreserveAspectCrop = 0,
+            //图像均匀地缩放来适合窗口，没有裁剪
+            NvsLiveWindowFillModePreserveAspectFit,
+            //图像被缩放来适合窗口
+            NvsLiveWindowFillModeStretch
+        } NvsLiveWindowFillMode;
+</pre><p>对于三种填充模式，图片展示如下：</p><ul>
+<li>NvsLiveWindowFillModePreserveAspectCrop模式： <br  />
+ <img src="PreserveAspectCrop.png" alt="" class="inline"/>   </li>
+<li>NvsLiveWindowFillModePreserveAspectFit模式： <img src="PreserveAspectFit.png" alt="" class="inline"/>   </li>
+<li>NvsLiveWindowFillModeStretch模式： <img src="Stretch.png" alt="" class="inline"/>   </li>
+</ul>
+<p><br  />
+</p>
+<h2><a class="anchor" id="预览前的准备"></a>
+3.1.3 预览前的准备</h2>
+<pre class="fragment">        // 可用采集设备的数量
+        if ([_context captureDeviceCount] == 0) {
+            NSLog(@"没有可用于采集的设备");
+            return;
+        }
+
+        // 将采集预览输出连接到NvsLiveWindow控件
+        if (![_context connectCapturePreviewWithLiveWindow:self.liveWindow]) {
+            NSLog(@"连接预览窗口失败");
+            return;
+        }
+        // 给NvsStreamingContext设置代理（必须要设置！！！）
+        _context.delegate = self;
+</pre><h2><a class="anchor" id="开启预览"></a>
+3.1.4 开启预览</h2>
+<p>在启动视频录制之前，要进行视频采集预览。 </p><pre class="fragment">                    //启动采集预览
+        _aspectRatio.den = 1;
+        _aspectRatio.num = 1;
+        if (![_context startCapturePreview:0 videoResGrade:NvsVideoCaptureResolutionGradeHigh flags:0 aspectRatio:&amp;m_aspectRatio]) {
+            ......
+        }
+</pre><h2><a class="anchor" id="录制与停止录制"></a>
+3.1.5 录制与停止录制</h2>
+<p>有两种录制视频的方式：不带特效录制与带特效录制。更多请参考：<a href="https://www.meishesdk.com/ios/doc_ch/html/content/videoRecorderMode_8md.html">https://www.meishesdk.com/ios/doc_ch/html/content/videoRecorderMode_8md.html</a></p><ul>
+<li>不带特效录制：此方式只能录制相机采集到的原始图像，不带有任何特效，宽高比也由相机设备自身决定。 <pre class="fragment">      [_context startRecording:outputFilePath];
+</pre></li>
+<li>带特效录制：此方式可以录制预览所见的所有效果，包括特效和宽高比。 <pre class="fragment">      [_context startRecordingWithFx:outputFilePath];
+</pre></li>
+</ul>
+<p>录制startRecording()和startRecordingWithFx()的参数outputFilePath是录制视频文件的路径。</p>
+<p>停止视频录制: </p><pre class="fragment">        [_context stopRecording];
+</pre><h2><a class="anchor" id="录制参数调节"></a>
+3.1.6 录制参数调节</h2>
+<p>设置闪光灯是否开启: </p><pre class="fragment">                    [_context toggleFlash:YES];
+</pre><p>自动聚焦: </p><pre class="fragment">                    CGPoint point = CGPointMake(100, 200);
+                    [_context startAutoFocus:point];
+</pre><p>设置曝光补偿: </p><pre class="fragment">                    [_context setExposureBias:1];
+</pre><p>设置缩放: </p><pre class="fragment">                    [_context setZoomFactor:0.8];
+</pre><h2><a class="anchor" id="美颜"></a>
+3.1.7 美颜</h2>
+<p>添加美颜特效后，在预览窗口就可以看到美颜效果。录制视频时，用户需要根据手机性能任意选择带美颜录制或者不带美颜录制。 美颜特效可设置磨皮、美白，红润，基础美颜效果，基础美颜效果的程度，锐化。具体美颜效果可以参考SdkDemo的“视频拍摄”模块。 <br  />
+代码如下： </p><pre class="fragment">                    NvsCaptureVideoFx* beautyFx = [_context appendBeautyCaptureVideoFx];//添加美颜特效
+                    [beautyFx setFloatVal:@"Strength" val:0.5];//设置美颜磨皮值
+                    [beautyFx setFloatVal:@"Whitening" val:0.5];//设置美白强度值
+                    [beautyFx setFloatVal:@"Reddening" val:0.5];//设置红润强度值
+                    [beautyFx setBooleanVal:@"Default Beauty Enabled" val:YES];//设置基础美颜的开关
+                    [beautyFx setBooleanVal:@"Default Sharpen Enabled" val:YES];//设置锐化的开关
+                    [beautyFx setFloatVal:@"Default Intensity" val:0.5];//设置基础美颜的强度
+</pre><h2><a class="anchor" id="采集特效（滤镜）"></a>
+3.1.8 采集特效（滤镜）</h2>
+<p>采集特效分为两种，内建采集特效和扩展采集特效，扩展采集特效即通过资源包安装而得到的采集特效。 </p>
+<h2><a class="anchor" id="内建采集特效"></a>
+3.1.8.1 内建采集特效</h2>
+<p>获取内建采集特效名称可以参考列表：<a href="https://www.meishesdk.com/ios/doc_ch/html/content/FxNameList_8md.html">https://www.meishesdk.com/ios/doc_ch/html/content/FxNameList_8md.html</a>。 <br  />
+添加与移除特效： </p><pre class="fragment">        [_context appendBuiltinCaptureVideoFx:fxName];
+        [_context removeAllCaptureVideoFx];
+</pre><h2><a class="anchor" id="扩展采集特效"></a>
+3.1.8.2 扩展采集特效</h2>
+<p>使用扩展采集特效，首先安装资源包，获取资源包ID值，然后添加扩展采集特效。例如，此处采用同步方式安装资源包，如果资源包尺寸太大或者根据需要可使用异步安装方式。 </p><pre class="fragment">        _fxPackageId = [[NSMutableString alloc] initWithString:@""];
+        NSString *appPath =[[NSBundle mainBundle] bundlePath];
+                    NSString *packagePath = [appPath stringByAppendingPathComponent:@"7FFCF99A-5336-4464-BACD-9D32D5D2DC5E.videofx"];
+                    NvsAssetPackageManagerError error = [_context.assetPackageManager installAssetPackage:packagePath license:nil
+                                                                                                            type:NvsAssetPackageType_VideoFx sync:YES assetPackageId:_fxPackageId];
+                    if (error != NvsAssetPackageManagerError_NoError &amp;&amp; error != NvsAssetPackageManagerError_AlreadyInstalled) {
+                             NSLog(@"Failed to install");
+                    }
+
+        //添加扩展采集特效
+        [_context appendPackagedCaptureVideoFx:_fxPackageId];
+</pre><h2><a class="anchor" id="编辑"></a>
+3.2 编辑</h2>
+<p>实现视频编辑的一般步骤：</p><ul>
+<li>先初始化NvsStreamingContext。如果已经初始化过，则直接获取对象。 <pre class="fragment">  //NvsStreamingContext初始化
+  NvsStreamingContext *_context = [NvsStreamingContext sharedInstance];
+</pre><ul>
+<li>创建时间线(timeline)。通过NvsStreamingContext类对象创建时间线，时间线占用资源较小，如有需要，一个程序中可以创建多个时间线。一般创建一条时间线即可。</li>
+</ul>
+</li>
+<li>添加轨道，包括视频轨道(VideoTrack)与音频轨道(AudioTrack)。时间线上可以添加视频轨道和音频轨道，而在视频轨道上添加视频片段，音频轨道上添加音频片段。如果要实现画中画，则可添加两条视频轨道。添加音频轨道一般用来给视频加音乐或者配音功能。</li>
+<li>把素材片段添加到轨道上。视频轨道上可以添加多个片段，可以是视频文件或者图片，实现图片和视频的混编。音频轨道上也可以添加多个音乐文件。 </li>
+</ul>
+<h2><a class="anchor" id="创建timeline设定视频尺寸"></a>
+3.2.1 创建timeline设定视频尺寸</h2>
+<p>创建timeline对于编辑是非常关键的，timeline的分辨率决定了生成视频文件的最大分辨率（尺寸）。请将timeline的分辨率和NvsLiveWindow的宽高比适配一致。 </p><pre class="fragment">        NvsVideoResolution videoEditRes;
+        videoEditRes.imageWidth = 1280;//视频分辨率的宽*/
+        videoEditRes.imageHeight = 720;//视频分辨率的高
+        videoEditRes.imagePAR = (NvsRational){1, 1};//像素比，设为1:1
+                    NvsRational videoFps = {25, 1};//帧速率，25或者30都可以，一般25。
+        NvsAudioResolution audioEditRes;
+        audioEditRes.sampleRate = 48000;//音频采样率，48000或44100均可
+        audioEditRes.channelCount = 2;//音频通道数
+        audioEditRes.sampleFormat = NvsAudSmpFmt_S16;//音频采样格式
+
+        //创建时间线
+        NvsTimeline *_timeline = [_context createTimeline:&amp;videoEditRes videoFps:&amp;videoFps audioEditRes:&amp;audioEditRes];
+        // 将时间线连接到NvsLiveWindow控件，用于预览时间线上的图像
+        if (![_context connectTimeline:_timeline withLiveWindow:self.liveWindow]) {
+            NSLog(@"Failed to connect timeline to liveWindow!");
+            return;
+        }
+</pre><h2><a class="anchor" id="多段视频、图片混编"></a>
+3.2.2 多段视频、图片混编</h2>
+<p>一般情况下创建一条视频轨道，然后往轨道上添加图片或者视频素材。添加到轨道上的素材，我们称它为片段（clip)。图片和视频素材都是通过文件路径添加到轨道上。 请注意：如果图片素材尺寸过大，需要降低图片尺寸，降低尺寸后的图片和创建timeline的分辨率的尺寸大小匹配最好。</p>
+<p>添加视频轨道： </p><pre class="fragment">        NvsVideoTrack *_videoTrack = [_timeline appendVideoTrack];
+</pre><p>添加音频轨道： </p><pre class="fragment">        NvsAudioTrack *_audioTrack = [_timeline appendAudioTrack];
+</pre><p>添加片段： </p><pre class="fragment">        NSString* videoUrl = @"file:///var/mobile/Media/DCIM/102APPLE/IMG_2625.MOV";
+                    [_videoTrack appendClip:videoUrl];
+</pre><h2><a class="anchor" id="播放与定位预览"></a>
+3.2.3 播放与定位预览</h2>
+<p>对于播放与定位预览接口，其参数videoSizeMode建议设置为NvsVideoPreviewSizeModeLiveWindowSize。若无特殊需求，设为NvsVideoPreviewSizeModeFullSize的模式会影响性能。 preload是预加载，设为YES。注意：美摄SDK的时间单位是微秒，1/1000000秒。 <br  />
+ 视频播放，playbackTimeline:startTime:endTime:videoSizeMode:preload:flags:的参数endTime，值可以是_timeline.duration或者-1。 </p><pre class="fragment">        [_context playbackTimeline:_timeline startTime:startTime endTime:_timeline.duration videoSizeMode:NvsVideoPreviewSizeModeLiveWindowSize preload:YES flags:0];
+</pre><p>视频定位预览： </p><pre class="fragment">        [_context seekTimeline:_timeline timestamp:0 videoSizeMode:NvsVideoPreviewSizeModeLiveWindowSize flags:NvsStreamingEngineSeekFlag_ShowCaptionPoster | NvsStreamingEngineSeekFlag_ShowAnimatedStickerPoster]
+</pre><h2><a class="anchor" id="视频裁剪"></a>
+3.2.4 视频裁剪</h2>
+<p>改变片段的入出点，裁剪片段。 </p><pre class="fragment">                    NvsVideoClip *clip = [_videoTrack getClipWithIndex:0];
+                    [clip changeTrimInPoint:1000000 affectSibling:YES];
+                    [clip changeTrimOutPoint:5000000 affectSibling:YES];
+</pre><h2><a class="anchor" id="从轨道上移除片段"></a>
+3.2.5 从轨道上移除片段</h2>
+<p>删除片段： </p><pre class="fragment">                    [_videoTrack removeClip:0 keepSpace:NO];
+</pre><h2><a class="anchor" id="片段排序"></a>
+3.2.6 片段排序</h2>
+<p>轨道上的片段可以互换位置，moveClip:destClipIndex:的参数clipIndex和destClipIndex分别代表互换的两个素材的位置索引。 </p><pre class="fragment">                    [_videoTrack moveClip:0 destClipIndex:1];
+</pre><h2><a class="anchor" id="图片时长设定"></a>
+3.2.7 图片时长设定</h2>
+<p>NvsVideoTrack类提供appendClip:trimIn:trimOut:可以根据需要来设定图片时长。 filePath是图片素材的路径，trimIn设置0，trimOut设置为8000000，则图片显示为8秒。 </p><pre class="fragment">        [_videoTrack appendClip:asset.localIdentifier trimIn:0 trimOut:8000000];
+</pre><p>如果通过appendClip:添加图片，则图片默认显示时长是4秒。 </p>
+<h2><a class="anchor" id="移除时间线与轨道"></a>
+3.2.8 移除时间线与轨道</h2>
+<p>创建的时间线，添加的视频轨道和音频轨道，如果当前不再需要，则要进行移除。操作如下： <br  />
+移除时间线： </p><pre class="fragment">                    [_context removeTimeline:_timeline];
+</pre><p>移除视频轨道： </p><pre class="fragment">        [_timeline removeVideoTrack:0];
+</pre><p>移除音频轨道： </p><pre class="fragment">        [_timeline removeAudioTrack:0];
+</pre><h2><a class="anchor" id="音乐"></a>
+3.3 音乐</h2>
+<p><br  />
+</p>
+<h2><a class="anchor" id="添加音乐"></a>
+3.3.1 添加音乐</h2>
+<p>给视频添加音乐是通过音频轨道添加音频片段实现的。创建时间线后，通过appendAudioTrack添加音频轨道，然后把音乐文件以音频片段的形式添加到音频轨道上即可。可以添加多段音乐，音乐会连续播放。 </p><pre class="fragment">        //添加音频轨道
+                    NvsAudioTrack *_audioTrack = [_timeline appendAudioTrack];
+        [_audioTrack appendClip:asset.localIdentifier];  
+</pre><h2><a class="anchor" id="音乐裁剪"></a>
+3.3.2 音乐裁剪</h2>
+<p>音乐裁剪与视频裁剪是一样的，也是通过设置入出点的方式进行裁剪。 </p><pre class="fragment">        //获取音频片段对象
+                    NvsAudioClip *clip = [_audioTrack getClipWithIndex:0];
+                    [clip changeTrimInPoint:1000000 affectSibling:YES];
+                    [clip changeTrimOutPoint:5000000 affectSibling:YES];
+</pre><h2><a class="anchor" id="字幕"></a>
+3.4 字幕</h2>
+<p>添加，删除以及获取字幕都是在时间线(timeline)上进行执行的，可以参考SdkDemo示例的字幕编辑模块。 </p>
+<h2><a class="anchor" id="添加与删除字幕"></a>
+3.4.1 添加与删除字幕</h2>
+<p>添加字幕，可设置字幕显示的时长。 </p><pre class="fragment">                    [_timeline addCaption:@"Meishe SDK" inPoint:1000000 duration:5000000 captionStylePackageId:_captionStylePackageId];
+</pre><p>移除字幕，返回下一个时间线字幕对象。如果没有下一个字幕，则返回nil。 </p><pre class="fragment">        NvsTimelineCaption *caption = [_timeline getFirstCaption];
+        while (caption) {
+                            caption = [_timeline removeCaption:caption];
+        }
+</pre><h2><a class="anchor" id="获取timeline上的字幕"></a>
+3.4.2 获取timeline上的字幕</h2>
+<p>有多种方式获取字幕： </p><pre class="fragment">                    //获得时间线上的第一个字幕
+                    NvsTimelineCaption *firstCaption = [_timeline getFirstCaption];
+
+                    //获得时间线上的最后一个字幕
+                    NvsTimelineCaption *lastCaption = [_timeline getLastCaption];
+
+                    //获得时间线上的当前字幕的前一个字幕
+                    NvsTimelineCaption *prevCaption = [_timeline getPrevCaption:currentCaption];
+
+                    //获得时间线上的当前字幕的后一个字幕
+                    NvsTimelineCaption *nextCaption = [_timeline getNextCaption:currentCaption];
+</pre><p>根据时间线上的位置获得字幕,返回保存当前位置字幕的List集合。获取的字幕列表排序规则如下： <br  />
+1.添加时字幕入点不同，按入点的先后顺序排列； <br  />
+2.添加时字幕入点相同，按添加字幕的先后顺序排列。 </p><pre class="fragment">                    NSArray *captionArray = [_timeline getCaptionsByTimelinePosition:1000000];
+</pre><h2><a class="anchor" id="改变字幕的属性"></a>
+3.4.3 改变字幕的属性</h2>
+<p>修改字幕属性可通过NvsTimelineCaption类的方法实现。获取字幕后，可设置字幕文本，颜色，加粗，斜体，描边等。 <br  />
+以修改字幕文本为例： </p><pre class="fragment">                    [currentCaption setText:@"Meishe SDK"];
+</pre><p>如果是全景图字幕，还可以设置字幕中心点的极角，字幕中心点的方位角等。以设置字幕中心点的极角为例： </p><pre class="fragment">                    [currentCaption setCenterPolarAngle:1.2];
+</pre><h2><a class="anchor" id="改变字幕的入出点"></a>
+3.4.4 改变字幕的入出点</h2>
+<p>获取字幕后，可以修改字幕在时间线上的入点，出点以及偏移值。 </p><pre class="fragment">                    //改变入点
+                    [currentCaption changeInPoint:1000000];
+
+                    //改变出点
+                    [currentCaption changeOutPoint:5000000];
+
+                    //改变显示位置(入点和出点同时偏移offset值)
+                    [currentCaption movePosition:1000000];
+</pre><h2><a class="anchor" id="动画贴纸"></a>
+3.5 动画贴纸</h2>
+<p>添加，删除以及获取动画贴纸也是在时间线(timeline)上进行执行的，可以参考SdkDemo示例的贴纸模块。 </p>
+<h2><a class="anchor" id="添加与删除动画贴纸"></a>
+3.5.1 添加与删除动画贴纸</h2>
+<p>添加动画贴纸： </p><pre class="fragment">                    [_timeline addAnimatedSticker:1000000 duration:5000000 animatedStickerPackageId:_stickerPackageId];
+</pre><p>移除动画贴纸，返回当前贴纸的下一个贴纸。如果没有下一下贴纸，则返回nil。 </p><pre class="fragment">                    NvsTimelineAnimatedSticker *nextSticker = [_timeline removeAnimatedSticker:currentSticker];
+</pre><h2><a class="anchor" id="获取timeline上的动画贴纸"></a>
+3.5.2 获取timeline上的动画贴纸</h2>
+<p>有多种方式获取时间线上添加的动画贴纸。 </p><pre class="fragment">                    //获取时间线上第一个动画贴纸
+                    NvsTimelineAnimatedSticker *firstSticker = [_timeline getFirstAnimatedSticker];
+                    //获取时间线上最后一个动画贴纸
+                    NvsTimelineAnimatedSticker *lastSticker = [_timeline getLastAnimatedSticker];
+
+                    //获取时间线当前动画贴纸的前一个动画贴纸
+                    NvsTimelineAnimatedSticker *prevSticker = [_timeline getPrevAnimatedSticker:currentSticker];
+                    //获取时间线当前动画贴纸的后一个动画贴纸
+                    NvsTimelineAnimatedSticker *nextSticker = [_timeline getNextAnimatedSticker:currentSticker];
+</pre><p>根据时间线上的位置获得动画贴纸,返回保存当前位置动画贴纸对象的List集合 获取的动画贴纸列表排序规则如下： <br  />
+1.添加时入点不同，按入点的先后顺序排列； <br  />
+2.添加时入点相同，按添加动画贴纸的先后顺序排列。 </p><pre class="fragment">                     NSArray *stickerArray = [_timeline getAnimatedStickersByTimelinePosition:5000000];
+</pre><h2><a class="anchor" id="改变动画贴纸的属性"></a>
+3.5.3 改变动画贴纸的属性</h2>
+<p>修改贴纸属性可通过NvsTimelineAnimatedSticker类的方法实现。获取贴纸后，可设置缩放值，水平翻转，旋转角度，平移等。 <br  />
+以修改贴纸缩放为例： </p><pre class="fragment">                    [currentSticker setScale:1.2];
+</pre><p>如果是全景图动画贴纸，则还可以设置贴纸中心点的极角，中心点的方位角等。以设置中心点的极角为例： </p><pre class="fragment">                    [currentSticker setCenterPolarAngle:0.8];
+</pre><h2><a class="anchor" id="改变动画贴纸的入出点"></a>
+3.5.4 改变动画贴纸的入出点</h2>
+<p>获取贴纸后，可以修改动画贴纸在时间线上的入点，出点以及偏移值。 </p><pre class="fragment">                    //改变入点
+                    [currentSticker changeInPoint:1000000];
+                    //改变出点
+                    [currentSticker changeOutPoint:5000000];
+                    //改变显示位置(入点和出点同时偏移offset值)
+                    [currentSticker movePosition:1000000];
+</pre><h2><a class="anchor" id="主题"></a>
+3.6 主题</h2>
+<p>编辑视频时，如果需要运用主题，则可通过时间线(timeline)实现添加，移除。 </p>
+<h2><a class="anchor" id="添加与删除主题"></a>
+3.6.1 添加与删除主题</h2>
+<p>运用主题： </p><pre class="fragment">                    [_timeline applyTheme:_themePackageId];
+</pre><p>移除主题： [_timeline removeCurrentTheme];</p>
+<h2><a class="anchor" id="获取timeline上的主题"></a>
+3.6.2 获取timeline上的主题</h2>
+<p>获取当前主题包Id： </p><pre class="fragment">                    [_timeline getCurrentThemeId];
+</pre><h2><a class="anchor" id="改变主题的属性"></a>
+3.6.3 改变主题的属性</h2>
+<p>运用主题后，可以设置主题片头，片尾，主题音乐音量等，以设置主题片头为例： </p><pre class="fragment">                    [_timeline setThemeTitleCaptionText:@"Meishe SDK"];
+</pre><h2><a class="anchor" id="转场"></a>
+3.7 转场</h2>
+<p>转场包括视频转场和音频转场。视频转场是在视频轨道上设置的，音频转场是在音频轨道上设置的。 <br  />
+视频转场包括内嵌式转场和包裹式转场。设置视频内嵌转场： </p><pre class="fragment">                    [_videoTrack setBuiltinTransition:0 withName:transName];
+</pre><p>视频包裹式转场： </p><pre class="fragment">                    [_videoTrack setPackagedTransition:1 withPackageId:m_transiPackageId];
+</pre><p>同样地，音频转场同视频转场是相同用法，用户可参照使用。 </p>
+<h2><a class="anchor" id="特效"></a>
+3.8 特效</h2>
+<p>在视频后续编辑中，经常会使用到几种特效，分别是视频特效(NvsVideoFx)，音频特效(NvsAudioFx)，时间线视频特效(NvsTimelineVideoFx)。 </p>
+<h2><a class="anchor" id="视频特效"></a>
+3.8.1 视频特效</h2>
+<p>视频特效是使用在视频片段上的，每个视频片段可以添加若干个视频特效。视频特效包括内嵌视频特效，包裹视频特效，美颜特效。 <br  />
+添加内嵌视频特效： </p><pre class="fragment">        [videoClip appendBuiltinFx:fxName];
+</pre><p>添加包裹视频特效： </p><pre class="fragment">        [videoClip appendPackagedFx:_videoFxPackageId];     
+</pre><p>添加美颜特效： </p><pre class="fragment">        [videoClip appendBeautyFx];
+</pre><p>移除视频特效包括移除指定索引值特效和移除所有视频特。 <br  />
+移除指定索引值的特效： </p><pre class="fragment">        [videoClip removeFx:0];
+</pre><p>移除所有视频特效： </p><pre class="fragment">        [videoClip removeAllFx];
+</pre><h2><a class="anchor" id="音频特效"></a>
+3.8.2 音频特效</h2>
+<p>音频特效是使用在音频片段上的，每个音频片段可以添加若干个音频特效。 <br  />
+添加音频特效： </p><pre class="fragment">        [audioClip appendFx:fxName];
+</pre><p>移除指定索引的音频特效： </p><pre class="fragment">        [audioClip removeFx:0];
+</pre><h2><a class="anchor" id="时间线视频特效"></a>
+3.8.3 时间线视频特效</h2>
+<p>时间线视频特效是使用在时间线上的一种特效，包含内嵌特效和包裹特效。时间线上可以添加若干个时间线视频特效。 </p>
+<h2><a class="anchor" id="添加与删除时间线特效"></a>
+3.8.3.1 添加与删除时间线特效</h2>
+<p>添加时间线特效： </p><pre class="fragment">                    [_timeline addBuiltinTimelineVideoFx:1000000 duration:5000000 videoFxName:_fxName];
+                    [_timeline addPackagedTimelineVideoFx:1000000 duration:5000000 videoFxPackageId:_fxPackageId];
+</pre><h2><a class="anchor" id="获取时间线特效"></a>
+3.8.3.2 获取时间线特效</h2>
+<p>有多种方法获取时间线特效。 </p><pre class="fragment">                    //获取时间线上第一个时间线视频特效
+                    NvsTimelineVideoFx *firstTimelineFx = [_timeline getFirstTimelineVideoFx];
+                    //获取时间线上最后一个时间线视频特效
+                    NvsTimelineVideoFx *lastTimelineFx = [_timeline getLastTimelineVideoFx];
+                    //获取时间线上某个时间线视频特效的前一个时间线视频特效
+                    NvsTimelineVideoFx *prevTimelineFx = [_timeline getPrevTimelineVideoFx:currentTimelineFx];
+                    //获取时间线上某个时间线视频特效的下一个时间线视频特效
+                    NvsTimelineVideoFx *nextTimelineFx = [_timeline getNextTimelineVideoFx:currentTimelineFx];
+</pre><p>根据时间线上的位置获得时间线视频特效,返回当前位置时间线视频特效对象的数组。 获取的时间线视频特效数组排序规则如下： <br  />
+1.添加时入点不同，按入点的先后顺序排列； <br  />
+2.添加时入点相同，按添加时间线视频特效的先后顺序排列。 </p><pre class="fragment">                    NSArray *timelineFxArray = [_timeline getTimelineVideoFxByTimelinePosition:5000000];
+</pre><h2><a class="anchor" id="改变时间线特效的入出点"></a>
+3.8.3.3 改变时间线特效的入出点</h2>
+<p>获取时间线特效后，可以修改时间线特效在时间线上的入点，出点以及偏移值。 </p><pre class="fragment">                    //改变入点
+                    [currentTimelineFx changeInPoint:1000000];
+                    //改变出点
+                    [currentTimelineFx changeOutPoint:5000000];
+                    //改变显示位置(入点和出点同时偏移offset值)
+                    [currentTimelineFx movePosition:1000000];
+</pre><h2><a class="anchor" id="生成"></a>
+3.9 生成</h2>
+<p>美摄SDK使用compileTimeline()用于将时间线上的片段生成输出一个新的视频。 <br  />
+生成视频： </p><pre class="fragment">        [_context compileTimeline:_timeline
+                         startTime:0
+                           endTime:_timeline.duration
+                    outputFilePath:_outputFilePath
+              videoResolutionGrade:NvsCompileVideoResolutionGrade720
+                 videoBitrateGrade:NvsCompileBitrateGradeHigh
+                             flags:0]
+</pre><h2><a class="anchor" id="素材包管理"></a>
+3.10 素材包管理</h2>
+<p>美摄SDK提供了丰富的素材库，包括动画贴纸，主题，字幕样式，转场等。素材包可以从网络上下载，或者由美摄SDK项目组提供，用户可以根据需要选择使用这些素材包。美摄SDK通过NvsAssetPackageManager类对这些素材包进行管理，可以安装，升级，卸载,获取素材包的状态，版本号等。 <br  />
+素材包安装： </p><pre class="fragment">        //此处采用同步安装方式，如果包裹过大可采用异步方式
+        NvsAssetPackageManagerError error = [_context.assetPackageManager installAssetPackage:package1Path 
+                                                   license:nil type:NvsAssetPackageType_VideoFx sync:YES assetPackageId:_fxPackageId];
+</pre><p>素材包升级： </p><pre class="fragment">        //此处采用同步升级方式，如果包裹过大可采用异步方式
+        NvsAssetPackageManagerError error = [_context.assetPackageManager upgradeAssetPackage:package1Path 
+                                                   license:nil type:NvsAssetPackageType_VideoFx sync:YES assetPackageId:_fxPackageId];
+</pre><p>素材包卸载： </p><pre class="fragment">        NvsAssetPackageManagerError error = [_context.assetPackageManager uninstallAssetPackage:_fxPackageId type:NvsAssetPackageType_VideoFx];
+</pre><h2><a class="anchor" id="代理"></a>
+3.11 代理</h2>
+<p>美摄SDK提供了很多代理接口，如果要查询采集设备状态，采集录制状态，视频播放状态，文件生成状态，资源包安装状态等，则必须在创建NvsStreamingContext对象后设置代理并实现对应的代理接口。 <br  />
+设置代理： </p><pre class="fragment">        //必须设置代理
+        _context.delegate = self;
+</pre><h2><a class="anchor" id="附件"></a>
+4 附件</h2>
+<p>美摄SDK版本包括极速版，标准功能版，全功能PRO版，对于每个版本产品的功能点，请参考：<a href="https://www.meishesdk.com/editsdk">https://www.meishesdk.com/editsdk</a>，会有详细介绍。每个用户可根据个人需要选择使用，具体请联系美摄商务。 <br  />
+ </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

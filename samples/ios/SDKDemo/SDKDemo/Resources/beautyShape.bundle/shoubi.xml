@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faceMesh globalSymmetric="true" type="noseWidth" globalLocked="false">
+    <controlPoint offsetY="-0.00999999" offsetZ="0" id="45" offsetX="-7.8319e-06"/>
+    <controlPoint offsetY="-0.000279804" offsetZ="0" id="47" offsetX="0.0534426"/>
+    <controlPoint offsetY="0.00844462" offsetZ="0" id="48" offsetX="0.0240656"/>
+    <controlPoint offsetY="0.00999891" offsetZ="0" id="49" offsetX="-0.000147497"/>
+    <controlPoint offsetY="0.00844462" offsetZ="0" id="50" offsetX="-0.0240656"/>
+    <controlPoint offsetY="-0.000279804" offsetZ="0" id="51" offsetX="-0.0534426"/>
+    <controlPoint offsetY="-0.00274035" offsetZ="0" id="80" offsetX="0.0553098"/>
+    <controlPoint offsetY="-0.00274035" offsetZ="0" id="81" offsetX="-0.0553098"/>
+    <controlPoint offsetY="0.00546278" offsetZ="0" id="82" offsetX="0.0618758"/>
+    <controlPoint offsetY="0.00546278" offsetZ="0" id="83" offsetX="-0.0618758"/>
+</faceMesh>

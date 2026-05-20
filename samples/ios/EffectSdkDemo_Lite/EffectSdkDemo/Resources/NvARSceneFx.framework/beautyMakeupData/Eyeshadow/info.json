@@ -1,0 +1,31 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"无",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"点痣眼影",
+        "displayName":"点痣眼影",
+        "packagePath":"Eyeshadow/FCDA4884-D569-4B18-8293-EB02B2E967B6.4",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"FCDA4884-D569-4B18-8293-EB02B2E967B6",
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"泰系学姐眼影",
+        "displayName":"泰系学姐眼影",
+        "packagePath":"Eyeshadow/129B83BA-0F16-499A-A101-C03922F7AE47.3",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"129B83BA-0F16-499A-A101-C03922F7AE47",
+        "coverImage":""
+    }
+]

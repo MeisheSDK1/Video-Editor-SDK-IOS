@@ -1,0 +1,101 @@
+[
+    {
+        "name":"磨皮1",
+        "coverImage":"NvCaptureBeautyStrength",
+        "selectedCoverImg":"NvCaptureBeautyStrength_s",
+        "fxName":"Beauty Strength",
+        "value":0,
+        "defaultValue":0,
+        "packageUrl":"",
+        "degreeName":""
+    },
+    {
+        "name":"磨皮2",
+        "coverImage":"NvCaptureBeautyStrength",
+        "selectedCoverImg":"NvCaptureBeautyStrength_s",
+        "fxName":"Advanced Beauty Type Zero",
+        "value":0.8,
+        "defaultValue":0.8,
+        "packageUrl":"",
+        "degreeName":""
+    },
+    {
+        "name":"磨皮3",
+        "coverImage":"NvCaptureBeautyStrength",
+        "selectedCoverImg":"NvCaptureBeautyStrength_s",
+        "fxName":"Advanced Beauty Type One",
+        "value":0,
+        "defaultValue":0,
+        "packageUrl":"",
+        "degreeName":""
+    },
+    {
+        "name":"磨皮4",
+        "coverImage":"NvCaptureBeautyStrength",
+        "selectedCoverImg":"NvCaptureBeautyStrength_s",
+        "fxName":"Advanced Beauty Type One",
+        "value":0,
+        "defaultValue":0,
+        "packageUrl":"",
+        "degreeName":""
+    },
+    {
+        "name":"美白A",
+        "coverImage":"NvCaptureBeautyWhitening",
+        "selectedCoverImg":"NvCaptureBeautyWhitening_s",
+        "fxName":"Beauty Whitening",
+        "value":0,
+        "defaultValue":0,
+        "packageUrl":"",
+        "degreeName":""
+    },
+    {
+        "name":"美白B",
+        "coverImage":"NvCaptureBeautyWhitening",
+        "selectedCoverImg":"NvCaptureBeautyWhitening_s",
+        "fxName":"Beauty Whitening",
+        "value":0,
+        "defaultValue":0,
+        "packageUrl":"",
+        "degreeName":""
+    },
+    {
+        "name":"去油光",
+        "coverImage":"NvCaptureBeautyShiny",
+        "selectedCoverImg":"NvCaptureBeautyShiny_s",
+        "fxName":"",
+        "value":0,
+        "defaultValue":0,
+        "radiusValue":0.44,
+        "defaultRadiusValue":0.44,
+        "packageUrl":"",
+        "degreeName":""
+    },
+    {
+        "name":"红润",
+        "coverImage":"NvCaptureBeautyReddening",
+        "selectedCoverImg":"NvCaptureBeautyReddening_s",
+        "fxName":"Beauty Reddening",
+        "value":0,
+        "defaultValue":0,
+        "packageUrl":"",
+        "degreeName":""
+    },
+    {
+        "name":"校色",
+        "coverImage":"NvCaptureBeautyFilter1",
+        "selectedCoverImg":"NvCaptureBeautyFilter1_s",
+        "fxName":"Default Beauty Enabled",
+        "value":0.5,
+        "defaultValue":0.5,
+        "packageUrl":"65521195-92A4-41CA-9DB5-6AB19C9321B5.1.videofx",
+        "open":0
+    },
+    {
+        "name":"锐度",
+        "coverImage":"NvCaptureBeautySharpen1",
+        "selectedCoverImg":"NvCaptureBeautySharpen1_s",
+        "fxName":"Default Sharpen Enabled",
+        "open":0
+    }
+]

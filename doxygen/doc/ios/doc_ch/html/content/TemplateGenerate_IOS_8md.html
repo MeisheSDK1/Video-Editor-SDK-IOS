@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 模板生成技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">模板生成技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>美摄sdk模板生成说明</h1>
+<p>模板是美摄SDK的重要技术之一，生成模板是使用模板技术的第一步，生成过程分两步：</p>
+<h2>1、生成模板信息。</h2>
+<p>调用StreamingContext的exportTemplateInfo 接口生成一个timeline对应的模板信息，三个参数由外部传入。</p>
+<p>函数原型如下：</p>
+<p>// 输出模板包的信息,返回是否成功。</p>
+<p>// 参数1：模板资源包ID</p>
+<p>// 参数2：时间线对象</p>
+<p>// 参数3：所需模板画幅比例，一般和timeline的画幅比例一致。请参见[模板资源包图幅比例](@ref ASSET_PACKAGE_ASPECT_RATIO)</p>
+<p>- (BOOL) exportTemplateInfo: (NSString *) templateUuid</p>
+<p>timeline: (<a class="el" href="interfaceNvsTimeline.html" title="时间线，编辑场景的时间轴实体">NvsTimeline</a> *) timeline</p>
+<p>requestedAspectRatio: (int) requestedAspectRatio</p>
+<p>如果需要模板支持多画幅，可以多次调用该接口，只要保证timeline和aspectRatio是需要的画幅，templateUuid相同即可。</p>
+<p>调用这个接口之前，需要对timeline做一些前提操作，指定生成模板信息所需的一些额外信息。这些信息的指定均通过object上的setTemplateAttachment接口设定。</p>
+<p>函数原型如下：</p>
+<p>- (void) setAttachment: (<a class="el" href="classNSObject-p.html">NSObject</a> *) value</p>
+<p>forKey: (NSString *) key</p>
+<p>目前可以设定的信息(key值)包括：</p>
+<p>#define TEMPLATE_ASSET_KEY_REPLACE_ID “MSTemplate-ReplaceId”</p>
+<p>#define TEMPLATE_ASSET_KEY_FOOTAGE_CAN_REPLACE “MSTemplate-FootageCanReplace”</p>
+<p>#define TEMPLATE_ASSET_KEY_FOOTAGE_ID “MSTemplate-FootageId”</p>
+<p>#define TEMPLATE_ASSET_KEY_FOOTAGE_NAME “MSTemplate-FootageName”</p>
+<p>#define TEMPLATE_ASSET_KEY_FOOTAGE_TAGS “MSTemplate-FootageTags”</p>
+<p>#define TEMPLATE_ASSET_KEY_FOOTAGE_TYPE “MSTemplate-FootageType”</p>
+<p>#define TEMPLATE_ASSET_KEY_FOOTAGE_NEED_REVERSE “MSTemplate-FootageNeedReverse”</p>
+<h3>1.1、footageId信息(必须)</h3>
+<p>key值为 "MSTemplate-FootageId"，value值为任一string。例如“footage0”。</p>
+<p>模板在使用时是以footage为单位进行素材替换，多个clip可以对应同一个footage，一个clip也可以是一个footage。同一个footage意思是：footageId是相同的。对应于同一个footage的clip应保证以下条件：</p>
+<p>A、trim时长一样，也就是trimOut - trimIn是一样的；</p>
+<p>B、tag信息一致，footage可以携带tag信息，比如风景、动物等等属性，用于分类；</p>
+<p>C、是否可替换；</p>
+<p>D、是否需要倒放。</p>
+<h3>1.2、footage是否可替换(非必须，默认是true)</h3>
+<p>key值为"MSTemplate-FootageCanReplace"，value值为“true”或者“false”。</p>
+<p>footage可以设定为是否可以被替换，如果可以被替换，用户在使用模板时可以传入素材进行替换，实现想要的效果。</p>
+<h3>1.3、footage名称(仅对不可替换footage需指定此项)</h3>
+<p>key值为"MSTemplate-FootageName"，value值为该clip使用的素材名称。例如“XXXX.jpg”。</p>
+<p>不可替换footage是作为模板的一个内置资源存在的。对于内置的视频、音频素材，为减小模板包的size，应该转码出一个对应时长的文件。</p>
+<p>比如一个十分钟的视频要内置，实际使用的trim段是它的第5至第20秒，那么应该转码出一个此trim段的视频，然后footageName设定为这个转码后的文件名。</p>
+<h3>1.4、footage的属性(非必须，默认空字符串)</h3>
+<p>key值为"MSTemplate-FootageTags"，value值为tag的组合，例如“风景,动物”，以逗号隔开。</p>
+<h3>1.5、footage的类型(必须)</h3>
+<p>key值为"MSTemplate-FootageType"，value值可为：</p>
+<p>A：“video”；</p>
+<p>B：“image”；</p>
+<p>C：“videoImage”；</p>
+<p>D：“audio”。</p>
+<p>根据需要进行选择。</p>
+<p>以此指定footage的类型，用户使用模板时可以据此传入相应类型的素材。</p>
+<h3>1.6、footage是否需要倒放(非必须，默认false)</h3>
+<p>key值为"MSTemplate-FootageNeedReverse"，value值为“true”或者“false”。</p>
+<p>表示这个footage是否需要倒放。对于需要倒放的footage，用户在使用模板时需要对传入的素材进行倒放。该设置仅对video类型的footage有效。</p>
+<h3>1.7、replaceId设定</h3>
+<p>除了footage信息必须指定，还有一项非必要信息的指定：</p>
+<p>对于timeline上使用的各种效果，包括贴纸、字幕、滤镜等等各种效果都可以进行替换，方法是设置replaceId(key值为"MSTemplate-ReplaceId"，value值为任一string，比如“caption0”。对于同类效果，value不可重复)。</p>
+<p>通过以上设置，即可完成对模板所需信息的标定。</p>
+<h2>生成模板文件</h2>
+<h3>2.1、函数说明</h3>
+<p>调用StreamingContext上的generateTemplatePackage接口，生成.templagte 的模板文件。函数原型如下：</p>
+<p>//生成模板包，返回是否成功</p>
+<p>//参数1：模板资源包ID</p>
+<p>//参数2：模板内部资源文件夹路径</p>
+<p>//参数3：模板资源包输出路径</p>
+<p>- (BOOL) generateTemplatePackage: (NSString *) templateUuid</p>
+<p>innerAssetDir: (NSString *) innerAssetDir</p>
+<p>templateOutputDir: (NSString *) templateOutputDir</p>
+<p>三个参数均由外部指定。其中：</p>
+<p>templateUuid ：必须和exportTemplateInfo 接口使用的uuid一致；</p>
+<p>innerAssetDir ：timeline所用到的各种资源包的一个文件夹目录；</p>
+<p>templateOutputDir：是生成的模板文件的文件夹路径。</p>
+<p>最终该接口在templateOutputDir路径下生成一个名称为templateUuid指定的uuid，后缀名为template的文件。</p>
+<p>innerAssetDir所指定的文件夹是该接口的重点，也是调用这个接口前需要做的准备工作。</p>
+<p>文件夹目录结构如图：</p>
+<p><img src="ee77ce798f9060895cf9e0fef81e940c.png" alt="" class="inline" title="1608621522(1)"/>   </p>
+<p>包含一个info.json文件和一些文件夹。</p>
+<h3>2.2、文件和文件夹解释</h3>
+<h4>2.2.1、info.json文件</h4>
+<p>这个文件是对模板的一个描述，需要客户端生成出来，其结构如下：</p>
+<p><img src="7bd0d9f879644f5fdf0944350c9ea6c4.png" alt="" class="inline" title="1608621760(1)"/>   </p>
+<ol type="1">
+<li>cover：模板的封面，非必须；</li>
+<li>minSdkVersion：模板支持的最低sdk版本，值必须是2.19.0以上；</li>
+<li>name：模板的名称；</li>
+<li>supportedAspectRatio：模板支持的画幅比例，之前调用exportTemplateInfo 接口生成了一个什么比例的模板信息，这里就需要加一个什么比例；</li>
+<li>defaultAspectRatio：默认的画幅比例；</li>
+<li>translation：中英文翻译；</li>
+<li>uuid：模板的uuid，必须和调用接口传入的uuid一致；</li>
+<li>version：模板的版本号；</li>
+<li>innerAssetTotalCount：该模板用到的资源包的数量；</li>
+<li>footageCount：可替换的footage数量；</li>
+<li>duration：模板的时长；</li>
+<li>creator：创作者；</li>
+<li>description：模板的描述。</li>
+</ol>
+<h4>2.2.2、其它文件夹</h4>
+<p>Timeline用到的package类型的资源包需要分类放置在这个文件夹下，分类标准是资源包的后缀名，分类文件夹名称和资源包的后缀名保持一致，如上图示。</p>
+<p>每个分类不是必须的，有使用这个类别的资源包就放一个这个类别的文件夹，不用新建一个空文件夹。</p>
+<p>某个类别的文件夹结构图如下：</p>
+<p><img src="67216d0f426c9933f0aa3dafd4a12eec.png" alt="" class="inline" title="1608623315(1)"/>   </p>
+<p>innerAssetDir文件夹准备好后，调用StreamingContext的generateTemplatePackage接口完成模板文件生成。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

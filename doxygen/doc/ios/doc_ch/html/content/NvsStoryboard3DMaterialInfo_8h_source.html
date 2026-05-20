@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsStoryboard3DMaterialInfo.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsStoryboard3DMaterialInfo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsStoryboard3DMaterialInfo_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2016. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Mar 9. 2020</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCommonDef_8h.html">NvsCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsArbitraryData_8h.html">NvsArbitraryData.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html">   20</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsMaterialInfoDetail.html">NvsMaterialInfoDetail</a> : NSObject</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a4a63304aea057eadcc85a3493ce9999f">   22</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">int</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a4a63304aea057eadcc85a3493ce9999f">index</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#aa2f6b48668c1b02a208222fe70810953">   23</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#aa2f6b48668c1b02a208222fe70810953">name</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#ae615d9ab28791b036f5e45c4e9623bfd">   24</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#ae615d9ab28791b036f5e45c4e9623bfd">diffuseTexture</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a3848632bfa73cba08387c7e5f50031f0">   25</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <a class="code" href="structNvsColor.html">NvsColor</a> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a3848632bfa73cba08387c7e5f50031f0">diffuseColor</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#ab099dbf828738d7c9479f8344bc175ef">   27</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) BOOL <a class="code" href="interfaceNvsMaterialInfoDetail.html#ab099dbf828738d7c9479f8344bc175ef">panoramicReflectionMap</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a6c37b71423b08fd53f1e2f4df6f59002">   28</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#a6c37b71423b08fd53f1e2f4df6f59002">reflectionTexture</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a5833cc2889d4e1f8a92053fe43c80e6b">   29</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a5833cc2889d4e1f8a92053fe43c80e6b">reflectivity</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a1bcc243b9f56c12968f66cbe32ffb020">   31</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#a1bcc243b9f56c12968f66cbe32ffb020">normalTexture</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#affbd831349db59583d424c547ab7f77e">   32</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#affbd831349db59583d424c547ab7f77e">specularTexture</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a05abe27f0d24a2ba797f78889c61e63f">   33</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a05abe27f0d24a2ba797f78889c61e63f">normalMapIntensity</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a8db7740a35db0402378e5aa60462ef26">   35</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#a8db7740a35db0402378e5aa60462ef26">emissiveTexture</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a8766d5bde6535f6b38177e0fa3c3631a">   36</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a8766d5bde6535f6b38177e0fa3c3631a">emissiveMapIntensity</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a4669398f84a56dc2fc7fd0dbce88e8d8">   37</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <a class="code" href="structNvsColor.html">NvsColor</a> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a4669398f84a56dc2fc7fd0dbce88e8d8">emissiveColor</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#af6e26dd873aa097a8ee7ac3977b38b0d">   39</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <a class="code" href="structNvsColor.html">NvsColor</a> <a class="code" href="interfaceNvsMaterialInfoDetail.html#af6e26dd873aa097a8ee7ac3977b38b0d">specularColor</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a514c8d283e8593982849bb0d0512f733">   41</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#a514c8d283e8593982849bb0d0512f733">ambientOcclusionTexture</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#aa00f61ac471195857794356e6cc24c3b">   42</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <a class="code" href="structNvsColor.html">NvsColor</a> <a class="code" href="interfaceNvsMaterialInfoDetail.html#aa00f61ac471195857794356e6cc24c3b">ambientColor</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a816367faf48fbc1dfa5f48a2c48f2153">   43</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a816367faf48fbc1dfa5f48a2c48f2153">ambientOcclusion</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a63e60add447cbbf28ffb9ae5af521495">   45</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#a63e60add447cbbf28ffb9ae5af521495">roughnessTexture</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a5aab048ad13c88903f8e342ea3517f7d">   46</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a5aab048ad13c88903f8e342ea3517f7d">roughness</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a9d51bc15ac6f7f54a00d1819584f5618">   48</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#a9d51bc15ac6f7f54a00d1819584f5618">metalnessTexture</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#afa37e2b82b648340f3d2937feee21315">   49</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#afa37e2b82b648340f3d2937feee21315">metalness</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a586fc82766fe52fae0e04fec1fa7689e">   51</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#a586fc82766fe52fae0e04fec1fa7689e">iblIrradianceTexture</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#adb98f8b31fafc86f6f74f3fb91f9e3fd">   52</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *<a class="code" href="interfaceNvsMaterialInfoDetail.html#adb98f8b31fafc86f6f74f3fb91f9e3fd">iblPrefilterTexture</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#aca7e659af70a4f3dbb8a56a1642535b7">   53</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#aca7e659af70a4f3dbb8a56a1642535b7">iblIrradianceIntensity</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a944d05279a488c11b04fa5462b77a565">   54</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a944d05279a488c11b04fa5462b77a565">iblSpecularIntensity</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a1b17cd81c29cba57d649cbe137058c8e">   55</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a1b17cd81c29cba57d649cbe137058c8e">iblIntensity</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#aef27d2787fe577d2916cabcf4bff0e62">   56</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#aef27d2787fe577d2916cabcf4bff0e62">iblRotationAngleY</a>; <span class="comment">// In degrees</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a1c9bdf260af019ece7da8dd96211a0a9">   58</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#a1c9bdf260af019ece7da8dd96211a0a9">shininess</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#ace7519e92973c6552c27ccb336089457">   59</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> <a class="code" href="interfaceNvsMaterialInfoDetail.html#ace7519e92973c6552c27ccb336089457">opacity</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#ad831d5ca10e88cdaf68df5e85d700c64">   61</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) BOOL <a class="code" href="interfaceNvsMaterialInfoDetail.html#ad831d5ca10e88cdaf68df5e85d700c64">shadowCaster</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfoDetail.html#a9673cc757b33305101768cbb24f7f6c7">   62</a></span>&#160;<span class="keyword">@property</span> (nonatomic, assign) BOOL <a class="code" href="interfaceNvsMaterialInfoDetail.html#a9673cc757b33305101768cbb24f7f6c7">shadowReceiver</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfo.html">   66</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsMaterialInfo.html">NvsMaterialInfo</a> : NSObject</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfo.html#a5a15838f386723439677b526c6f61fdd">   68</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSMutableDictionary&lt;NSNumber*,NvsMaterialInfoDetail *&gt; *materialInfo;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="interfaceNvsMaterialInfo.html#af3aa48cbdf0c1e3f8e504e8b27729532">   69</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSString *fbxName;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="interfaceNvsStoryboard3DMaterialInfo.html">   73</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsStoryboard3DMaterialInfo.html">NvsStoryboard3DMaterialInfo</a> : <a class="code" href="interfaceNvsArbitraryData.html">NvsArbitraryData</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="interfaceNvsStoryboard3DMaterialInfo.html#a0abf34ac9acba9f701f8d903992e936e">   74</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSMutableArray&lt;NvsMaterialInfo *&gt; *materialInfoList;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_aa00f61ac471195857794356e6cc24c3b"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#aa00f61ac471195857794356e6cc24c3b">NvsMaterialInfoDetail::ambientColor</a></div><div class="ttdeci">NvsColor ambientColor</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:42</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a1bcc243b9f56c12968f66cbe32ffb020"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a1bcc243b9f56c12968f66cbe32ffb020">NvsMaterialInfoDetail::normalTexture</a></div><div class="ttdeci">NSString * normalTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:31</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a8db7740a35db0402378e5aa60462ef26"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a8db7740a35db0402378e5aa60462ef26">NvsMaterialInfoDetail::emissiveTexture</a></div><div class="ttdeci">NSString * emissiveTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:35</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_ae615d9ab28791b036f5e45c4e9623bfd"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#ae615d9ab28791b036f5e45c4e9623bfd">NvsMaterialInfoDetail::diffuseTexture</a></div><div class="ttdeci">NSString * diffuseTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:24</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a816367faf48fbc1dfa5f48a2c48f2153"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a816367faf48fbc1dfa5f48a2c48f2153">NvsMaterialInfoDetail::ambientOcclusion</a></div><div class="ttdeci">float ambientOcclusion</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:43</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a4669398f84a56dc2fc7fd0dbce88e8d8"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a4669398f84a56dc2fc7fd0dbce88e8d8">NvsMaterialInfoDetail::emissiveColor</a></div><div class="ttdeci">NvsColor emissiveColor</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:37</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html">NvsMaterialInfoDetail</a></div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:21</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfo_html"><div class="ttname"><a href="interfaceNvsMaterialInfo.html">NvsMaterialInfo</a></div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:67</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a9673cc757b33305101768cbb24f7f6c7"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a9673cc757b33305101768cbb24f7f6c7">NvsMaterialInfoDetail::shadowReceiver</a></div><div class="ttdeci">BOOL shadowReceiver</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:62</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_aef27d2787fe577d2916cabcf4bff0e62"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#aef27d2787fe577d2916cabcf4bff0e62">NvsMaterialInfoDetail::iblRotationAngleY</a></div><div class="ttdeci">float iblRotationAngleY</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:56</div></div>
+<div class="ttc" id="ainterfaceNvsStoryboard3DMaterialInfo_html"><div class="ttname"><a href="interfaceNvsStoryboard3DMaterialInfo.html">NvsStoryboard3DMaterialInfo</a></div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:74</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a9d51bc15ac6f7f54a00d1819584f5618"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a9d51bc15ac6f7f54a00d1819584f5618">NvsMaterialInfoDetail::metalnessTexture</a></div><div class="ttdeci">NSString * metalnessTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:48</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a5aab048ad13c88903f8e342ea3517f7d"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a5aab048ad13c88903f8e342ea3517f7d">NvsMaterialInfoDetail::roughness</a></div><div class="ttdeci">float roughness</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:46</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a514c8d283e8593982849bb0d0512f733"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a514c8d283e8593982849bb0d0512f733">NvsMaterialInfoDetail::ambientOcclusionTexture</a></div><div class="ttdeci">NSString * ambientOcclusionTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:41</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a944d05279a488c11b04fa5462b77a565"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a944d05279a488c11b04fa5462b77a565">NvsMaterialInfoDetail::iblSpecularIntensity</a></div><div class="ttdeci">float iblSpecularIntensity</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:54</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_afa37e2b82b648340f3d2937feee21315"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#afa37e2b82b648340f3d2937feee21315">NvsMaterialInfoDetail::metalness</a></div><div class="ttdeci">float metalness</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:49</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a4a63304aea057eadcc85a3493ce9999f"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a4a63304aea057eadcc85a3493ce9999f">NvsMaterialInfoDetail::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:22</div></div>
+<div class="ttc" id="aNvsArbitraryData_8h_html"><div class="ttname"><a href="NvsArbitraryData_8h.html">NvsArbitraryData.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_ab099dbf828738d7c9479f8344bc175ef"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#ab099dbf828738d7c9479f8344bc175ef">NvsMaterialInfoDetail::panoramicReflectionMap</a></div><div class="ttdeci">BOOL panoramicReflectionMap</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:27</div></div>
+<div class="ttc" id="astructNvsColor_html"><div class="ttname"><a href="structNvsColor.html">NvsColor</a></div><div class="ttdoc">自定义颜色类</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:413</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a1b17cd81c29cba57d649cbe137058c8e"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a1b17cd81c29cba57d649cbe137058c8e">NvsMaterialInfoDetail::iblIntensity</a></div><div class="ttdeci">float iblIntensity</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:55</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_affbd831349db59583d424c547ab7f77e"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#affbd831349db59583d424c547ab7f77e">NvsMaterialInfoDetail::specularTexture</a></div><div class="ttdeci">NSString * specularTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:32</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a1c9bdf260af019ece7da8dd96211a0a9"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a1c9bdf260af019ece7da8dd96211a0a9">NvsMaterialInfoDetail::shininess</a></div><div class="ttdeci">float shininess</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:58</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a63e60add447cbbf28ffb9ae5af521495"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a63e60add447cbbf28ffb9ae5af521495">NvsMaterialInfoDetail::roughnessTexture</a></div><div class="ttdeci">NSString * roughnessTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:45</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_aa2f6b48668c1b02a208222fe70810953"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#aa2f6b48668c1b02a208222fe70810953">NvsMaterialInfoDetail::name</a></div><div class="ttdeci">NSString * name</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:23</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a5833cc2889d4e1f8a92053fe43c80e6b"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a5833cc2889d4e1f8a92053fe43c80e6b">NvsMaterialInfoDetail::reflectivity</a></div><div class="ttdeci">float reflectivity</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:29</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_ace7519e92973c6552c27ccb336089457"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#ace7519e92973c6552c27ccb336089457">NvsMaterialInfoDetail::opacity</a></div><div class="ttdeci">float opacity</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:59</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a05abe27f0d24a2ba797f78889c61e63f"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a05abe27f0d24a2ba797f78889c61e63f">NvsMaterialInfoDetail::normalMapIntensity</a></div><div class="ttdeci">float normalMapIntensity</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:33</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html"><div class="ttname"><a href="NvsCommonDef_8h.html">NvsCommonDef.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_aca7e659af70a4f3dbb8a56a1642535b7"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#aca7e659af70a4f3dbb8a56a1642535b7">NvsMaterialInfoDetail::iblIrradianceIntensity</a></div><div class="ttdeci">float iblIrradianceIntensity</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:53</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a6c37b71423b08fd53f1e2f4df6f59002"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a6c37b71423b08fd53f1e2f4df6f59002">NvsMaterialInfoDetail::reflectionTexture</a></div><div class="ttdeci">NSString * reflectionTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:28</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_ad831d5ca10e88cdaf68df5e85d700c64"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#ad831d5ca10e88cdaf68df5e85d700c64">NvsMaterialInfoDetail::shadowCaster</a></div><div class="ttdeci">BOOL shadowCaster</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:61</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a3848632bfa73cba08387c7e5f50031f0"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a3848632bfa73cba08387c7e5f50031f0">NvsMaterialInfoDetail::diffuseColor</a></div><div class="ttdeci">NvsColor diffuseColor</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:25</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a586fc82766fe52fae0e04fec1fa7689e"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a586fc82766fe52fae0e04fec1fa7689e">NvsMaterialInfoDetail::iblIrradianceTexture</a></div><div class="ttdeci">NSString * iblIrradianceTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:51</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_adb98f8b31fafc86f6f74f3fb91f9e3fd"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#adb98f8b31fafc86f6f74f3fb91f9e3fd">NvsMaterialInfoDetail::iblPrefilterTexture</a></div><div class="ttdeci">NSString * iblPrefilterTexture</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:52</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_a8766d5bde6535f6b38177e0fa3c3631a"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#a8766d5bde6535f6b38177e0fa3c3631a">NvsMaterialInfoDetail::emissiveMapIntensity</a></div><div class="ttdeci">float emissiveMapIntensity</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:36</div></div>
+<div class="ttc" id="ainterfaceNvsArbitraryData_html"><div class="ttname"><a href="interfaceNvsArbitraryData.html">NvsArbitraryData</a></div><div class="ttdoc">特技的一种自定义参数结构</div><div class="ttdef"><b>Definition:</b> NvsArbitraryData.h:29</div></div>
+<div class="ttc" id="ainterfaceNvsMaterialInfoDetail_html_af6e26dd873aa097a8ee7ac3977b38b0d"><div class="ttname"><a href="interfaceNvsMaterialInfoDetail.html#af6e26dd873aa097a8ee7ac3977b38b0d">NvsMaterialInfoDetail::specularColor</a></div><div class="ttdeci">NvsColor specularColor</div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMaterialInfo.h:39</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

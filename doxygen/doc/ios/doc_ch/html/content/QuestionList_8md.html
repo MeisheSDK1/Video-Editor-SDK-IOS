@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 疑难问题集锦</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">疑难问题集锦 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><ol type="1">
+<li><a class="el" href="QuestionList_8md.html#如何生成方形视频">如何生成方形视频？</a></li>
+<li><a class="el" href="QuestionList_8md.html#如何生成带有美肤特效的视频">如何生成带有美肤特效的视频？</a></li>
+<li><a class="el" href="QuestionList_8md.html#如何将多个素材生成一个视频文件">如何将多个素材生成一个视频文件？</a></li>
+<li><a class="el" href="QuestionList_8md.html#如何实现画中画">如何实现画中画？</a></li>
+<li><a class="el" href="QuestionList_8md.html#如何添加水印">如何添加水印？</a></li>
+<li><a class="el" href="QuestionList_8md.html#从录制界面到播放界面没有问题，返回之后，录制界面的预览黑屏">从录制界面到播放界面没有问题，返回之后，录制界面的预览黑屏</a></li>
+<li><a class="el" href="QuestionList_8md.html#NvsColor设置不生效">NvsColor设置不生效</a></li>
+<li><a class="el" href="QuestionList_8md.html#从录制界面到播出界面，播出界面的Livewindow闪黑然后播出正常">从录制界面到播出界面，播出界面的Livewindow闪黑然后播出正常</a></li>
+<li><a class="el" href="QuestionList_8md.html#某些手机录制的视频播放时画面方向不正常？">某些手机录制的视频播放时画面方向不正常？</a></li>
+<li><a class="el" href="QuestionList_8md.html#android使用美摄SDK时，代码混淆出错？">android使用美摄SDK时，代码混淆出错？</a></li>
+<li><a class="el" href="QuestionList_8md.html#使用H265如何设置进行视频拍摄和生成？">使用H265如何设置进行视频拍摄和生成？</a></li>
+<li><a class="el" href="QuestionList_8md.html#相机采集各档位分别对应的分辨率？">相机采集各档位分别对应的分辨率？</a></li>
+<li><a class="el" href="QuestionList_8md.html#生成各档位分别对应的码率？">生成各档位分别对应的码率？</a></li>
+</ol>
+<hr  />
+ <h1><a class="anchor" id="详细解释"></a>
+详细解释</h1>
+<h2><a class="anchor" id="如何生成方形视频"></a>
+1.如何生成方形视频?</h2>
+<p>假设拍摄的视频是竖着拍摄分辨率1280*720，我们生成720*720的视频。 <br  />
+1)创建timeline <a class="el" href="structNvsVideoResolution.html" title="视频解析度">NvsVideoResolution</a> videoEditRes; videoEditRes.imageWidth = 720; videoEditRes.imageHeight = 720; videoEditRes.imagePAR = (<a class="el" href="structNvsRational.html" title="比例值">NvsRational</a>){1, 1}; <a class="el" href="structNvsRational.html" title="比例值">NvsRational</a> videoFps = {25, 1}; <a class="el" href="structNvsAudioResolution.html" title="音频解析度">NvsAudioResolution</a> audioEditRes; audioEditRes.sampleRate = 48000; audioEditRes.channelCount = 2; audioEditRes.sampleFormat = NvsAudSmpFmt_S16; //创建时间线 m_timeline = [streamingContext createTimeline:&amp;videoEditRes videoFps:&amp;videoFps audioEditRes:&amp;audioEditRes];</p>
+<p>2)创建轨道和片段,path是片段的绝对路径。 <a class="el" href="interfaceNvsVideoTrack.html" title="视频轨道，视频片段的集合">NvsVideoTrack</a> videoTrack = [m_timeline appendVideoTrack]; <a class="el" href="interfaceNvsVideoClip.html" title="视频片段，对视频文件的描述">NvsVideoClip</a> clip = [videoTrack appendClip:path];</p>
+<p>3)放大视频。 [clip setPan:0 andScan:1];</p>
+<p>详细设置参见<a class="el" href="Pan_Scan_8md.html">摇摄与扫描(Pan and Scan)</a> <br  />
+4)生成视频，path是生成视频的路径。 [m_streamingContext compileTimeline:m_timeline startTime:0 endTime:m_timeline.duration outputFilePath:path videoResolutionGrade:COMPILE_VIDEO_RESOLUTION_GRADE_720 videoBitrateGrade:COMPILE_BITRATE_GRADE_HIGH flags:0]; <br  />
+</p>
+<h2><a class="anchor" id="如何生成带有美肤特效的视频"></a>
+2.如何生成带有美肤特效的视频?</h2>
+<p>1)创建timeline、轨道、片段同问题1。 <br  />
+2)添加美肤特技。 [clip appendBeautyFx]; <br  />
+</p>
+<p>3)生成视频。 </p>
+<h2><a class="anchor" id="如何将多个素材生成一个视频文件"></a>
+3.如何将多个素材生成一个视频文件？</h2>
+<p>1)在创建轨道和片段的时候，添加多个素材创建出来多个片段。 <a class="el" href="interfaceNvsVideoTrack.html" title="视频轨道，视频片段的集合">NvsVideoTrack</a> videoTrack = [m_timeline appendVideoTrack]; <a class="el" href="interfaceNvsVideoClip.html" title="视频片段，对视频文件的描述">NvsVideoClip</a> clip1 = [videoTrack appendClip:path1]; <a class="el" href="interfaceNvsVideoClip.html" title="视频片段，对视频文件的描述">NvsVideoClip</a> clip2 = [videoTrack appendClip:path2]; <a class="el" href="interfaceNvsVideoClip.html" title="视频片段，对视频文件的描述">NvsVideoClip</a> clip3 = [videoTrack appendClip:path3]; <a class="el" href="interfaceNvsVideoClip.html" title="视频片段，对视频文件的描述">NvsVideoClip</a> clip4 = [videoTrack appendClip:path4]; <a class="el" href="interfaceNvsVideoClip.html" title="视频片段，对视频文件的描述">NvsVideoClip</a> clip5 = [videoTrack appendClip:path5];</p>
+<p>2)生成视频。 [m_streamingContext compileTimeline:m_timeline startTime:0 endTime:m_timeline.duration outputFilePath:path videoResolutionGrade:COMPILE_VIDEO_RESOLUTION_GRADE_720 videoBitrateGrade:COMPILE_BITRATE_GRADE_HIGH flags:0]; <br  />
+ <br  />
+</p>
+<p>即可生成1个文件。 </p>
+<h2><a class="anchor" id="如何实现画中画"></a>
+4.如何实现画中画？</h2>
+<p>简单的画中画，用两个不同分辨率的素材例如一个横着拍摄的素材和一个竖着拍摄的素材，分别添加到两个轨道上，就可以看到两个素材叠加在一起的效果。另外Transform 2D特技可以实现视频的放大缩小、旋转、给视频加透明度。 <a class="el" href="interfaceNvsVideoTrack.html" title="视频轨道，视频片段的集合">NvsVideoTrack</a> videoTrack1 = [m_timeline appendVideoTrack]; <a class="el" href="interfaceNvsVideoTrack.html" title="视频轨道，视频片段的集合">NvsVideoTrack</a> videoTrack2 = [m_timeline appendVideoTrack]; <a class="el" href="interfaceNvsVideoClip.html" title="视频片段，对视频文件的描述">NvsVideoClip</a> clip1 = [videoTrack1 appendClip:path1]; <a class="el" href="interfaceNvsVideoClip.html" title="视频片段，对视频文件的描述">NvsVideoClip</a> clip2 = [videoTrack2 appendClip:path2]; <br  />
+</p>
+<h2><a class="anchor" id="如何添加水印"></a>
+5.如何添加水印？</h2>
+<p>添加水印有两种方式：一是通过贴纸功能来实现的，需要用户发给一张带水印的图片，我们来进行制作。制作完的水印文件是UUID为文件名，.animatedsticker为扩展名的一个文件。有了这个文件，就可以通过我们的API实现添加水印的功能。 NSMutableString *m_stickerId; NSString *packagePath = [appPath stringByAppendingPathComponent:"89740AEA-80D6-432A-B6DE-E7F6539C4121.animatedsticker"]; NvsAssetPackageManagerError error = [m_streamingContext.assetPackageManager installAssetPackage:packagePath license:nil type:NvsAssetPackageType_VideoFx sync:YES assetPackageId:m_stickerId]; if (error != NvsAssetPackageManagerError_NoError &amp;&amp; error != NvsAssetPackageManagerError_AlreadyInstalled) { NSLog("Failed to install video fx package!"); package1Valid = false; }</p>
+<p>[m_timeline addAnimatedSticker:0 duration:m_timeline.duration animatedStickerPackageId:_stickerPackageId]; <br  />
+</p>
+<p>二是通过NvsTimeline类里的addWatermark()接口添加水印。 [m_timeline addWatermark:path displayWidth:0 displayHeight:0 opacity:1 position:NvsTimelineWatermarkPosition_TopRight marginX:0 marginY:0];//path是水印文件的路径，可以是为PNG或JPG文件，或者是.caf格式文件 <br  />
+ <br  />
+</p>
+<h2><a class="anchor" id="从录制界面到播放界面没有问题，返回之后，录制界面的预览黑屏"></a>
+6.从录制界面到播放界面没有问题，返回之后，录制界面的预览黑屏</h2>
+<p>检查NvsStreamingContext类里的connectCapturePreviewWithLiveWindow()有没有调用或者调用出了问题，亦或是在调用startCapturePreivew()之后，调用了NvsStreamingContext上的stop()。同样，从录制界面到播出界面，播出黑屏，可能是调用playbackTimeline()后，又调用NvsStreamingContext的stop()。还有可能是NvsStreamingContext上的connectTimelineWithLiveWindow方法没有调用或调用出了问题。</p>
+<h2><a class="anchor" id="NvsColor设置不生效"></a>
+7.NvsColor设置不生效？</h2>
+<p>NvsClor类成员是Float类型，R,G，B,A取值是0到1，如果所给颜色值是100，100，100，则需要分别除以255。</p>
+<h2><a class="anchor" id="从录制界面到播出界面，播出界面的Livewindow闪黑然后播出正常"></a>
+8.从录制界面到播出界面，播出界面的Livewindow闪黑然后播出正常</h2>
+<p>调用playbackTimeline播出需要预览一段时间，为了避免这个问题，需要先调用seekTimeline到0的位置，再播出，就不会闪黑了。</p>
+<h2><a class="anchor" id="某些手机录制的视频播放时画面方向不正常？"></a>
+9.某些手机录制的视频播放时画面方向不正常？</h2>
+<p>可能是有些手机播放器不支持自动旋转，会造成视频播放时画面方向不正常，因而导致用户对录制的视频播产生误导。 </p>
+<h2><a class="anchor" id="android使用美摄SDK时，代码混淆出错？"></a>
+10.android使用美摄SDK时，代码混淆出错？</h2>
+<p>使用代码混淆时，注意避免对下面的几个类进行混淆，正确避免方式如下： </p><pre class="fragment">-keep class com.cdv.**  {*;}
+-keep class com.meicam.**  {*;}
+</pre><p>单独使用effectsdk时，需要对下面的类进行混淆，正确避免方式如下： </p><pre class="fragment">-keep class com.cdv.effect.**  {*;}
+-keep class com.meicam.effect.**  {*;}
+</pre><h2><a class="anchor" id="使用H265如何设置进行视频拍摄和生成？"></a>
+11.使用H265如何设置进行视频拍摄和生成？</h2>
+<p>使用H265进行视频拍摄的用法如下： NSMutableDictionary *config = [[NSMutableDictionary alloc] init]; [config setValue:"hevc" forKey:NVS_COMPILE_VIDEO_ENCODEC_NAME]; [context startRecording:filePath withFlags:0 withRecordConfigurations:config]; <br  />
+</p>
+<p>使用H265进行视频生成的用法如下： NSMutableDictionary *config = [[NSMutableDictionary alloc] init]; [config setValue:"hevc" forKey:NVS_COMPILE_VIDEO_ENCODEC_NAME];//h265方式 context.compileConfigurations = config;//调用compileTimeline API之前设置 [context compileTimeline:timeline startTime:0 endTime:timeline.duration outputFilePath:ouputPath videoResolutionGrade:NvsCompileVideoResolutionGrade720 videoBitrateGrade:NvsCompileBitrateGradeHigh flags:0]; <br  />
+</p>
+<dl class="section warning"><dt>警告</dt><dd>并非所有iPhone机都可以支持H265拍摄和生成，如若不支持，则会回到默认设置进行视频拍摄和生成。 <br  />
+</dd></dl>
+<h2><a class="anchor" id="相机采集各档位分别对应的分辨率？"></a>
+12.相机采集各档位分别对应的分辨率？</h2>
+<p><br  />
+</p>
+<p>注：SDK会对用户手机系统整体处理能力进行评估，若能够实时处理录制的视频，则采用设置的分辨率等级进行录制；若不能处理，SDK会适当降低当前分辨率等级以匹配用户手机系统能够达到的录制等级。 例如：用某一款手机录制时设置更高等级，但是它可能录制不了这个等级的视频，所以就会适当降低其等级到高甚至是中，所以才会出现有些用户设置的视频录制的等级跟拍摄的视频等级不一致的情况。 同样的，如果使用不带特效录制方式（使用系统相机录制），则会根据相机能够达到的分辨率级别选择适当的分辨率等级。假如相机达不到设置的分辨率等级，可能也会降低相应的分辨率等级来进行录制。</p>
+<h2><a class="anchor" id="生成各档位分别对应的码率？"></a>
+13.生成各档位分别对应的码率？</h2>
+<p><br  />
+ </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

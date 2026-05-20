@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvStreamingSdkCore.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvStreamingSdkCore.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvStreamingSdkCore_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2018. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Apr 28. 2019</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//  Header.h</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//  NvStreamingSdkCore</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//  Created by 刘东旭 on 2019/4/28.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef Header_h</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define Header_h</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//meishe</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsArbitraryData_8h.html">NvsArbitraryData.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsARFaceContext_8h.html">NvsARFaceContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsARSceneManipulate_8h.html">NvsARSceneManipulate.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsAssetPackageManager_8h.html">NvsAssetPackageManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsAssetPackageParticleDescParser_8h.html">NvsAssetPackageParticleDescParser.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsAudioClip_8h.html">NvsAudioClip.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsAudioFx_8h.html">NvsAudioFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsAudioTrack_8h.html">NvsAudioTrack.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsAudioTransition_8h.html">NvsAudioTransition.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsAVFileInfo_8h.html">NvsAVFileInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCaptureVideoFx_8h.html">NvsCaptureVideoFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCaptureAudioFx_8h.html">NvsCaptureAudioFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsClip_8h.html">NvsClip.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCommonDef_8h.html">NvsCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCustomVideoFx_8h.html">NvsCustomVideoFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsEffect_8h.html">NvsEffect.h</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsEffectCommonDef_8h.html">NvsEffectCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsEffectDescription_8h.html">NvsEffectDescription.h</a>&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsEffectRenderCore_8h.html">NvsEffectRenderCore.h</a>&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsEffectSdkContext_8h.html">NvsEffectSdkContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsVideoEffectCaption_8h.html">NvsVideoEffectCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsFx_8h.html">NvsFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsControlPointPair_8h.html">NvsControlPointPair.h</a>&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCaption_8h.html">NvsCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsFxDescription_8h.html">NvsFxDescription.h</a>&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsIosUtils_8h.html">NvsIosUtils.h</a>&quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsLiveWindow_8h.html">NvsLiveWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsMultiThumbnailSequenceView_8h.html">NvsMultiThumbnailSequenceView.h</a>&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsObject_8h.html">NvsObject.h</a>&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsParticleSystemContext_8h.html">NvsParticleSystemContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsStreamingContext_8h.html">NvsStreamingContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsThumbnailSequenceView_8h.html">NvsThumbnailSequenceView.h</a>&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTimeline_8h.html">NvsTimeline.h</a>&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsAnimatedSticker_8h.html">NvsAnimatedSticker.h</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTrackAnimatedSticker_8h.html">NvsTrackAnimatedSticker.h</a>&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTimelineAnimatedSticker_8h.html">NvsTimelineAnimatedSticker.h</a>&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCaptureAnimatedSticker_8h.html">NvsCaptureAnimatedSticker.h</a>&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTrackCaption_8h.html">NvsTrackCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTimelineCaption_8h.html">NvsTimelineCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCompoundCaption_8h.html">NvsCompoundCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCaptureCaption_8h.html">NvsCaptureCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCaptureCompoundCaption_8h.html">NvsCaptureCompoundCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTrackCompoundCaption_8h.html">NvsTrackCompoundCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTimelineCompoundCaption_8h.html">NvsTimelineCompoundCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTimelineVideoFx_8h.html">NvsTimelineVideoFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTrack_8h.html">NvsTrack.h</a>&quot;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsVideoClip_8h.html">NvsVideoClip.h</a>&quot;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsVideoEffect_8h.html">NvsVideoEffect.h</a>&quot;</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsVideoFrameReceiver_8h.html">NvsVideoFrameReceiver.h</a>&quot;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsVideoFrameRetriever_8h.html">NvsVideoFrameRetriever.h</a>&quot;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsVideoFx_8h.html">NvsVideoFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsVideoTrack_8h.html">NvsVideoTrack.h</a>&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsVideoTransition_8h.html">NvsVideoTransition.h</a>&quot;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsMediaFileConvertor_8h.html">NvsMediaFileConvertor.h</a>&quot;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsMaskRegionInfo_8h.html">NvsMaskRegionInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsWaveformView_8h.html">NvsWaveformView.h</a>&quot;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsClipCaption_8h.html">NvsClipCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsClipCompoundCaption_8h.html">NvsClipCompoundCaption.h</a>&quot;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsClipAnimatedSticker_8h.html">NvsClipAnimatedSticker.h</a>&quot;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsMakeupEffectInfo_8h.html">NvsMakeupEffectInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCaptureSceneInfo_8h.html">NvsCaptureSceneInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsTrackVideoFx_8h.html">NvsTrackVideoFx.h</a>&quot;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsExpressionParam_8h.html">NvsExpressionParam.h</a>&quot;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCaptionSpan_8h.html">NvsCaptionSpan.h</a>&quot;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsFontInfo_8h.html">NvsFontInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Header_h */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aNvsTrackCaption_8h_html"><div class="ttname"><a href="NvsTrackCaption_8h.html">NvsTrackCaption.h</a></div></div>
+<div class="ttc" id="aNvsVideoEffect_8h_html"><div class="ttname"><a href="NvsVideoEffect_8h.html">NvsVideoEffect.h</a></div></div>
+<div class="ttc" id="aNvsAudioFx_8h_html"><div class="ttname"><a href="NvsAudioFx_8h.html">NvsAudioFx.h</a></div></div>
+<div class="ttc" id="aNvsVideoFrameRetriever_8h_html"><div class="ttname"><a href="NvsVideoFrameRetriever_8h.html">NvsVideoFrameRetriever.h</a></div></div>
+<div class="ttc" id="aNvsTrack_8h_html"><div class="ttname"><a href="NvsTrack_8h.html">NvsTrack.h</a></div></div>
+<div class="ttc" id="aNvsClipCompoundCaption_8h_html"><div class="ttname"><a href="NvsClipCompoundCaption_8h.html">NvsClipCompoundCaption.h</a></div></div>
+<div class="ttc" id="aNvsVideoFrameReceiver_8h_html"><div class="ttname"><a href="NvsVideoFrameReceiver_8h.html">NvsVideoFrameReceiver.h</a></div></div>
+<div class="ttc" id="aNvsClipAnimatedSticker_8h_html"><div class="ttname"><a href="NvsClipAnimatedSticker_8h.html">NvsClipAnimatedSticker.h</a></div></div>
+<div class="ttc" id="aNvsTrackCompoundCaption_8h_html"><div class="ttname"><a href="NvsTrackCompoundCaption_8h.html">NvsTrackCompoundCaption.h</a></div></div>
+<div class="ttc" id="aNvsTrackAnimatedSticker_8h_html"><div class="ttname"><a href="NvsTrackAnimatedSticker_8h.html">NvsTrackAnimatedSticker.h</a></div></div>
+<div class="ttc" id="aNvsEffectRenderCore_8h_html"><div class="ttname"><a href="NvsEffectRenderCore_8h.html">NvsEffectRenderCore.h</a></div></div>
+<div class="ttc" id="aNvsTrackVideoFx_8h_html"><div class="ttname"><a href="NvsTrackVideoFx_8h.html">NvsTrackVideoFx.h</a></div></div>
+<div class="ttc" id="aNvsAudioTrack_8h_html"><div class="ttname"><a href="NvsAudioTrack_8h.html">NvsAudioTrack.h</a></div></div>
+<div class="ttc" id="aNvsExpressionParam_8h_html"><div class="ttname"><a href="NvsExpressionParam_8h.html">NvsExpressionParam.h</a></div></div>
+<div class="ttc" id="aNvsClip_8h_html"><div class="ttname"><a href="NvsClip_8h.html">NvsClip.h</a></div></div>
+<div class="ttc" id="aNvsCaptureVideoFx_8h_html"><div class="ttname"><a href="NvsCaptureVideoFx_8h.html">NvsCaptureVideoFx.h</a></div></div>
+<div class="ttc" id="aNvsTimelineAnimatedSticker_8h_html"><div class="ttname"><a href="NvsTimelineAnimatedSticker_8h.html">NvsTimelineAnimatedSticker.h</a></div></div>
+<div class="ttc" id="aNvsFxDescription_8h_html"><div class="ttname"><a href="NvsFxDescription_8h.html">NvsFxDescription.h</a></div></div>
+<div class="ttc" id="aNvsAudioTransition_8h_html"><div class="ttname"><a href="NvsAudioTransition_8h.html">NvsAudioTransition.h</a></div></div>
+<div class="ttc" id="aNvsARSceneManipulate_8h_html"><div class="ttname"><a href="NvsARSceneManipulate_8h.html">NvsARSceneManipulate.h</a></div></div>
+<div class="ttc" id="aNvsFontInfo_8h_html"><div class="ttname"><a href="NvsFontInfo_8h.html">NvsFontInfo.h</a></div></div>
+<div class="ttc" id="aNvsWaveformView_8h_html"><div class="ttname"><a href="NvsWaveformView_8h.html">NvsWaveformView.h</a></div></div>
+<div class="ttc" id="aNvsVideoTransition_8h_html"><div class="ttname"><a href="NvsVideoTransition_8h.html">NvsVideoTransition.h</a></div></div>
+<div class="ttc" id="aNvsMediaFileConvertor_8h_html"><div class="ttname"><a href="NvsMediaFileConvertor_8h.html">NvsMediaFileConvertor.h</a></div></div>
+<div class="ttc" id="aNvsClipCaption_8h_html"><div class="ttname"><a href="NvsClipCaption_8h.html">NvsClipCaption.h</a></div></div>
+<div class="ttc" id="aNvsArbitraryData_8h_html"><div class="ttname"><a href="NvsArbitraryData_8h.html">NvsArbitraryData.h</a></div></div>
+<div class="ttc" id="aNvsAnimatedSticker_8h_html"><div class="ttname"><a href="NvsAnimatedSticker_8h.html">NvsAnimatedSticker.h</a></div></div>
+<div class="ttc" id="aNvsEffectDescription_8h_html"><div class="ttname"><a href="NvsEffectDescription_8h.html">NvsEffectDescription.h</a></div></div>
+<div class="ttc" id="aNvsTimelineVideoFx_8h_html"><div class="ttname"><a href="NvsTimelineVideoFx_8h.html">NvsTimelineVideoFx.h</a></div></div>
+<div class="ttc" id="aNvsObject_8h_html"><div class="ttname"><a href="NvsObject_8h.html">NvsObject.h</a></div></div>
+<div class="ttc" id="aNvsVideoClip_8h_html"><div class="ttname"><a href="NvsVideoClip_8h.html">NvsVideoClip.h</a></div></div>
+<div class="ttc" id="aNvsARFaceContext_8h_html"><div class="ttname"><a href="NvsARFaceContext_8h.html">NvsARFaceContext.h</a></div></div>
+<div class="ttc" id="aNvsVideoTrack_8h_html"><div class="ttname"><a href="NvsVideoTrack_8h.html">NvsVideoTrack.h</a></div></div>
+<div class="ttc" id="aNvsAVFileInfo_8h_html"><div class="ttname"><a href="NvsAVFileInfo_8h.html">NvsAVFileInfo.h</a></div></div>
+<div class="ttc" id="aNvsVideoEffectCaption_8h_html"><div class="ttname"><a href="NvsVideoEffectCaption_8h.html">NvsVideoEffectCaption.h</a></div></div>
+<div class="ttc" id="aNvsCaptureCaption_8h_html"><div class="ttname"><a href="NvsCaptureCaption_8h.html">NvsCaptureCaption.h</a></div></div>
+<div class="ttc" id="aNvsIosUtils_8h_html"><div class="ttname"><a href="NvsIosUtils_8h.html">NvsIosUtils.h</a></div></div>
+<div class="ttc" id="aNvsMakeupEffectInfo_8h_html"><div class="ttname"><a href="NvsMakeupEffectInfo_8h.html">NvsMakeupEffectInfo.h</a></div></div>
+<div class="ttc" id="aNvsEffectSdkContext_8h_html"><div class="ttname"><a href="NvsEffectSdkContext_8h.html">NvsEffectSdkContext.h</a></div></div>
+<div class="ttc" id="aNvsAssetPackageParticleDescParser_8h_html"><div class="ttname"><a href="NvsAssetPackageParticleDescParser_8h.html">NvsAssetPackageParticleDescParser.h</a></div></div>
+<div class="ttc" id="aNvsCaptureCompoundCaption_8h_html"><div class="ttname"><a href="NvsCaptureCompoundCaption_8h.html">NvsCaptureCompoundCaption.h</a></div></div>
+<div class="ttc" id="aNvsCompoundCaption_8h_html"><div class="ttname"><a href="NvsCompoundCaption_8h.html">NvsCompoundCaption.h</a></div></div>
+<div class="ttc" id="aNvsMultiThumbnailSequenceView_8h_html"><div class="ttname"><a href="NvsMultiThumbnailSequenceView_8h.html">NvsMultiThumbnailSequenceView.h</a></div></div>
+<div class="ttc" id="aNvsTimeline_8h_html"><div class="ttname"><a href="NvsTimeline_8h.html">NvsTimeline.h</a></div></div>
+<div class="ttc" id="aNvsMaskRegionInfo_8h_html"><div class="ttname"><a href="NvsMaskRegionInfo_8h.html">NvsMaskRegionInfo.h</a></div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html"><div class="ttname"><a href="NvsCommonDef_8h.html">NvsCommonDef.h</a></div></div>
+<div class="ttc" id="aNvsThumbnailSequenceView_8h_html"><div class="ttname"><a href="NvsThumbnailSequenceView_8h.html">NvsThumbnailSequenceView.h</a></div></div>
+<div class="ttc" id="aNvsCustomVideoFx_8h_html"><div class="ttname"><a href="NvsCustomVideoFx_8h.html">NvsCustomVideoFx.h</a></div></div>
+<div class="ttc" id="aNvsCaptureAudioFx_8h_html"><div class="ttname"><a href="NvsCaptureAudioFx_8h.html">NvsCaptureAudioFx.h</a></div></div>
+<div class="ttc" id="aNvsCaptureSceneInfo_8h_html"><div class="ttname"><a href="NvsCaptureSceneInfo_8h.html">NvsCaptureSceneInfo.h</a></div></div>
+<div class="ttc" id="aNvsVideoFx_8h_html"><div class="ttname"><a href="NvsVideoFx_8h.html">NvsVideoFx.h</a></div></div>
+<div class="ttc" id="aNvsTimelineCaption_8h_html"><div class="ttname"><a href="NvsTimelineCaption_8h.html">NvsTimelineCaption.h</a></div></div>
+<div class="ttc" id="aNvsEffectCommonDef_8h_html"><div class="ttname"><a href="NvsEffectCommonDef_8h.html">NvsEffectCommonDef.h</a></div></div>
+<div class="ttc" id="aNvsParticleSystemContext_8h_html"><div class="ttname"><a href="NvsParticleSystemContext_8h.html">NvsParticleSystemContext.h</a></div></div>
+<div class="ttc" id="aNvsCaption_8h_html"><div class="ttname"><a href="NvsCaption_8h.html">NvsCaption.h</a></div></div>
+<div class="ttc" id="aNvsStreamingContext_8h_html"><div class="ttname"><a href="NvsStreamingContext_8h.html">NvsStreamingContext.h</a></div></div>
+<div class="ttc" id="aNvsCaptionSpan_8h_html"><div class="ttname"><a href="NvsCaptionSpan_8h.html">NvsCaptionSpan.h</a></div></div>
+<div class="ttc" id="aNvsAudioClip_8h_html"><div class="ttname"><a href="NvsAudioClip_8h.html">NvsAudioClip.h</a></div></div>
+<div class="ttc" id="aNvsCaptureAnimatedSticker_8h_html"><div class="ttname"><a href="NvsCaptureAnimatedSticker_8h.html">NvsCaptureAnimatedSticker.h</a></div></div>
+<div class="ttc" id="aNvsFx_8h_html"><div class="ttname"><a href="NvsFx_8h.html">NvsFx.h</a></div></div>
+<div class="ttc" id="aNvsLiveWindow_8h_html"><div class="ttname"><a href="NvsLiveWindow_8h.html">NvsLiveWindow.h</a></div></div>
+<div class="ttc" id="aNvsTimelineCompoundCaption_8h_html"><div class="ttname"><a href="NvsTimelineCompoundCaption_8h.html">NvsTimelineCompoundCaption.h</a></div></div>
+<div class="ttc" id="aNvsAssetPackageManager_8h_html"><div class="ttname"><a href="NvsAssetPackageManager_8h.html">NvsAssetPackageManager.h</a></div></div>
+<div class="ttc" id="aNvsEffect_8h_html"><div class="ttname"><a href="NvsEffect_8h.html">NvsEffect.h</a></div></div>
+<div class="ttc" id="aNvsControlPointPair_8h_html"><div class="ttname"><a href="NvsControlPointPair_8h.html">NvsControlPointPair.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

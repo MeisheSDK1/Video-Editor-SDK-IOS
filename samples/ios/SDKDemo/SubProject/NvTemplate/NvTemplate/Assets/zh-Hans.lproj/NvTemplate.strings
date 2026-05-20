@@ -1,0 +1,55 @@
+/* 
+  NvTemplate.strings
+  NvTemplateModule
+
+  Created by chengww on 2021/2/1.
+  
+*/
+"Template" = "通用模板";
+"Default" = "默认";
+"To use" = "去使用";
+"Template Downloading" = "模版下载中";
+"Material installing" = "素材安装中";
+"Material installation failed" = "素材安装失败";
+"Upend error" = "倒放失败";
+"Please check your network" = "请检查网络环境";
+"Select Aspect Ratio"="选择制作比例";
+"No template data display"="暂无模板内容";
+"Replace" = "替换";
+"Cropp" = "裁剪";
+"Volume" = "音量";
+"Complete" = "完成";
+"Edit" = "编辑";
+"Compile" = "导出";
+"VideoEdit"="视频编辑";
+"TextEdit"="文本编辑";
+"Click Edit"="点击编辑";
+"Cancel"="取消";
+"Compile Success"="完成";
+"File size is approximately"="文件大小约为";
+"Compile failed"="导出失败";
+"Saved to album"="已保存到相册";
+"Select Resolution"="选择分辨率";
+"Confirm Compile"="确认导出";
+"Confirm"="确认";
+"Please do not lock the screen or switch to other apps"="请不要锁屏或切换到其他的应用程序";
+"Unlimited"="不限";
+"Only Image"="仅图片";
+"Only Video"="仅视频";
+"Next"="下一步";
+"Support only image export"="仅支持图片导入";
+"VideoClip duration lower"="视频片段过短";
+"Support only video export"="仅支持视频导入";
+"Application failed"="应用失败";
+"Standard formwork" = "标准模板";
+"Adaptation duration" = "自适时长";
+"AE conversion template" = "AE转换模板";
+"Enter the keyword search template" = "输入关键词搜索模版";
+"Please enter the search content" = "请输入搜索内容";
+"Usage amount" = "使用量";
+"Duration" = "时长";
+"Clip" = "片段";
+"Duration: Auto Usage amount：" = "时长：自适时长 使用量：";
+"Clip： unlimited" = "片段 不限数量";
+"Clip Duration" = "片段时长";
+"Created by Meishe" = "Meishe原创";

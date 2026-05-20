@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1440">
+	
+	<track source=":1" clipStart="0" clipDuration="4080">	
+	 
+		<effect name="lut">
+			<param name="dataFileName" value="love.mslut"/>		
+			<animation paramName="intensity">
+				<key time="0" value="0"/>
+				<key time="1000" value="1"/>				
+				<key time="4080" value="1"/>
+			</animation>
+		</effect> 
+		<effect name="transform">
+		    <param name="anchorX" value="anchorXValue"/>
+		    <param name="anchorY" value="anchorYValue"/>		
+			<animation paramName="scaleX">
+				<key time="0" value="1" curveMode="inOutSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+				<key time="4080" value="1.4"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="0" value="1" curveMode="inOutSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+				<key time="4080" value="1.4"/>
+			</animation>
+		</effect>
+	  </track>	
+	  
+     <track source=":1" clipStart="0" clipDuration="4080" blendingMode="screen">
+	 
+		<effect name="lut">
+			<param name="dataFileName" value="love2.mslut"/>		
+			<animation paramName="intensity">
+				<key time="0" value="0"/>
+				<key time="1000" value="1"/>				
+				<key time="4080" value="1"/>
+			</animation>
+		</effect> 
+		
+		<effect name="fastBlur">
+			<param name="radius" value="30"/>	
+		</effect>
+				
+		<effect name="transform">		
+		    <param name="anchorX" value="anchorXValue"/>
+		    <param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+				<key time="0" value="1" curveMode="inOutSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+				<key time="4080" value="1.4"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="0" value="1" curveMode="inOutSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+				<key time="4080" value="1.4"/>
+			</animation>
+			<animation paramName="opacity">
+				<key time="0" value="0"/>
+				<key time="1000" value="1"/>
+			</animation>		
+		</effect>
+    </track>	  	  
+	 
+	 
+
+
+	<track source="love.caf" width="720" height="1440" clipStart="1000" clipDuration="3080" blendingMode="screen">
+	</track>
+	
+	<track source="normal.png" width="360" height="720" clipStart="0" clipDuration="4080">
+		<effect name="transform">
+		    <param name="scaleX" value="2"/>
+			<param name="scaleY" value="2"/>
+			<animation paramName="opacity">
+				<key time="0" value="0"/>
+				<key time="1000" value="1"/>
+			</animation>		
+		</effect>
+	</track>
+</storyboard>

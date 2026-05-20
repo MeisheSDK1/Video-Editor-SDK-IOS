@@ -1,0 +1,6 @@
+framework module NvAlbum {
+  umbrella header "NvAlbum-umbrella.h"
+
+  export *
+  module * { export * }
+}

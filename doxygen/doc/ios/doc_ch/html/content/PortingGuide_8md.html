@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 开发指南</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">开发指南 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Xcode编辑器开发指南</p>
+<p>1.新建工程</p>
+<p>(a)选择File-&gt;New-&gt;Project来新建工程</p>
+<p>(b)在工程类型界面选择适合的工程类型，点击“Next”</p>
+<p>(c)输入工程名，点击“Next”</p>
+<p>(d)输入工程路径，点击”Create“</p>
+<p><img src="CreateProject_ios.png" alt="" class="inline" title="新建工程"/>   </p>
+<p>2.禁用Bitcode</p>
+<p>(a)在工程设置界面，选择“Build Settings”。</p>
+<p>(b)在搜索框输入“bit code”。</p>
+<p>(c)在“Enable Bitcode”选项卡中选择“No”</p>
+<p><img src="EnableBitcode_ios.png" alt="" class="inline" title="设置Bitcode"/>   </p>
+<p>3.添加SDK头文件和库文件的引用</p>
+<p>(a)在工程设置界面，选择“Build Settings”。</p>
+<p>(b)在搜索框输入“search Paths”。</p>
+<p>(c)在“search paths”中输入SDK的头文件和库文件地址 2.0.0以后版本添加库文件： <img src="AddSearchPaths_ios_2.0.0.png" alt="" class="inline" title="添加头文件"/>   </p>
+<p>旧版添加库文件(2.0.0版以前的)： <img src="AddSearchPaths_ios.png" alt="" class="inline" title="添加头文件"/>   </p>
+<p>4.添加库文件</p>
+<p>(a)在工程设置界面，选择”General“</p>
+<p>(b)找到“Linked Frameworks and Libraries”</p>
+<p>(c)添加SDK库文件</p>
+<p>(d)添加framework库文件 2.0.0以后版本添加库文件： <img src="AddLibs_ios_2.0.0.jpg" alt="" class="inline" title="添加库文件"/>   </p>
+<p>旧版添加库文件(2.0.0版以前的)： <img src="AddLibs_ios.png" alt="" class="inline" title="添加库文件"/>   </p>
+<p>注意：2.0.0版SDK包同时包含模拟器版本，如果最终发布ipa应用程序，则需要移除x86_64模拟版!!!!! <br  />
+这里提供一种移除方式：lipo -remove x86_64 NvStreamingSdkCore -output NvStreamingSdkCore </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1280">
+	
+   <trackGroup>
+   
+	<track source=":1" clipStart="0" clipDuration="4080">
+	
+	   <effect name="lut">
+			<param name="dataFileName" value="cartoon.mslut"/>	
+			<animation paramName="intensity">
+				<key time="0" value="0"/>
+				<key time="832" value="0"/>
+				<key time="833" value="1"/>				
+				<key time="4080" value="1"/>
+			</animation>
+		</effect>
+		
+	    <effect name="transform">
+		    <param name="anchorX" value="anchorXValue"/>
+		    <param name="anchorY" value="anchorYValue"/>
+		</effect>
+	</track>
+	
+	<track source=":1" clipStart="833" clipDuration="3247" blendingMode="screen">
+		
+	    <effect name="transform">
+		    <param name="anchorX" value="anchorXValue"/>
+		    <param name="anchorY" value="anchorYValue"/>	
+		    <param name="opacity" value="0.3"/>	
+		</effect>
+	</track>
+	
+		<effect name="transform">	
+			<animation paramName="scaleX">
+				<key time="466" value="1"/>
+				<key time="500" value="1.01"/>
+				<key time="533" value="1.02"/>
+				<key time="567" value="1.034"/>
+				<key time="600" value="1.055"/>
+				<key time="633" value="1.085"/>
+				<key time="667" value="1.125"/>
+				<key time="700" value="1.18"/>
+				<key time="733" value="1.26"/>
+				<key time="767" value="1.383"/>
+				<key time="800" value="1.67"/>
+				<key time="833" value="1.9"/>				
+				<key time="3247" value="2.25"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="466" value="1"/>
+				<key time="500" value="1.01"/>
+				<key time="533" value="1.02"/>
+				<key time="567" value="1.034"/>
+				<key time="600" value="1.055"/>
+				<key time="633" value="1.085"/>
+				<key time="667" value="1.125"/>
+				<key time="700" value="1.18"/>
+				<key time="733" value="1.26"/>
+				<key time="767" value="1.383"/>
+				<key time="800" value="1.67"/>
+				<key time="833" value="1.9"/>
+				<key time="3247" value="2.25"/>
+			</animation>
+		</effect>		
+	</trackGroup>
+	
+	<track source="cartoon.png" width="720" height="1440" clipStart="833" clipDuration="3247">
+	
+		<effect name="transform">	
+			<animation paramName="scaleX">
+                 <key time="0" value="1" curveMode="inOutSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="3247" value="1.1"/>
+            </animation>
+			<animation paramName="scaleY">
+                 <key time="0" value="1" curveMode="inOutSine" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="3247" value="1.1"/>
+            </animation>
+		</effect>		
+	</track>
+	
+</storyboard>

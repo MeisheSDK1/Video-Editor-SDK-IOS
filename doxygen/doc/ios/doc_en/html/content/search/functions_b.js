@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['onaudiosamplearrived_3a_3731',['onAudioSampleArrived:',['../protocolNvsStreamingContextDelegate-p.html#a1b83f8d7f66421e96d8c274507873580',1,'NvsStreamingContextDelegate-p']]],
+  ['onaudiosamplearrived_3aaudiosample_3a_3732',['onAudioSampleArrived:audioSample:',['../protocolNvsStreamingContextDelegate-p.html#a9cfc1799c309553173a9ea9174582568',1,'NvsStreamingContextDelegate-p']]],
+  ['ondebuglogarrived_3alogstr_3a_3733',['onDebugLogArrived:logStr:',['../protocolNvsEffectSdkContextDebugLogDelegate-p.html#ad9161c799b19b3fb0a5472b4f596f019',1,'NvsEffectSdkContextDebugLogDelegate-p::onDebugLogArrived:logStr:()'],['../protocolNvsStreamingContextDebugLogDelegate-p.html#a689f3b5a821ab7c96777c4d9be69018e',1,'NvsStreamingContextDebugLogDelegate-p::onDebugLogArrived:logStr:()']]],
+  ['onfinished_3abeats_3aerrortype_3a_3734',['onFinished:beats:errorType:',['../protocolNvsBeatDetectionDelegate-p.html#a96c22552fe7cda628fcaa552f34781a6',1,'NvsBeatDetectionDelegate-p']]],
+  ['ongeneratetemplatepackagefinished_3aerror_3a_3735',['onGenerateTemplatePackageFinished:error:',['../protocolNvsAssetPackageManagerGenerateTemplateDelegate-p.html#ac38430557d458e1347113a0842ada274',1,'NvsAssetPackageManagerGenerateTemplateDelegate-p']]],
+  ['onhardwareerror_3astringinfo_3a_3736',['onHardwareError:stringInfo:',['../protocolNvsStreamingContextDelegate-p.html#aa8a1c26fcfa0b7c172835b22b2c4a110',1,'NvsStreamingContextDelegate-p']]],
+  ['onimagegrabbedarrived_3aimage_3atimestamp_3a_3737',['onImageGrabbedArrived:image:timestamp:',['../protocolNvsImageGrabberDelegate-p.html#ae40df9c32c0b9d373f4a6446430318ec',1,'NvsImageGrabberDelegate-p']]],
+  ['onimagegrabbedarrived_3atimestamp_3a_3738',['onImageGrabbedArrived:timestamp:',['../protocolNvsImageGrabberDelegate-p.html#a222254cc8ccf95a69f2b9b806ae1a855',1,'NvsImageGrabberDelegate-p']]],
+  ['onmediaerror_3a_3739',['onMediaError:',['../protocolNvsStreamingContextDelegate-p.html#ac716e11581bd419e2cb13c5b05fdffed',1,'NvsStreamingContextDelegate-p']]],
+  ['onparsererror_3a_3740',['onParserError:',['../protocolAIParserDelegate-p.html#aeb36080cb777864aa73e9dc33e9c0ca7',1,'AIParserDelegate-p']]],
+  ['onparserfinished_3ascdpath_3a_3741',['onParserFinished:scdPath:',['../protocolAIParserDelegate-p.html#ac2fd0f25af599323e01abfc78c895f36',1,'AIParserDelegate-p']]],
+  ['onparserprogress_3amediapath_3aprogress_3a_3742',['onParserProgress:mediaPath:progress:',['../protocolAIParserDelegate-p.html#a89521fdd48dc05e53c968aac0eebad76',1,'AIParserDelegate-p']]],
+  ['onparserstarted_3ataskid_3a_3743',['onParserStarted:taskId:',['../protocolAIParserDelegate-p.html#a1dfe98e0d13d65cc947eed28183652a8',1,'AIParserDelegate-p']]],
+  ['onplaybackexception_3aexceptiontype_3aexceptionstring_3a_3744',['onPlaybackException:exceptionType:exceptionString:',['../protocolNvsStreamingContextDelegate-p.html#a5d6529f9e9e94bc19b2db12a01f8f1a8',1,'NvsStreamingContextDelegate-p']]],
+  ['onprogress_3a_3745',['onProgress:',['../protocolNvsBeatDetectionDelegate-p.html#a2a0552aa2821acdd56eb242621dc8424',1,'NvsBeatDetectionDelegate-p']]],
+  ['onwebrequestwaitstatuschange_3awaiting_3a_3746',['onWebRequestWaitStatusChange:waiting:',['../protocolNvsStreamingContextWebDelegate-p.html#a6eddbb9f1237dc0e301aa57dfba2fa1a',1,'NvsStreamingContextWebDelegate-p']]]
+];

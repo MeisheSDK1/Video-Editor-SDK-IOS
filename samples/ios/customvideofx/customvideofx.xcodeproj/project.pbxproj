@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		584A57052EFBAEBE00E344C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584A57042EFBAEBE00E344C9 /* ViewController.m */; };
+		584A57082EFBB9D300E344C9 /* MyCustomVideoFx2.m in Sources */ = {isa = PBXBuildFile; fileRef = 584A57072EFBB9D300E344C9 /* MyCustomVideoFx2.m */; };
+		584A5D672F028FA900E344C9 /* PixelBufferTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 584A5D662F028FA900E344C9 /* PixelBufferTool.m */; };
+		58CC658C2ECD887400291402 /* NvTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CC658B2ECD887400291402 /* NvTimelineViewController.m */; };
+		58CC658F2ECD8C1000291402 /* PhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CC658E2ECD8C1000291402 /* PhotoPickerController.m */; };
+		83B01BCD20859BBE00829DC3 /* NvStreamingSdkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B01BCB20859BB900829DC3 /* NvStreamingSdkCore.framework */; };
+		83B01BCE20859BBE00829DC3 /* NvStreamingSdkCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83B01BCB20859BB900829DC3 /* NvStreamingSdkCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4C351E31F308EC1000FED65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C351E21F308EC1000FED65 /* main.m */; };
+		D4C351E61F308EC1000FED65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C351E51F308EC1000FED65 /* AppDelegate.m */; };
+		D4C351E91F308EC1000FED65 /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C351E81F308EC1000FED65 /* CaptureViewController.m */; };
+		D4C351EC1F308EC2000FED65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C351EA1F308EC2000FED65 /* Main.storyboard */; };
+		D4C351EE1F308EC2000FED65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C351ED1F308EC2000FED65 /* Assets.xcassets */; };
+		D4C351F11F308EC2000FED65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C351EF1F308EC2000FED65 /* LaunchScreen.storyboard */; };
+		D4C352171F31ACB4000FED65 /* MyCustomVideoFx.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C352161F31ACB4000FED65 /* MyCustomVideoFx.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83B01BCF20859BBF00829DC3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				83B01BCE20859BBE00829DC3 /* NvStreamingSdkCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0CA693B52A061B7C00192B37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		0CA693B62A061B8800192B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		584A57032EFBAEBE00E344C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		584A57042EFBAEBE00E344C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		584A57062EFBB9D300E344C9 /* MyCustomVideoFx2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCustomVideoFx2.h; sourceTree = "<group>"; };
+		584A57072EFBB9D300E344C9 /* MyCustomVideoFx2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCustomVideoFx2.m; sourceTree = "<group>"; };
+		584A5D652F028FA900E344C9 /* PixelBufferTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelBufferTool.h; sourceTree = "<group>"; };
+		584A5D662F028FA900E344C9 /* PixelBufferTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PixelBufferTool.m; sourceTree = "<group>"; };
+		58CC658A2ECD887400291402 /* NvTimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NvTimelineViewController.h; sourceTree = "<group>"; };
+		58CC658B2ECD887400291402 /* NvTimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NvTimelineViewController.m; sourceTree = "<group>"; };
+		58CC658D2ECD8C1000291402 /* PhotoPickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoPickerController.h; sourceTree = "<group>"; };
+		58CC658E2ECD8C1000291402 /* PhotoPickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerController.m; sourceTree = "<group>"; };
+		83B01BCB20859BB900829DC3 /* NvStreamingSdkCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NvStreamingSdkCore.framework; path = ../../../lib/ios/NvStreamingSdkCore.framework; sourceTree = "<group>"; };
+		9BDC99201F7CD8AC001E7C00 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		D4C351DE1F308EC1000FED65 /* customvideofx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customvideofx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C351E21F308EC1000FED65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4C351E41F308EC1000FED65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4C351E51F308EC1000FED65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4C351E71F308EC1000FED65 /* CaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
+		D4C351E81F308EC1000FED65 /* CaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureViewController.m; sourceTree = "<group>"; };
+		D4C351EB1F308EC2000FED65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4C351ED1F308EC2000FED65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4C351F01F308EC2000FED65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4C351F21F308EC2000FED65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4C351FF1F319FFA000FED65 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D4C352011F31A00A000FED65 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D4C352031F31A01D000FED65 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		D4C352051F31A03F000FED65 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D4C352071F31A04F000FED65 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D4C352091F31A063000FED65 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D4C3520B1F31A0A7000FED65 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		D4C3520D1F31A0C7000FED65 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D4C3520F1F31A0E2000FED65 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		D4C352111F31A0F9000FED65 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D4C352131F31A110000FED65 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		D4C352151F31ACB4000FED65 /* MyCustomVideoFx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomVideoFx.h; sourceTree = "<group>"; };
+		D4C352161F31ACB4000FED65 /* MyCustomVideoFx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomVideoFx.m; sourceTree = "<group>"; };
+		D4C352181F31C26E000FED65 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D4C3521A1F31C27B000FED65 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4C351DB1F308EC1000FED65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B01BCD20859BBE00829DC3 /* NvStreamingSdkCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58CC65C72ECD91FF00291402 /* editsample */ = {
+			isa = PBXGroup;
+			children = (
+				58CC658A2ECD887400291402 /* NvTimelineViewController.h */,
+				58CC658B2ECD887400291402 /* NvTimelineViewController.m */,
+				58CC658D2ECD8C1000291402 /* PhotoPickerController.h */,
+				58CC658E2ECD8C1000291402 /* PhotoPickerController.m */,
+			);
+			path = editsample;
+			sourceTree = "<group>";
+		};
+		D4C351D51F308EC1000FED65 = {
+			isa = PBXGroup;
+			children = (
+				D4C351E01F308EC1000FED65 /* customvideofx */,
+				D4C351DF1F308EC1000FED65 /* Products */,
+				D4C351F81F3199E2000FED65 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4C351DF1F308EC1000FED65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4C351DE1F308EC1000FED65 /* customvideofx.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4C351E01F308EC1000FED65 /* customvideofx */ = {
+			isa = PBXGroup;
+			children = (
+				58CC65C72ECD91FF00291402 /* editsample */,
+				D4C351E41F308EC1000FED65 /* AppDelegate.h */,
+				D4C351E51F308EC1000FED65 /* AppDelegate.m */,
+				D4C351E71F308EC1000FED65 /* CaptureViewController.h */,
+				D4C351E81F308EC1000FED65 /* CaptureViewController.m */,
+				584A57032EFBAEBE00E344C9 /* ViewController.h */,
+				584A57042EFBAEBE00E344C9 /* ViewController.m */,
+				D4C351EA1F308EC2000FED65 /* Main.storyboard */,
+				D4C351ED1F308EC2000FED65 /* Assets.xcassets */,
+				D4C351EF1F308EC2000FED65 /* LaunchScreen.storyboard */,
+				D4C351F21F308EC2000FED65 /* Info.plist */,
+				D4C351E11F308EC1000FED65 /* Supporting Files */,
+				D4C352151F31ACB4000FED65 /* MyCustomVideoFx.h */,
+				D4C352161F31ACB4000FED65 /* MyCustomVideoFx.m */,
+				584A5D652F028FA900E344C9 /* PixelBufferTool.h */,
+				584A5D662F028FA900E344C9 /* PixelBufferTool.m */,
+				584A57062EFBB9D300E344C9 /* MyCustomVideoFx2.h */,
+				584A57072EFBB9D300E344C9 /* MyCustomVideoFx2.m */,
+			);
+			path = customvideofx;
+			sourceTree = "<group>";
+		};
+		D4C351E11F308EC1000FED65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4C351E21F308EC1000FED65 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4C351F81F3199E2000FED65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83B01BCB20859BB900829DC3 /* NvStreamingSdkCore.framework */,
+				9BDC99201F7CD8AC001E7C00 /* Accelerate.framework */,
+				D4C3521A1F31C27B000FED65 /* GLKit.framework */,
+				D4C352181F31C26E000FED65 /* OpenGLES.framework */,
+				D4C352131F31A110000FED65 /* AssetsLibrary.framework */,
+				D4C352111F31A0F9000FED65 /* MobileCoreServices.framework */,
+				D4C3520F1F31A0E2000FED65 /* CoreMotion.framework */,
+				D4C3520D1F31A0C7000FED65 /* CoreMedia.framework */,
+				D4C3520B1F31A0A7000FED65 /* Photos.framework */,
+				D4C352091F31A063000FED65 /* libz.tbd */,
+				D4C352071F31A04F000FED65 /* libiconv.tbd */,
+				D4C352051F31A03F000FED65 /* libc++.tbd */,
+				D4C352031F31A01D000FED65 /* VideoToolbox.framework */,
+				D4C352011F31A00A000FED65 /* AVFoundation.framework */,
+				D4C351FF1F319FFA000FED65 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4C351DD1F308EC1000FED65 /* customvideofx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C351F51F308EC2000FED65 /* Build configuration list for PBXNativeTarget "customvideofx" */;
+			buildPhases = (
+				D4C351DA1F308EC1000FED65 /* Sources */,
+				D4C351DB1F308EC1000FED65 /* Frameworks */,
+				D4C351DC1F308EC1000FED65 /* Resources */,
+				83B01BCF20859BBF00829DC3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = customvideofx;
+			productName = customvideofx;
+			productReference = D4C351DE1F308EC1000FED65 /* customvideofx.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4C351D61F308EC1000FED65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = cdv;
+				TargetAttributes = {
+					D4C351DD1F308EC1000FED65 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = GURX554A9Q;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D4C351D91F308EC1000FED65 /* Build configuration list for PBXProject "customvideofx" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Base,
+				"zh-Hans",
+				en,
+			);
+			mainGroup = D4C351D51F308EC1000FED65;
+			productRefGroup = D4C351DF1F308EC1000FED65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4C351DD1F308EC1000FED65 /* customvideofx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4C351DC1F308EC1000FED65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C351F11F308EC2000FED65 /* LaunchScreen.storyboard in Resources */,
+				D4C351EE1F308EC2000FED65 /* Assets.xcassets in Resources */,
+				D4C351EC1F308EC2000FED65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4C351DA1F308EC1000FED65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584A57052EFBAEBE00E344C9 /* ViewController.m in Sources */,
+				58CC658F2ECD8C1000291402 /* PhotoPickerController.m in Sources */,
+				D4C351E91F308EC1000FED65 /* CaptureViewController.m in Sources */,
+				D4C351E61F308EC1000FED65 /* AppDelegate.m in Sources */,
+				584A5D672F028FA900E344C9 /* PixelBufferTool.m in Sources */,
+				D4C352171F31ACB4000FED65 /* MyCustomVideoFx.m in Sources */,
+				D4C351E31F308EC1000FED65 /* main.m in Sources */,
+				58CC658C2ECD887400291402 /* NvTimelineViewController.m in Sources */,
+				584A57082EFBB9D300E344C9 /* MyCustomVideoFx2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4C351EA1F308EC2000FED65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C351EB1F308EC2000FED65 /* Base */,
+				0CA693B52A061B7C00192B37 /* zh-Hans */,
+				0CA693B62A061B8800192B37 /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4C351EF1F308EC2000FED65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C351F01F308EC2000FED65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4C351F31F308EC2000FED65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4C351F41F308EC2000FED65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4C351F61F308EC2000FED65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = ../../../lib/ios;
+				HEADER_SEARCH_PATHS = ../../../lib/ios/NvStreamingSdkCore.framework/Headers;
+				INFOPLIST_FILE = customvideofx/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meicam.customvideofx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4C351F71F308EC2000FED65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = ../../../lib/ios;
+				HEADER_SEARCH_PATHS = ../../../lib/ios/NvStreamingSdkCore.framework/Headers;
+				INFOPLIST_FILE = customvideofx/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meicam.customvideofx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4C351D91F308EC1000FED65 /* Build configuration list for PBXProject "customvideofx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C351F31F308EC2000FED65 /* Debug */,
+				D4C351F41F308EC2000FED65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C351F51F308EC2000FED65 /* Build configuration list for PBXNativeTarget "customvideofx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C351F61F308EC2000FED65 /* Debug */,
+				D4C351F71F308EC2000FED65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4C351D61F308EC1000FED65 /* Project object */;
+}

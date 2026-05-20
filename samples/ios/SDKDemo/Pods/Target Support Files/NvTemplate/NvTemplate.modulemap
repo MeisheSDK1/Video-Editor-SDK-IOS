@@ -1,0 +1,6 @@
+framework module NvTemplate {
+  umbrella header "NvTemplate-umbrella.h"
+
+  export *
+  module * { export * }
+}

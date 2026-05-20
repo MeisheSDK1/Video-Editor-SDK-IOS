@@ -1,0 +1,1429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: NvsEffectRenderCore类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">构造函数</a> &#124;
+<a href="interfaceNvsEffectRenderCore-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">NvsEffectRenderCore类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>特效渲染类  
+ <a href="interfaceNvsEffectRenderCore.html#details">更多...</a></p>
+
+<p><code>#import &lt;<a class="el" href="NvsEffectRenderCore_8h_source.html">NvsEffectRenderCore.h</a>&gt;</code></p>
+<div class="dynheader">
+类 NvsEffectRenderCore 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="interfaceNvsEffectRenderCore.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+构造函数</h2></td></tr>
+<tr class="memitem:a2de41f03c354bd6075e67bfb2999bcde"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a2de41f03c354bd6075e67bfb2999bcde">initialize</a></td></tr>
+<tr class="memdesc:a2de41f03c354bd6075e67bfb2999bcde"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="interfaceNvsEffectRenderCore.html#a2de41f03c354bd6075e67bfb2999bcde">更多...</a><br /></td></tr>
+<tr class="separator:a2de41f03c354bd6075e67bfb2999bcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a17313134cb66ba561e0224c9b7157"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a45a17313134cb66ba561e0224c9b7157">initializeWithFlags:</a></td></tr>
+<tr class="memdesc:a45a17313134cb66ba561e0224c9b7157"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化 如果标志为NvsInitializeFlag_CreateGLContextIfNeed，如果当前的线程没有GLContext，SDK内部会创建GLContext，这个renderCore中的所有API，需要在这个线程中调用  <a href="interfaceNvsEffectRenderCore.html#a45a17313134cb66ba561e0224c9b7157">更多...</a><br /></td></tr>
+<tr class="separator:a45a17313134cb66ba561e0224c9b7157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6125ea67b9a2807b91c72e3c085534c2"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a6125ea67b9a2807b91c72e3c085534c2">cleanUp</a></td></tr>
+<tr class="memdesc:a6125ea67b9a2807b91c72e3c085534c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除NvsEffectRenderCore中的所有资源  <a href="interfaceNvsEffectRenderCore.html#a6125ea67b9a2807b91c72e3c085534c2">更多...</a><br /></td></tr>
+<tr class="separator:a6125ea67b9a2807b91c72e3c085534c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f20e92c8d5370e6018bd36fb9565f8c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a9f20e92c8d5370e6018bd36fb9565f8c">renderEffect:inputTexId:inputVideoResolution:outputTexId:timestamp:flags:</a></td></tr>
+<tr class="memdesc:a9f20e92c8d5370e6018bd36fb9565f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效  <a href="interfaceNvsEffectRenderCore.html#a9f20e92c8d5370e6018bd36fb9565f8c">更多...</a><br /></td></tr>
+<tr class="separator:a9f20e92c8d5370e6018bd36fb9565f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a7384a2176c368406f353bd8835023"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#ae2a7384a2176c368406f353bd8835023">renderEffect:inputTexId:inputBuddyBuffer:physicalOrientation:inputVideoResolution:outputTexId:timestamp:flags:</a></td></tr>
+<tr class="memdesc:ae2a7384a2176c368406f353bd8835023"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效  <a href="interfaceNvsEffectRenderCore.html#ae2a7384a2176c368406f353bd8835023">更多...</a><br /></td></tr>
+<tr class="separator:ae2a7384a2176c368406f353bd8835023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba251a618ea829f166d4c45c03c81e2"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#abba251a618ea829f166d4c45c03c81e2">renderEffects:inputTexId:inputBuddyBuffer:physicalOrientation:inputVideoResolution:outputTexId:timestamp:flags:</a></td></tr>
+<tr class="memdesc:abba251a618ea829f166d4c45c03c81e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效  <a href="interfaceNvsEffectRenderCore.html#abba251a618ea829f166d4c45c03c81e2">更多...</a><br /></td></tr>
+<tr class="separator:abba251a618ea829f166d4c45c03c81e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3659b78a7059bc2362c23e84fbd8b452"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a3659b78a7059bc2362c23e84fbd8b452">renderEffects:inputImage:displayRotation:isFlipHorizontally:physicalOrientation:outputTexId:timestamp:flags:</a></td></tr>
+<tr class="memdesc:a3659b78a7059bc2362c23e84fbd8b452"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效 【特别注意】必须和initialize在同一个线程中使用。如果使用的线程没有OpenGL环境，在调用initializeWithFlags必须带有NvsInitializeFlag_CreateGLContextIfNeed  <a href="interfaceNvsEffectRenderCore.html#a3659b78a7059bc2362c23e84fbd8b452">更多...</a><br /></td></tr>
+<tr class="separator:a3659b78a7059bc2362c23e84fbd8b452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0083e60081d937d278c531af408a8071"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a0083e60081d937d278c531af408a8071">renderEffect:inputImage:displayRotation:isFlipHorizontally:timestamp:flags:outputFrameFormat:outputFrameIsBT601:outputImage:</a></td></tr>
+<tr class="memdesc:a0083e60081d937d278c531af408a8071"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效 【特别注意】必须和initialize在同一个线程中使用。如果使用的线程没有OpenGL环境，在调用initializeWithFlags必须带有NvsInitializeFlag_CreateGLContextIfNeed  <a href="interfaceNvsEffectRenderCore.html#a0083e60081d937d278c531af408a8071">更多...</a><br /></td></tr>
+<tr class="separator:a0083e60081d937d278c531af408a8071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893fb373e8638084cbbd6ff9edb71052"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a893fb373e8638084cbbd6ff9edb71052">renderEffects:inputImage:displayRotation:isFlipHorizontally:timestamp:flags:outputFrameFormat:outputFrameIsBT601:outputImage:</a></td></tr>
+<tr class="memdesc:a893fb373e8638084cbbd6ff9edb71052"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效 【特别注意】必须和initialize在同一个线程中使用。如果使用的线程没有OpenGL环境，在调用initializeWithFlags必须带有NvsInitializeFlag_CreateGLContextIfNeed  <a href="interfaceNvsEffectRenderCore.html#a893fb373e8638084cbbd6ff9edb71052">更多...</a><br /></td></tr>
+<tr class="separator:a893fb373e8638084cbbd6ff9edb71052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0fe1aa5dc3de358b81b28284efe023"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#afb0fe1aa5dc3de358b81b28284efe023">renderEffects:inputImage:outputImage:options:</a></td></tr>
+<tr class="memdesc:afb0fe1aa5dc3de358b81b28284efe023"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效 【特别注意】必须和initialize在同一个线程中使用。如果使用的线程没有OpenGL环境，在调用initializeWithFlags必须带有NvsInitializeFlag_CreateGLContextIfNeed  <a href="interfaceNvsEffectRenderCore.html#afb0fe1aa5dc3de358b81b28284efe023">更多...</a><br /></td></tr>
+<tr class="separator:afb0fe1aa5dc3de358b81b28284efe023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a753aa97ccce2384fb87ad6908d240676"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a753aa97ccce2384fb87ad6908d240676">renderEffects:inputImage:options:</a></td></tr>
+<tr class="memdesc:a753aa97ccce2384fb87ad6908d240676"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效 【特别注意】渲染结果覆盖到输入图像  <a href="interfaceNvsEffectRenderCore.html#a753aa97ccce2384fb87ad6908d240676">更多...</a><br /></td></tr>
+<tr class="separator:a753aa97ccce2384fb87ad6908d240676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ab92b3d6ab2613d196460fbabc3208"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a55ab92b3d6ab2613d196460fbabc3208">renderEffect:inputTexIds:inputVideoResolution:outputTexId:timestamp:flags:</a></td></tr>
+<tr class="memdesc:a55ab92b3d6ab2613d196460fbabc3208"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效 渲染需要多个输入的Texture的特效，多个输入texture的大小都必须一致  <a href="interfaceNvsEffectRenderCore.html#a55ab92b3d6ab2613d196460fbabc3208">更多...</a><br /></td></tr>
+<tr class="separator:a55ab92b3d6ab2613d196460fbabc3208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba1c83144f41ea04e0c3edd53635c24"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#afba1c83144f41ea04e0c3edd53635c24">calcEffectOutputSize:inputTexs:intputTexCount:expectVideoResolution:outputTex:timestamp:flags:</a></td></tr>
+<tr class="memdesc:afba1c83144f41ea04e0c3edd53635c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算变画幅特效输出大小  <a href="interfaceNvsEffectRenderCore.html#afba1c83144f41ea04e0c3edd53635c24">更多...</a><br /></td></tr>
+<tr class="separator:afba1c83144f41ea04e0c3edd53635c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355ab363fc7dd79dbbaff9ed64b5a0a4"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a355ab363fc7dd79dbbaff9ed64b5a0a4">renderVariantSizeEffect:inputTexs:intputTexSize:outputTex:timestamp:flags:</a></td></tr>
+<tr class="memdesc:a355ab363fc7dd79dbbaff9ed64b5a0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染变画幅特效  <a href="interfaceNvsEffectRenderCore.html#a355ab363fc7dd79dbbaff9ed64b5a0a4">更多...</a><br /></td></tr>
+<tr class="separator:a355ab363fc7dd79dbbaff9ed64b5a0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ce645160816282c43fbcb4a2ce8385"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a96ce645160816282c43fbcb4a2ce8385">renderEffects:inputTex:inputBuddyBuffer:physicalOrientation:outputTex:timestamp:flags:</a></td></tr>
+<tr class="memdesc:a96ce645160816282c43fbcb4a2ce8385"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染特效  <a href="interfaceNvsEffectRenderCore.html#a96ce645160816282c43fbcb4a2ce8385">更多...</a><br /></td></tr>
+<tr class="separator:a96ce645160816282c43fbcb4a2ce8385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab306768932484ac3a0ddb5b701f4f8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a8ab306768932484ac3a0ddb5b701f4f8">clearEffectResources:</a></td></tr>
+<tr class="memdesc:a8ab306768932484ac3a0ddb5b701f4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除特效中携带的OPenGL资源  <a href="interfaceNvsEffectRenderCore.html#a8ab306768932484ac3a0ddb5b701f4f8">更多...</a><br /></td></tr>
+<tr class="separator:a8ab306768932484ac3a0ddb5b701f4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6e430dcf240f5ec78f0e95444554a0"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#adb6e430dcf240f5ec78f0e95444554a0">clearCacheResources</a></td></tr>
+<tr class="memdesc:adb6e430dcf240f5ec78f0e95444554a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除缓存资源  <a href="interfaceNvsEffectRenderCore.html#adb6e430dcf240f5ec78f0e95444554a0">更多...</a><br /></td></tr>
+<tr class="separator:adb6e430dcf240f5ec78f0e95444554a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add22a6cee042845d9778055646fd1915"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#add22a6cee042845d9778055646fd1915">uploadPixelBufferToTexture:displayRotation:horizontalFlip:outputTexId:</a></td></tr>
+<tr class="memdesc:add22a6cee042845d9778055646fd1915"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传buffer到GPU纹理  <a href="interfaceNvsEffectRenderCore.html#add22a6cee042845d9778055646fd1915">更多...</a><br /></td></tr>
+<tr class="separator:add22a6cee042845d9778055646fd1915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74aa0ec0acdf326298b39b1eea097cdd"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a74aa0ec0acdf326298b39b1eea097cdd">uploadPixelBufferToTexture:horizontalFlip:outputTexId:</a></td></tr>
+<tr class="memdesc:a74aa0ec0acdf326298b39b1eea097cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传buffer到GPU纹理  <a href="interfaceNvsEffectRenderCore.html#a74aa0ec0acdf326298b39b1eea097cdd">更多...</a><br /></td></tr>
+<tr class="separator:a74aa0ec0acdf326298b39b1eea097cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65592835827d264122c412e907d82950"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a65592835827d264122c412e907d82950">uploadPixelBufferToTexture:displayRotation:horizontalFlip:outputTex:</a></td></tr>
+<tr class="memdesc:a65592835827d264122c412e907d82950"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传buffer到GPU纹理  <a href="interfaceNvsEffectRenderCore.html#a65592835827d264122c412e907d82950">更多...</a><br /></td></tr>
+<tr class="separator:a65592835827d264122c412e907d82950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b90968cd19efe59603cb84f0a20b89"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a61b90968cd19efe59603cb84f0a20b89">downloadPixelBufferFromTexture:inputVideoResolution:outputFrameFormat:isBT601:outputFrame:</a></td></tr>
+<tr class="memdesc:a61b90968cd19efe59603cb84f0a20b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">从GPU纹理下传到buffer  <a href="interfaceNvsEffectRenderCore.html#a61b90968cd19efe59603cb84f0a20b89">更多...</a><br /></td></tr>
+<tr class="separator:a61b90968cd19efe59603cb84f0a20b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b9129af807430d4b5678410b0b6ff4"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNvsEffectRenderCore.html#a73b9129af807430d4b5678410b0b6ff4">downloadPixelBufferFromTexture:outputFrameFormat:outputYUVMatrix:outputColorTransfer:outputColorPrimaries:outputFrame:</a></td></tr>
+<tr class="memdesc:a73b9129af807430d4b5678410b0b6ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">从GPU纹理下传到buffer  <a href="interfaceNvsEffectRenderCore.html#a73b9129af807430d4b5678410b0b6ff4">更多...</a><br /></td></tr>
+<tr class="separator:a73b9129af807430d4b5678410b0b6ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>特效渲染类 </p>
+<p>特效渲染类整个SDK的特效渲染入口。 </p><dl class="section warning"><dt>警告</dt><dd>NvsEffectRenderCore类中，所有public API都必须在OpenGL线程使用！！！ </dd></dl>
+</div><h2 class="groupheader">函数文档</h2>
+<a id="afba1c83144f41ea04e0c3edd53635c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba1c83144f41ea04e0c3edd53635c24">&#9670;&nbsp;</a></span>calcEffectOutputSize:inputTexs:intputTexCount:expectVideoResolution:outputTex:timestamp:flags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) calcEffectOutputSize: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interfaceNvsEffect.html">NvsEffect</a> *)&#160;</td>
+          <td class="paramname"><em>effect</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputTexs:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectGPUTexture.html">NvsEffectGPUTexture</a> *)&#160;</td>
+          <td class="paramname"><em>inputTextureArray</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">intputTexCount:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>texArrayCount</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">expectVideoResolution:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectVideoResolution.html">NvsEffectVideoResolution</a> *)&#160;</td>
+          <td class="paramname"><em>videoResolution</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTex:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectGPUTextureInfo.html">NvsEffectGPUTextureInfo</a> *)&#160;</td>
+          <td class="paramname"><em>outputTexInfo</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算变画幅特效输出大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputTextureArray</td><td>输入图像组 </td></tr>
+    <tr><td class="paramname">texArrayCount</td><td>输入纹理的数组数量 </td></tr>
+    <tr><td class="paramname">videoResolution</td><td>期望输出的视频解析度 </td></tr>
+    <tr><td class="paramname">outputTex</td><td>输出纹理 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>3.9.1 </dd></dl>
+
+</div>
+</div>
+<a id="a6125ea67b9a2807b91c72e3c085534c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6125ea67b9a2807b91c72e3c085534c2">&#9670;&nbsp;</a></span>cleanUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) cleanUp </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除NvsEffectRenderCore中的所有资源 </p>
+<dl class="section since"><dt>自从</dt><dd>2.14.0 </dd></dl>
+
+</div>
+</div>
+<a id="adb6e430dcf240f5ec78f0e95444554a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb6e430dcf240f5ec78f0e95444554a0">&#9670;&nbsp;</a></span>clearCacheResources</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) clearCacheResources </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除缓存资源 </p>
+<dl class="section since"><dt>自从</dt><dd>2.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a8ab306768932484ac3a0ddb5b701f4f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab306768932484ac3a0ddb5b701f4f8">&#9670;&nbsp;</a></span>clearEffectResources:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) clearEffectResources: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interfaceNvsEffect.html">NvsEffect</a> *)&#160;</td>
+          <td class="paramname"><em>effect</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除特效中携带的OPenGL资源 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>要清除的特效对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>自从</dt><dd>2.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a61b90968cd19efe59603cb84f0a20b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b90968cd19efe59603cb84f0a20b89">&#9670;&nbsp;</a></span>downloadPixelBufferFromTexture:inputVideoResolution:outputFrameFormat:isBT601:outputFrame:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) downloadPixelBufferFromTexture: </td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>inputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputVideoResolution:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectVideoResolution.html">NvsEffectVideoResolution</a> *)&#160;</td>
+          <td class="paramname"><em>inputVideoResolution</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputFrameFormat:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectCommonDef_8h.html#a80f7c9d0e2e5fd6fb9dc556efc599fea">NvsEffectVideoFramePixelFormat</a>)&#160;</td>
+          <td class="paramname"><em>format</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">isBT601:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>is601</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputFrame:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef *)&#160;</td>
+          <td class="paramname"><em>frameBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从GPU纹理下传到buffer </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputTexId</td><td>输入纹理 </td></tr>
+    <tr><td class="paramname">inputVideoResolution</td><td>输入纹理的视频解析度 </td></tr>
+    <tr><td class="paramname">outputFrameFormat</td><td>返回下传的buffer格式(BGRA or YUV420 format) </td></tr>
+    <tr><td class="paramname">isBT601</td><td>是否按照BT.601的标准转化,如果返回下传的buffer格式为YUV,这个参数有意义 </td></tr>
+    <tr><td class="paramname">frameBuffer</td><td>返回下传的buffer(BGRA or YUV420 format) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.12.0 </dd></dl>
+
+</div>
+</div>
+<a id="a73b9129af807430d4b5678410b0b6ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b9129af807430d4b5678410b0b6ff4">&#9670;&nbsp;</a></span>downloadPixelBufferFromTexture:outputFrameFormat:outputYUVMatrix:outputColorTransfer:outputColorPrimaries:outputFrame:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) downloadPixelBufferFromTexture: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectGPUTexture.html">NvsEffectGPUTexture</a> *)&#160;</td>
+          <td class="paramname"><em>inputTexture</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputFrameFormat:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectCommonDef_8h.html#a80f7c9d0e2e5fd6fb9dc556efc599fea">NvsEffectVideoFramePixelFormat</a>)&#160;</td>
+          <td class="paramname"><em>format</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputYUVMatrix:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectCommonDef_8h.html#a1b518976f9a89bd559361fc40b207c4c">NvsEffectVideoFrameYUVColorMatrix</a>)&#160;</td>
+          <td class="paramname"><em>colorMatrix</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputColorTransfer:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectCommonDef_8h.html#a3bd54dc882e094db4760ebd35c199a93">NvsEffectVideoFrameColorTransfer</a>)&#160;</td>
+          <td class="paramname"><em>colorTransfer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputColorPrimaries:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectCommonDef_8h.html#a55a721cadbb3deb65ad76df3f941d568">NvsEffectVideoFrameColorPrimaries</a>)&#160;</td>
+          <td class="paramname"><em>colorPrimaries</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputFrame:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef *)&#160;</td>
+          <td class="paramname"><em>frameBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从GPU纹理下传到buffer </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputTexture</td><td>输入纹理 </td></tr>
+    <tr><td class="paramname">outputFrameFormat</td><td>返回下传的buffer格式(BGRA or YUV420 format) </td></tr>
+    <tr><td class="paramname">colorMatrix</td><td>输出转化矩阵,如果返回下传的buffer格式为YUV,这个参数有意义 </td></tr>
+    <tr><td class="paramname">colorTransfer</td><td>输出颜色传输曲线 </td></tr>
+    <tr><td class="paramname">colorPrimaries</td><td>输出色域 </td></tr>
+    <tr><td class="paramname">frameBuffer</td><td>返回下传的buffer(BGRA or YUV420 format) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>3.15.1 </dd></dl>
+
+</div>
+</div>
+<a id="a2de41f03c354bd6075e67bfb2999bcde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de41f03c354bd6075e67bfb2999bcde">&#9670;&nbsp;</a></span>initialize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) initialize </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+<dl class="section return"><dt>返回</dt><dd>成功返回YES，失败返回NO </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a45a17313134cb66ba561e0224c9b7157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a17313134cb66ba561e0224c9b7157">&#9670;&nbsp;</a></span>initializeWithFlags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) initializeWithFlags: </td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>falgs</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 如果标志为NvsInitializeFlag_CreateGLContextIfNeed，如果当前的线程没有GLContext，SDK内部会创建GLContext，这个renderCore中的所有API，需要在这个线程中调用 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">falgs</td><td>参考NvsInitializeFlags </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回YES，失败返回NO </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a0083e60081d937d278c531af408a8071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0083e60081d937d278c531af408a8071">&#9670;&nbsp;</a></span>renderEffect:inputImage:displayRotation:isFlipHorizontally:timestamp:flags:outputFrameFormat:outputFrameIsBT601:outputImage:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffect: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interfaceNvsEffect.html">NvsEffect</a> *)&#160;</td>
+          <td class="paramname"><em>effect</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputImage:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>inputImage</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">displayRotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>rotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">isFlipHorizontally:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>isFlip</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputFrameFormat:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectCommonDef_8h.html#a80f7c9d0e2e5fd6fb9dc556efc599fea">NvsEffectVideoFramePixelFormat</a>)&#160;</td>
+          <td class="paramname"><em>format</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputFrameIsBT601:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>is601</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputImage:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef *)&#160;</td>
+          <td class="paramname"><em>ouputImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 【特别注意】必须和initialize在同一个线程中使用。如果使用的线程没有OpenGL环境，在调用initializeWithFlags必须带有NvsInitializeFlag_CreateGLContextIfNeed </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputImage</td><td>输入图像 </td></tr>
+    <tr><td class="paramname">rotation</td><td>输入图像旋转角度，只能是0， 90， 180， 270 </td></tr>
+    <tr><td class="paramname">isFlip</td><td>是否需要横向翻转 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+    <tr><td class="paramname">format</td><td>输出图像格式请参数 NvsEffectVideoFramePixelFormat </td></tr>
+    <tr><td class="paramname">is601</td><td>如果输出图像是Nv12或者YUV420P格式才有意义 </td></tr>
+    <tr><td class="paramname">ouputImage</td><td>输出图像数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.14.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae2a7384a2176c368406f353bd8835023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a7384a2176c368406f353bd8835023">&#9670;&nbsp;</a></span>renderEffect:inputTexId:inputBuddyBuffer:physicalOrientation:inputVideoResolution:outputTexId:timestamp:flags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffect: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interfaceNvsEffect.html">NvsEffect</a> *)&#160;</td>
+          <td class="paramname"><em>effect</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>inputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputBuddyBuffer:</td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="structNvsEffectVideoFrameInfo.html">NvsEffectVideoFrameInfo</a> *)&#160;</td>
+          <td class="paramname"><em>inputBuddyBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">physicalOrientation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>physicalOrientation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputVideoResolution:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectVideoResolution.html">NvsEffectVideoResolution</a> *)&#160;</td>
+          <td class="paramname"><em>inputVideoResolution</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>outputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputTexId</td><td>输入纹理 </td></tr>
+    <tr><td class="paramname">inputBuddyBuffer</td><td>输入纹理的伴随buffer(支持NV12或BGRA或YUV420格式) </td></tr>
+    <tr><td class="paramname">physicalOrientation</td><td>设备方向 </td></tr>
+    <tr><td class="paramname">inputVideoResolution</td><td>输入纹理的视频解析度 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.5.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9f20e92c8d5370e6018bd36fb9565f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f20e92c8d5370e6018bd36fb9565f8c">&#9670;&nbsp;</a></span>renderEffect:inputTexId:inputVideoResolution:outputTexId:timestamp:flags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffect: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interfaceNvsEffect.html">NvsEffect</a> *)&#160;</td>
+          <td class="paramname"><em>effect</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>inputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputVideoResolution:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectVideoResolution.html">NvsEffectVideoResolution</a> *)&#160;</td>
+          <td class="paramname"><em>inputVideoResolution</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>outputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputTexId</td><td>输入纹理 </td></tr>
+    <tr><td class="paramname">inputVideoResolution</td><td>输入纹理的视频解析度 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a55ab92b3d6ab2613d196460fbabc3208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ab92b3d6ab2613d196460fbabc3208">&#9670;&nbsp;</a></span>renderEffect:inputTexIds:inputVideoResolution:outputTexId:timestamp:flags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffect: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interfaceNvsEffect.html">NvsEffect</a> *)&#160;</td>
+          <td class="paramname"><em>effect</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputTexIds:</td>
+          <td></td>
+          <td class="paramtype">(NSArray *)&#160;</td>
+          <td class="paramname"><em>inputTextures</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputVideoResolution:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectVideoResolution.html">NvsEffectVideoResolution</a> *)&#160;</td>
+          <td class="paramname"><em>inputVideoResolution</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>outputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 渲染需要多个输入的Texture的特效，多个输入texture的大小都必须一致 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputTextures</td><td>输入图像组 </td></tr>
+    <tr><td class="paramname">inputVideoResolution</td><td>输入纹理的视频解析度 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.14.0 </dd></dl>
+
+</div>
+</div>
+<a id="a3659b78a7059bc2362c23e84fbd8b452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3659b78a7059bc2362c23e84fbd8b452">&#9670;&nbsp;</a></span>renderEffects:inputImage:displayRotation:isFlipHorizontally:physicalOrientation:outputTexId:timestamp:flags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffects: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; <a class="el" href="interfaceNvsEffect.html">NvsEffect</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>effects</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputImage:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>inputImage</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">displayRotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>displayRotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">isFlipHorizontally:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>isFlip</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">physicalOrientation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>physicalOrientation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>outputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 【特别注意】必须和initialize在同一个线程中使用。如果使用的线程没有OpenGL环境，在调用initializeWithFlags必须带有NvsInitializeFlag_CreateGLContextIfNeed </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effects</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputImage</td><td>输入图像 </td></tr>
+    <tr><td class="paramname">displayRotation</td><td>输入图像旋转角度，只能是0， 90， 180， 270 </td></tr>
+    <tr><td class="paramname">isFlip</td><td>是否需要横向翻转 </td></tr>
+    <tr><td class="paramname">physicalOrientation</td><td>设备方向 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>3.7.1 </dd></dl>
+
+</div>
+</div>
+<a id="a893fb373e8638084cbbd6ff9edb71052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893fb373e8638084cbbd6ff9edb71052">&#9670;&nbsp;</a></span>renderEffects:inputImage:displayRotation:isFlipHorizontally:timestamp:flags:outputFrameFormat:outputFrameIsBT601:outputImage:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffects: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; <a class="el" href="interfaceNvsEffect.html">NvsEffect</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>effects</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputImage:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>inputImage</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">displayRotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>rotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">isFlipHorizontally:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>isFlip</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputFrameFormat:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectCommonDef_8h.html#a80f7c9d0e2e5fd6fb9dc556efc599fea">NvsEffectVideoFramePixelFormat</a>)&#160;</td>
+          <td class="paramname"><em>ouputFrameformat</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputFrameIsBT601:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>is601</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputImage:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef *)&#160;</td>
+          <td class="paramname"><em>ouputImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 【特别注意】必须和initialize在同一个线程中使用。如果使用的线程没有OpenGL环境，在调用initializeWithFlags必须带有NvsInitializeFlag_CreateGLContextIfNeed </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effects</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputImage</td><td>输入图像 </td></tr>
+    <tr><td class="paramname">rotation</td><td>输入图像旋转角度，只能是0， 90， 180， 270 </td></tr>
+    <tr><td class="paramname">isFlip</td><td>是否需要横向翻转 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+    <tr><td class="paramname">format</td><td>输出图像格式请参数 NvsEffectVideoFramePixelFormat </td></tr>
+    <tr><td class="paramname">is601</td><td>如果输出图像是Nv12或者YUV420P格式才有意义 </td></tr>
+    <tr><td class="paramname">ouputImage</td><td>输出图像数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.14.0 </dd></dl>
+
+</div>
+</div>
+<a id="a753aa97ccce2384fb87ad6908d240676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753aa97ccce2384fb87ad6908d240676">&#9670;&nbsp;</a></span>renderEffects:inputImage:options:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffects: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; <a class="el" href="interfaceNvsEffect.html">NvsEffect</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>effects</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputImage:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>inputImage</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">options:</td>
+          <td></td>
+          <td class="paramtype">(NSDictionary *)&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 【特别注意】渲染结果覆盖到输入图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effects</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputImage</td><td>输入图像 </td></tr>
+    <tr><td class="paramname">options</td><td>渲染参数，详见：<a class="el" href="NvsEffectRenderCore_8h.html#RENDER_PARAMETERS">渲染参数</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>3.8.1 </dd></dl>
+
+</div>
+</div>
+<a id="afb0fe1aa5dc3de358b81b28284efe023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb0fe1aa5dc3de358b81b28284efe023">&#9670;&nbsp;</a></span>renderEffects:inputImage:outputImage:options:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffects: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; <a class="el" href="interfaceNvsEffect.html">NvsEffect</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>effects</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputImage:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>inputImage</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputImage:</td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef *)&#160;</td>
+          <td class="paramname"><em>ouputImage</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">options:</td>
+          <td></td>
+          <td class="paramtype">(NSDictionary *)&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 【特别注意】必须和initialize在同一个线程中使用。如果使用的线程没有OpenGL环境，在调用initializeWithFlags必须带有NvsInitializeFlag_CreateGLContextIfNeed </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effects</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputImage</td><td>输入图像 </td></tr>
+    <tr><td class="paramname">ouputImage</td><td>输出图像数据 </td></tr>
+    <tr><td class="paramname">options</td><td>渲染参数，详见：<a class="el" href="NvsEffectRenderCore_8h.html#RENDER_PARAMETERS">渲染参数</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.14.0 </dd></dl>
+
+</div>
+</div>
+<a id="a96ce645160816282c43fbcb4a2ce8385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ce645160816282c43fbcb4a2ce8385">&#9670;&nbsp;</a></span>renderEffects:inputTex:inputBuddyBuffer:physicalOrientation:outputTex:timestamp:flags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffects: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; <a class="el" href="interfaceNvsEffect.html">NvsEffect</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>effects</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputTex:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectGPUTexture.html">NvsEffectGPUTexture</a> *)&#160;</td>
+          <td class="paramname"><em>inputTex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputBuddyBuffer:</td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="structNvsEffectVideoFrameInfoExt.html">NvsEffectVideoFrameInfoExt</a> *)&#160;</td>
+          <td class="paramname"><em>inputBuddyBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">physicalOrientation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>physicalOrientation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTex:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectGPUTexture.html">NvsEffectGPUTexture</a> *)&#160;</td>
+          <td class="paramname"><em>outputTex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effects</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputTexId</td><td>输入纹理 </td></tr>
+    <tr><td class="paramname">inputBuddyBuffer</td><td>输入纹理的伴随buffer(支持NV12或BGRA或YUV420格式) </td></tr>
+    <tr><td class="paramname">physicalOrientation</td><td>设备方向 </td></tr>
+    <tr><td class="paramname">inputVideoResolution</td><td>输入纹理的视频解析度 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>3.13.0 </dd></dl>
+
+</div>
+</div>
+<a id="abba251a618ea829f166d4c45c03c81e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba251a618ea829f166d4c45c03c81e2">&#9670;&nbsp;</a></span>renderEffects:inputTexId:inputBuddyBuffer:physicalOrientation:inputVideoResolution:outputTexId:timestamp:flags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderEffects: </td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; <a class="el" href="interfaceNvsEffect.html">NvsEffect</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>effects</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>inputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputBuddyBuffer:</td>
+          <td></td>
+          <td class="paramtype">(const <a class="el" href="structNvsEffectVideoFrameInfo.html">NvsEffectVideoFrameInfo</a> *)&#160;</td>
+          <td class="paramname"><em>inputBuddyBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">physicalOrientation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>physicalOrientation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputVideoResolution:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectVideoResolution.html">NvsEffectVideoResolution</a> *)&#160;</td>
+          <td class="paramname"><em>inputVideoResolution</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>outputTexId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染特效 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effects</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputTexId</td><td>输入纹理 </td></tr>
+    <tr><td class="paramname">inputBuddyBuffer</td><td>输入纹理的伴随buffer(支持NV12或BGRA或YUV420格式) </td></tr>
+    <tr><td class="paramname">physicalOrientation</td><td>设备方向 </td></tr>
+    <tr><td class="paramname">inputVideoResolution</td><td>输入纹理的视频解析度 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>3.7.0 </dd></dl>
+
+</div>
+</div>
+<a id="a355ab363fc7dd79dbbaff9ed64b5a0a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a355ab363fc7dd79dbbaff9ed64b5a0a4">&#9670;&nbsp;</a></span>renderVariantSizeEffect:inputTexs:intputTexSize:outputTex:timestamp:flags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) renderVariantSizeEffect: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interfaceNvsEffect.html">NvsEffect</a> *)&#160;</td>
+          <td class="paramname"><em>effect</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">inputTexs:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectGPUTexture.html">NvsEffectGPUTexture</a> *)&#160;</td>
+          <td class="paramname"><em>inputTextureArray</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">intputTexSize:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>texArrayCount</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTex:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectGPUTexture.html">NvsEffectGPUTexture</a> *)&#160;</td>
+          <td class="paramname"><em>outputTex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">timestamp:</td>
+          <td></td>
+          <td class="paramtype">(int64_t)&#160;</td>
+          <td class="paramname"><em>timestamp</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">flags:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="NvsEffectRenderCore_8h.html#a21496b82d0ded941e7b39e692b3af61b">NvsRenderFlag</a>)&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>渲染变画幅特效 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>要渲染的特效对象 </td></tr>
+    <tr><td class="paramname">inputTextureArray</td><td>输入图像组 </td></tr>
+    <tr><td class="paramname">texArrayCount</td><td>输入纹理的数组数量 </td></tr>
+    <tr><td class="paramname">outputTex</td><td>输出纹理 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>当前渲染的时间戳 </td></tr>
+    <tr><td class="paramname">flags</td><td>暂时为0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>3.9.1 </dd></dl>
+
+</div>
+</div>
+<a id="a65592835827d264122c412e907d82950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65592835827d264122c412e907d82950">&#9670;&nbsp;</a></span>uploadPixelBufferToTexture:displayRotation:horizontalFlip:outputTex:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) uploadPixelBufferToTexture: </td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>frameBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">displayRotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>rotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">horizontalFlip:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>flip</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTex:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="structNvsEffectGPUTexture.html">NvsEffectGPUTexture</a> *)&#160;</td>
+          <td class="paramname"><em>outputTex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上传buffer到GPU纹理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameBuffer</td><td>需要上传buffer(支持NV12, P010) </td></tr>
+    <tr><td class="paramname">horizontalFlip</td><td>是否横向反转 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>3.13.0 </dd></dl>
+
+</div>
+</div>
+<a id="add22a6cee042845d9778055646fd1915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add22a6cee042845d9778055646fd1915">&#9670;&nbsp;</a></span>uploadPixelBufferToTexture:displayRotation:horizontalFlip:outputTexId:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) uploadPixelBufferToTexture: </td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>frameBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">displayRotation:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>rotation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">horizontalFlip:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>flip</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>outputTexId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上传buffer到GPU纹理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameBuffer</td><td>需要上传buffer(支持NV12) </td></tr>
+    <tr><td class="paramname">horizontalFlip</td><td>是否横向反转 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.12.0 </dd></dl>
+
+</div>
+</div>
+<a id="a74aa0ec0acdf326298b39b1eea097cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74aa0ec0acdf326298b39b1eea097cdd">&#9670;&nbsp;</a></span>uploadPixelBufferToTexture:horizontalFlip:outputTexId:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="NvsEffectRenderCore_8h.html#a81de31e2691912e7a929de87d9075460">NvsEffectCoreError</a>) uploadPixelBufferToTexture: </td>
+          <td></td>
+          <td class="paramtype">(CVPixelBufferRef)&#160;</td>
+          <td class="paramname"><em>frameBuffer</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">horizontalFlip:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>flip</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">outputTexId:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>outputTexId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上传buffer到GPU纹理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameBuffer</td><td>需要上传buffer(支持NV12) </td></tr>
+    <tr><td class="paramname">horizontalFlip</td><td>是否横向反转 </td></tr>
+    <tr><td class="paramname">outputTexId</td><td>输出纹理 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回NvsEffectCoreError_NoError为成功,其他值都是错误,参考错误码定义 </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>2.12.0 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/sdkcore/ios/<a class="el" href="NvsEffectRenderCore_8h_source.html">NvsEffectRenderCore.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1440">
+
+	
+	<track source=":1" clipStart="0" clipDuration="4080">
+	
+	   <effect name="lut">
+			<param name="dataFileName" value="no.mslut"/>	
+			<animation paramName="intensity">
+				<key time="0" value="0"/>
+				<key time="900" value="0"/>				
+				<key time="1400" value="1"/>				
+				<key time="4080" value="1"/>
+			</animation>		
+		</effect>
+		
+	    <effect name="transform">
+		    <param name="anchorX" value="anchorXValue"/>
+		    <param name="anchorY" value="anchorYValue"/>	
+			
+			<animation paramName="scaleX">
+                 <key time="200" value="1" curveMode="inOutCubic" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="733" value="2"/>
+                 <key time="4080" value="2.3"/>
+            </animation>
+			<animation paramName="scaleY">
+                 <key time="200" value="1" curveMode="inOutCubic" 
+	curvePeriod="0.5" curveAmplitude="0.8" curveOvershoot="1.7"/>
+                 <key time="733" value="2"/>
+                 <key time="4080" value="2.3"/>
+            </animation>
+			<animation paramName="transX">
+                 <key time="666" value="0"/>
+                 <key time="733" value="5"/>
+                 <key time="800" value="-20"/>
+                 <key time="866" value="0"/>
+                 <key time="933" value="-22"/>
+                 <key time="1000" value="-3.7"/>
+                 <key time="1100" value="0"/>
+            </animation>
+			<animation paramName="transY">
+                 <key time="666" value="0"/>
+                 <key time="733" value="30"/>
+                 <key time="800" value="-28"/>
+                 <key time="866" value="14"/>
+                 <key time="933" value="-15"/>  
+                 <key time="1000" value="3.2"/>  
+                 <key time="1100" value="0"/>  
+            </animation>
+		</effect>
+	</track>
+	
+	<track source="no.png" width="540" height="960" clipStart="633" clipDuration="3480">
+	
+	     <effect name="transform">
+		    <animation paramName="scaleX">
+                 <key time="0" value="5.3"/>
+                 <key time="33" value="2.6"/>
+                 <key time="66" value="2"/>
+                 <key time="100" value="1.5"/>
+            </animation>
+			<animation paramName="scaleY">
+                 <key time="0" value="5.3"/>
+                 <key time="33" value="2.6"/>
+                 <key time="66" value="2"/>
+                 <key time="100" value="1.5"/>
+            </animation>
+			<animation paramName="rotationZ">
+                 <key time="0" value="37.7"/>
+                 <key time="33" value="12.5"/>
+                 <key time="66" value="-1.2"/>
+                 <key time="100" value="0"/>
+            </animation>
+		</effect>
+		
+		<effect name="zoomBlur">
+			<animation paramName="length">
+                 <key time="0" value="0"/>
+                 <key time="33" value="40"/>
+                 <key time="66" value="30"/>
+                 <key time="100" value="0"/>
+            </animation>
+		</effect>
+	</track>
+	
+</storyboard>

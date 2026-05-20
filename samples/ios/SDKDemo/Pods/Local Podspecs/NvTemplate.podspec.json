@@ -1,0 +1,64 @@
+{
+  "name": "NvTemplate",
+  "version": "0.2.0",
+  "summary": "A short description of NvTemplate.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chuyang009@163.com/NvTemplate",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chuyang009@163.com": "liudongxu@meishesdk.com"
+  },
+  "source": {
+    "git": "https://github.com/chuyang009@163.com/NvTemplate.git",
+    "tag": "0.2.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "resources": "NvTemplate/Assets/*",
+  "source_files": "NvTemplate/Classes/**/*",
+  "public_header_files": "Pod/Classes/**/*.swift",
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "5.0",
+    "ENABLE_BITCODE": "NO"
+  },
+  "vendored_frameworks": "NvStreamingSdkCore.framework",
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios/",
+      "$(SRCROOT)/../../../../../../../lib/ios/",
+      "$(SRCROOT)/../../../../lib/ios/"
+    ],
+    "HEADER_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../lib/ios/NvStreamingSdkCore.framework/Headers"
+    ]
+  },
+  "dependencies": {
+    "YYWebImage": [
+      "~> 1.0.5"
+    ],
+    "AFNetworking": [
+
+    ],
+    "MJRefresh": [
+      "~> 3.5.0"
+    ],
+    "SnapKit": [
+
+    ],
+    "NvBaseCommon": [
+
+    ],
+    "NvSDKCommon": [
+
+    ],
+    "NvAlbum": [
+
+    ]
+  }
+}

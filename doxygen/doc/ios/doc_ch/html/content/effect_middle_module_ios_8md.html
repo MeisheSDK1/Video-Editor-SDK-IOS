@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: NveEffectKit快速接入指南</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">NveEffectKit快速接入指南 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>NveEffectKit接入文档</h1>
+<p>NveEffectKit在美摄sdk 基础上集成了美颜、美型、美妆、妆容、滤镜、人脸道具功能，方便用户集成对纹理或者buffer上处理对应功能，比如对图片进行添加上述效果，或者对直播录制中每一帧（texture或者buffer）上添加效果。NveEffectKit 的依赖库为NvEffectSdkCore（或NvStreamingSdkCore）。 这里以集成了NveEffectKit的NveEffectKitDemo 为例展示接入步骤，该demo 展示的是在拍摄中添加上诉功能，NveEffectKit也支持在编辑中添加上诉功能。</p>
+<h2>第一步：添加依赖库</h2>
+<p><code>NveEffectKit.framework</code> 内部调用了美摄sdk 的接口，所以它本身与其引用的美摄sdk 库是成对匹配的；如果您购买和使用的是<code>NvEffectSdkCore</code>，就需要使用内部引用了<code>NvEffectSdkCore</code> 的<code>NveEffectKit.framework</code>，同理，如果您购买和使用的是<code>NvStreamingSdkCore</code>，那么就需要使用内部引用了<code>NvStreamingSdkCore</code>的<code>NveEffectKit.framework</code>，可以和我们的技术支持同事或者商务同事联系得到对应的匹配的库。</p>
+<p>如果您使用的是<code>NvEffectSdkCore</code>，那么添加库如以下图1-1所示 <img src="1-1.jpg" alt="" class="inline"/>   </p>
+<center>图1-1</center><p>如果您使用的是<code>NvStreamingSdkCore</code>，那么添加库应该以下图1-2所示 <img src="1-2.jpg" alt="" class="inline"/>   </p>
+<center>图1-2</center><h2>第二步：sdk 授权</h2>
+<p>在使用美摄相关内容之前需要调用接口对sdk 进行授权验证，并且只需要验证一次即可，建议在AppDelegate 文件中调用授权验证的接口, 注意，授权接口必须在NveEffectKit创建单例前之前调用。代码如下： </p><div class="fragment"><div class="line">NSString *sdkLicFilePath = [[NSBundle mainBundle] pathForResource:@&quot;meishesdk.lic&quot; ofType:nil];</div>
+<div class="line">if (![NveEffectKit verifySdkLicenseFile:sdkLicFilePath]) {</div>
+<div class="line">    NSLog(@&quot;Sdk License File error&quot;);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>特别注意：美摄SDK授权文件和项目Bundle Identifier绑定，修改Bundle Identifier需要替换对应的授权文件。</p>
+<h2>第三步：准备要处理的帧数据</h2>
+<p>这里和sdk 无关，您可以根据您实际项目需求，比如拍摄录制功能或者单张图片等都可以，只要能拿到对应的纹理或者buffer 数据即可。例如拍摄可以用iOS系统自身的AVFoundation，或者可以实现拍摄功能的第三方，在对应的返回帧数据的代理回调中能拿到实时的每一帧的数据即可。 demo 中即是依据AVFoundation实现的拍摄功能，并从AVCaptureVideoDataOutputSampleBufferDelegate中拿到了每一帧的数据回调,代码如下： </p><div class="fragment"><div class="line">- (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {</div>
+<div class="line">    if (self.delegate &amp;&amp; [self.delegate respondsToSelector:@selector(captureOutput:didOutputSampleBuffer:fromConnection:isAudioConnection:)]) {</div>
+<div class="line">        if (connection == _audioConnection) {</div>
+<div class="line">            [self.delegate captureOutput:output didOutputSampleBuffer:sampleBuffer fromConnection:connection isAudioConnection:YES];</div>
+<div class="line">        } else {</div>
+<div class="line">            [self.delegate captureOutput:output didOutputSampleBuffer:sampleBuffer fromConnection:connection isAudioConnection:NO];</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>第四步：在使用人脸特效前初始化人脸模型</h2>
+<p>美颜、美型、美妆、妆容、人脸道具都是和人脸相关的特效，所以需要在使用这些特效之前初始化人脸模型，并且只初始化一次即可。初始化之后并不会一次性增长所有人脸模型中的内存，会在实际用到了对应的功能后才会增加内存，这是我们sdk 有关人脸模型的内存优化策略。初始化人脸模型代码如下： </p><div class="fragment"><div class="line">NSString *bundlePath = [[[NSBundle bundleForClass:[self class]] bundlePath] stringByAppendingPathComponent:@&quot;model.bundle&quot;];</div>
+<div class="line"> </div>
+<div class="line">NSString *faceModel = [bundlePath stringByAppendingPathComponent:@&quot;ms_face240_v3.0.1.model&quot;];</div>
+<div class="line">BOOL ret = [NveEffectKit initHumanDetection:NveDetectionModelType_face modelPath:faceModel licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect error: face&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">NSString *fakeFace = [bundlePath stringByAppendingPathComponent:@&quot;fakeface_v1.0.1.dat&quot;];</div>
+<div class="line">ret = [NveEffectKit initHumanDetection:NveDetectionModelType_fakeFace modelPath:fakeFace licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect error: fakeFace&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">NSString *avatar = [bundlePath stringByAppendingPathComponent:@&quot;ms_avatar_v2.0.0.model&quot;];</div>
+<div class="line">ret = [NveEffectKit initHumanDetection:NveDetectionModelType_avatar modelPath:avatar licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect avatar: avatar&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">NSString *eyeball = [bundlePath stringByAppendingPathComponent:@&quot;ms_eyecontour_v2.0.0.model&quot;];</div>
+<div class="line">ret = [NveEffectKit initHumanDetection:NveDetectionModelType_eyeball modelPath:eyeball licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect error: eyeball&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">NSString *facecommon = [bundlePath stringByAppendingPathComponent:@&quot;facecommon_v1.0.1.dat&quot;];</div>
+<div class="line">ret = [NveEffectKit initHumanDetection:NveDetectionModelType_face modelPath:facecommon licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect error: facecommon&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">NSString *background = [bundlePath stringByAppendingPathComponent:@&quot;ms_humanseg_medium_v2.0.0.model&quot;];</div>
+<div class="line">BOOL highVersion = [NvLiveEffectModule isHighVersionPhone];</div>
+<div class="line">if (highVersion == NO) {</div>
+<div class="line">    background = [[[bundlePath stringByAppendingPathComponent:@&quot;license&quot;]stringByAppendingPathComponent:@&quot;ms&quot;] stringByAppendingPathComponent:@&quot;ms_humanseg_small_v2.0.0.model&quot;];</div>
+<div class="line">}</div>
+<div class="line">ret = [NveEffectKit initHumanDetection:NveDetectionModelType_background modelPath:background licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect error: background&quot;);</div>
+<div class="line">}</div>
+<div class="line">NSString *hand = [bundlePath stringByAppendingPathComponent:@&quot;ms_hand_v2.0.0.model&quot;];</div>
+<div class="line">ret = [NveEffectKit initHumanDetection:NveDetectionModelType_hand modelPath:hand licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect error: hand&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">NSString *faceCommon = [bundlePath stringByAppendingPathComponent:@&quot;facecommon_v1.0.1.dat&quot;];</div>
+<div class="line">ret = [NveEffectKit initHumanDetection:NveDetectionModelType_faceCommon modelPath:faceCommon licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect error: faceCommon&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">NSString *advancedbeauty = [bundlePath stringByAppendingPathComponent:@&quot;advancedbeauty_v1.0.1.dat&quot;];</div>
+<div class="line">ret = [NveEffectKit initHumanDetection:NveDetectionModelType_advancedBeauty modelPath:advancedbeauty licenseFilePath:nil];</div>
+<div class="line">if (!ret) {</div>
+<div class="line">    NSLog(@&quot;init human detect error: advancedbeauty&quot;);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>上诉代码中各种检测类型和用途对应表如下</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">检测模型类型 </th><th class="markdownTableHeadNone">名称 </th><th class="markdownTableHeadNone">用途  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType_face </td><td class="markdownTableBodyNone">人脸 </td><td class="markdownTableBodyNone">人脸模型  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveDetectionModelType_hand </td><td class="markdownTableBodyNone">手势 </td><td class="markdownTableBodyNone">有手势的道具会使用到  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType_avatar </td><td class="markdownTableBodyNone">avatar </td><td class="markdownTableBodyNone">avatar道具会使用到  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveDetectionModelType_fakeFace </td><td class="markdownTableBodyNone">假脸 </td><td class="markdownTableBodyNone">人脸道具使用  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType_eyeball </td><td class="markdownTableBodyNone">眼球 </td><td class="markdownTableBodyNone">眼球模型  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveDetectionModelType_makeup2 </td><td class="markdownTableBodyNone">美妆 </td><td class="markdownTableBodyNone">sdk3.13.0版本及之后废弃(包含3.13.0)，请使用NveDetectionModelType_faceCommon  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType_background </td><td class="markdownTableBodyNone">背景分割 </td><td class="markdownTableBodyNone">部分人脸道具会用到分割效果  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveDetectionModelType_faceCommon </td><td class="markdownTableBodyNone">人脸通用模型 </td><td class="markdownTableBodyNone">sdk3.13.0版本及之后(包含3.13.0)，当需要用到人脸相关功能或者美妆，都需要初始化此项  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType_advancedBeauty </td><td class="markdownTableBodyNone">高级美颜模型 </td><td class="markdownTableBodyNone">sdk3.13.0版本及之后(包含3.13.0)，开启高级美颜，需要初始化此项  </td></tr>
+</table>
+<p>注：如果上诉的模型文件在开发过程中缺失，可联系技术支持同事或者商务同事获取。</p>
+<h2>第五步： 添加特效数据到<code>NveEffectKit</code>单例上</h2>
+<p>接下来就是添加各种不同类型的特效数据到<code>NveEffectKit</code>单例上，以便下一步将<code>NveEffectKit</code>单例上的特效都渲染到输出纹理或者buffer 上。您需要在您工程内合适的地方添加对应的特效数据到<code>NveEffectKit</code>单例上，例如用户点击添加了一个滤镜，您可以在点击方法中设置对应的滤镜特效到<code>NveEffectKit</code>单例内，由<code>NveEffectKit</code>单例统一管理已添加的特效数据。以下是各个不同种类特效的具体讲解：</p>
+<h3>美颜</h3>
+<div class="fragment"><div class="line">NveBeauty *beauty = [[NveBeauty alloc] init];</div>
+<div class="line">// 磨皮</div>
+<div class="line">beauty.strength = 1;</div>
+<div class="line">[NveEffectKit shareInstance].beauty = beauty;</div>
+</div><!-- fragment --><p>美颜内部还可以切换美白类型，磨皮类型，调节强度等，可参考下方代码（这是<code>NveBeauty</code>的扩展类方法并不在<code>NveEffectKit.framework</code>中，可在demo 中获取。这是方便实现符合UI 界面操作的对应方法，您也可以根据需求写您自己的方法，以下其他类型特效也都如此，此后不再赘述），和设置<code>strength</code>类似，将操作后的数据全部保存到<code>[NveEffectKit shareInstance].beauty</code> 中。 </p><div class="fragment"><div class="line">- (void)updateEffect:(NveBeautyLiveType)type value:(double)value {</div>
+<div class="line">    switch (type) {</div>
+<div class="line">        case NveBeautyLiveType_whitening:</div>
+<div class="line">            self.whitening = value;</div>
+<div class="line">            [self setEffectParam:@&quot;Whitening Lut Enabled&quot; type:NveParamType_bool value:@(NO)];</div>
+<div class="line">            [self setEffectParam:@&quot;Whitening Lut File&quot; type:NveParamType_string value:@&quot;&quot;];</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_whitening_1:{</div>
+<div class="line">            self.whitening = value;</div>
+<div class="line">            NSString *whitenLutPath = [[[NSBundle bundleForClass:[NvLiveEffectModule class]] bundlePath] stringByAppendingPathComponent:@&quot;whitenLut.bundle&quot;];</div>
+<div class="line">            NSString *lutPath = [whitenLutPath stringByAppendingPathComponent:@&quot;WhiteB.mslut&quot;];</div>
+<div class="line">            [self setEffectParam:@&quot;Whitening Lut Enabled&quot; type:NveParamType_bool value:@(YES)];</div>
+<div class="line">            [self setEffectParam:@&quot;Whitening Lut File&quot; type:NveParamType_string value:lutPath];</div>
+<div class="line">        }</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_reddening:</div>
+<div class="line">            self.reddening = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_strength:</div>
+<div class="line">            self.strength = value;</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Intensity&quot; type:NveParamType_float value:@(0)];</div>
+<div class="line">            [self setEffectParam:@&quot;Beauty Strength&quot; type:NveParamType_float value:@(value)];</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_strength_1:</div>
+<div class="line">            self.strength = value;</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Enable&quot; type:NveParamType_bool value:@(YES)];</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Type&quot; type:NveParamType_int value:@(0)];</div>
+<div class="line">            [self setEffectParam:@&quot;Beauty Strength&quot; type:NveParamType_float value:@(0)];</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Intensity&quot; type:NveParamType_float value:@(value)];</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_strength_2:</div>
+<div class="line">            self.strength = value;</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Enable&quot; type:NveParamType_bool value:@(YES)];</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Type&quot; type:NveParamType_int value:@(1)];</div>
+<div class="line">            [self setEffectParam:@&quot;Beauty Strength&quot; type:NveParamType_float value:@(0)];</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Intensity&quot; type:NveParamType_float value:@(value)];</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_strength_3:</div>
+<div class="line">            self.strength = value;</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Enable&quot; type:NveParamType_bool value:@(YES)];</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Type&quot; type:NveParamType_int value:@(2)];</div>
+<div class="line">            [self setEffectParam:@&quot;Beauty Strength&quot; type:NveParamType_float value:@(0)];</div>
+<div class="line">            [self setEffectParam:@&quot;Advanced Beauty Intensity&quot; type:NveParamType_float value:@(value)];</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_matte:</div>
+<div class="line">            self.matte = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_sharpen:</div>
+<div class="line">            self.sharpen = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveBeautyLiveType_definition:</div>
+<div class="line">            self.definition = value;</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3>美型</h3>
+<div class="fragment"><div class="line">NveShape *shape = [[NveShape alloc] init];</div>
+<div class="line">// 瘦脸</div>
+<div class="line">shape.faceWidth = 1;</div>
+<div class="line">[NveEffectKit shareInstance].shape = beauty;</div>
+</div><!-- fragment --><p>美型除了瘦脸效果还有更多的美型效果，这里不一一列举，可在代码中查看注释。这里需要注意的一点是，美型都是package 包类型的素材，每一种类型的美型效果都可以有多个不同的包文件实现不同的算法效果（比如大眼效果可以有多个不同算法实现的大眼效果素材包），所以需要进行素材安装以及安装成功后设置素材uuid 到指定效果上。素材安装可在随后的小节中查看实现逻辑，这里列出设置uuid 的代码以及设置各个效果属性值大小的代码,在NveShape 类的扩展方法中可添加如下代码（这是<code>NveShape</code>的扩展类方法并不在<code>NveEffectKit.framework</code>中，可在demo 中获取），这样在合适的地方进行调用，并保存相关数据到<code>[NveEffectKit shareInstance].shape</code>中。 </p><div class="fragment"><div class="line">- (void)updateEffect:(NveShapeLiveType)type packageId:(NSString *)packageId {</div>
+<div class="line">    if (!packageId) {</div>
+<div class="line">        return;</div>
+<div class="line">    }</div>
+<div class="line">    switch (type) {</div>
+<div class="line">        case NveShapeLiveType_faceWidth:</div>
+<div class="line">            self.faceWidthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_faceLength:</div>
+<div class="line">            self.faceLengthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_faceSize:</div>
+<div class="line">            self.faceSizePackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_foreheadHeight:</div>
+<div class="line">            self.foreheadHeightPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_chinLength:</div>
+<div class="line">            self.chinLengthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_eyeSize:</div>
+<div class="line">            self.eyeSizePackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_eyeCornerStretch:</div>
+<div class="line">            self.eyeCornerStretchPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_noseWidth:</div>
+<div class="line">            self.noseWidthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_noseLength:</div>
+<div class="line">            self.noseLengthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_mouthSize:</div>
+<div class="line">            self.mouthSizePackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_mouthCornerLift:</div>
+<div class="line">            self.mouthCornerLiftPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>设置数值代码如下 </p><div class="fragment"><div class="line">- (void)updateEffect:(NveShapeLiveType)type value:(double)value {</div>
+<div class="line">    switch (type) {</div>
+<div class="line">        case NveShapeLiveType_faceWidth:</div>
+<div class="line">            self.faceWidth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_faceLength:</div>
+<div class="line">            self.faceLength = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_faceSize:</div>
+<div class="line">            self.faceSize = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_foreheadHeight:</div>
+<div class="line">            self.foreheadHeight = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_chinLength:</div>
+<div class="line">            self.chinLength = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_eyeSize:</div>
+<div class="line">            self.eyeSize = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_eyeCornerStretch:</div>
+<div class="line">            self.eyeCornerStretch = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_noseWidth:</div>
+<div class="line">            self.noseWidth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_noseLength:</div>
+<div class="line">            self.noseLength = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_mouthSize:</div>
+<div class="line">            self.mouthSize = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveShapeLiveType_mouthCornerLift:</div>
+<div class="line">            self.mouthCornerLift = value;</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3>微整形</h3>
+<p>微整形比较特殊，其中既有需要进行安装的素材也有内置的素材，但是实现逻辑上和其他类型也都遵循相同的原则 </p><div class="fragment"><div class="line">NveMicroShape *microShape = [[NveMicroShape alloc] init];</div>
+<div class="line">// 缩头</div>
+<div class="line">microShape.headSize = 1;</div>
+<div class="line">[NveEffectKit shareInstance].microShape = microShape;</div>
+</div><!-- fragment --><p>设置需要package 包素材uuid到<code>[NveEffectKit shareInstance].microShape</code> 上（这是<code>NveMicroShape</code>的扩展类方法并不在<code>NveEffectKit.framework</code>中，可在demo 中获取），代码如下 </p><div class="fragment"><div class="line">- (void)updateEffect:(NveMicroShapeLiveType)type packageId:(NSString *)packageId {</div>
+<div class="line">    switch (type) {</div>
+<div class="line">        case NveMicroShapeLiveType_headSize:</div>
+<div class="line">            self.headSizePackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_malarWidth:</div>
+<div class="line">            self.malarWidthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_jawWidth:</div>
+<div class="line">            self.jawWidthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_templeWidth:</div>
+<div class="line">            self.templeWidthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_removeNasolabialFolds:</div>
+<div class="line">        case NveMicroShapeLiveType_removeDarkCircles:</div>
+<div class="line">        case NveMicroShapeLiveType_brightenEyes:</div>
+<div class="line">        case NveMicroShapeLiveType_whitenTeeth:</div>
+<div class="line">            // Unsupport custom effect packs</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeDistance:</div>
+<div class="line">            self.eyeDistancePackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeAngle:</div>
+<div class="line">            self.eyeAnglePackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_philtrumLength:</div>
+<div class="line">            self.philtrumLengthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_noseBridgeWidth:</div>
+<div class="line">            self.noseBridgeWidthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_noseHeadWidth:</div>
+<div class="line">            self.noseHeadWidthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyebrowThickness:</div>
+<div class="line">            self.eyebrowThicknessPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyebrowAngle:</div>
+<div class="line">            self.eyebrowAnglePackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyebrowXOffset:</div>
+<div class="line">            self.eyebrowXOffsetPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyebrowYOffset:</div>
+<div class="line">            self.eyebrowYOffsetPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeWidth:</div>
+<div class="line">            self.eyeWidthPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeHeight:</div>
+<div class="line">            self.eyeHeightPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeArc:</div>
+<div class="line">            self.eyeArcPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeYOffset:</div>
+<div class="line">            self.eyeYOffsetPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>设置属性大小值方法如下</p>
+<div class="fragment"><div class="line">- (void)updateEffect:(NveMicroShapeLiveType)type value:(double)value {</div>
+<div class="line">    switch (type) {</div>
+<div class="line">        case NveMicroShapeLiveType_headSize:</div>
+<div class="line">            self.headSize = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_malarWidth:</div>
+<div class="line">            self.malarWidth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_jawWidth:</div>
+<div class="line">            self.jawWidth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_templeWidth:</div>
+<div class="line">            self.templeWidth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_removeNasolabialFolds:</div>
+<div class="line">            self.removeNasolabialFolds = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_removeDarkCircles:</div>
+<div class="line">            self.removeDarkCircles = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_brightenEyes:</div>
+<div class="line">            self.brightenEyes = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_whitenTeeth:</div>
+<div class="line">            self.whitenTeeth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeDistance:</div>
+<div class="line">            self.eyeDistance = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeAngle:</div>
+<div class="line">            self.eyeAngle = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_philtrumLength:</div>
+<div class="line">            self.philtrumLength = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_noseBridgeWidth:</div>
+<div class="line">            self.noseBridgeWidth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_noseHeadWidth:</div>
+<div class="line">            self.noseHeadWidth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyebrowThickness:</div>
+<div class="line">            self.eyebrowThickness = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyebrowAngle:</div>
+<div class="line">            self.eyebrowAngle = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyebrowXOffset:</div>
+<div class="line">            self.eyebrowXOffset = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyebrowYOffset:</div>
+<div class="line">            self.eyebrowYOffset = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeWidth:</div>
+<div class="line">            self.eyeWidth = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeHeight:</div>
+<div class="line">            self.eyeHeight = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeArc:</div>
+<div class="line">            self.eyeArc = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMicroShapeLiveType_eyeYOffset:</div>
+<div class="line">            self.eyeYOffset = value;</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>这样就可以把和微整形相关的数据都设置到了<code>[NveEffectKit shareInstance].microShape</code> 中</p>
+<h3>美妆</h3>
+<p>这里指后缀名为.makeup 文件，是单个美妆文件,同样需要安装素材文件和指定packgeId。 </p><div class="fragment"><div class="line">NveMakeup *makeup = [NveEffectKit shareInstance].makeup;</div>
+<div class="line">if (!makeup) {</div>
+<div class="line">    makeup = [[NveMakeup alloc] init];</div>
+<div class="line">    [NveEffectKit shareInstance].makeup = makeup;</div>
+<div class="line">}</div>
+<div class="line">[makeup updateEffect:effectModel.effectType packageId:effectModel.uuid];</div>
+<div class="line">[makeup updateEffect:effectModel.effectType value:effectModel.value];</div>
+</div><!-- fragment --><p>其中调用了的两个方法是<code>NveMakeup</code>的扩展类方法，并不在<code>NveEffectKit.framework</code>中，可在demo 中获取，分别为 </p><div class="fragment"><div class="line">- (void)updateEffect:(NveMakeupLiveType)type packageId:(NSString *)packageId {</div>
+<div class="line">    switch (type) {</div>
+<div class="line">        case NveMakeupLiveType_lip:</div>
+<div class="line">            self.lipPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeshadow:</div>
+<div class="line">            self.eyeshadowPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyebrow:</div>
+<div class="line">            self.eyebrowPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyelash:</div>
+<div class="line">            self.eyelashPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeliner:</div>
+<div class="line">            self.eyelinerPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_blusher:</div>
+<div class="line">            self.blusherPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_brighten:</div>
+<div class="line">            self.brightenPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_shadow:</div>
+<div class="line">            self.shadowPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeball:</div>
+<div class="line">            self.eyeballPackageId = packageId;</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line">- (void)updateEffect:(NveMakeupLiveType)type value:(double)value {</div>
+<div class="line">    switch (type) {</div>
+<div class="line">        case NveMakeupLiveType_lip:</div>
+<div class="line">            self.lip = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeshadow:</div>
+<div class="line">            self.eyeshadow = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyebrow:</div>
+<div class="line">            self.eyebrow = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyelash:</div>
+<div class="line">            self.eyelash = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeliner:</div>
+<div class="line">            self.eyeliner = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_blusher:</div>
+<div class="line">            self.blusher = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_brighten:</div>
+<div class="line">            self.brighten = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_shadow:</div>
+<div class="line">            self.shadow = value;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeball:</div>
+<div class="line">            self.eyeball = value;</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>还可以设置颜色，代码如下 </p><div class="fragment"><div class="line">- (void)updateEffect:(NveMakeupLiveType)type color:(UIColor *)color {</div>
+<div class="line">    switch (type) {</div>
+<div class="line">        case NveMakeupLiveType_lip:</div>
+<div class="line">            self.lipColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeshadow:</div>
+<div class="line">            self.eyeshadowColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyebrow:</div>
+<div class="line">            self.eyebrowColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyelash:</div>
+<div class="line">            self.eyelashColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeliner:</div>
+<div class="line">            self.eyelinerColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_blusher:</div>
+<div class="line">            self.blusherColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_brighten:</div>
+<div class="line">            self.brightenColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_shadow:</div>
+<div class="line">            self.shadowColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">        case NveMakeupLiveType_eyeball:</div>
+<div class="line">            self.eyeballColor = color;</div>
+<div class="line">            break;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>同样，需要将美妆相关数据保存到<code>[NveEffectKit shareInstance].makeup</code>中。</p>
+<h3>妆容</h3>
+<p>妆容是一个文件夹内组织了多种类型的特效，比如有美妆效果，美型效果，美颜效果等，按照指定规则以json 文件规定好各个效果的属性值（比如强度值，眼睛大小，口红强度等），然后统一使用的整体效果，并且应用或移除妆容时会更新美颜、美型、微整形、美妆数据。妆容只需要传入对应妆容解压后文件夹的路径即可。 </p><div class="fragment"><div class="line">// packagePath 妆容包路径</div>
+<div class="line">NveComposeMakeup *composeMakeup = [NveComposeMakeup composeMakeupWithPackagePath:packagePath];</div>
+<div class="line">[NveEffectKit shareInstance].composeMakeup = composeMakeup;</div>
+</div><!-- fragment --><h3>滤镜</h3>
+<div class="fragment"><div class="line">NvFilter *filter = [NvFilter filterWithEffectId:packageId];</div>
+<div class="line">// 调节强度</div>
+<div class="line">filter.intensity = 0.5;</div>
+<div class="line"> </div>
+<div class="line">NvFilterContainer *filterContainer = [NveEffectKit shareInstance].filterContainer;</div>
+<div class="line">// 添加</div>
+<div class="line">[filterContainer append:filter];</div>
+<div class="line">// 移除</div>
+<div class="line">[filterContainer remove:filter];</div>
+</div><!-- fragment --><p>支持内建滤镜列表：https://www.meishesdk.com/ios/doc_ch/html/content/FxNameList_8md.html 或者使用滤镜包，如：0FBCC8A1-C16E-4FEB-BBDE-D04B91D98A40.1.videofx 滤镜包需要安装获取packageId，即这个滤镜包的uuid.</p>
+<h3>人脸道具</h3>
+<p>人脸道具安装素材后获取<code>packageId</code>，然后根据<code>packageId</code> 创建<code>NveFaceProp</code>对象，将<code>NveFaceProp</code>对象设置给<code>[NveEffectKit shareInstance].prop</code>，这样该道具的数据就记录在<code>[NveEffectKit shareInstance].prop</code>中了。 </p><div class="fragment"><div class="line">NveFaceProp *prop = [NveFaceProp propWithPackageId:packageId];</div>
+<div class="line">[NveEffectKit shareInstance].prop = prop;</div>
+</div><!-- fragment --><p>现在，从美颜到人脸道具，各个特效的数据就都保存到了[NveEffectKit shareInstance]单例之中。下面就可以着手准备被渲染的数据以及渲染之前的配置工作了。</p>
+<h2>第六步：配置NveEffectKit渲染输入数据&ndash; NveRenderInput</h2>
+<p><code>NveRenderInput</code> 是给<code>[NveEffectKit shareInstance]</code>单例的输入数据，包含要处理的图像数据（纹理或者buffer）、输入输出的配置，比如输入纹理输出纹理、输入buffer输出buffer、输入buffe输出纹理模式的选择。 其中数据结构的定义如下 </p><div class="fragment"><div class="line">@interface NveRenderInput : NSObject</div>
+<div class="line"> </div>
+<div class="line">@property(nonatomic, strong) NveTexture *_Nullable texture; //!&lt; \if ENGLISH Texture \else 输入的纹理 \endif</div>
+<div class="line"> </div>
+<div class="line">/*! \if ENGLISH Input pixelBuffer</div>
+<div class="line">    \else 输入的pixelBuffer</div>
+<div class="line">    \endif</div>
+<div class="line"> */</div>
+<div class="line">@property(nonatomic, strong) NveImageBuffer *_Nullable imageBuffer;</div>
+<div class="line"> </div>
+<div class="line">@property(nonatomic, strong) NveRenderConfig *config; //!&lt; \if ENGLISH I/o configuration \else 输入输出配置 \endif</div>
+<div class="line"> </div>
+<div class="line">@end</div>
+<div class="line">@interface NveRenderConfig : NSObject</div>
+<div class="line"> </div>
+<div class="line">/// 渲染模式</div>
+<div class="line">@property(nonatomic, assign) NveRenderMode renderMode;</div>
+<div class="line"> </div>
+<div class="line">/// 输出纹理方向</div>
+<div class="line">@property(nonatomic, assign) NveTextureLayout outputTextureLayout;</div>
+<div class="line"> </div>
+<div class="line">/// 输出Buffer格式， .none： 不指定，和输入保持一致</div>
+<div class="line">@property(nonatomic, assign) NvePixelFormatType outputFormatType;</div>
+<div class="line"> </div>
+<div class="line">/// 输出到输入Buffer</div>
+<div class="line">@property(nonatomic, assign) BOOL overlayInputBuffer;</div>
+<div class="line"> </div>
+<div class="line">// 当前图像是否来源于前置摄像头，默认为 NO</div>
+<div class="line">@property(nonatomic, assign) BOOL isFromFrontCamera;</div>
+<div class="line"> </div>
+<div class="line">@property(nonatomic, assign) BOOL autoMotion;</div>
+<div class="line"> </div>
+<div class="line">@end</div>
+<div class="line">typedef NS_ENUM(NSInteger, NveRenderMode) {</div>
+<div class="line">    NveRenderMode_texture_texture,</div>
+<div class="line">    NveRenderMode_buffer_texture,</div>
+<div class="line">    NveRenderMode_buffer_buffer</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>其中对输入输出模式的配置，可参考下表</p>
+<table class="doxtable">
+<tr>
+<td>NveRenderMode_texture_texture </td><td>渲染纹理 </td><td>输入中texture不能为空  </td></tr>
+<tr>
+<td>NveRenderMode_buffer_texture </td><td>输入CVPixelBufferRef,输出纹理 </td><td>输入中imageBuffer不能为空  </td></tr>
+<tr>
+<td>NveRenderMode_buffer_buffer </td><td>输入CVPixelBufferRef,输出也是CVPixelBufferRef </td><td>输入中imageBuffer不能为空  </td></tr>
+</table>
+<p>根据选择的输入输出模式，将获取的帧数据（如从AVFoundation 拍摄回调方法中获取的数据）以合适的形式传给NveRenderInput 中对应的属性，以NveRenderMode_buffer_buffer为例</p>
+<div class="fragment"><div class="line">- (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection isAudioConnection:(BOOL)isAudioConnection {</div>
+<div class="line">    //和本处讲解无关的代码忽略，可在demo 中查看全部代码</div>
+<div class="line"> </div>
+<div class="line">    if (isAudioConnection) {</div>
+<div class="line">        [self.fileWriter appendAudioSampleBuffer:sampleBuffer];</div>
+<div class="line">    } else {</div>
+<div class="line">        EAGLContext *currentContext = [EAGLContext currentContext];</div>
+<div class="line">        if (currentContext != self.glContext) {</div>
+<div class="line">            [EAGLContext setCurrentContext:self.glContext];</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        // Render</div>
+<div class="line">        CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);</div>
+<div class="line">        if (pixelBuffer == nil) {</div>
+<div class="line">            return;</div>
+<div class="line">        }</div>
+<div class="line">        NveRenderInput *input = [[NveRenderInput alloc] init];</div>
+<div class="line">        // 填数据</div>
+<div class="line">        NveImageBuffer *imageBuffer = [[NveImageBuffer alloc] init];</div>
+<div class="line">        imageBuffer.pixelBuffer = pixelBuffer;</div>
+<div class="line">        input.imageBuffer = imageBuffer;</div>
+<div class="line">        input.imageBuffer.mirror = self.capture.position == AVCaptureDevicePositionFront;</div>
+<div class="line">        // 渲染模式</div>
+<div class="line">        input.config.renderMode = self.renderMode;</div>
+<div class="line">        //和本处讲解无关的代码忽略，可在demo 中查看全部代码</div>
+<div class="line">    }</div>
+<div class="line">    //和本处讲解无关的代码忽略，可在demo 中查看全部代码</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>第七步：渲染</h2>
+<p>经过前面步骤的执行，现在<code>[NveEffectKit shareInstance]</code>单例已经有了所有需要渲染的特效的数据，<code>NveRenderInput</code>中也有了输入的图像数据以及输入输出配置方式，现在要做的就是将<code>NveRenderInput</code>给到<code>[NveEffectKit shareInstance]</code>单例在图像上渲染已知的特效，并拿到渲染后的输出<code>NveRenderOutput</code>。 代码如下: </p><div class="fragment"><div class="line">- (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection isAudioConnection:(BOOL)isAudioConnection {</div>
+<div class="line">        //和本处讲解无关的代码忽略，可在demo 中查看全部代码</div>
+<div class="line">        // Render / 渲染</div>
+<div class="line">        NveRenderOutput *output = [[NveEffectKit shareInstance] renderEffect:input];</div>
+<div class="line">        if (output.errorCode != NveRenderError_noError) {</div>
+<div class="line">            [self.effectKit recycleOutput:output];</div>
+<div class="line">            return;</div>
+<div class="line">        }</div>
+<div class="line">        //和本处讲解无关的代码忽略，可在demo 中查看全部代码</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>其中，输出数据结构为 </p><div class="fragment"><div class="line">@interface NveRenderOutput : NSObject</div>
+<div class="line"> </div>
+<div class="line">@property(nonatomic, assign) NveRenderError errorCode;</div>
+<div class="line"> </div>
+<div class="line">@property(nonatomic, strong) NveTexture *texture;</div>
+<div class="line"> </div>
+<div class="line">@property(nonatomic, assign) CVPixelBufferRef _Nullable pixelBuffer;</div>
+<div class="line"> </div>
+<div class="line">@end</div>
+</div><!-- fragment --><p>根据渲染后的输出是否有问题，决定抛弃该输出或者在您的屏幕上进行显示和保存到文件中（录制）。以下是demo中的示例代码，您可以当作伪代码来理解，实际工程中按照您的具体需求去执行相应的逻辑。</p>
+<div class="fragment"><div class="line">// Display </div>
+<div class="line">// 显示</div>
+<div class="line">CMTime presentationTimeStamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);</div>
+<div class="line">CMTime duration = CMSampleBufferGetDuration(sampleBuffer);</div>
+<div class="line">[self.preview displayRenderOutput:output presentationTimeStamp:presentationTimeStamp duration:duration];</div>
+<div class="line">// write file </div>
+<div class="line">// 写入到文件中</div>
+<div class="line">CMTime bufferTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);</div>
+<div class="line">int64_t timelinePos = (int64_t)(bufferTime.value / 1000);</div>
+<div class="line">if (output.pixelBuffer != nil) {</div>
+<div class="line">    [self.fileWriter appendPixelBuffer:output.pixelBuffer timelinePos:timelinePos];</div>
+<div class="line">} else {</div>
+<div class="line">    [self.fileWriter appendTexture:output.texture.textureId videoSize:output.texture.size timelinePos:timelinePos];</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>在处理完输出数据后（如显示、保存）需要将不再使用的输出给销毁掉，回收由NveEffectKit创建的CVPixelBufferRef或纹理，代码如下 </p><div class="fragment"><div class="line">- (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection isAudioConnection:(BOOL)isAudioConnection {</div>
+<div class="line">    //和本处讲解无关的代码忽略，可在demo 中查看全部代码</div>
+<div class="line">    </div>
+<div class="line">    // recycle / 回收释放资源</div>
+<div class="line">    [self.effectKit recycleOutput:output];</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>素材安装</h2>
+<p>sdk 内部所有以文件形式存在的素材包都需要在使用前进行安装，代码如下： </p><div class="fragment"><div class="line">NSString* packagePath = @&quot;XXXX&quot;; // 效果包路径</div>
+<div class="line">NSString* packageLicPath = @&quot;XXXX&quot;; // 效果包对应的lic文件路径</div>
+<div class="line">NSMutableString *mutString = [NSMutableString string];</div>
+<div class="line">NvsAssetPackageManagerError error =</div>
+<div class="line">    [[NveEffectKit shareInstance] installAssetPackage:packagePath</div>
+<div class="line">                                             license:packageLicPath</div>
+<div class="line">                                                type:NvsAssetPackageType_VideoFx</div>
+<div class="line">                                      assetPackageId:mutString];</div>
+<div class="line">if (error == NvsAssetPackageManagerError_NoError) {</div>
+<div class="line">    model.packageId = mutString;</div>
+<div class="line">} else {</div>
+<div class="line">    NSLog(@&quot;installAssetPackage error: %d&quot;, error);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>注意，每个素材（效果包）文件都有一个对应的证书文件，一定要传入该素材对应的证书文件地址。type 是该素材对应的类型，具体枚举可查看 <code>NvsAssetPackageType</code>。</p>
+<p>至此，相信您已经成功集成，下面是对demo 的文件的大致说明，帮助您快速了解demo 架构。</p>
+<h2>demo 中文件和类的大致说明</h2>
+<p><img src="16844062720544.jpg" alt="" class="inline"/>   </p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">文件夹 </th><th class="markdownTableHeadNone"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Resources </td><td class="markdownTableBodyNone">资源（人脸模型、效果包、SDK授权等）  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Makeup </td><td class="markdownTableBodyNone">美妆和妆容视图和模型  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">BeautyView </td><td class="markdownTableBodyNone">美颜、美型、微整形视图和模型  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Category </td><td class="markdownTableBodyNone">类扩展  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Utils </td><td class="markdownTableBodyNone">工具类  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Helper </td><td class="markdownTableBodyNone">拍摄、预览、录制功能类  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Capture </td><td class="markdownTableBodyNone">拍摄页面控制器  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">AppDelegate </td><td class="markdownTableBodyNone">项目类  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">类 </td><td class="markdownTableBodyNone">功能  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">----------&mdash; </td><td class="markdownTableBodyNone">---&mdash;  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">EFCapture </td><td class="markdownTableBodyNone">相机管理  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NvDisplayView </td><td class="markdownTableBodyNone">预览画面  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">EFFileWriter </td><td class="markdownTableBodyNone">视频文件录制  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

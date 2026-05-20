@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 美摄Mimo技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">美摄Mimo技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>Mimo Android使用文档</h1>
+<p>&emsp;&emsp;Mimo技术参数封装在json文件中，使用前首先将模版中info.json文件进行解析。</p>
+<p>&emsp;&emsp;按照解析得到的信息，添加如下内容：</p>
+<p>&emsp;&emsp;A、添加镜头(注：shot，分为普通镜头和空镜头。空镜头指json中已经预定好指定素材的镜头，即用户无法对此镜头进行选素材操作)。</p>
+<p>&emsp;&emsp;B、添加时间线特效。</p>
+<p>&emsp;&emsp;C、添加clip特效等。</p>
+<p>&emsp;&emsp;最后形成合乎预期效果的时间线。再把时间线渲染成视频。</p>
+<h2>1、Mimo规范</h2>
+<p>&emsp;&emsp;Mimo具体规范，参考设计同事给定的范例文档。</p>
+<h2>2、Demo参考代码</h2>
+<h3>2.1、MainActivity -&gt; MimoActivity</h3>
+<p>&emsp;&emsp;从主界面跳转到Mimo界面，用户在此界面选定某个Mimo模板，然后跳转至相册界面，选择相应素材，填充镜头数据。</p>
+<h3>2.2、单镜头裁剪</h3>
+<p>&emsp;&emsp;通过TrimEditActivity对单个镜头进行裁剪，设置素材的trimIn和trimOut参数。</p>
+<h3>2.3、说明</h3>
+<p>&emsp;&emsp;如果镜头对应选择素材为视频素材，而且该镜头包含reverse或repeat字段 需要对该视频素材进行转码操作。</p>
+<p>&emsp;&emsp;调用NvsMediaFileConvertor.convertMeidaFile 接口 </p><pre class="fragment">NvsMediaFileConvertor.convertMeidaFile(String srcFile,String dstFile,boolean isReverseConvert,long fromPositon,long toPosition,Hashtable&lt; String, Object &gt; configurations )
+</pre><p>&emsp;&emsp;镜头数据填充完毕后，跳转到MimoEditActivity页面，在此界面创建Timeline, 并按照模版信息进行添加素材及特效。</p>
+<h2>3、创建时间线</h2>
+<h3>3.1、创建时间线</h3>
+<p>&emsp;&emsp;创建时间线通过下面函数创建： </p><pre class="fragment">MimoTimelineUtil.newTimeline(NvsVideoResolution videoResolution)
+</pre><h3>3.2、Mimo参数配置</h3>
+<p>&emsp;&emsp;通过下面函数，设置Mimo配置的各种参数。如主视频轨道、子视频轨道、字幕、特效、变速等效果。 </p><pre class="fragment">MimoTimelineUtil.rebuildTimelineByTemplate(NvsTimeline timeline)
+</pre><h3>3.3、添加镜头数据</h3>
+<p>&emsp;&emsp;参见下面方法： </p><pre class="fragment">MimoTimelineUtil.addShotVideo()
+</pre><p>&emsp;&emsp;包括添加主视频轨道、子视频轨道、镜头变速、音频轨道、转场、时间线特效等。</p>
+<h4>3.3.1、添加VideoClip</h4>
+<p>&emsp;&emsp;通过如下函数添加： </p><pre class="fragment">MimoTimelineUtil.appendVideoClip(NvsVideoTrack videoTrack,
+                                    String videoFilePath,
+                                    int shot,
+                                    TrackClipInfo trackClipInfo,
+                                    long inPoint)
+</pre><h4>3.3.2、镜头变速</h4>
+<p>&emsp;&emsp;针对镜头内speed数组不为空，需要进行变速操作。</p>
+<p>&emsp;&emsp;如果所选素材指定trimIn与trimOut不够镜头时长限制，也需进行变速操作。 封装方法如下： </p><pre class="fragment">MimoTimelineUtil.changeSpeed（NvsVideoClip videoClip,TrackClipInfo trackClipInfo）
+</pre><p>&emsp;&emsp;注意：sdk 最小支持变速为 1/16.0</p>
+<h4>3.3.3、镜头内特效</h4>
+<p>&emsp;&emsp;镜头内特效按照是否存在变速分为两种：添加时间线特效和添加clip特效。</p>
+<p>&emsp;&emsp;注：其中因变速导致的一个镜头分割为多个clip的情况应将这些clip之间的转场设为空。 </p><pre class="fragment">MimoTimelineUtil.appendFilter(NvsVideoClip videoClip,String filterName)
+</pre><h4>3.3.4、时间线特效</h4>
+<p>&emsp;&emsp;按照模板信息对非镜头内特效(滤镜、复合字幕、贴纸等)进行添加。</p>
+<p>&emsp;&emsp;注：使用特效之前，应首先确保该特效已经正确安装。 </p><pre class="fragment">MimoTimelineUtil.setTimelineData(NvsTimeline timeline,MiMoLocalData selectTemplate)
+</pre><h3>3.3.5、其它</h3>
+<p>&emsp;&emsp;组合字幕字体：组合字幕可应用指定字体效果。注意的是，使用字体之前，首先对字体注册。</p>
+<p>&emsp;&emsp;片段水印：开启或关闭片段结尾水印。即添加和删除模板指定的动态水印。</p>
+<p>&emsp;&emsp;转场特效：视频转场需要在片段数据处理完毕后单独处理，否则无效！ </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

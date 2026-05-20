@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  SDKDemo
+
+  Created by 刘东旭 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+CFBundleDisplayName = "Meicam";
+NSMicrophoneUsageDescription = "If you don't allow it, you won't be able to take a video with sound in the photo, or record it, or add a voice to the produced video.";
+NSCameraUsageDescription = "If you don't allow it, you won't be able to take a video or photo in the photo.";
+NSPhotoLibraryUsageDescription = "If you don't allow it, you won't be able to store photos taken or made, or import your own photos or videos to Meicam.";
+NSPhotoLibraryAddUsageDescription = "If you don't allow it, you won't be able to store photos taken or made, or import your own photos or videos to Meicam.";
+NSAppleMusicUsageDescription = "If you don't allow it, you won't be able to import your own music in the photo, as the background music for the video.";

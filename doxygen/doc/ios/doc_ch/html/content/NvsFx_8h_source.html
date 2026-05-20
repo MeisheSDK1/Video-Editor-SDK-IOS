@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsFx.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsFx.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsFx_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2016. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Dec 29. 2016</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsObject_8h.html">NvsObject.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsCommonDef_8h.html">NvsCommonDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945c">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945ca3b0c072b7831be33964596eb1f91645c">   28</a></span>&#160;    <a class="code" href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945ca3b0c072b7831be33964596eb1f91645c">NvsKeyFrameFindModeFlag_Before</a> = 1,            </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945ca52922d77149aa499edf32bac20a9a6a2">   29</a></span>&#160;    <a class="code" href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945ca52922d77149aa499edf32bac20a9a6a2">NvsKeyFrameFindModeFlag_After</a> = 2,             </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <a class="code" href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945c">NvsKeyFrameFindModeFlag</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="NvsFx_8h.html#a632ca148785dc633e3440058850178cd">   38</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="NvsFx_8h.html#a632ca148785dc633e3440058850178cdab7dcafae217ac002abd083a67185ce58">   39</a></span>&#160;    <a class="code" href="NvsFx_8h.html#a632ca148785dc633e3440058850178cdab7dcafae217ac002abd083a67185ce58">NvsRegionCoordinateSystemType_NDC</a> = 0,              </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="NvsFx_8h.html#a632ca148785dc633e3440058850178cdadd0891458d54a945d6b7e3a18b2409cc">NvsRegionCoordinateSystemType_Timeline</a> = 1          </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="NvsFx_8h.html#a632ca148785dc633e3440058850178cdadd0891458d54a945d6b7e3a18b2409cc">   41</a></span>&#160;} <a class="code" href="NvsFx_8h.html#a632ca148785dc633e3440058850178cd">NvsRegionCoordinateSystemType</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="NvsFx_8h.html#aeb85995e3ae7c8bdff2d32a9e429207b">   49</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="NvsFx_8h.html#aeb85995e3ae7c8bdff2d32a9e429207ba6e34c03eafa331a1db780c35ceedd68e">NvsFaceWarpEffectStrategy_Custom</a> = 0x7FFFFFFF       </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="NvsFx_8h.html#aeb85995e3ae7c8bdff2d32a9e429207ba6e34c03eafa331a1db780c35ceedd68e">   51</a></span>&#160;} <a class="code" href="NvsFx_8h.html#aeb85995e3ae7c8bdff2d32a9e429207b">NvsFaceWarpEffectStrategy</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsArbitraryData.html">NvsArbitraryData</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsFxDescription.html">NvsFxDescription</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsParticleSystemContext.html">NvsParticleSystemContext</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsARFaceContext.html">NvsARFaceContext</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsPaintingEffectContext.html">NvsPaintingEffectContext</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsARSceneManipulate.html">NvsARSceneManipulate</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsControlPointPair.html">NvsControlPointPair</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsControlPointModePair.html">NvsControlPointModePair</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsMeshWarpInfo.html">NvsMeshWarpInfo</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsStoryboard3DSceneAnimData.html">NvsStoryboard3DSceneAnimData</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNvsStoryboard3DMorphingData.html">NvsStoryboard3DMorphingData</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="interfaceNvsFx.html">   82</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsFx.html">NvsFx</a> : <a class="code" href="interfaceNvsObject.html">NvsObject</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="interfaceNvsFx.html#a9101d9a89504968bcd681e42633f2fce">   84</a></span>&#160;<span class="keyword">@property</span> (readonly) <a class="code" href="interfaceNvsFxDescription.html">NvsFxDescription</a> *<a class="code" href="interfaceNvsFx.html#a668f05b6b48c2b68b78100bea9b06387">description</a>; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;- (void)setIntVal:(NSString *)fxParam val:(int)val;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;- (int)getIntVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;- (void)setIntValAtTime:(NSString *)fxParam val:(int)val time:(int64_t)time;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;- (int)getIntValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;- (void)setFloatVal:(NSString *)fxParam val:(double)val;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;- (double)getFloatVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;- (void)setFloatValAtTime:(NSString *)fxParam val:(double)val time:(int64_t)time;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;- (double)getFloatValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;- (void)setBooleanVal:(NSString *)fxParam val:(BOOL)val;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;- (BOOL)getBooleanVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;- (void)setBooleanValAtTime:(NSString *)fxParam val:(BOOL)val time:(int64_t)time;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;- (BOOL)getBooleanValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;- (void)setStringVal:(NSString *)fxParam val:(NSString *)val;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;- (NSString *)getStringVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;- (void)setStringValAtTime:(NSString *)fxParam val:(NSString *)val time:(int64_t)time;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;- (NSString *)getStringValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;- (void)setColorVal:(NSString *)fxParam val:(<a class="code" href="structNvsColor.html">NvsColor</a> *)val;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;- (<a class="code" href="structNvsColor.html">NvsColor</a>)getColorVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;- (void)setColorValAtTime:(NSString *)fxParam val:(<a class="code" href="structNvsColor.html">NvsColor</a> *)val time:(int64_t)time;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;- (<a class="code" href="structNvsColor.html">NvsColor</a>)getColorValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;- (void)setPosition2DVal:(NSString *)fxParam val:(<a class="code" href="structNvsPosition2D.html">NvsPosition2D</a> *)val;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;- (<a class="code" href="structNvsPosition2D.html">NvsPosition2D</a>)getPosition2DVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;- (void)setPosition2DValAtTime:(NSString *)fxParam val:(<a class="code" href="structNvsPosition2D.html">NvsPosition2D</a> *)val time:(int64_t)time;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;- (<a class="code" href="structNvsPosition2D.html">NvsPosition2D</a>)getPosition2DValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;- (void)setPosition3DVal:(NSString *)fxParam val:(<a class="code" href="structNvsPosition3D.html">NvsPosition3D</a> *)val;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;- (<a class="code" href="structNvsPosition3D.html">NvsPosition3D</a>)getPosition3DVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;- (void)setPosition3DValAtTime:(NSString *)fxParam val:(<a class="code" href="structNvsPosition3D.html">NvsPosition3D</a> *)val time:(int64_t)time;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;- (<a class="code" href="structNvsPosition3D.html">NvsPosition3D</a>)getPosition3DValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;- (void)setMenuVal:(NSString *)fxParam val:(NSString *)val;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;- (NSString *)getMenuVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160; </div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;- (void)setMenuValAtTime:(NSString *)fxParam val:(NSString *)val time:(int64_t)time;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160; </div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;- (NSString *)getMenuValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160; </div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;- (void)setArbDataVal:(NSString *)fxParam val:(<a class="code" href="interfaceNvsArbitraryData.html">NvsArbitraryData</a> *)val;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160; </div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;- (<a class="code" href="interfaceNvsArbitraryData.html">NvsArbitraryData</a> *)getArbDataVal:(NSString *)fxParam;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160; </div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;- (void)setArbDataValAtTime:(NSString *)fxParam val:(<a class="code" href="interfaceNvsArbitraryData.html">NvsArbitraryData</a> *)val time:(int64_t)time;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;- (<a class="code" href="interfaceNvsArbitraryData.html">NvsArbitraryData</a> *)getArbDataValAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;- (bool)removeKeyframeAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160; </div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;- (bool)removeAllKeyframe:(NSString *)fxParam;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;- (bool)hasKeyframeList:(NSString *)fxParam;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160; </div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;- (int64_t)findKeyframeTime:(NSString *)fxParam time:(int64_t)time flags:(<span class="keywordtype">int</span>)flags;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160; </div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;- (bool)setKeyFrameControlPoint:(NSString *)fxParam time:(int64_t)time controlPointPair:(<a class="code" href="interfaceNvsControlPointPair.html">NvsControlPointPair</a> *)controlPointPair;</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;- (<a class="code" href="interfaceNvsControlPointPair.html">NvsControlPointPair</a>*)getKeyFrameControlPoint:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160; </div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;- (bool)setKeyFrameControlPointMode:(NSString *)fxParam time:(int64_t)time controlPointModePair:(<a class="code" href="interfaceNvsControlPointModePair.html">NvsControlPointModePair</a> *)controlPointModePair;</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160; </div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;- (<a class="code" href="interfaceNvsControlPointModePair.html">NvsControlPointModePair</a>*)getKeyFrameControlPointMode:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;-(void)setFilterIntensity:(<span class="keywordtype">float</span>)intensity;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160; </div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;-(float)<a class="code" href="interfaceNvsFx.html#ad7f44e2302c8bee436f071b7e69e9c0b">getFilterIntensity</a>;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160; </div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;-(void)setFilterMask:(<span class="keywordtype">bool</span>)useMask;</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160; </div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;-(bool)<a class="code" href="interfaceNvsFx.html#a2139a1ec57e657523653b2f133edc21b">getFilterMask</a>;</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160; </div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;-(void)setRegional:(BOOL)isRegional;</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160; </div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;-(BOOL)<a class="code" href="interfaceNvsFx.html#a601ff9f4a657e5e05d9f2cf4f5d6c74c">getRegional</a>;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;-(void)setIgnoreBackground:(BOOL)isIgnoreBackground;</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160; </div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;-(BOOL)<a class="code" href="interfaceNvsFx.html#a0d1699ed16a149fcc19bb2e26ecc4937">getIgnoreBackground</a>;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160; </div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160; </div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;-(void)setInverseRegion:(BOOL)isInverseRegion;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160; </div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;-(BOOL)<a class="code" href="interfaceNvsFx.html#a1122dab339fbd97e95c8c71c561a0ef8">getInverseRegion</a>;</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160; </div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;-(NSArray *)<a class="code" href="interfaceNvsFx.html#af2fd7d39cd02c9a33859d7fd77565b02">getRegion</a>;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160; </div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;-(void)setRegion:(NSArray *)region;</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160; </div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;-(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> *)<a class="code" href="interfaceNvsFx.html#a8df805d0bf1ccb0f9153ac264f509a53">getRegionInfo</a>;</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160; </div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;-(void)setRegionInfo:(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> *)info;</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160; </div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;-(void)setRegionInfoAtTime:(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> *)info time:(int64_t)time;</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160; </div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;-(<a class="code" href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a> *)getRegionInfoAtTime:(int64_t)time;</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160; </div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;-(void)setRegionalFeatherWidth:(<span class="keywordtype">float</span>)featherWidth;</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160; </div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;-(float)<a class="code" href="interfaceNvsFx.html#abbf7cd69de0f088c1a04324455ddc827">getRegionalFeatherWidth</a>;</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160; </div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;- (void)setRegionalFeatherWidthAtTime:(<span class="keywordtype">float</span>)featherWidth time:(int64_t)time;</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160; </div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;- (float)getRegionalFeatherWidthAtTime:(int64_t)time;</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160; </div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;-(void)setRegionCoordinateSystemType:(<span class="keywordtype">int</span>)type;</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160; </div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;-(int)<a class="code" href="interfaceNvsFx.html#aafc89f2476e00a3ba6139b156041887b">getRegionCoordinateSystemType</a>;</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160; </div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;- (<a class="code" href="interfaceNvsParticleSystemContext.html">NvsParticleSystemContext</a> *)<a class="code" href="interfaceNvsFx.html#a8f2f784e96d2f3fe35fc5de1483c017f">getParticleSystemContext</a>;</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160; </div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;- (<a class="code" href="interfaceNvsARFaceContext.html">NvsARFaceContext</a> *)<a class="code" href="interfaceNvsFx.html#ae6a7445da274cc7f6059a935375a522a">getARFaceContext</a>;</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160; </div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;- (<a class="code" href="interfaceNvsPaintingEffectContext.html">NvsPaintingEffectContext</a> *)<a class="code" href="interfaceNvsFx.html#a0b7366edf65d52d99d8386424db2d4c5">getPaintingEffectContext</a>;</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160; </div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;- (<a class="code" href="interfaceNvsARSceneManipulate.html">NvsARSceneManipulate</a> *)<a class="code" href="interfaceNvsFx.html#ae91d037e1a08f92f141d0ebc8e50b9c9">getARSceneManipulate</a>;</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160; </div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;- (void)setExprVar:(NSString *)varName varValue:(double)varValue;</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160; </div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;- (double)getExprVar:(NSString *)varName;</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160; </div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;- (void)setColorExprVar:(NSString *)varName varValue:(<a class="code" href="structNvsColor.html">NvsColor</a> *)color;</div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160; </div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;- (<a class="code" href="structNvsColor.html">NvsColor</a>)getColorExprVar:(NSString *)varName;</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160; </div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;- (void)clearExprVar:(NSString *)varName;</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160; </div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;- (void)<a class="code" href="interfaceNvsFx.html#ad6b39a029b16161ec63e8cb819950d73">clearExprVarCtx</a>;</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterfaceNvsFx_html_a2139a1ec57e657523653b2f133edc21b"><div class="ttname"><a href="interfaceNvsFx.html#a2139a1ec57e657523653b2f133edc21b">-[NvsFx getFilterMask]</a></div><div class="ttdeci">bool getFilterMask()</div><div class="ttdoc">获得是否使用滤镜遮罩</div></div>
+<div class="ttc" id="ainterfaceNvsARSceneManipulate_html"><div class="ttname"><a href="interfaceNvsARSceneManipulate.html">NvsARSceneManipulate</a></div><div class="ttdoc">AR场景处理接口</div><div class="ttdef"><b>Definition:</b> NvsARSceneManipulate.h:290</div></div>
+<div class="ttc" id="aNvsFx_8h_html_a632ca148785dc633e3440058850178cdadd0891458d54a945d6b7e3a18b2409cc"><div class="ttname"><a href="NvsFx_8h.html#a632ca148785dc633e3440058850178cdadd0891458d54a945d6b7e3a18b2409cc">NvsRegionCoordinateSystemType_Timeline</a></div><div class="ttdeci">@ NvsRegionCoordinateSystemType_Timeline</div><div class="ttdoc">timeline坐标系</div><div class="ttdef"><b>Definition:</b> NvsFx.h:40</div></div>
+<div class="ttc" id="aNvsFx_8h_html_ad342b92fdcaaaf1662e73b0344be945c"><div class="ttname"><a href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945c">NvsKeyFrameFindModeFlag</a></div><div class="ttdeci">NvsKeyFrameFindModeFlag</div><div class="ttdoc">关键帧查找方式</div><div class="ttdef"><b>Definition:</b> NvsFx.h:27</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_a0b7366edf65d52d99d8386424db2d4c5"><div class="ttname"><a href="interfaceNvsFx.html#a0b7366edf65d52d99d8386424db2d4c5">-[NvsFx getPaintingEffectContext]</a></div><div class="ttdeci">NvsPaintingEffectContext * getPaintingEffectContext()</div><div class="ttdoc">获得手绘特效上下文指针。请参见NvsPaintingEffectContext</div></div>
+<div class="ttc" id="ainterfaceNvsControlPointPair_html"><div class="ttname"><a href="interfaceNvsControlPointPair.html">NvsControlPointPair</a></div><div class="ttdoc">关键帧控制点对类。</div><div class="ttdef"><b>Definition:</b> NvsControlPointPair.h:27</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_ae6a7445da274cc7f6059a935375a522a"><div class="ttname"><a href="interfaceNvsFx.html#ae6a7445da274cc7f6059a935375a522a">-[NvsFx getARFaceContext]</a></div><div class="ttdeci">NvsARFaceContext * getARFaceContext()</div><div class="ttdoc">获得人脸特效上下文指针。请参见NvsARFaceContext</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_aafc89f2476e00a3ba6139b156041887b"><div class="ttname"><a href="interfaceNvsFx.html#aafc89f2476e00a3ba6139b156041887b">-[NvsFx getRegionCoordinateSystemType]</a></div><div class="ttdeci">int getRegionCoordinateSystemType()</div><div class="ttdoc">获得局部滤镜所在坐标系类型</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_a8f2f784e96d2f3fe35fc5de1483c017f"><div class="ttname"><a href="interfaceNvsFx.html#a8f2f784e96d2f3fe35fc5de1483c017f">-[NvsFx getParticleSystemContext]</a></div><div class="ttdeci">NvsParticleSystemContext * getParticleSystemContext()</div><div class="ttdoc">获得粒子特效上下文指针。请参见NvsParticleSystemContext</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_a8df805d0bf1ccb0f9153ac264f509a53"><div class="ttname"><a href="interfaceNvsFx.html#a8df805d0bf1ccb0f9153ac264f509a53">-[NvsFx getRegionInfo]</a></div><div class="ttdeci">NvsMaskRegionInfo * getRegionInfo()</div><div class="ttdoc">获取局部滤镜的蒙版区域信息</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_abbf7cd69de0f088c1a04324455ddc827"><div class="ttname"><a href="interfaceNvsFx.html#abbf7cd69de0f088c1a04324455ddc827">-[NvsFx getRegionalFeatherWidth]</a></div><div class="ttdeci">float getRegionalFeatherWidth()</div><div class="ttdoc">获得局部滤镜的羽化宽度</div></div>
+<div class="ttc" id="ainterfaceNvsObject_html"><div class="ttname"><a href="interfaceNvsObject.html">NvsObject</a></div><div class="ttdoc">NvsObject类，继承自object-c里的NSObject类。</div><div class="ttdef"><b>Definition:</b> NvsObject.h:78</div></div>
+<div class="ttc" id="aNvsFx_8h_html_ad342b92fdcaaaf1662e73b0344be945ca52922d77149aa499edf32bac20a9a6a2"><div class="ttname"><a href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945ca52922d77149aa499edf32bac20a9a6a2">NvsKeyFrameFindModeFlag_After</a></div><div class="ttdeci">@ NvsKeyFrameFindModeFlag_After</div><div class="ttdoc">查找当前时间点之后的关键帧</div><div class="ttdef"><b>Definition:</b> NvsFx.h:29</div></div>
+<div class="ttc" id="ainterfaceNvsFxDescription_html"><div class="ttname"><a href="interfaceNvsFxDescription.html">NvsFxDescription</a></div><div class="ttdoc">特效参数描述类</div><div class="ttdef"><b>Definition:</b> NvsFxDescription.h:33</div></div>
+<div class="ttc" id="astructNvsPosition3D_html"><div class="ttname"><a href="structNvsPosition3D.html">NvsPosition3D</a></div><div class="ttdoc">三维坐标结构</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:433</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_a0d1699ed16a149fcc19bb2e26ecc4937"><div class="ttname"><a href="interfaceNvsFx.html#a0d1699ed16a149fcc19bb2e26ecc4937">-[NvsFx getIgnoreBackground]</a></div><div class="ttdeci">BOOL getIgnoreBackground()</div><div class="ttdoc">获得局部滤镜是否消除背景</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html"><div class="ttname"><a href="interfaceNvsFx.html">NvsFx</a></div><div class="ttdoc">特效类</div><div class="ttdef"><b>Definition:</b> NvsFx.h:83</div></div>
+<div class="ttc" id="ainterfaceNvsMaskRegionInfo_html"><div class="ttname"><a href="interfaceNvsMaskRegionInfo.html">NvsMaskRegionInfo</a></div><div class="ttdoc">蒙版区域信息</div><div class="ttdef"><b>Definition:</b> NvsMaskRegionInfo.h:98</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_ae91d037e1a08f92f141d0ebc8e50b9c9"><div class="ttname"><a href="interfaceNvsFx.html#ae91d037e1a08f92f141d0ebc8e50b9c9">-[NvsFx getARSceneManipulate]</a></div><div class="ttdeci">NvsARSceneManipulate * getARSceneManipulate()</div><div class="ttdoc">获得AR场景操作指针。请参见NvsARSceneManipulate</div></div>
+<div class="ttc" id="aNvsFx_8h_html_aeb85995e3ae7c8bdff2d32a9e429207ba6e34c03eafa331a1db780c35ceedd68e"><div class="ttname"><a href="NvsFx_8h.html#aeb85995e3ae7c8bdff2d32a9e429207ba6e34c03eafa331a1db780c35ceedd68e">NvsFaceWarpEffectStrategy_Custom</a></div><div class="ttdeci">@ NvsFaceWarpEffectStrategy_Custom</div><div class="ttdoc">人脸变形特效自定义策略</div><div class="ttdef"><b>Definition:</b> NvsFx.h:50</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_ad6b39a029b16161ec63e8cb819950d73"><div class="ttname"><a href="interfaceNvsFx.html#ad6b39a029b16161ec63e8cb819950d73">-[NvsFx clearExprVarCtx]</a></div><div class="ttdeci">void clearExprVarCtx()</div><div class="ttdoc">清空表达式中定义的全部参数的值，并设置为默认值0</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_a601ff9f4a657e5e05d9f2cf4f5d6c74c"><div class="ttname"><a href="interfaceNvsFx.html#a601ff9f4a657e5e05d9f2cf4f5d6c74c">-[NvsFx getRegional]</a></div><div class="ttdeci">BOOL getRegional()</div><div class="ttdoc">获得滤镜是否为局部滤镜</div></div>
+<div class="ttc" id="astructNvsColor_html"><div class="ttname"><a href="structNvsColor.html">NvsColor</a></div><div class="ttdoc">自定义颜色类</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:413</div></div>
+<div class="ttc" id="aNvsObject_8h_html"><div class="ttname"><a href="NvsObject_8h.html">NvsObject.h</a></div></div>
+<div class="ttc" id="ainterfaceNvsPaintingEffectContext_html"><div class="ttname"><a href="interfaceNvsPaintingEffectContext.html">NvsPaintingEffectContext</a></div><div class="ttdoc">手绘特效上下文</div><div class="ttdef"><b>Definition:</b> NvsPaintingEffectContext.h:71</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_a668f05b6b48c2b68b78100bea9b06387"><div class="ttname"><a href="interfaceNvsFx.html#a668f05b6b48c2b68b78100bea9b06387">NvsFx::description</a></div><div class="ttdeci">NvsFxDescription * description</div><div class="ttdoc">特效描述</div><div class="ttdef"><b>Definition:</b> NvsFx.h:84</div></div>
+<div class="ttc" id="aNvsFx_8h_html_a632ca148785dc633e3440058850178cd"><div class="ttname"><a href="NvsFx_8h.html#a632ca148785dc633e3440058850178cd">NvsRegionCoordinateSystemType</a></div><div class="ttdeci">NvsRegionCoordinateSystemType</div><div class="ttdoc">局部特效坐标系类型</div><div class="ttdef"><b>Definition:</b> NvsFx.h:38</div></div>
+<div class="ttc" id="aNvsFx_8h_html_a632ca148785dc633e3440058850178cdab7dcafae217ac002abd083a67185ce58"><div class="ttname"><a href="NvsFx_8h.html#a632ca148785dc633e3440058850178cdab7dcafae217ac002abd083a67185ce58">NvsRegionCoordinateSystemType_NDC</a></div><div class="ttdeci">@ NvsRegionCoordinateSystemType_NDC</div><div class="ttdoc">NDC坐标系</div><div class="ttdef"><b>Definition:</b> NvsFx.h:39</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_af2fd7d39cd02c9a33859d7fd77565b02"><div class="ttname"><a href="interfaceNvsFx.html#af2fd7d39cd02c9a33859d7fd77565b02">-[NvsFx getRegion]</a></div><div class="ttdeci">NSArray * getRegion()</div><div class="ttdoc">获取局部滤镜的控制范围</div></div>
+<div class="ttc" id="ainterfaceNvsStoryboard3DSceneAnimData_html"><div class="ttname"><a href="interfaceNvsStoryboard3DSceneAnimData.html">NvsStoryboard3DSceneAnimData</a></div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DSceneAnimData.h:34</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="ainterfaceNvsStoryboard3DMorphingData_html"><div class="ttname"><a href="interfaceNvsStoryboard3DMorphingData.html">NvsStoryboard3DMorphingData</a></div><div class="ttdef"><b>Definition:</b> NvsStoryboard3DMorphingData.h:46</div></div>
+<div class="ttc" id="ainterfaceNvsParticleSystemContext_html"><div class="ttname"><a href="interfaceNvsParticleSystemContext.html">NvsParticleSystemContext</a></div><div class="ttdoc">粒子特效上下文 粒子系统的由若干粒子发生器和子粒子发生器构成。粒子发生器会随着时间推移不断发射出粒子，而子粒子发生器则会在粒子发生器发射出的粒子上面发射出粒子。</div><div class="ttdef"><b>Definition:</b> NvsParticleSystemContext.h:30</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html"><div class="ttname"><a href="NvsCommonDef_8h.html">NvsCommonDef.h</a></div></div>
+<div class="ttc" id="aNvsFx_8h_html_ad342b92fdcaaaf1662e73b0344be945ca3b0c072b7831be33964596eb1f91645c"><div class="ttname"><a href="NvsFx_8h.html#ad342b92fdcaaaf1662e73b0344be945ca3b0c072b7831be33964596eb1f91645c">NvsKeyFrameFindModeFlag_Before</a></div><div class="ttdeci">@ NvsKeyFrameFindModeFlag_Before</div><div class="ttdoc">查找当前时间点之前的关键帧</div><div class="ttdef"><b>Definition:</b> NvsFx.h:28</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_ad7f44e2302c8bee436f071b7e69e9c0b"><div class="ttname"><a href="interfaceNvsFx.html#ad7f44e2302c8bee436f071b7e69e9c0b">-[NvsFx getFilterIntensity]</a></div><div class="ttdeci">float getFilterIntensity()</div><div class="ttdoc">获得滤镜的强度</div></div>
+<div class="ttc" id="aNvsFx_8h_html_aeb85995e3ae7c8bdff2d32a9e429207b"><div class="ttname"><a href="NvsFx_8h.html#aeb85995e3ae7c8bdff2d32a9e429207b">NvsFaceWarpEffectStrategy</a></div><div class="ttdeci">NvsFaceWarpEffectStrategy</div><div class="ttdef"><b>Definition:</b> NvsFx.h:49</div></div>
+<div class="ttc" id="ainterfaceNvsARFaceContext_html"><div class="ttname"><a href="interfaceNvsARFaceContext.html">NvsARFaceContext</a></div><div class="ttdoc">ARFace上下文</div><div class="ttdef"><b>Definition:</b> NvsARFaceContext.h:158</div></div>
+<div class="ttc" id="astructNvsPosition2D_html"><div class="ttname"><a href="structNvsPosition2D.html">NvsPosition2D</a></div><div class="ttdoc">二维坐标结构</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:423</div></div>
+<div class="ttc" id="ainterfaceNvsMeshWarpInfo_html"><div class="ttname"><a href="interfaceNvsMeshWarpInfo.html">NvsMeshWarpInfo</a></div><div class="ttdoc">MeshWarp信息</div><div class="ttdef"><b>Definition:</b> NvsMeshWarpInfo.h:54</div></div>
+<div class="ttc" id="ainterfaceNvsArbitraryData_html"><div class="ttname"><a href="interfaceNvsArbitraryData.html">NvsArbitraryData</a></div><div class="ttdoc">特技的一种自定义参数结构</div><div class="ttdef"><b>Definition:</b> NvsArbitraryData.h:29</div></div>
+<div class="ttc" id="ainterfaceNvsControlPointModePair_html"><div class="ttname"><a href="interfaceNvsControlPointModePair.html">NvsControlPointModePair</a></div><div class="ttdoc">关键帧控制点模式对类。</div><div class="ttdef"><b>Definition:</b> NvsControlPointModePair.h:27</div></div>
+<div class="ttc" id="ainterfaceNvsFx_html_a1122dab339fbd97e95c8c71c561a0ef8"><div class="ttname"><a href="interfaceNvsFx.html#a1122dab339fbd97e95c8c71c561a0ef8">-[NvsFx getInverseRegion]</a></div><div class="ttdeci">BOOL getInverseRegion()</div><div class="ttdoc">获得局部滤镜是否反选区域</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

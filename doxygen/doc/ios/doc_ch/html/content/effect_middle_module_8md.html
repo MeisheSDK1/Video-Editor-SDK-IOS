@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 快速接入指南</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">快速接入指南 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>NveEffectKit使用说明文档</h1>
+<hr  />
+<p>NveEffectKit集成了美颜、美型、美妆、妆容、滤镜、人脸道具功能。依赖库为3.8.0以上的美摄Effect库</p>
+<h2>快速体验</h2>
+<ul>
+<li><a href="https://www.meishesdk.com/downloads">美摄</a>官方网站下载SDK人脸版本(下载**zip**包为<code>NvStreamingSdk_Android_..._ARSCENE_MS.zip</code> )</li>
+<li>使用Android Studio打开<code>./samples/android/NvEffectKitDemo</code>快速体验相关功能。</li>
+<li>运行demo时可查阅<a href="#常见问题">常见问题</a>。</li>
+</ul>
+<h2>如何导入项目？</h2>
+<p>Android打包为AAR库(<code>NveEffectKit.aar</code>)，复制到libs目录下(<code>./app/libs</code>)，在build.gradle设置aar的编译引入 &gt;NveEffectKit.aar路径： <code>./samples/android/NvEffectKitDemo/libBase/libs/NveEffectKit.aar</code></p>
+<div class="fragment"><div class="line">api fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;, &#39;*.aar&#39;])</div>
+</div><!-- fragment --><h2>初始化SDK</h2>
+<p>init时需传入授权文件路径，该路径可以是assets下路径，或本地的绝对路径。 <code>effectsdkdemo.lic</code>请联系<a href="https://www.meishesdk.com/">美摄商务</a>获取</p>
+<div class="fragment"><div class="line"> </div>
+<div class="line">String licPath = <span class="stringliteral">&quot;assets:/effectsdkdemo.lic&quot;</span>;</div>
+<div class="line">NveEffectKit.getInstance().init(<span class="keyword">this</span>, licPath);</div>
+</div><!-- fragment --><h2>初始化人脸检测模型</h2>
+<p>初始化模型，需传入模型类型和路径（路径可以为assets路径或本地绝对路径）</p>
+<div class="fragment"><div class="line"> </div>
+<div class="line">NveEffectKit.getInstance().initModel(<span class="keyword">this</span>, NveDetectionModelType.FACE, faceModelPath);</div>
+</div><!-- fragment --><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">类型 </th><th class="markdownTableHeadLeft">名称 </th><th class="markdownTableHeadNone">用途  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType.FACE </td><td class="markdownTableBodyLeft">人脸 </td><td class="markdownTableBodyNone">人脸道具使用  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveDetectionModelType.FAKE_FACE </td><td class="markdownTableBodyLeft">假脸 </td><td class="markdownTableBodyNone">人脸道具使用  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType.MAKEUP2 </td><td class="markdownTableBodyLeft">美妆 </td><td class="markdownTableBodyNone">美妆使用  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveDetectionModelType.FACE_COMMON </td><td class="markdownTableBodyLeft">人脸通用 </td><td class="markdownTableBodyNone">美颜和美妆使用  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType.ADVANCED_BEAUTY </td><td class="markdownTableBodyLeft">高级美颜 </td><td class="markdownTableBodyNone">美颜和妆容使用  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveDetectionModelType.EYEBALL </td><td class="markdownTableBodyLeft">眼球 </td><td class="markdownTableBodyNone">部分人脸道具会用到眼球效果  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveDetectionModelType.SEGMENTATION </td><td class="markdownTableBodyLeft">背景分割 </td><td class="markdownTableBodyNone">部分人脸道具会用到分割效果  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveDetectionModelType.AVATAR </td><td class="markdownTableBodyLeft">Avatar </td><td class="markdownTableBodyNone">根据表情动的特效果类别会使用这个模型  </td></tr>
+</table>
+<ul>
+<li><b>NveDetectionModelType.MAKEUP2在SDK3.13.x以上已废弃</b></li>
+<li><b>NveDetectionModelType.FACE_COMMON和NveDetectionModelType.ADVANCED_BEAUTY最低支持版本为 SDK3.13.x</b></li>
+<li><em>人脸模型详情可查看demo代码</em> <blockquote class="doxtable">
+<p><b>samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/Constants.java</b></p>
+<p></p>
+</blockquote>
+<div class="fragment"><div class="line">samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/MainActivity.java</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> initEffectModel() {}</div>
+</div><!-- fragment --></li>
+<li>更多可查看<a href="#2模型中face240和face106有什么区别">常见问题</a>。</li>
+</ul>
+<h2>相机预览，录制参考demo代码</h2>
+<blockquote class="doxtable">
+<p>samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/camera/... </p>
+</blockquote>
+<div class="fragment"><div class="line">samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/MainActivity.java</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span> GLSurfaceView mGlView;</div>
+<div class="line"><span class="keyword">private</span> RenderCameraUtil mRenderCameraUtil;</div>
+</div><!-- fragment --><h2>美颜使用</h2>
+<div class="fragment"><div class="line"><span class="comment">//美颜的使用</span></div>
+<div class="line">NveBeauty beauty= <span class="keyword">new</span> NveBeauty();</div>
+<div class="line"><span class="comment">//开关可以通过enable参数控制</span></div>
+<div class="line">beauty.setEnable(<span class="keyword">true</span>);</div>
+<div class="line"><span class="comment">//只设置一次即可，后续修改参数可直接调用beauty的参数set方法。</span></div>
+<div class="line">NveEffectKit.getInstance().setBeauty(beauty);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//磨皮和美白有多种类型，默认类型如下</span></div>
+<div class="line">beauty.setBlurType(NveBeautyBlurTypeEnum.AdvancedBuffingSkin1);</div>
+<div class="line">beauty.setWhiteningType(NveBeautyWhiteningTypeEnum.WhiteningA);</div>
+</div><!-- fragment --><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">参数 </th><th class="markdownTableHeadNone">类型 </th><th class="markdownTableHeadNone">用途  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">enable </td><td class="markdownTableBodyNone">boolean </td><td class="markdownTableBodyNone">美颜功能开关  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">blurType </td><td class="markdownTableBodyNone">NveBeautyBlurTypeEnum </td><td class="markdownTableBodyNone">磨皮类型  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">blurIntensity </td><td class="markdownTableBodyNone">float </td><td class="markdownTableBodyNone">磨皮强度，[0-1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">whiteningType </td><td class="markdownTableBodyNone">NvBeautyWhiteningTypeEnum </td><td class="markdownTableBodyNone">美白类型  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">whiteningIntensity </td><td class="markdownTableBodyNone">float </td><td class="markdownTableBodyNone">美白强度，[0-1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">matteIntensity </td><td class="markdownTableBodyNone">float </td><td class="markdownTableBodyNone">去油光强度，[0-1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">matteFillRadius </td><td class="markdownTableBodyNone">float </td><td class="markdownTableBodyNone">去油光半径，[0-1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">reddeningIntensity </td><td class="markdownTableBodyNone">float </td><td class="markdownTableBodyNone">红润强度，[0-1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">definitionIntensity </td><td class="markdownTableBodyNone">float </td><td class="markdownTableBodyNone">清晰度强度，[0-1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">sharpnessIntensity </td><td class="markdownTableBodyNone">float </td><td class="markdownTableBodyNone">锐度强度，[0-10]  </td></tr>
+</table>
+<p>磨皮类型</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">名称 </th><th class="markdownTableHeadNone">用途  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveBeautyBlurTypeEnum.BuffingSkin </td><td class="markdownTableBodyNone">普通磨皮  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveBeautyBlurTypeEnum.AdvancedBuffingSkin1 </td><td class="markdownTableBodyNone">高级磨皮1  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveBeautyBlurTypeEnum.AdvancedBuffingSkin2 </td><td class="markdownTableBodyNone">高级磨皮2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveBeautyBlurTypeEnum.AdvancedBuffingSkin3 </td><td class="markdownTableBodyNone">高级磨皮3  </td></tr>
+</table>
+<ul>
+<li>更多可查看<a href="#3普通磨皮高级磨皮1高级磨皮2高级磨皮3有什么区别">常见问题</a>。</li>
+</ul>
+<p>美白类型</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">名称 </th><th class="markdownTableHeadNone">用途  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NvBeautyWhiteningTypeEnum.WhiteningA </td><td class="markdownTableBodyNone">美白A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NvBeautyWhiteningTypeEnum.WhiteningB </td><td class="markdownTableBodyNone">美白B  </td></tr>
+</table>
+<ul>
+<li>更多可查看<a href="#4美颜a美颜b有什么区别">常见问题</a>。</li>
+</ul>
+<h2>美型使用</h2>
+<div class="fragment"><div class="line"><span class="comment">//使用美型</span></div>
+<div class="line">NveShape shape= <span class="keyword">new</span> NveShape();</div>
+<div class="line">shape.setEnable(<span class="keyword">true</span>);</div>
+<div class="line">NveEffectKit.getInstance().setShape(shape);</div>
+<div class="line"><span class="comment">//如何使用美型包？</span></div>
+<div class="line"><span class="comment">//瘦脸 为例</span></div>
+<div class="line"><span class="comment">//新增美型，分别传入类型，shapeDegree:美型强度[-1,1]，</span></div>
+<div class="line"><span class="keywordtype">float</span> shapeDegree = 1f;</div>
+<div class="line"><span class="comment">//packagePath 此处为模拟路径，替换为实际资源包路径</span></div>
+<div class="line">String packagePath = <span class="stringliteral">&quot;assets:/beauty/shape/shapePackage/63BD3F32-D01B-4755-92D5-0DE361E4045A.1.facemesh&quot;</span>;</div>
+<div class="line"><span class="comment">// 资源包授权文件路径</span></div>
+<div class="line">String packageLicPath = <span class="stringliteral">&quot;assets:/beauty/shape/shapePackage/63BD3F32-D01B-4755-92D5-0DE361E4045A.1.lic&quot;</span>;</div>
+<div class="line"><span class="comment">//如果资源的结尾是facemesh则类型为ASSET_PACKAGE_TYPE_FACE_MESH，如果是warp则为ASSET_PACKAGE_TYPE_WARP</span></div>
+<div class="line"><span class="comment">//63BD3F32-D01B-4755-92D5-0DE361E4045A.1.facemesh</span></div>
+<div class="line"><span class="keywordtype">int</span> packageType = <a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a>.ASSET_PACKAGE_TYPE_FACE_MESH;</div>
+<div class="line"><span class="comment">//63BD3F32-D01B-4755-92D5-0DE361E4045A.1.warp</span></div>
+<div class="line"><span class="comment">// int packageType = NvsAssetPackageManager.ASSET_PACKAGE_TYPE_WARP;</span></div>
+<div class="line"><span class="comment">//shapePackageID：美型包ID(包需要安装,安装见下面安装使用)</span></div>
+<div class="line">String shapePackageID = NveAssetPackageManagerUtil.installFxPackage(packagePath, packageLicPath, packageType);</div>
+<div class="line">shape.setShapeData(NveShapeTypeEnum.FACE_SIZE, <span class="keyword">new</span> NveShapeData(shapeDegree, shapePackageID));</div>
+<div class="line"><span class="comment">//修改美型强度</span></div>
+<div class="line">shape.setDegreeByType(NveShapeTypeEnum.FACE_SIZE, shapeDegree);</div>
+<div class="line">NveEffectKit.getInstance().setShape(shape);</div>
+</div><!-- fragment --><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">名称 </th><th class="markdownTableHeadNone">用途  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.FACE_WIDTH </td><td class="markdownTableBodyNone">窄脸，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.FACE_LENGTH </td><td class="markdownTableBodyNone">小脸，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.FACE_SIZE </td><td class="markdownTableBodyNone">瘦脸，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.FORE_HEAD </td><td class="markdownTableBodyNone">额头，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.CHIN </td><td class="markdownTableBodyNone">下巴，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.EYE_SIZE </td><td class="markdownTableBodyNone">大眼，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.EYE_ANGLE </td><td class="markdownTableBodyNone">眼角，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.NOSE_WIDTH </td><td class="markdownTableBodyNone">瘦鼻，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.NOSE_LENGTH </td><td class="markdownTableBodyNone">长鼻，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.MOUTH_SIZE </td><td class="markdownTableBodyNone">嘴型，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveShapeTypeEnum.MOUTH_CORNER </td><td class="markdownTableBodyNone">嘴角，[-1,1]  </td></tr>
+</table>
+<h2>微整形使用</h2>
+<div class="fragment"><div class="line"><span class="comment">//使用微整形</span></div>
+<div class="line">NveMicroShape microShape = <span class="keyword">new</span> NveMicroShape();</div>
+<div class="line">microShape.setEnable(<span class="keyword">true</span>);</div>
+<div class="line">NveEffectKit.getInstance().setMicroShape(microShape);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//新增微整形，分别传入类型，shapeDegree:微整形强度，</span></div>
+<div class="line"><span class="keywordtype">float</span> shapeDegree = 0.5f;</div>
+<div class="line"><span class="comment">//packagePath 此处为模拟路径，替换为实际资源包路径</span></div>
+<div class="line">String packagePath = <span class="stringliteral">&quot;assets:/beauty/shape/shapePackage/63BD3F32-D01B-4755-92D5-0DE361E4045A.1.facemesh&quot;</span>;</div>
+<div class="line"><span class="comment">// 资源包授权文件路径</span></div>
+<div class="line">String packageLicPath = <span class="stringliteral">&quot;assets:/beauty/shape/shapePackage/63BD3F32-D01B-4755-92D5-0DE361E4045A.1.lic&quot;</span>;</div>
+<div class="line"><span class="comment">//如果资源的结尾是facemesh则类型为ASSET_PACKAGE_TYPE_FACE_MESH，如果是warp则为ASSET_PACKAGE_TYPE_WARP</span></div>
+<div class="line"><span class="comment">//63BD3F32-D01B-4755-92D5-0DE361E4045A.1.facemesh</span></div>
+<div class="line"><span class="keywordtype">int</span> packageType = <a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a>.ASSET_PACKAGE_TYPE_FACE_MESH;</div>
+<div class="line"><span class="comment">//63BD3F32-D01B-4755-92D5-0DE361E4045A.1.warp</span></div>
+<div class="line"><span class="comment">// int packageType = NvsAssetPackageManager.ASSET_PACKAGE_TYPE_WARP;</span></div>
+<div class="line"><span class="comment">//shapePackageID：微整形ID(包需要安装,安装见下面安装使用)</span></div>
+<div class="line">String shapePackageID = NveAssetPackageManagerUtil.installFxPackage(packagePath, packageLicPath, packageType);</div>
+<div class="line"><span class="comment">//HEAD_SIZE 为例</span></div>
+<div class="line">shape.setMicroShapeData(NveMicroShapeTypeEnum.HEAD_SIZE, <span class="keyword">new</span> NveMicroShapeData(shapeDegree,shapePackageID));</div>
+<div class="line"><span class="comment">//修改微整形强度</span></div>
+<div class="line">shape.setDegreeByType(NveMicroShapeTypeEnum.HEAD_SIZE, shapeDegree);</div>
+</div><!-- fragment --><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">名称 </th><th class="markdownTableHeadCenter">用途  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.HEAD_SIZE </td><td class="markdownTableBodyCenter">缩头，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.CHEEKBONE_WIDTH </td><td class="markdownTableBodyCenter">颧骨宽，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.JAW_WIDTH </td><td class="markdownTableBodyCenter">下颌宽，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.TEMPLE_WIDTH </td><td class="markdownTableBodyCenter">太阳穴宽，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.NASOLABIAL_FOLDS </td><td class="markdownTableBodyCenter">法令纹，[0,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.DARK_CIRCLES </td><td class="markdownTableBodyCenter">黑眼圈，[0,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.BRIGHTEN_EYES </td><td class="markdownTableBodyCenter">亮眼，[0,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.WHITEN_TEETH </td><td class="markdownTableBodyCenter">美牙，[0,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYE_ANGLE_DEGREE </td><td class="markdownTableBodyCenter">眼角度，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYE_DISTANCE </td><td class="markdownTableBodyCenter">眼离，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYE_HEIGHT </td><td class="markdownTableBodyCenter">眼高度，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYE_WIDTH </td><td class="markdownTableBodyCenter">眼宽度，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYE_ARC </td><td class="markdownTableBodyCenter">眼弧度，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYE_Y_OFFSET </td><td class="markdownTableBodyCenter">眼上下，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.PHILTRUM </td><td class="markdownTableBodyCenter">人中，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.NOSE_BRIDGE_WIDTH </td><td class="markdownTableBodyCenter">鼻梁宽度，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.NOSE_HEAD </td><td class="markdownTableBodyCenter">鼻头，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYEBROW_THICKNESS </td><td class="markdownTableBodyCenter">眉毛粗细，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYEBROW_ANGLE </td><td class="markdownTableBodyCenter">眉角度，[-1,1]  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMicroShapeTypeEnum.EYEBROW_Y_OFFSET </td><td class="markdownTableBodyCenter">眉上下，[-1,1]  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NvMicroShapeTypeEnum.EYEBROW_X_OFFSET </td><td class="markdownTableBodyCenter">眉间距，[-1,1]  </td></tr>
+</table>
+<blockquote class="doxtable">
+<p><a href="https://www.meishesdk.com/android/doc_ch/html/content/FxNameList_8md.html">美摄SDK For Android: 特效名称列表 (meishesdk.com)</a> </p>
+</blockquote>
+<p>美颜、美型、微整形的各个参数均来自于美摄文档仓库中AR Scene的说明，更多进阶用法见上方链接。</p>
+<hr  />
+<h2>美妆</h2>
+<div class="fragment"><div class="line"><span class="comment">//使用美妆</span></div>
+<div class="line">NveMakeup makeUp= <span class="keyword">new</span> NveMakeup();</div>
+<div class="line">makeUp.setEnable(<span class="keyword">true</span>);</div>
+<div class="line">NveEffectKit.getInstance().setMakeup(makeUp);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//新增美妆中的单妆，NvSingleMakeUp来自单妆包中解析的makeup.json</span></div>
+<div class="line"><span class="comment">//(包需要安装,安装见下面安装使用)</span></div>
+<div class="line">makeUp.addSingleMakeUp(NveMakeupTypeEnum, NveSingleMakeUp);</div>
+<div class="line"><span class="comment">//根据单妆类型删除使用的单妆，每个类型的单妆只能加一个，例如只能加一种类型的口红。            </span></div>
+<div class="line">makeUp.removeSingleMakeUp(NveMakeupTypeEnum);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//妆容的使用，NvComposeMakeup来自妆容包中解析的info.json</span></div>
+<div class="line"><span class="comment">//(包需要安装,安装见下面安装使用)</span></div>
+<div class="line">makeUp.setComposeMakeup(NveComposeMakeup);</div>
+<div class="line"><span class="comment">//妆容的删除。妆容是由多个单妆、美颜、美型、微整形、滤镜等组成，每次只能应用一个妆容</span></div>
+<div class="line">makeUp.removeComposeMakeUp();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//调节单妆强度</span></div>
+<div class="line">makeUp.setIntensityByType(NveMakeupTypeEnum.Brighten,1);</div>
+<div class="line"><span class="comment">//调节单妆颜色</span></div>
+<div class="line">makeUp.setColorByType(NveMakeupTypeEnum.Brighten,<span class="keyword">new</span> <a class="code" href="structNvsColor.html">NvsColor</a>(0,0,0,0));</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>json解析安装等可参考：</b> samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/data/NvAssetManager samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/data/AssetInfoData </p>
+</blockquote>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">名称 </th><th class="markdownTableHeadNone">用途  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.Lip </td><td class="markdownTableBodyNone">口红  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.Eyebrow </td><td class="markdownTableBodyNone">眉毛  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.Eyeshadow </td><td class="markdownTableBodyNone">眼影  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.Eyelash </td><td class="markdownTableBodyNone">睫毛  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.Eyeliner </td><td class="markdownTableBodyNone">眼线  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.Blusher </td><td class="markdownTableBodyNone">腮红  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.Shadow </td><td class="markdownTableBodyNone">修容  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.Brighten </td><td class="markdownTableBodyNone">高光  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveMakeupTypeEnum.ComposeMakeup </td><td class="markdownTableBodyNone">妆容  </td></tr>
+</table>
+<h2>滤镜</h2>
+<div class="fragment"><div class="line"><span class="comment">//必传ID，包滤镜需安装，传入安装后的ID(安装见下面安装使用)</span></div>
+<div class="line">NveFilter filter = <span class="keyword">new</span> NveFilter(effectId);</div>
+<div class="line">NveEffectKit.getInstance().addFilter(filter);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//setFilter表示使用滤镜，后续可以进行其他修改参数操作，例如修改强度：</span></div>
+<div class="line">filter.setFilterIntensity(0.5f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//移除滤镜</span></div>
+<div class="line">NveEffectKit.getInstance().removeFilter(filter);</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>json解析安装等可参考：</b> samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/data/NvAssetManager samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/data/AssetInfoData samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/data/FilterJsonParseData </p>
+</blockquote>
+<h2>道具</h2>
+<div class="fragment"><div class="line">NveFaceProp faceProp = <span class="keyword">new</span> NveFaceProp();</div>
+<div class="line">faceProp.setEnable(<span class="keyword">true</span>);</div>
+<div class="line">NveEffectKit.getInstance().setFaceProp(faceProp);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//设置道具Id(道具包需要安装,安装见下面安装使用)</span></div>
+<div class="line">String propId = <span class="stringliteral">&quot;xxx&quot;</span></div>
+<div class="line">faceProp.setPropId(propId);</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>json解析安装等可参考：</b> samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/data/NvAssetManager samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/data/AssetInfoData samples/android/NvEffectKitDemo/app/src/main/java/com/meicam/effectsdkdemo/data/StickerJsonParseData </p><h2></h2>
+<p></p>
+<h2>自定义特效</h2>
+<p></p>
+<p>NveEffectKit除了上述已有功能，用户可自已创建美摄支持的特效，使用中间层来渲染。比如背景分割功能（需提前初始化人脸和分割模型），实现如下：</p>
+<div class="fragment"><div class="line"><span class="comment">//创建背景分割</span></div>
+<div class="line"><a class="code" href="structNvsRational.html">NvsRational</a> aspectRatio = <span class="keyword">new</span> <a class="code" href="structNvsRational.html">NvsRational</a>(9, 16);</div>
+<div class="line"><a class="code" href="interfaceNvsVideoEffect.html">NvsVideoEffect</a> mSegmentationEffect = <a class="code" href="interfaceNvsEffectSdkContext.html">NvsEffectSdkContext</a>.getInstance().createVideoEffect(<span class="stringliteral">&quot;Segmentation Background Fill&quot;</span>, aspectRatio);</div>
+<div class="line">mSegmentationEffect.setIntVal(<span class="stringliteral">&quot;Stretch Mode&quot;</span>, 2);</div>
+<div class="line">mSegmentationEffect.setMenuVal(<span class="stringliteral">&quot;Segment Type&quot;</span>, <span class="stringliteral">&quot;Half Body&quot;</span>);</div>
+<div class="line">mSegmentationEffect.setColorVal(<span class="stringliteral">&quot;Background Color&quot;</span>, <span class="keyword">new</span> <a class="code" href="structNvsColor.html">NvsColor</a>(0, 1, 0, 1));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//添加渲染</span></div>
+<div class="line">NveEffectKit.getInstance().addEffect(mSegmentationEffect);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//根据索引添加渲染</span></div>
+<div class="line">NveEffectKit.getInstance().insertEffect(mSegmentationEffect,0);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//移除创建的特效</span></div>
+<div class="line">NveEffectKit.getInstance().removeEffect(mSegmentationEffect);</div>
+</div><!-- fragment --><hr  />
+<h2>包安装</h2>
+<p></p>
+<p>上述的内容中基本都涉及包安装，官网有安装说明</p>
+<blockquote class="doxtable">
+<p><a href="https://www.meishesdk.com/android/doc_ch/html/content/assetsPackageInstall_8md.html">美摄SDK For Android: 素材包安装 (meishesdk.com)</a> </p>
+</blockquote>
+<p>可以使用已经封装好的工具类（NvAssetPackageManagerUtil）示例代码：</p>
+<div class="fragment"><div class="line"><span class="comment">//packagePath 此处为模拟路径，替换为实际资源包路径</span></div>
+<div class="line">String packagePath = <span class="stringliteral">&quot;assets:/beauty/shape/shapePackage/63BD3F32-D01B-4755-92D5-0DE361E4045A.1.facemesh&quot;</span>;</div>
+<div class="line"><span class="comment">// 资源包授权文件路径</span></div>
+<div class="line">String packageLicPath = <span class="stringliteral">&quot;assets:/beauty/shape/shapePackage/63BD3F32-D01B-4755-92D5-0DE361E4045A.1.lic&quot;</span>;</div>
+<div class="line"><span class="comment">//如果资源的结尾是facemesh则类型为ASSET_PACKAGE_TYPE_FACE_MESH，如果是warp则为ASSET_PACKAGE_TYPE_WARP</span></div>
+<div class="line"><span class="comment">//63BD3F32-D01B-4755-92D5-0DE361E4045A.1.facemesh</span></div>
+<div class="line"><span class="keywordtype">int</span> packageType = <a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a>.ASSET_PACKAGE_TYPE_FACE_MESH;</div>
+<div class="line"><span class="comment">//63BD3F32-D01B-4755-92D5-0DE361E4045A.1.warp</span></div>
+<div class="line"><span class="comment">// int packageType = NvsAssetPackageManager.ASSET_PACKAGE_TYPE_WARP;</span></div>
+<div class="line"><span class="comment">//shapePackageID：资源包ID(包需要安装,安装见下面安装使用)</span></div>
+<div class="line">String shapePackageID = NveAssetPackageManagerUtil.installFxPackage(packagePath, packageLicPath, packageType);</div>
+</div><!-- fragment --><p>其中需要重点关注的参数有：</p>
+<p>1、packagePath&ndash; 安装包的路径，可以为assets路径或者本地绝对路径</p>
+<p>2、packageLicPath&ndash; 安装包的授权文件路径</p>
+<p>3、packageType&ndash; 安装包类型，具体类型见：<a href="https://www.meishesdk.com/android/doc_ch/html/content/classcom_1_1meicam_1_1sdk_1_1NvsAssetPackageManager.html">美摄SDK For Android: com.meicam.sdk.NvsAssetPackageManager类 参考 (meishesdk.com)</a></p>
+<hr  />
+<h2>渲染</h2>
+<p></p>
+<h5>1.RenderCore相关初始化</h5>
+<p></p>
+<div class="fragment"><div class="line"><span class="comment">//注：需提前初始化SDK</span></div>
+<div class="line">NveEffectKit.getInstance().initialize();</div>
+</div><!-- fragment --><h5>2.NveRenderInput说明</h5>
+<p></p>
+<p>NveRenderInput主要包括渲染配置（NveRenderConfig），纹理（NveTexture），Buffer（NveImageBuffer），图像的格式（pixelFormat）。具体参数如下：</p>
+<p>（1）NveRenderConfig相关参数，包括相机朝向（cameraOrientation）和渲染模式（NveRenderMode）</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">NveRenderMode </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveRenderConfig.NveRenderMode.TEXTURE_TEXTURE </td><td class="markdownTableBodyNone">纹理入，纹理出  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveRenderConfig.NveRenderMode.BUFFER_TEXTURE </td><td class="markdownTableBodyNone">Buffer入，纹理出  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveRenderConfig.NveRenderMode.BUFFER_BUFFER </td><td class="markdownTableBodyNone">Buffer入，Buffer出  </td></tr>
+</table>
+<p>（2）NveTexture相关参数</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">参数 </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">textureId </td><td class="markdownTableBodyNone">纹理ID  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">mirror </td><td class="markdownTableBodyNone">是否水平翻转，OES纹理转Texture 2D纹理需要  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveSize </td><td class="markdownTableBodyNone">纹理宽高  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveTextureType </td><td class="markdownTableBodyNone">纹理类型  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveTextureLayout </td><td class="markdownTableBodyNone">纹理方向  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">NveTextureType </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveTextureType.NV_COMMON_TEXTURE </td><td class="markdownTableBodyNone">普通纹理  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveTextureType.NV_OES_TEXTURE </td><td class="markdownTableBodyNone">OpenGL OES纹理  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">NveTextureLayout </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveTextureLayout.UP_SIDE_DOWN </td><td class="markdownTableBodyNone">上下颠倒  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveTextureLayout.DOWN_SIDE_UP </td><td class="markdownTableBodyNone">正常  </td></tr>
+</table>
+<p>（3）NveImageBuffer相关参数</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">名称 </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">data </td><td class="markdownTableBodyNone">Buffer数据  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveSize </td><td class="markdownTableBodyNone">Buffer宽高  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">mirror </td><td class="markdownTableBodyNone">是否水平翻转  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">displayRotation </td><td class="markdownTableBodyNone">当前图像需要旋转的角度  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">rowPitchY </td><td class="markdownTableBodyNone">图像每行在Frame中占的字节数，如果图像格式是NV21,YUV420, 则指Y平面  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">rowPitchUV </td><td class="markdownTableBodyNone">图像每行在Frame中占的字节数 一般是指UV平面,如果格式为RGBA,这个量没有意义  </td></tr>
+</table>
+<p>（4）pixelFormat图像格式，其封装在NvFormatType中，具体对应可参考官网<a href="[美摄SDK For Android: com.meicam.sdk.NvsVideoFrameInfo类 参考](https://www.meishesdk.com/android/doc_ch/html/content/classcom_1_1meicam_1_1sdk_1_1NvsVideoFrameInfo.html#a879ad4bf8e42df9381768f5aff2693c8)">视频帧像素格式</a></p>
+<h5>3.NveRenderOutput说明</h5>
+<p></p>
+<p>NveRenderOutput主要包括渲染结果（NveRenderError），输出纹理（NveTexture，参数同上），输出Buffer（NveImageBuffer，参数同上）。其渲染结果参数如下</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">名称 </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveRenderError.NO_ERROR </td><td class="markdownTableBodyNone">成功  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveRenderError.ERROR_UNKNOWN </td><td class="markdownTableBodyNone">未知错误  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NveRenderError.INVALID_TEXTURE </td><td class="markdownTableBodyNone">无效的纹理  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NveRenderError.INVALID_INPUT_PARAM </td><td class="markdownTableBodyNone">无效的输入参数，针对NvRenderInput  </td></tr>
+</table>
+<h4>4.渲染</h4>
+<p></p>
+<div class="fragment"><div class="line"><span class="comment">//输入配置</span></div>
+<div class="line">NveRenderInput  mRenderInput = <span class="keyword">new</span> NveRenderInput();</div>
+<div class="line">mRenderInput.setPixelFormat(NveFormatType.VIDEO_FRAME_PIXEL_FROMAT_NV21.getType());</div>
+<div class="line">NveRenderConfig config = <span class="keyword">new</span> NveRenderConfig()</div>
+<div class="line">                .setRenderMode(NveRenderConfig.NveRenderMode.TEXTURE_TEXTURE)</div>
+<div class="line">                .setCameraOrientation(mCameraProxy.getOrientation()).build();</div>
+<div class="line">mRenderInput.setConfig(config);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//输入纹理</span></div>
+<div class="line">NveTexture nvTexture = <span class="keyword">new</span> NveTexture();</div>
+<div class="line">nvTexture.setTextureId(displayTex);</div>
+<div class="line">Texture.setTextureType(NveTextureType.NV_OES_TEXTURE);</div>
+<div class="line">nvTexture.setSize(<span class="keyword">new</span> NveSize(texWidth, texHeight));</div>
+<div class="line">nvTexture.setMirror(mCameraProxy.isFlipHorizontal());</div>
+<div class="line">mRenderInput.setTexture(nvTexture);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//输入Buffer</span></div>
+<div class="line">NveImageBufferbuffer = <span class="keyword">new</span> NveImageBuffer();</div>
+<div class="line">buffer.setData(data);</div>
+<div class="line">buffer.setSize(<span class="keyword">new</span> NveSize(bufferWidth, bufferHeight));</div>
+<div class="line">buffer.setDisplayRotation(mOrientation);</div>
+<div class="line">buffer.setMirror(mCameraProxy.isFlipHorizontal());</div>
+<div class="line">mRenderInput.setImageBuffer(buffer);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//渲染</span></div>
+<div class="line">NveRenderOutput renderOutput = mNvEffectKit.renderEffect(mRenderInput);</div>
+<div class="line"> </div>
+<div class="line">  ......</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (<span class="keyword">null</span> != renderOutput) {</div>
+<div class="line">     <span class="comment">//回收render out</span></div>
+<div class="line">     NveEffectKitt.recycleOutput(renderOutput);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4>5.资源释放</h4>
+<p></p>
+<p>在退出或者不再需要渲染时，需要释放相关资源，可调用下面的方法</p>
+<div class="fragment"><div class="line">NveEffectKit.getInstance().cleanUp();</div>
+</div><!-- fragment --><p>注意：该方法需要在GLContext所在的线程调用</p>
+<h2>销毁</h2>
+<p></p>
+<p>在页面退出或者应用杀死的情况下进行SDK的销毁，可调用下面的方法</p>
+<div class="fragment"><div class="line">NveEffectKit.getInstance().destroy();</div>
+</div><!-- fragment --><p>注意：如果是在某个页面退出时进行销毁，那么在其他地方还需要使用SDK，那么在使用前就需要重新初始化SDK，即调用init方法</p>
+<h2>常见问题</h2>
+<h4>1.使用Android Studio较高版本时run apk失败，需要修改Gradle JDK版本为 jdk 11</h4>
+<p>&gt;Settings-&gt;Build,Execution,Deployment-&gt;Build Tools-&gt;Gradle-&gt;Gradle JDK (<code>java 11</code>)</p>
+<p><em>类似错误：</em> </p><div class="fragment"><div class="line">FAILURE: Build completed with 2 failures.</div>
+<div class="line"> </div>
+<div class="line">1: Task failed with an exception.</div>
+<div class="line">-----------</div>
+<div class="line">* What went wrong:</div>
+<div class="line">Execution failed for task &#39;:app:processDebugMainManifest&#39;.</div>
+<div class="line">&gt; Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not &quot;opens java.io&quot; to unnamed module @16a1c82d</div>
+<div class="line"> </div>
+<div class="line">* Try:</div>
+<div class="line">Run with --info or --debug option to get more log output. Run with --scan to get full insights.</div>
+<div class="line"> </div>
+<div class="line">* Exception is:</div>
+<div class="line">org.gradle.api.tasks.TaskExecutionException: Execution failed for task </div>
+<div class="line">Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not &quot;opens java.io&quot; to unnamed module @16a1c82d</div>
+</div><!-- fragment --><h4>2.模型中face240和face106有什么区别？</h4>
+<blockquote class="doxtable">
+<p>240和160指的是人脸模型的点位数量，240效果更佳。<code>160点位不支持美妆</code>。 </p>
+</blockquote>
+<h4>3.普通磨皮，高级磨皮1，高级磨皮2，高级磨皮3有什么区别？</h4>
+<blockquote class="doxtable">
+<p><code>高级磨皮1</code>是<code>Android</code>端标准效果，<code>高级磨皮2</code>是<code>iOS</code>端标准效果，<code>高级磨皮3</code>是<code>男性</code>效果. <a href="https://www.meishesdk.com/android/doc_ch/html/content/FxNameList_8md.html">详情见文档：AR Scene</a> <em>Advanced Beauty Type</em> </p>
+</blockquote>
+<h4>4.美颜A，美颜B有什么区别？</h4>
+<blockquote class="doxtable">
+<p>实现方式不同，<code>美颜B</code>使用<code>Lut</code>文件。 <a href="https://www.meishesdk.com/android/doc_ch/html/content/FxNameList_8md.html">详情见文档：AR Scene</a> <em>Whitening Lut File</em> </p>
+</blockquote>
+<h4>5.是否支持自定义GLSurfaceView/相机预览？</h4>
+<blockquote class="doxtable">
+<p>代码中示例供参考，如果用户已有相关实现，可以提供要渲染的纹理或者buffer 数据即可。详情可咨询<a href="https://www.meishesdk.com/">美摄技术支持</a> </p>
+</blockquote>
+<h4>6.导入项目后，渲染无效果或黑屏？</h4>
+<blockquote class="doxtable">
+<p>检查项目中<code>lic</code>文件与<code>applicationId</code>是否绑定。详情可咨询<a href="https://www.meishesdk.com/">美摄商务</a> </p>
+</blockquote>
+<h4>7.已接入NvAndroidStreamingSdk.jar，冲突如何处理？</h4>
+<blockquote class="doxtable">
+<p>删除项目中原<code>NvAndroidStreamingSdk.jar</code>，重新依赖<code>NveEffectKit.aar</code>。 </p>
+</blockquote>
+</blockquote>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="astructNvsRational_html"><div class="ttname"><a href="structNvsRational.html">NvsRational</a></div><div class="ttdoc">比例值</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:349</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffect_html"><div class="ttname"><a href="interfaceNvsVideoEffect.html">NvsVideoEffect</a></div><div class="ttdoc">视频特效</div><div class="ttdef"><b>Definition:</b> NvsVideoEffect.h:44</div></div>
+<div class="ttc" id="astructNvsColor_html"><div class="ttname"><a href="structNvsColor.html">NvsColor</a></div><div class="ttdoc">自定义颜色类</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:413</div></div>
+<div class="ttc" id="ainterfaceNvsEffectSdkContext_html"><div class="ttname"><a href="interfaceNvsEffectSdkContext.html">NvsEffectSdkContext</a></div><div class="ttdoc">Effect SDK上下文类</div><div class="ttdef"><b>Definition:</b> NvsEffectSdkContext.h:120</div></div>
+<div class="ttc" id="ainterfaceNvsAssetPackageManager_html"><div class="ttname"><a href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a></div><div class="ttdoc">资源包管理器，管理视频场景中的资源包</div><div class="ttdef"><b>Definition:</b> NvsAssetPackageManager.h:350</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

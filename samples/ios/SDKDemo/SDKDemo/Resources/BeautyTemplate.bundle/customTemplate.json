@@ -1,0 +1,98 @@
+
+{
+  "name": "custom",
+  "uuid": "",
+  "version": 1,
+  "cover": "",
+  "minSdkVersion": "3.4.0",
+  "supportedAspectRatio": "9v16",
+  "translation": [
+    {
+      "originalText": "custom",
+      "targetLanguage": "zh_CN",
+      "targetText": "自定义"
+    }
+  ],
+  "effectContent": {
+    "makeup": [
+        
+    ],
+    "beauty": [
+    {
+      "params": [
+       {
+          "key": "Beauty Effect",
+          "value": true,
+          "type": "boolean"
+       }
+      ]
+    },
+    {
+      "canReplace": 1,
+      "params": [
+        {
+          "key": "Advanced Beauty Enable",
+          "value": true,
+          "type": "boolean"
+        },
+        {
+          "key": "Advanced Beauty Type",
+          "value": 1,
+          "type": "int"
+        },
+        {
+          "key": "Advanced Beauty Intensity",
+          "value": 0,
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "canReplace": 1,
+      "params": [
+        {
+          "key": "Whitening Lut Enabled",
+          "value": true,
+          "type": "boolean"
+        },
+        {
+          "key": "Whitening Lut File",
+          "value": "WhiteB.mslut",
+          "type": "path"
+        },
+        {
+          "key": "Beauty Whitening",
+          "value": 0,
+          "type": "float"
+        }
+      ]
+    },
+    ],
+    "shape": [
+        {
+          "params": [
+           {
+              "key": "Face Mesh Internal Enabled",
+              "value": true,
+              "type": "boolean"
+           }
+          ]
+        },
+    ],
+  "microShape": [
+    {
+        "params": [
+         {
+            "key": "Beauty Shape",
+            "value": true,
+            "type": "boolean"
+         }
+        ]
+    },
+  ]
+  }
+}
+
+
+
+

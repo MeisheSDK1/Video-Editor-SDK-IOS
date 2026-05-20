@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 背景分割特效 技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">背景分割特效 技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>背景分割特效 技术文档 </h1>
+<p><b>1.说明：</b></p>
+<ul>
+<li>背景分割特效可以以道具包的形式使用，也可以以SDK内建特技的形式使用，但前提是都需要初始化**“人像背景分割模型”**，本文档以SDK内建特技的形式进行讲述。</li>
+<li>背景分割特效既可以在**拍摄**中使用，也可以在**编辑**中使用，两者的应用方式不同，文档会详细说明</li>
+<li>CaptureScene只能在**拍摄**中使用</li>
+</ul>
+<p><b>2.背景分割的使用</b></p>
+<ul>
+<li>初始化人像背景分割模型。在拍摄中，相机为前置摄像头时可设置使用“半身分割模型”，是后置摄像头时可设置使用“全身分割模型”。在编辑中，设置使用“全身分割模型”。 <div class="fragment"><div class="line"> </div>
+<div class="line">String segPath = <span class="stringliteral">&quot;assets:/facemode/ms/ms_humanseg_v1.0.7.model&quot;</span>;</div>
+<div class="line"><span class="keywordtype">boolean</span> segSuccess = <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.initHumanDetectionExt(MSApplication.getContext(),</div>
+<div class="line">        segPath, <span class="keyword">null</span>, <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_SEGMENTATION_BACKGROUND);</div>
+<div class="line">Logger.e(TAG, <span class="stringliteral">&quot;ms segSuccess--&gt;&quot;</span> + segSuccess);</div>
+<div class="line"> </div>
+<div class="line">String halfBodyPath = <span class="stringliteral">&quot;assets:/facemode/ms/ms_halfbodyseg_v1.0.6.model&quot;</span>;</div>
+<div class="line"><span class="keywordtype">boolean</span> halfBodySuccess = <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.initHumanDetectionExt(MSApplication.getContext(),</div>
+<div class="line">        halfBodyPath, <span class="keyword">null</span>, <a class="code" href="interfaceNvsStreamingContext.html">NvsStreamingContext</a>.HUMAN_DETECTION_FEATURE_SEGMENTATION_HALF_BODY);</div>
+<div class="line">Logger.e(TAG, <span class="stringliteral">&quot;ms halfBodySuccess--&gt;&quot;</span> + halfBodySuccess);</div>
+</div><!-- fragment --></li>
+<li><p class="startli">背景分割是内建特效，创建如下： </p><div class="fragment"><div class="line">拍摄：</div>
+<div class="line">      <span class="comment">//创建分割特技</span></div>
+<div class="line">      <a class="code" href="interfaceNvsCaptureVideoFx.html">NvsCaptureVideoFx</a>  mSegmentEffect = mStreamingContext.appendBuiltinCaptureVideoFx(<span class="stringliteral">&quot;Segmentation Background Fill&quot;</span>);</div>
+<div class="line">      <span class="comment">/*</span></div>
+<div class="line"><span class="comment">       * 根据前置后置摄像头判断使用对应模型</span></div>
+<div class="line"><span class="comment">       * 前置：半身模型</span></div>
+<div class="line"><span class="comment">       * 后置：全身模型</span></div>
+<div class="line"><span class="comment">       */</span></div>
+<div class="line">      <span class="keywordflow">if</span> (mCurrentDeviceIndex == 0) {</div>
+<div class="line">          mSegmentEffect.setMenuVal(<span class="stringliteral">&quot;Segment Type&quot;</span>, <span class="stringliteral">&quot;Background&quot;</span>);</div>
+<div class="line">      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mCurrentDeviceIndex == 1) {</div>
+<div class="line">          mSegmentEffect.setMenuVal(<span class="stringliteral">&quot;Segment Type&quot;</span>, <span class="stringliteral">&quot;Half Body&quot;</span>);</div>
+<div class="line">      }</div>
+<div class="line">      <span class="comment">/*1:铺满  0：自适应*/</span></div>
+<div class="line">      mSegmentEffect.setIntVal(<span class="stringliteral">&quot;Stretch Mode&quot;</span>, 1);</div>
+<div class="line"> </div>
+<div class="line"> 编辑：</div>
+<div class="line">       <span class="comment">//创建分割特技</span></div>
+<div class="line">       <a class="code" href="interfaceNvsVideoFx.html">NvsVideoFx</a> mSegmentEffect = clip.appendRawBuiltinFx(<span class="stringliteral">&quot;Segmentation Background Fill&quot;</span>);</div>
+<div class="line">       mSegmentEffect.setMenuVal(<span class="stringliteral">&quot;Segment Type&quot;</span>, <span class="stringliteral">&quot;Background&quot;</span>);</div>
+<div class="line">       <span class="comment">/*1:铺满（可能会被拉伸）  0：自适应*/</span></div>
+<div class="line">       mSegmentEffect.setIntVal(<span class="stringliteral">&quot;Stretch Mode&quot;</span>, 1);</div>
+</div><!-- fragment --><p class="startli">设置背景颜色 </p><div class="fragment"><div class="line">mSegmentEffect.setColorVal(<span class="stringliteral">&quot;Background Color&quot;</span>, <span class="keyword">new</span> <a class="code" href="structNvsColor.html">NvsColor</a>(0.0f, 1.0f, 0.0f, 0.0f));</div>
+</div><!-- fragment --></li>
+</ul>
+<p>设置图片背景，目前支持设置图片 </p><div class="fragment"><div class="line"><span class="comment">//filePath 图片的绝对路径</span></div>
+<div class="line">mSegmentEffect.setStringVal(<span class="stringliteral">&quot;Tex File Path&quot;</span>, filePath);</div>
+</div><!-- fragment --><p>移除分割特效 </p><div class="fragment"><div class="line">拍摄：</div>
+<div class="line"> <span class="keywordflow">if</span> (<span class="keyword">null</span> != mSegmentEffect) {</div>
+<div class="line">   mStreamingContext.removeCaptureVideoFx(mSegmentEffect.getIndex());</div>
+<div class="line"> }</div>
+<div class="line"> </div>
+<div class="line">编辑：</div>
+<div class="line"><span class="keywordflow">if</span> (<span class="keyword">null</span> != mSegmentEffect) {</div>
+<div class="line">   clip.removeRawFx(mSegmentEffect.getIndex());</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>&gt;注：在编辑中应用背景分割特技后，需要在Seek、播放、导出添加对应的flag，即：NvsStreamingContext.STREAMING_ENGINE_XXX_FLAG_BUDDY_ORIGIN_VIDEO_FRAME</p>
+<p>&gt;注：该内建分割特技目前不支持设置视频背景，如果需要，则需要使用captureScene素材包</p>
+<ul>
+<li><p class="startli">CaptureScene的使用。其背景既支持设置图片，也支持设置视频，使用如下：</p>
+<p class="startli">安装captureScene素材包 </p><div class="fragment"><div class="line"> String path = <span class="stringliteral">&quot;assets:/capturescene/A2F05F58-87AB-4D1D-9609-6C00EF09E4D1.capturescene&quot;</span>;</div>
+<div class="line">  StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><span class="keywordtype">int</span> inCode = mStreamingContext.getAssetPackageManager().installAssetPackage(path, <span class="keyword">null</span></div>
+<div class="line">                , <a class="code" href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a>.ASSET_PACKAGE_TYPE_CAPTURESCENE, <span class="keyword">true</span>, sb);</div>
+<div class="line">capturesceneId = sb.toString();</div>
+</div><!-- fragment --><p class="startli">创建背景分割特技（**“Segmentation Background Fill”**），同上创建（**必需**）</p>
+<p class="startli">调用**applyCaptureScene**添加 </p><div class="fragment"><div class="line"><span class="comment">//创建拍摄场景资源信息</span></div>
+<div class="line"><a class="code" href="interfaceNvsCaptureSceneInfo.html">NvsCaptureSceneInfo</a> sceneInfo = <span class="keyword">new</span> <a class="code" href="interfaceNvsCaptureSceneInfo.html">NvsCaptureSceneInfo</a>();</div>
+<div class="line"><span class="comment">//片段数据集</span></div>
+<div class="line">List&lt;<a class="code" href="interfaceNvsCaptureSceneInfo.html">NvsCaptureSceneInfo</a>.ClipData&gt; clipDataList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><a class="code" href="interfaceNvsCaptureSceneInfo.html">NvsCaptureSceneInfo</a>.ClipData clipData = <span class="keyword">new</span> <a class="code" href="interfaceNvsCaptureSceneInfo.html">NvsCaptureSceneInfo</a>.ClipData();</div>
+<div class="line"><span class="comment">//视频使用，设置pan和scan</span></div>
+<div class="line">clipData.scan = 1;</div>
+<div class="line"><span class="comment">//图片使用，设置填充模式，有：&quot;fit&quot;,&quot;letterBox&quot;,&quot;crop&quot;,&quot;stretch&quot;</span></div>
+<div class="line">clipData.imageFillMode = <a class="code" href="interfaceNvsCaptureSceneInfo.html">NvsCaptureSceneInfo</a>.CAPTURESCENE_INFO_IMAGE_FILLMODE_CROP;</div>
+<div class="line"><span class="comment">//图片或者视频路径</span></div>
+<div class="line">clipData.mediaPath = filePath;</div>
+<div class="line">clipDataList.add(clipData);</div>
+<div class="line"><span class="comment">//设置后景场景</span></div>
+<div class="line">sceneInfo.<a class="code" href="interfaceNvsCaptureSceneInfo.html#a47bd8ac92944f84a13eaff806dde1cd6">foregroundClipArray</a> = clipDataList;</div>
+<div class="line"><span class="comment">//应用拍摄场景资源包</span></div>
+<div class="line">mStreamingContext.applyCaptureScene(mBgSegPackageId, sceneInfo);</div>
+</div><!-- fragment --></li>
+</ul>
+<p>移除当前拍摄场景 </p><div class="fragment"><div class="line">mStreamingContext.removeCurrentCaptureScene();</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="ainterfaceNvsVideoFx_html"><div class="ttname"><a href="interfaceNvsVideoFx.html">NvsVideoFx</a></div><div class="ttdoc">视频特效</div><div class="ttdef"><b>Definition:</b> NvsVideoFx.h:48</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureSceneInfo_html_a47bd8ac92944f84a13eaff806dde1cd6"><div class="ttname"><a href="interfaceNvsCaptureSceneInfo.html#a47bd8ac92944f84a13eaff806dde1cd6">NvsCaptureSceneInfo::foregroundClipArray</a></div><div class="ttdeci">NSMutableArray&lt; NvsClipData * &gt; * foregroundClipArray</div><div class="ttdef"><b>Definition:</b> NvsCaptureSceneInfo.h:46</div></div>
+<div class="ttc" id="ainterfaceNvsStreamingContext_html"><div class="ttname"><a href="interfaceNvsStreamingContext.html">NvsStreamingContext</a></div><div class="ttdoc">流媒体上下文</div><div class="ttdef"><b>Definition:</b> NvsStreamingContext.h:1120</div></div>
+<div class="ttc" id="astructNvsColor_html"><div class="ttname"><a href="structNvsColor.html">NvsColor</a></div><div class="ttdoc">自定义颜色类</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:413</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureSceneInfo_html"><div class="ttname"><a href="interfaceNvsCaptureSceneInfo.html">NvsCaptureSceneInfo</a></div><div class="ttdoc">拍摄场景资源信息。</div><div class="ttdef"><b>Definition:</b> NvsCaptureSceneInfo.h:44</div></div>
+<div class="ttc" id="ainterfaceNvsCaptureVideoFx_html"><div class="ttname"><a href="interfaceNvsCaptureVideoFx.html">NvsCaptureVideoFx</a></div><div class="ttdoc">采集视频特效</div><div class="ttdef"><b>Definition:</b> NvsCaptureVideoFx.h:45</div></div>
+<div class="ttc" id="ainterfaceNvsAssetPackageManager_html"><div class="ttname"><a href="interfaceNvsAssetPackageManager.html">NvsAssetPackageManager</a></div><div class="ttdoc">资源包管理器，管理视频场景中的资源包</div><div class="ttdef"><b>Definition:</b> NvsAssetPackageManager.h:350</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

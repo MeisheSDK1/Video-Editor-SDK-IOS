@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: include/sdkcore/ios/NvsVideoEffectCompoundCaption.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9af3ba082cb5f4ed06b4845a1a94f23e.html">sdkcore</a></li><li class="navelem"><a class="el" href="dir_763eed7e10c17201289e6e9e1b3cfecd.html">ios</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NvsVideoEffectCompoundCaption.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="NvsVideoEffectCompoundCaption_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (c) Copyright Meishe Co. Ltd, 2016. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This code and information is provided &quot;as is&quot; without warranty of any kind,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// either expressed or implied, including but not limited to the implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// warranties of merchantability and/or fitness for a particular purpose.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//--------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//   Birth Date:    Jan 15. 2021</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Author:        Meishe video team</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//================================================================================</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="NvsEffect_8h.html">NvsEffect.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &lt;CoreGraphics/CGGeometry.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454b">   43</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454bafba72d0e2f52c43aee872f0e539f66ba">   45</a></span>&#160;    <a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454bafba72d0e2f52c43aee872f0e539f66ba">NvsEffectBoundingType_Text</a> = 0,               </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba5bfaf2fc30efdc7057bffc713c511b08">   46</a></span>&#160;    <a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba5bfaf2fc30efdc7057bffc713c511b08">NvsEffectBoundingType_Text_Frame</a> = 1,         </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba0a1f0b793902c2d49c28c35c178f6c94">   47</a></span>&#160;    <a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba0a1f0b793902c2d49c28c35c178f6c94">NvsEffectBoundingType_Frame</a> = 2,              </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba65ca5aa06a771b52cc1ed52da19e5e58">   48</a></span>&#160;    <a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba65ca5aa06a771b52cc1ed52da19e5e58">NvsEffectBoundingType_Text_Origin_Frame</a> = 3,  </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba833e7937b9a2ea18a1519c2d8158d012">   49</a></span>&#160;    <a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba833e7937b9a2ea18a1519c2d8158d012">NvsEffectBoundingType_Typographic_Text</a> = 4,    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454b">NvsEffectBoundingType</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="interfaceNvsVideoEffectCompoundCaption.html">   52</a></span>&#160;<a class="code" href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a> <span class="keyword">@interface </span><a class="code" href="interfaceNvsVideoEffectCompoundCaption.html">NvsVideoEffectCompoundCaption</a> : <a class="code" href="interfaceNvsEffect.html">NvsEffect</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="interfaceNvsVideoEffectCompoundCaption.html#af4f71c1122ec11d49385968bbc0bf972">   62</a></span>&#160;<span class="keyword">@property</span> (readonly) NSInteger <a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#af4f71c1122ec11d49385968bbc0bf972">captionCount</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="interfaceNvsVideoEffectCompoundCaption.html#a89d9c1f62fb39e6ef29a6698637ee529">   64</a></span>&#160;<span class="keyword">@property</span> (readonly) int64_t <a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#a89d9c1f62fb39e6ef29a6698637ee529">inPoint</a>;                 </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="interfaceNvsVideoEffectCompoundCaption.html#a72107f2408a03cabce3d3d22e76b2869">   65</a></span>&#160;<span class="keyword">@property</span> (readonly) int64_t <a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#a72107f2408a03cabce3d3d22e76b2869">outPoint</a>;                </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="interfaceNvsVideoEffectCompoundCaption.html#a94ce6f209baba8ee1fd8cf082bc7c765">   66</a></span>&#160;<span class="keyword">@property</span> (readonly) NSString* <a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#a8ec01462e21838a4161be007d7515075">captionStylePackageId</a>; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;- (int64_t)changeInPoint:(int64_t)newInPoint;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;- (int64_t)changeOutPoint:(int64_t)newOutPoint;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;- (void)movePosition:(int64_t)offset;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;- (void)setText:(NSInteger)captionIndex</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;           text:(NSString *)text;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;- (NSString *)getText:(NSInteger)captionIndex;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;- (void)setFontFamily:(NSInteger)captionIndex</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;               family:(NSString *)family;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;- (NSString *)getFontFamily:(NSInteger)captionIndex;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;- (void)setTextColor:(NSInteger)captionIndex</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;           textColor:(const <a class="code" href="structNvsEffectColor.html">NvsEffectColor</a> *)textColor;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;- (<a class="code" href="structNvsEffectColor.html">NvsEffectColor</a>)getTextColor:(NSInteger)captionIndex;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;- (void)setWeight:(<span class="keywordtype">int</span>)weight captionIndex:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;- (int)getWeight:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;- (void)setCaptionTranslation:(CGPoint)translation;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;- (CGPoint)<a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#a81f8613f25ae8a6612bae66fceb5651f">getCaptionTranslation</a>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;- (void)translateCaption:(CGPoint)translationOffset;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;- (void)setAnchorPoint:(CGPoint)anchor;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;- (CGPoint)<a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#af8e61f3075fc7e5db0352073710bb2fa">getAnchorPoint</a>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;- (void)setScaleX:(<span class="keywordtype">float</span>)scale;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;- (float)<a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#a6cf469ddcec544336ce52308649481b9">getScaleX</a>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;- (void)setScaleY:(<span class="keywordtype">float</span>)scale;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;- (float)<a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#a217b0361c626c0731ad5e0bcf0ab680e">getScaleY</a>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;- (void)scaleCaption:(<span class="keywordtype">float</span>)scaleFactor</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;              anchor:(CGPoint)anchor;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;- (void)setRotationZ:(<span class="keywordtype">float</span>)angle;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;- (float)<a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#a90fa9d976492c603ea0b71af5772021f">getRotationZ</a>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;- (void)rotateCaption:(<span class="keywordtype">float</span>)angle</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;               anchor:(CGPoint)anchor;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;- (void)rotateCaptionAroundCenter:(<span class="keywordtype">float</span>)angle</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                     boundingType:(<a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454b">NvsEffectBoundingType</a>)boundingType;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;- (NSArray *)getCaptionBoundingVertices:(NSInteger)captionIndex</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                           boundingType:(<a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454b">NvsEffectBoundingType</a>)boundingType;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;- (NSArray *)getCompoundBoundingVertices:(<a class="code" href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454b">NvsEffectBoundingType</a>)boundingType;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;- (void)setZValue:(<span class="keywordtype">float</span>)value;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;- (float)<a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#acaa631b15c224d0582850c5a8f14669d">getZValue</a>;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;- (void)setOpacity:(<span class="keywordtype">float</span>)opacity;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;- (float)<a class="code" href="interfaceNvsVideoEffectCompoundCaption.html#a95d229a59c4bc1fe8855ff29f60cf221">getOpacity</a>;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;- (void)setVideoResolution:(<a class="code" href="structNvsEffectVideoResolution.html">NvsEffectVideoResolution</a>*)resolution;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;- (void)setDrawOutline:(BOOL)drawOutline captionIndex:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;- (BOOL)getDrawOutline:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160; </div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;- (void)setOutlineColor:(<a class="code" href="structNvsEffectColor.html">NvsEffectColor</a>)outlineColor captionIndex:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;-(<a class="code" href="structNvsEffectColor.html">NvsEffectColor</a>)getOutlineColor:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160; </div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;- (void)setOutlineWidth:(<span class="keywordtype">float</span>)outlineWidth captionIndex:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160; </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;- (float)getOutlineWidth:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160; </div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;- (void)setBackgroundColor:(<a class="code" href="structNvsEffectColor.html">NvsEffectColor</a>)backgroundColor captionIndex:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160; </div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;- (<a class="code" href="structNvsEffectColor.html">NvsEffectColor</a>)getBackgroundColor:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160; </div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;- (void)setBold:(BOOL)bold captionIndex:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160; </div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;- (BOOL)getBold:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160; </div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;- (void)setItalic:(BOOL)italic captionIndex:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;- (BOOL)getItalic:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160; </div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;- (void)setCurrentKeyFrameTime:(int64_t)time;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160; </div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;- (bool)setControlPoint:(NSString *)fxParam controlPointPair:(<a class="code" href="interfaceNvsControlPointPair.html">NvsControlPointPair</a> *)controlPointPair;</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;- (<a class="code" href="interfaceNvsControlPointPair.html">NvsControlPointPair</a>*)getControlPoint:(NSString*)fxParam;</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;- (bool)removeKeyframeAtTime:(NSString *)fxParam time:(int64_t)time;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160; </div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;- (bool)removeAllKeyframe:(NSString *)fxParam;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160; </div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;- (bool)hasKeyframeList:(NSString *)fxParam;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160; </div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;- (int64_t)findKeyframeTime:(NSString *)fxParam time:(int64_t)time flags:(<span class="keywordtype">int</span>)flags;</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">// Panoramic caption specific methods</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="keyword">@property</span> (readonly) BOOL isPanoramic;          </div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;-(void)setCenterPolarAngle:(<span class="keywordtype">float</span>)centerPolarAngle;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160; </div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;-(float)getCenterPolarAngle:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;-(void)setPolarAngleRange:(<span class="keywordtype">float</span>)polarAngleRange;</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160; </div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;-(float)getPolarAngleRange:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160; </div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;-(void)setCenterAzimuthAngle:(<span class="keywordtype">float</span>)centerAzimuthAngle;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;-(float)getCenterAzimuthAngle:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160; </div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;-(float)getOrthoAngleRange:(<span class="keywordtype">int</span>)captionIndex;</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160; </div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;-(void)setPanoramicScaleX:(<span class="keywordtype">float</span>)scaleX;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160; </div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;-(float)getPanoramicScaleX;</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160; </div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;-(void)setPanoramicScaleY:(<span class="keywordtype">float</span>)scaleY;</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160; </div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;-(float)getPanoramicScaleY;</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160; </div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;-(void)setPanoramicRotation:(<span class="keywordtype">float</span>)rotationAngle;</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160; </div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;-(float)getPanoramicRotation;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_a8ec01462e21838a4161be007d7515075"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#a8ec01462e21838a4161be007d7515075">NvsVideoEffectCompoundCaption::captionStylePackageId</a></div><div class="ttdeci">NSString * captionStylePackageId</div><div class="ttdoc">字幕样式包裹ID</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:66</div></div>
+<div class="ttc" id="ainterfaceNvsControlPointPair_html"><div class="ttname"><a href="interfaceNvsControlPointPair.html">NvsControlPointPair</a></div><div class="ttdoc">关键帧控制点对类。</div><div class="ttdef"><b>Definition:</b> NvsControlPointPair.h:27</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_af8e61f3075fc7e5db0352073710bb2fa"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#af8e61f3075fc7e5db0352073710bb2fa">-[NvsVideoEffectCompoundCaption getAnchorPoint]</a></div><div class="ttdeci">CGPoint getAnchorPoint()</div><div class="ttdoc">获取字幕锚点</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_af4f71c1122ec11d49385968bbc0bf972"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#af4f71c1122ec11d49385968bbc0bf972">NvsVideoEffectCompoundCaption::captionCount</a></div><div class="ttdeci">NSInteger captionCount</div><div class="ttdoc">获取该复合字幕中子字幕的数量</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:62</div></div>
+<div class="ttc" id="aNvsVideoEffectCompoundCaption_8h_html_a5c3262e34904b2fbb9f33891efc1454b"><div class="ttname"><a href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454b">NvsEffectBoundingType</a></div><div class="ttdeci">NvsEffectBoundingType</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:44</div></div>
+<div class="ttc" id="aNvsVideoEffectCompoundCaption_8h_html_a5c3262e34904b2fbb9f33891efc1454ba5bfaf2fc30efdc7057bffc713c511b08"><div class="ttname"><a href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba5bfaf2fc30efdc7057bffc713c511b08">NvsEffectBoundingType_Text_Frame</a></div><div class="ttdeci">@ NvsEffectBoundingType_Text_Frame</div><div class="ttdoc">文字框的边框</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:46</div></div>
+<div class="ttc" id="aNvsVideoEffectCompoundCaption_8h_html_a5c3262e34904b2fbb9f33891efc1454ba833e7937b9a2ea18a1519c2d8158d012"><div class="ttname"><a href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba833e7937b9a2ea18a1519c2d8158d012">NvsEffectBoundingType_Typographic_Text</a></div><div class="ttdeci">@ NvsEffectBoundingType_Typographic_Text</div><div class="ttdoc">文字的排版边框</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:49</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_a95d229a59c4bc1fe8855ff29f60cf221"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#a95d229a59c4bc1fe8855ff29f60cf221">-[NvsVideoEffectCompoundCaption getOpacity]</a></div><div class="ttdeci">float getOpacity()</div><div class="ttdoc">获取字幕透明度</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_acaa631b15c224d0582850c5a8f14669d"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#acaa631b15c224d0582850c5a8f14669d">-[NvsVideoEffectCompoundCaption getZValue]</a></div><div class="ttdeci">float getZValue()</div><div class="ttdoc">获取字幕Z值</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_a6cf469ddcec544336ce52308649481b9"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#a6cf469ddcec544336ce52308649481b9">-[NvsVideoEffectCompoundCaption getScaleX]</a></div><div class="ttdeci">float getScaleX()</div><div class="ttdoc">获取字幕水平缩放系数</div></div>
+<div class="ttc" id="astructNvsEffectColor_html"><div class="ttname"><a href="structNvsEffectColor.html">NvsEffectColor</a></div><div class="ttdoc">自定义颜色类</div><div class="ttdef"><b>Definition:</b> NvsEffectCommonDef.h:55</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_a90fa9d976492c603ea0b71af5772021f"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#a90fa9d976492c603ea0b71af5772021f">-[NvsVideoEffectCompoundCaption getRotationZ]</a></div><div class="ttdeci">float getRotationZ()</div><div class="ttdoc">获取字幕旋转角度</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_a89d9c1f62fb39e6ef29a6698637ee529"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#a89d9c1f62fb39e6ef29a6698637ee529">NvsVideoEffectCompoundCaption::inPoint</a></div><div class="ttdeci">int64_t inPoint</div><div class="ttdoc">字幕显示的入点（单位微秒）</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:64</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_a217b0361c626c0731ad5e0bcf0ab680e"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#a217b0361c626c0731ad5e0bcf0ab680e">-[NvsVideoEffectCompoundCaption getScaleY]</a></div><div class="ttdeci">float getScaleY()</div><div class="ttdoc">获取字幕垂直缩放系数</div></div>
+<div class="ttc" id="aNvsCommonDef_8h_html_a307a2dd9cb3609061dc3645ca13d9e00"><div class="ttname"><a href="NvsCommonDef_8h.html#a307a2dd9cb3609061dc3645ca13d9e00">NVS_EXPORT</a></div><div class="ttdeci">#define NVS_EXPORT</div><div class="ttdef"><b>Definition:</b> NvsCommonDef.h:20</div></div>
+<div class="ttc" id="ainterfaceNvsEffect_html"><div class="ttname"><a href="interfaceNvsEffect.html">NvsEffect</a></div><div class="ttdoc">特效</div><div class="ttdef"><b>Definition:</b> NvsEffect.h:46</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html">NvsVideoEffectCompoundCaption</a></div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:53</div></div>
+<div class="ttc" id="astructNvsEffectVideoResolution_html"><div class="ttname"><a href="structNvsEffectVideoResolution.html">NvsEffectVideoResolution</a></div><div class="ttdoc">视频解析度</div><div class="ttdef"><b>Definition:</b> NvsEffectCommonDef.h:39</div></div>
+<div class="ttc" id="aNvsVideoEffectCompoundCaption_8h_html_a5c3262e34904b2fbb9f33891efc1454bafba72d0e2f52c43aee872f0e539f66ba"><div class="ttname"><a href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454bafba72d0e2f52c43aee872f0e539f66ba">NvsEffectBoundingType_Text</a></div><div class="ttdeci">@ NvsEffectBoundingType_Text</div><div class="ttdoc">文字的实际边框</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:45</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_a72107f2408a03cabce3d3d22e76b2869"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#a72107f2408a03cabce3d3d22e76b2869">NvsVideoEffectCompoundCaption::outPoint</a></div><div class="ttdeci">int64_t outPoint</div><div class="ttdoc">字幕显示的出点（单位微秒）</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:65</div></div>
+<div class="ttc" id="ainterfaceNvsVideoEffectCompoundCaption_html_a81f8613f25ae8a6612bae66fceb5651f"><div class="ttname"><a href="interfaceNvsVideoEffectCompoundCaption.html#a81f8613f25ae8a6612bae66fceb5651f">-[NvsVideoEffectCompoundCaption getCaptionTranslation]</a></div><div class="ttdeci">CGPoint getCaptionTranslation()</div><div class="ttdoc">获取字幕的平移量</div></div>
+<div class="ttc" id="aNvsVideoEffectCompoundCaption_8h_html_a5c3262e34904b2fbb9f33891efc1454ba65ca5aa06a771b52cc1ed52da19e5e58"><div class="ttname"><a href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba65ca5aa06a771b52cc1ed52da19e5e58">NvsEffectBoundingType_Text_Origin_Frame</a></div><div class="ttdeci">@ NvsEffectBoundingType_Text_Origin_Frame</div><div class="ttdoc">没有经过变换的文字框的边框</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:48</div></div>
+<div class="ttc" id="aNvsEffect_8h_html"><div class="ttname"><a href="NvsEffect_8h.html">NvsEffect.h</a></div></div>
+<div class="ttc" id="aNvsVideoEffectCompoundCaption_8h_html_a5c3262e34904b2fbb9f33891efc1454ba0a1f0b793902c2d49c28c35c178f6c94"><div class="ttname"><a href="NvsVideoEffectCompoundCaption_8h.html#a5c3262e34904b2fbb9f33891efc1454ba0a1f0b793902c2d49c28c35c178f6c94">NvsEffectBoundingType_Frame</a></div><div class="ttdeci">@ NvsEffectBoundingType_Frame</div><div class="ttdoc">包括装饰在内的整体边框</div><div class="ttdef"><b>Definition:</b> NvsVideoEffectCompoundCaption.h:47</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

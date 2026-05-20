@@ -1,0 +1,21 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"无",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"泰系学姐阴影",
+        "displayName":"泰系学姐阴影",
+        "packagePath":"Shadow/E59361ED-6894-44FC-84FA-3DB30294F2C7.5",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"E59361ED-6894-44FC-84FA-3DB30294F2C7",
+        "coverImage":""
+    }
+]

@@ -1,0 +1,6 @@
+framework module AudioEqualizer {
+  umbrella header "AudioEqualizer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,30 @@
+[{
+	"name":"Column Sweep",
+    "packageId":"3DEFF9D6-C2A4-4A1E-A817-BA90565D1AD4",
+    "aspect":127
+},
+{
+    "name":"Pixelated Wipe",
+    "packageId":"9FFBDDB6-8C5C-4D58-AA6C-585FCE15CE1D",
+    "aspect":127
+},{
+    "name":"BounceOpen",
+    "packageId":"0499C962-9CDE-4B0C-A4DC-3F09C5A8D12E",
+    "aspect":127
+},{
+    "name":"Page Flip",
+    "packageId":"8298527D-C479-4A14-B363-BE0528397E2E",
+    "aspect":127
+},{
+    "name":"Color Revolve",
+    "packageId":"572CCCBA-A522-4F98-B0D3-DF6855EAD5F0",
+    "aspect":3
+},{
+    "name":"Signal interference",
+    "packageId":"AAE4308A-9910-4F7F-9AEE-60A5A8165A0F",
+    "aspect":127
+},{
+    "name":"Fuzzy amplification",
+    "packageId":"C94516F7-0380-430E-AADC-83D9ED386790",
+    "aspect":2047
+}]

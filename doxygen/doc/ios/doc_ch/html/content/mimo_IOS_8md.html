@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 美摄Mimo技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">美摄Mimo技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>Mimo iOS使用文档</h1>
+<h2>1、Mimo概述</h2>
+<p>&emsp;&emsp;Mimo模板数据由info.json进行组织，使用时对info.json文件进行解析，然后按照获取的信息进行视频内容添加。</p>
+<p>&emsp;&emsp;具体添加内容：</p>
+<p>&emsp;&emsp;A、添加镜头(注：shot，分为普通镜头和空镜头。空镜头指json 中已经预定好指定素材的镜头，即用户无法对此镜头进行选素材操作)。</p>
+<p>&emsp;&emsp;B、添加时间线特效。</p>
+<p>&emsp;&emsp;C、添加clip 特效等。</p>
+<p>&emsp;&emsp;最后形成一个合乎预期效果的时间线，通过时间线转换成视频。</p>
+<h2>2、Mimo规范</h2>
+<p>&emsp;&emsp;Mimo 具体规范，可参考设计同事给定的范例文档。</p>
+<h2>3、Demo参考代码</h2>
+<h3>3.1、NvMimoListViewController-&gt; Mimo 模块模版列表界面。</h3>
+<p>&emsp;&emsp;完成内容如下：</p>
+<p>&emsp;&emsp;A、用户在此界面选定某个模版应用，并跳转至相册界面选择相应素材。</p>
+<p>&emsp;&emsp;B、在此界面完成具体模板json转model操作。</p>
+<p>&emsp;&emsp;C、在相册界面根据model信息(如，镜头数量)选择素材。</p>
+<p>&emsp;&emsp;D、完成对clipArr(不包含空镜头)中元素的初步处理，如指定该镜头对应的选定素材及其素材时长等相关信息。</p>
+<h3>3.2、NvMimoEditTailoringViewController-&gt;单镜头素材编辑</h3>
+<p>&emsp;&emsp;对单个镜头素材trimIn\trimOut进行编辑。</p>
+<h3>3.3、NvPreviewViewController -&gt; 模版效果预览界面</h3>
+<p>&emsp;&emsp;在此界面创建timeline, 按照模版信息添加素材及特效。</p>
+<h2>4、创建时间线</h2>
+<h3>4.1、转码视频</h3>
+<p>&emsp;&emsp;转码视频：如果镜头对应选择素材为视频素材，而且该镜头包含reverse或repeat字段，需要对该视频素材进行转码操作。</p>
+<p>&emsp;&emsp;调用NvsMediaFileConvertor接口转码，接口如下： </p><pre class="fragment">- (int64_t)convertMeidaFile:(NSString *)srcFilePath
+               outputFile:(NSString *)outputFilePath
+         isReverseConvert:(bool)isReverse
+             fromPosition:(int64_t)from
+               toPosition:(int64_t)to
+                  options:(NSMutableDictionary *)options;
+</pre><h3>4.2、镜头变速</h3>
+<p>&emsp;&emsp;镜头变速的两种情况：</p>
+<p>&emsp;&emsp;A、针对镜头内speed 数组不为空，需进行变速操作。</p>
+<p>&emsp;&emsp;B、如果所选素材指定trimIn与 trimOut不够镜头时长限制，需进行变速操作。</p>
+<p>&emsp;&emsp;两种情形封装接口如下： </p><pre class="fragment">- (void)multiSpeedWithModel:(NvShotModel *)editDataModel videoTrack:(NvsVideoTrack *)videoTrack totalTime:(int64_t)totalTime modelIndex:(int)index
+
+- (void)noneSpeedWithModel:(NvShotModel *)editDataModel videoTrack:(NvsVideoTrack *)videoTrack totalTime:(int64_t)totalTime modelIndex:(int)index
+</pre><p>&emsp;&emsp;注意：sdk 最小支持变速为 1/16.0。</p>
+<h3>4.3、时间线特效</h3>
+<p>&emsp;&emsp;时间线特效：按照模板信息对非镜头内特效(滤镜、复合字幕、贴纸等)添加。</p>
+<p>&emsp;&emsp;注：使用特效之前，应首先确保该特效已经正确安装。</p>
+<p>&emsp;&emsp;安装素材调用NvsAssetPackageManager下的方法。</p>
+<p>&emsp;&emsp;接口如下： </p><pre class="fragment">- (NvsAssetPackageManagerError)installAssetPackage:(NSString *)assetPackageFilePath license:(NSString *)licenseFilePath type:(NvsAssetPackageType)type sync:(BOOL)synchronous assetPackageId:(NSMutableString *)assetPackageId;
+</pre><h3>4.4、镜头内特效</h3>
+<p>&emsp;&emsp;镜头内特效：按照是否存在变速分为添加时间线特效和添加clip特效两种。 &emsp;注：其中因变速导致的一个镜头分割为多个clip的情况，应将这些clip之间的转场设为空。</p>
+<h3>4.5、组合字幕字体</h3>
+<p>&emsp;&emsp;组合字幕字体：组合字幕可应用指定字体效果。使用字体之前，首先对字体注册。</p>
+<p>&emsp;&emsp;字体注册示例代码： </p><pre class="fragment">NSString *fontFamily = [self.streamingContext registerFontByFilePath:[fontPath stringByAppendingPathComponent:path]];
+</pre><h3>4.6、片段水印</h3>
+<p>&emsp;&emsp;片段水印：开启或关闭片段结尾水印。即添加和删除模板指定动态水印。</p>
+<h3>4.7、转场特效</h3>
+<p>&emsp;&emsp;转场特效：视频转场需要在片段数据处理完后单独处理，否则无效！ </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

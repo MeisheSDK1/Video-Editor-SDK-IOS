@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: Master Keyer技术文档</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Master Keyer技术文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>Master Keyer技术文档</h1>
+<p>1.1版本</p>
+<p>北京美摄网络科技有限公司</p>
+<h2>目录</h2>
+<p>[toc]</p>
+<h2>前置说明：</h2>
+<p>&emsp;&emsp;美摄SDK抠像技术在拍摄和编辑时都可应用，本文档适用于拍摄。对于编辑应用，请参考美摄相关文档。</p>
+<h2>1、抠像</h2>
+<p>&emsp;&emsp;“抠像”一词来源于早期电视制作，英文称作“Key”。吸取画面中的某一种颜色作为透明色，将透明色从画面中抠去，使背景透出来，形成二层画面的叠加合成。可以使拍摄的人物经抠像后与其它景物叠加在一起，形成神奇的艺术效果。</p>
+<p><img src="38b26ee11e3919ac5e23506b3185c1d2.png" alt="" class="inline"/>   </p>
+<p>&emsp;&emsp;美摄SDK非线性编辑软件，巧妙地应用其中的Key功能，并与其它特技配合，达到高质量的抠像效果。</p>
+<h2>2、素材要求</h2>
+<p>&emsp;&emsp;所有的画面都可以抠像，如果实现比较好的抠像效果，最好流媒体前景与背景色差区别明显，色调不要过于接近，背景铺光要匀称。这样抠像效果最佳。</p>
+<h2>3、如何利用美摄SDK进行抠像开发</h2>
+<h3>3.1、总体思想</h3>
+<p>&emsp;&emsp;美摄SDK的很多功能实现是通过特效来进行实现的，抠像也不例外。抠像的实现是对流媒体添加特效。</p>
+<p>&emsp;&emsp;为了方便广大开发人员编程，抠像和AR Scene一样，都是通过字符串参数ID进行标记。通过Maseter Keyer参数ID构造特效对象，然后进行相关参数设定。</p>
+<p>&emsp;&emsp;抠像实现的本质是在当前流媒体界面上把一些相近颜色用其它颜色进行替代。用户在流媒体界面上发出事件，程序捕获用户点击范围，采集范围颜色，把界面上和范围相近的颜色用其它颜色来取代。</p>
+<h3>3.2、抠像分类</h3>
+<p>&emsp;&emsp;抠像整体分为3种模式，Master Mode、Hsv Mode、RGB Mode。分别为色度抠像，HSV空间抠像和RGB抠像。</p>
+<p><img src="f55d078e8da72c3274c8e40f04cd6b21.png" alt="" class="inline"/>   </p>
+<h3>3.3、抠像参数ID</h3>
+<p>&emsp;&emsp;通过字符串参数ID，方便开发者应用，Master Keyer整体代表抠像特技。在Master Keyer下有禁用预乘、靶色、收缩边界强度、柔软度修正、溢色去除、溢色去除强度等参数ID。根据实际需要，通过特效对象，进行相关参数设置。</p>
+<p>&emsp;&emsp;在美摄SDK种，参数ID按照抠像分类进行组织。即色度抠像参数ID，HSV空间抠像参数ID，RGB抠像参数ID，其次还有公共ID参数，公共参数ID可以被这三种模式调用。</p>
+<p>&emsp;&emsp;需要强调的是：模式内参数仅在模式选择为对应模式时生效。</p>
+<h4>3.3.1、公共参数ID</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">标号 </th><th class="markdownTableHeadLeft">名字&emsp;&emsp;&emsp;&emsp; </th><th class="markdownTableHeadLeft">解释 </th><th class="markdownTableHeadLeft">类型 </th><th class="markdownTableHeadLeft">最大 </th><th class="markdownTableHeadLeft">最小 </th><th class="markdownTableHeadLeft">默认  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">01 </td><td class="markdownTableBodyLeft">Master Keyer </td><td class="markdownTableBodyLeft">代表抠像 </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">02 </td><td class="markdownTableBodyLeft">Keyer Mode </td><td class="markdownTableBodyLeft">抠像类型：Master Mode；Hsv Mode；RGB Mode </td><td class="markdownTableBodyLeft">String </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">Master Mode  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">03 </td><td class="markdownTableBodyLeft">Hsv Mode </td><td class="markdownTableBodyLeft">RGB Mode </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">04 </td><td class="markdownTableBodyLeft">Key Color </td><td class="markdownTableBodyLeft">靶色 </td><td class="markdownTableBodyLeft">COLOR </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">0，0，0  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">05 </td><td class="markdownTableBodyLeft">Aperture </td><td class="markdownTableBodyLeft">孔径范围，取色之后色度范围张角大小 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">360 </td><td class="markdownTableBodyLeft">0 </td><td class="markdownTableBodyLeft">90  </td></tr>
+</table>
+<h4>3.3.2、Master模式</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">标号 </th><th class="markdownTableHeadLeft">名字 </th><th class="markdownTableHeadLeft">解释 </th><th class="markdownTableHeadLeft">类型 </th><th class="markdownTableHeadLeft">最大 </th><th class="markdownTableHeadLeft">最小 </th><th class="markdownTableHeadLeft">默认  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">01 </td><td class="markdownTableBodyLeft">Disable Premultiply </td><td class="markdownTableBodyLeft">禁用预乘, 是否保留原图像alpha值 </td><td class="markdownTableBodyLeft">BOOL </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">false  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">02 </td><td class="markdownTableBodyLeft">Shrink Intensity </td><td class="markdownTableBodyLeft">收缩边界强度，处理抠像边界 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1.0 </td><td class="markdownTableBodyLeft">0.0 </td><td class="markdownTableBodyLeft">0.0  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">03 </td><td class="markdownTableBodyLeft">Softeness Amendment </td><td class="markdownTableBodyLeft">柔软度修正，可以调整选区中区域抠至半透明 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1.0 </td><td class="markdownTableBodyLeft">-1.0 </td><td class="markdownTableBodyLeft">0.0  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">04 </td><td class="markdownTableBodyLeft">Spill Removal </td><td class="markdownTableBodyLeft">溢色去除，抠像边界杂色称为溢色 </td><td class="markdownTableBodyLeft">BOOL </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">false  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">05 </td><td class="markdownTableBodyLeft">Spill Removal Intensity </td><td class="markdownTableBodyLeft">溢色去除强度 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1.0 </td><td class="markdownTableBodyLeft">0.0 </td><td class="markdownTableBodyLeft">0.25  </td></tr>
+</table>
+<h4>3.3.3、HSV模式</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">标号 </th><th class="markdownTableHeadLeft">名字&emsp;&emsp;&emsp;&emsp; </th><th class="markdownTableHeadLeft">解释 </th><th class="markdownTableHeadLeft">类型 </th><th class="markdownTableHeadLeft">最大 </th><th class="markdownTableHeadLeft">最小 </th><th class="markdownTableHeadLeft">默认  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">01 </td><td class="markdownTableBodyLeft">Sat Width </td><td class="markdownTableBodyLeft">S空间宽度 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1 </td><td class="markdownTableBodyLeft">0 </td><td class="markdownTableBodyLeft">0.2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">02 </td><td class="markdownTableBodyLeft">Val Width </td><td class="markdownTableBodyLeft">V空间宽度，各个空间宽度相当于和孔径一起控制对应的颜色 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1 </td><td class="markdownTableBodyLeft">0 </td><td class="markdownTableBodyLeft">0.2  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">03 </td><td class="markdownTableBodyLeft">Hue Roll Off </td><td class="markdownTableBodyLeft">H空间柔边 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1 </td><td class="markdownTableBodyLeft">0 </td><td class="markdownTableBodyLeft">0  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">04 </td><td class="markdownTableBodyLeft">Sat Roll Off </td><td class="markdownTableBodyLeft">S空间柔边 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1 </td><td class="markdownTableBodyLeft">0 </td><td class="markdownTableBodyLeft">0  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">05 </td><td class="markdownTableBodyLeft">Val Roll Off </td><td class="markdownTableBodyLeft">柔边对应软边，控制选中区域的半透明程度,V空间柔边 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1 </td><td class="markdownTableBodyLeft">0 </td><td class="markdownTableBodyLeft">0  </td></tr>
+</table>
+<h4>3.3.4、RGB抠像参数ID</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">标号 </th><th class="markdownTableHeadLeft">名字 </th><th class="markdownTableHeadLeft">解释 </th><th class="markdownTableHeadLeft">类型 </th><th class="markdownTableHeadLeft">最大 </th><th class="markdownTableHeadLeft">最小 </th><th class="markdownTableHeadLeft">默认  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">01 </td><td class="markdownTableBodyLeft">RGB Softness </td><td class="markdownTableBodyLeft">同软边 </td><td class="markdownTableBodyLeft">FLOAT </td><td class="markdownTableBodyLeft">1 </td><td class="markdownTableBodyLeft">0 </td><td class="markdownTableBodyLeft">0.2  </td></tr>
+</table>
+<h4>3.3.5、说明</h4>
+<p>&emsp;&emsp;特别说明：在表格中，最大值与最小值是相对的，小的代表弱化，大的代表增强。</p>
+<h2>4、类与函数</h2>
+<p>&emsp;&emsp;在本部分中，用到NvsColor和RectF类，对于特效编程其它类，参考前面相关文档。</p>
+<h3>4.1、NvsColor类</h3>
+<p>&emsp;&emsp;美摄SDK封装的颜色类，是对r(红色)，g(绿色)，b(蓝色)以及a(透明度)的封装。</p>
+<p>public 成员函数 </p><pre class="fragment">NvsColor (float r, float g, float b, float a)
+</pre><p>public 属性 </p><pre class="fragment">float   r      红色
+float   g     绿色
+float   b     蓝色
+float   a     透明度
+</pre><p>SDK中，NvsColor类属性r,g,b,a取值范围是[0,1]，而非[0,255]。</p>
+<p>构造及析构函数说明：</p>
+<p>不带参数构造函数： </p><pre class="fragment">NvsColor()
+</pre><p>带参数构造函数： </p><pre class="fragment">NvsColor
+(
+    float   r,
+    float   g,
+    float   b,
+    float   a 
+)
+</pre><h3>4.2、相关函数</h3>
+<p>&emsp;&emsp;相同名字的函数参考前面文档。本文档仅列出前面没有讲述过的函数。</p>
+<h4>4.2.1、getCaptureVideoFxByIndex</h4>
+<p>获取采集视频特效。</p>
+<p>原型： </p><pre class="fragment">NvsCaptureVideoFx NvsStreamingContext.getCaptureVideoFxByIndex(int captureVideoFxIndex)
+</pre><p>参数： captureVideoFxIndex 视频特效索引 返回： 返回视频特效对象</p>
+<h4>4.2.2、setColorVal()</h4>
+<p>给相关特效设置参数值。</p>
+<p>原型： </p><pre class="fragment">void com.meicam.sdk.NvsFx.setColorVal(String fxParam,NvsColor val)      
+</pre><p>设置特效颜色值参数值</p>
+<p>参数：</p>
+<p>fxParam 特效的颜色参数的类型。请参见PARAM_TYPE_COLOR</p>
+<p>val NvsColor自定义颜色对象</p>
+<h4>4.2.3、sampleColorFromCapturedVideoFrame</h4>
+<p>采集区域颜色值。</p>
+<p>原型： </p><pre class="fragment">NvsColor com.meicam.sdk.NvsStreamingContext.sampleColorFromCapturedVideoFrame(RectF sampleRect)
+</pre><p>对采集设备的视频帧内容进行采样</p>
+<p>参数： sampleRect：采样的矩形区域，坐标为实时预览窗口的自身坐标系</p>
+<p>返回： 返回值为采样的颜色值，该颜色值是采样的矩形区域内所有像素颜色的平均值</p>
+<h2>5、开发内容</h2>
+<h3>5.1、开发准备</h3>
+<p>&emsp;&emsp;开发者首先申请摄像头权限，创建流媒体上下文（Streaming Context）对象，流媒体窗口显示NvsLiveWindow对象，并进行预览。</p>
+<p>对象声明 </p><pre class="fragment">private NvsLiveWindow m_liveWindow;
+public NvsStreamingContext m_streamingContext;
+
+String licensePath = "assets:/meishesdk.lic";
+//对象定义
+m_streamingContext = NvsStreamingContext.init(getApplicationContext(), licensePath, NvsStreamingContext.STREAMING_CONTEXT_FLAG_SUPPORT_4K_EDIT);
+m_liveWindow = (NvsLiveWindow) findViewById(R.id.liveWindow);
+m_streamingContext.connectCapturePreviewWithLiveWindow(m_liveWindow);
+</pre><h3>5.2、画面颜色采样</h3>
+<p>&emsp;&emsp;从点击位置采集背景画面的颜色值。封装为成员函数</p>
+<p>&emsp;&emsp;矩形区域定位算法比较简单，不做讲述。 </p><pre class="fragment">private NvsColor getColorFromLiveWindow(MotionEvent event) {
+//矩形位置定位
+    int sampleWidth = 20;
+    int sampleHeight = 20;
+    RectF sampleRect = new RectF();
+    sampleRect.left = (int) (event.getX() - sampleWidth / 2);
+    if (sampleRect.left &lt; 0) {
+        sampleRect.left = 0;
+    } else if (sampleRect.left + sampleWidth &gt; m_liveWindow.getWidth()) {
+        sampleRect.left = m_liveWindow.getWidth() - sampleWidth;
+    }
+
+    sampleRect.top = (int) (event.getY() - sampleHeight / 2);
+    if (sampleRect.top &lt; 0) {
+        sampleRect.top = 0;
+    } else if (sampleRect.top + sampleHeight &gt; m_liveWindow.getHeight()) {
+        sampleRect.top = m_liveWindow.getHeight() - sampleHeight;
+    }
+    sampleRect.right = sampleRect.left + sampleWidth;
+    sampleRect.bottom = sampleRect.top + sampleHeight;
+//采集位置颜色，并返回
+    return m_streamingContext.sampleColorFromCapturedVideoFrame(sampleRect);
+}
+</pre><h3>5.3、事件处理</h3>
+<p>&emsp;&emsp;抠像的参数ID </p><pre class="fragment">private final String NAME = "Master Keyer";
+
+m_liveWindow.setOnTouchListener(new View.OnTouchListener() {
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+
+//判断是否添加过抠像特技，如果没有添加，则添加.不要重复添加。
+        if (!isContainCaptureVideoFxByName(NAME)) {
+            appendBuiltinCaptureVideoFx();
+        }
+//调用上面函数
+        NvsColor sampledColor = getColorFromLiveWindow(event);
+        /*
+        * 将吸取下来的背景画面颜色值设置给抠像特技
+        * Set the extracted background color value to the keying effect
+        * */
+//判断是否有特效对象
+        NvsCaptureVideoFx keyerFx = m_streamingContext.getCaptureVideoFxByIndex(0);
+        if (keyerFx == null) {
+            return false;
+        }
+//设置抠像颜色
+        keyerFx.setColorVal("Key Color", sampledColor);
+        return true;
+    }
+});
+</pre><h3>5.4、抠像特效设置</h3>
+<pre class="fragment">private final String NAME = "Master Keyer";
+
+//生成抠像对象
+NvsCaptureVideoFx keyerFx = m_streamingContext.appendBuiltinCaptureVideoFx(NAME);
+
+//对抠像对象进行技术处理
+if (keyerFx != null) {
+        /*
+        * 开启溢色去除
+        * Turn on overflow color removal
+        * */
+        keyerFx.setBooleanVal("Spill Removal", true);
+        /*
+        * 将溢色去除强度设置为最低
+        * Set the overflow color removal intensity to minimum
+        * */
+        keyerFx.setFloatVal("Spill Removal Intensity", 0);
+        /*
+        * 设置收缩边界强度
+        * Set shrink border strength
+        * */
+        keyerFx.setFloatVal("Shrink Intensity", 0.4);
+
+    //Aperture：一个可以调节的孔径，代表取色之后的色度范围张角大小
+//参数30在0到90之间，可以调整，实例应用中，可以通过进度条控制
+
+keyerFx.setFloatVal("Aperture", 30);
+}
+</pre><h3>5.5、运行效果</h3>
+<p><img src="f55d078e8da72c3274c8e40f04cd6b33.png" alt="" class="inline"/>    </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

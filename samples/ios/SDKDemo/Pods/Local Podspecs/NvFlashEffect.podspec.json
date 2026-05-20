@@ -1,0 +1,58 @@
+{
+  "name": "NvFlashEffect",
+  "version": "0.1.0",
+  "summary": "A short description of NvFlashEffect.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chuyang009@163.com/NvFlashEffect",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chuyang009@163.com": "liu_dongxu@cdv.com"
+  },
+  "source": {
+    "git": "https://github.com/chuyang009@163.com/NvFlashEffect.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": [
+    "NvFlashEffect/Classes/**/*",
+    "NvFlashEffect/Classes/NvFlashEffect/**/*"
+  ],
+  "resources": "NvFlashEffect/Assets/*",
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  },
+  "public_header_files": "NvFlashEffect/Classes/NvFlashEffectViewController.h",
+  "private_header_files": [
+    "NvFlashEffect/Classes/NvFlashEffect/Controller/*.h",
+    "NvFlashEffect/Classes/**/*.h"
+  ],
+  "vendored_frameworks": "NvStreamingSdkCore.framework",
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios",
+      "$(SRCROOT)/../../../../../../../lib/ios",
+      "$(SRCROOT)/../../../../lib/ios"
+    ],
+    "HEADER_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../lib/ios/NvStreamingSdkCore.framework/Headers"
+    ]
+  },
+  "dependencies": {
+    "NvBaseCommon": [
+
+    ],
+    "Masonry": [
+      "~> 1.1.0"
+    ],
+    "MBProgressHUD": [
+      "~> 1.1.0"
+    ]
+  }
+}

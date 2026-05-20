@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>美摄SDK For iOS: 断点续导</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">美摄SDK For iOS
+   &#160;<span id="projectnumber">3.16.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">断点续导 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h3>断点续导介绍</h3>
+<p>断点续导是在文件生成过程中的一个概念，指在生成过程中因为各种原因导致生成中断，当下一次生成开始，在所有参数与上一次生成完全一致的情况下，可以从中断位置继续生成文件。</p>
+<p>断点续导需要在普通生成文件的基础上，开启断点续导标识、设置切片文件存储路径以及设置切片文件长度。</p>
+<p>当用户开启断点续导后，SDK会根据用户指定的切片长度（默认10秒）在用户指定的文件储存路径下生成切片文件，在所有切片文件都生成成功后再把所有切片文件合成一个最终文件。</p>
+<h3>断点续导参数设置与接口使用</h3>
+<p>通过在生成时间线时，设置时间线配置中的具体参数来实现 <br  />
+</p><ul>
+<li>(BOOL)compileTimeline:(NvsTimeline *)timeline startTime:(int64_t)startTime endTime:(int64_t)endTime outputFilePath:(NSString *)outputFilePath videoResolutionGrade:(NvsCompileVideoResolutionGrade)videoResolutionGrade videoBitrateGrade:(NvsCompileVideoBitrateGrade)videoBitrateGrade compileConfigurations:(NSMutableDictionary *)compileConfigurations flags:(int)flags</li>
+</ul>
+<p>NVS_COMPILE_ENABLE_BREAKPOINT_CONTINUATION "enable breakpoint continuation" 设置是否开启断点续导</p>
+<p>NVS_COMPILE_CACHE_FILE_PATH "cache file path" 断点续导缓存文件路径</p>
+<p>NVS_COMPILE_CACHE_FILE_DURATION "cache file duration" 断点续导切片视频长度 <br  />
+</p>
+<h3>断点续导FAQ</h3>
+<p>1.断点续导默认切片长度</p>
+<p>答：切片默认长度为10秒。</p>
+<p>2.断点续导失败的原因</p>
+<p>答：在常规生成失败原因的基础上（如编码失败，解码失败，读写权限等），用户没有指定断点续导缓存路径，断点续导过程中切片文件或缓存路径被删除等也会导致断点续导失败。</p>
+<p>3.断点续导使用建议</p>
+<p>答：1）切片时长设置要适宜。设置的过短会造成切片过碎，设置的过长又会耗用比较长的时间。</p>
+<p>2）每个续导文件最好使用不同的缓存路径。虽然SDK内部会以命名规则来区分切片文件，但是使用不同的缓存路径会使得文件系统更清晰，也更利于管理。</p>
+<p>3）生成成功后，SDK并不会主动删除缓存切片文件，需要用户自行删除。</p>
+<p>4）如果生成文件时长不长的前提下，不建议使用断点续导。因为断点续导需要生成切片文件，最后还要将切片文件合成，所以不触发断点续导的前提下直接生成的效率要比设置断点续导更快。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

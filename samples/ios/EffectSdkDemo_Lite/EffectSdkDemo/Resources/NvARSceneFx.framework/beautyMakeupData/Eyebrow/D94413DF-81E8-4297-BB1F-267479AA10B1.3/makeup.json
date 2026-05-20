@@ -1,0 +1,11 @@
+{
+	"translation": [
+		{
+			"originalText": "Dot mole eyebrow",
+			"targetLanguage": "zh_CN",
+			"targetText": "点痣眉毛"
+		}
+	],
+	"className": "Makeup Eyebrow Package Id", 
+	"makeupId": "Eyebrow"
+}

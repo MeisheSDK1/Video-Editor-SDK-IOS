@@ -1,0 +1,23 @@
+[
+    {
+        "name":"霓虹灯",
+        "config":"1",
+        "categoryId":"3",
+        "kindId":"2",
+        "color":"#E6E6FA",
+        "fxFileName":"34B095C8-628A-4E9D-B36D-093F9774DAF7.videofx",
+        "fxid":"34B095C8-628A-4E9D-B36D-093F9774DAF7",
+        "imageName":"34B095C8-628A-4E9D-B36D-093F9774DAF7.png"
+    },
+    {
+        "name":"金色闪烁",
+        "config":"1",
+        "categoryId":"3",
+        "kindId":"2",
+        "color":"#FF8C00",
+        "fxFileName":"641C5CDE-BF3E-478D-A4C6-B5D5FA3AA9AD.videofx",
+        "fxid":"641C5CDE-BF3E-478D-A4C6-B5D5FA3AA9AD",
+        "imageName":"641C5CDE-BF3E-478D-A4C6-B5D5FA3AA9AD.png"
+    }
+]
+ 

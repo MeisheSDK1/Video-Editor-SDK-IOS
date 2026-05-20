@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  SDKDemo
+
+  Created by ms20180425 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+
+//displayName
+"CFBundleDisplayName" = "Meicam";
+"General" = "General";
+"Generated" = "Generated...";
+"Generated complete" = "Completed\nPlease view in album";
+"compile fiald" = "Compile Field";
+"storage" = "Please check the storage space";
+"Compile" = "Compile";
+"Save Succecs!" = "Save Successfully!";
+"Cancel" = "Cancel";
+"Save" = "Save";
+"Know" = "Got it";
+
