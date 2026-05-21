@@ -88,7 +88,7 @@ Start a 14-day free trial and see how the MeisheSDK works. No credit card inform
 No entity may use the trial version of the SDK for commercial purposes or in any field prohibited by local laws and regulations; otherwise, such entity shall bear full legal responsibility.
 
 Feel free to contact us if you have any questions regarding this plugin.
-You can Please contact the sales to purchase a legally valid license https://en.meishesdk.com/register.
+Please contact the sales to purchase a legally valid license https://en.meishesdk.com/register.
 
 **Development Document**
 
