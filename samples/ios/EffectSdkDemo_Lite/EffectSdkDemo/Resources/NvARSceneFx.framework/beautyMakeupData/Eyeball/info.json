@@ -1,0 +1,21 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"无",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"银河",
+        "displayName":"银河",
+        "packagePath":"Eyeball/C0325DDC-4C8E-46F2-A7EE-49A013729DAC",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"C0325DDC-4C8E-46F2-A7EE-49A013729DAC",
+        "coverImage":""
+    }
+]

@@ -1,0 +1,31 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"no",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"泰系学姐睫毛",
+        "displayName":"泰系学姐睫毛",
+        "packagePath":"Eyelash/E650B231-73BD-421D-9566-8BDEF136C54D.6",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"E650B231-73BD-421D-9566-8BDEF136C54D",
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"点痣睫毛",
+        "displayName":"点痣睫毛",
+        "packagePath":"Eyelash/C8FE4F73-25FB-4C1B-8B75-DC9BB2A98A74.5",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "singlePackageId":"C8FE4F73-25FB-4C1B-8B75-DC9BB2A98A74",
+        "coverImage":""
+    }
+]

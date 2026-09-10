@@ -1,0 +1,29 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"卧蚕眼影",
+        "displayName":"Bags under Eyeshadow",
+        "packagePath":"Eyeshadow/82799E3F-0BB9-4C83-A4BE-1A08F10C12F1.1",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"白开水眼影",
+        "displayName":"Water Eyeshadow",
+        "packagePath":"Eyeshadow/19816E68-99E1-4A5D-9A11-68F217F63C9C.6",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    }
+]

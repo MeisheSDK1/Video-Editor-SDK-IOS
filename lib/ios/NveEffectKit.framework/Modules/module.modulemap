@@ -1,0 +1,6 @@
+framework module NveEffectKit {
+  umbrella header "NveEffectKit.h"
+  export *
+
+  module * { export * }
+}

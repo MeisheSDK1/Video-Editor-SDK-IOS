@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'Virtual_Example' do
+  pod 'Virtual', :path => '../'
+
+  target 'Virtual_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

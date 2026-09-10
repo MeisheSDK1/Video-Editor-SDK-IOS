@@ -1,0 +1,30 @@
+{
+	"fxDuration": "4080",
+	"stillImages": [
+	{ 
+		"stillImageBeginTime":"680",
+		"stillImageDuration":"360"
+	},
+	{ 
+		"stillImageBeginTime":"1320",
+		"stillImageDuration":"400"
+	},
+	{ 
+		"stillImageBeginTime":"1920",
+		"stillImageDuration":"400"
+	},
+	{ 
+		"stillImageBeginTime":"2560",
+		"stillImageDuration":"360"
+	},
+	{ 
+		"stillImageBeginTime":"2960",
+		"stillImageDuration":"320"
+	},
+	{ 
+		"stillImageBeginTime":"3640",
+		"stillImageDuration":"280"
+	}
+	]
+
+}

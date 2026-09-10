@@ -1,0 +1,51 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName": "No",
+        "value":0,
+        "packagePath":"",
+        "coverName":"NvsFilterNone.png"
+    },
+    {
+        "displayNameZhCn":"泡泡浴",
+        "displayName": "Bubble bath",
+        "value":1,
+        "packagePath":"38F5CD81-F2CF-4831-AAA0-0AA855038894.4.arscene",
+        "coverName":"38F5CD81-F2CF-4831-AAA0-0AA855038894.png"
+    },
+    {
+        "displayNameZhCn":"可爱喵喵",
+        "displayName": "Cute Cat",
+        "value":1,
+        "packagePath":"38D1F702-5F78-44FA-9CEB-AC032FEA6618.14.arscene",
+        "coverName":"38D1F702-5F78-44FA-9CEB-AC032FEA6618.png"
+    },
+    {
+        "displayNameZhCn":"cool眼镜",
+        "displayName": "Glasses3",
+        "value":1,
+        "packagePath":"3B08D86F-5259-422E-AE23-513000227536.1.arscene",
+        "coverName":"3B08D86F-5259-422E-AE23-513000227536.png"
+    },
+    {
+        "displayNameZhCn":"恭喜发财",
+        "displayName": "Red Packet",
+        "value":1,
+        "packagePath":"3EB5FF99-D9D0-41AA-80FF-8D3B83D48DCB.4.arscene",
+        "coverName":"3EB5FF99-D9D0-41AA-80FF-8D3B83D48DCB.png"
+    },
+    {
+        "displayNameZhCn":"圣诞鹿角",
+        "displayName": "Hairpin2",
+        "value":1,
+        "packagePath":"42D5BABC-05C3-41C3-8077-DF0E4E2E6ECD.9.arscene",
+        "coverName":"42D5BABC-05C3-41C3-8077-DF0E4E2E6ECD.png"
+    },
+    {
+        "displayNameZhCn":"狐狸",
+        "displayName": "Fox",
+        "value":1,
+        "packagePath":"7242B80E-A804-4CB5-B7DD-DFACC1B6BF6F.8.arscene",
+        "coverName":"7242B80E-A804-4CB5-B7DD-DFACC1B6BF6F.png"
+    }
+]

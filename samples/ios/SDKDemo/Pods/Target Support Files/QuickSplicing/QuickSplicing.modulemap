@@ -1,0 +1,6 @@
+framework module QuickSplicing {
+  umbrella header "QuickSplicing-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,1182 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CA1B866292E1BC600174DE7 /* NvBeautyTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA1B865292E1BC600174DE7 /* NvBeautyTypeModel.m */; };
+		0CA1B867292E1E1F00174DE7 /* NvBeautyTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA1B865292E1BC600174DE7 /* NvBeautyTypeModel.m */; };
+		0CA1B868292E40B800174DE7 /* EFCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C21E292B7D0900E35F33 /* EFCapture.m */; };
+		0CA694322A08945400192B37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA694302A08945400192B37 /* Localizable.strings */; };
+		0CA694332A08945400192B37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA694302A08945400192B37 /* Localizable.strings */; };
+		0CA694372A08961400192B37 /* NvARLocalString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CA694352A08961300192B37 /* NvARLocalString.h */; };
+		0CA694382A08961400192B37 /* NvARLocalString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA694362A08961400192B37 /* NvARLocalString.m */; };
+		0CA694392A08961400192B37 /* NvARLocalString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA694362A08961400192B37 /* NvARLocalString.m */; };
+		0CC1C20D292B6D6A00E35F33 /* NvMakeupToolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C205292B6D6A00E35F33 /* NvMakeupToolModel.m */; };
+		0CC1C211292B6F8F00E35F33 /* NvMakeupToolMakeupModuler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C20F292B6F8E00E35F33 /* NvMakeupToolMakeupModuler.m */; };
+		0CC1C212292B7B2900E35F33 /* NvMakeupToolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C205292B6D6A00E35F33 /* NvMakeupToolModel.m */; };
+		0CC1C213292B7B3700E35F33 /* NvMakeupToolMakeupModuler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C20F292B6F8E00E35F33 /* NvMakeupToolMakeupModuler.m */; };
+		0CC1C220292B7D0900E35F33 /* EFBGRAProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C218292B7D0800E35F33 /* EFBGRAProgram.m */; };
+		0CC1C221292B7D0900E35F33 /* EFGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C21B292B7D0800E35F33 /* EFGLProgram.m */; };
+		0CC1C222292B7D0900E35F33 /* EFPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C21C292B7D0800E35F33 /* EFPreview.m */; };
+		0CC1C223292B7D0900E35F33 /* EFCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C21E292B7D0900E35F33 /* EFCapture.m */; };
+		0CC1C226292B7DAD00E35F33 /* EFPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C21C292B7D0800E35F33 /* EFPreview.m */; };
+		0CC1C227292B7DB300E35F33 /* EFBGRAProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C218292B7D0800E35F33 /* EFBGRAProgram.m */; };
+		0CC1C228292B7DB500E35F33 /* EFGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1C21B292B7D0800E35F33 /* EFGLProgram.m */; };
+		0CC1C229292B833200E35F33 /* NvARSceneUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BEE28B4B4B400AE3067 /* NvARSceneUtils.m */; };
+		91049BB428B4B3BE00AE3067 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BB328B4B3BE00AE3067 /* AppDelegate.m */; };
+		91049BB728B4B3BE00AE3067 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BB628B4B3BE00AE3067 /* SceneDelegate.m */; };
+		91049BBA28B4B3BE00AE3067 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BB928B4B3BE00AE3067 /* ViewController.m */; };
+		91049BBD28B4B3BE00AE3067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91049BBB28B4B3BE00AE3067 /* Main.storyboard */; };
+		91049BBF28B4B3C300AE3067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91049BBE28B4B3C300AE3067 /* Assets.xcassets */; };
+		91049BC228B4B3C300AE3067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91049BC028B4B3C300AE3067 /* LaunchScreen.storyboard */; };
+		91049BC528B4B3C300AE3067 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BC428B4B3C300AE3067 /* main.m */; };
+		91049BF828B4B4B600AE3067 /* NvARScenePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BD128B4B4B200AE3067 /* NvARScenePreview.m */; };
+		91049BF928B4B4B600AE3067 /* NvBeautyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BD628B4B4B200AE3067 /* NvBeautyView.m */; };
+		91049BFA28B4B4B600AE3067 /* NvBeautyTypeCViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BD728B4B4B200AE3067 /* NvBeautyTypeCViewCell.m */; };
+		91049BFB28B4B4B600AE3067 /* NvSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BD928B4B4B200AE3067 /* NvSwitchView.m */; };
+		91049BFC28B4B4B600AE3067 /* NvBeautySliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BDA28B4B4B200AE3067 /* NvBeautySliderView.m */; };
+		91049BFD28B4B4B600AE3067 /* NvBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BDB28B4B4B200AE3067 /* NvBaseModel.m */; };
+		91049BFE28B4B4B600AE3067 /* NvARSeceneCaptureFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BDC28B4B4B200AE3067 /* NvARSeceneCaptureFilterCell.m */; };
+		91049BFF28B4B4B600AE3067 /* NvCaptureFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BDD28B4B4B200AE3067 /* NvCaptureFilterModel.m */; };
+		91049C0028B4B4B600AE3067 /* UIColor+NvColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BE128B4B4B300AE3067 /* UIColor+NvColor.m */; };
+		91049C0128B4B4B600AE3067 /* UIImage+NvARSceneImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BE428B4B4B400AE3067 /* UIImage+NvARSceneImage.m */; };
+		91049C0228B4B4B600AE3067 /* NvARScenAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BE528B4B4B400AE3067 /* NvARScenAsset.m */; };
+		91049C0328B4B4B600AE3067 /* NvARSceneAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BEA28B4B4B400AE3067 /* NvARSceneAssetManager.m */; };
+		91049C0428B4B4B600AE3067 /* NvARSceneBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BED28B4B4B400AE3067 /* NvARSceneBuffer.m */; };
+		91049C0528B4B4B600AE3067 /* NvARSceneUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BEE28B4B4B400AE3067 /* NvARSceneUtils.m */; };
+		91049C0628B4B4B600AE3067 /* NvARSceneFxOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BF128B4B4B500AE3067 /* NvARSceneFxOperator.m */; };
+		91049C0D28B4B50A00AE3067 /* beautyJson in Resources */ = {isa = PBXBuildFile; fileRef = 91049C0A28B4B50A00AE3067 /* beautyJson */; };
+		91049C0E28B4B50A00AE3067 /* license.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91049C0B28B4B50A00AE3067 /* license.bundle */; };
+		91049C0F28B4B50A00AE3067 /* beautyShapeData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91049C0C28B4B50A00AE3067 /* beautyShapeData.bundle */; };
+		91049C1C28B4B7C000AE3067 /* NvARSceneFx.h in Headers */ = {isa = PBXBuildFile; fileRef = 91049C1928B4B7C000AE3067 /* NvARSceneFx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91049C1F28B4B7C000AE3067 /* NvARSceneFx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91049C1728B4B7C000AE3067 /* NvARSceneFx.framework */; };
+		91049C2028B4B7C000AE3067 /* NvARSceneFx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91049C1728B4B7C000AE3067 /* NvARSceneFx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91049C2428B4B7FC00AE3067 /* UIColor+NvColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BE128B4B4B300AE3067 /* UIColor+NvColor.m */; };
+		91049C2728B4B80A00AE3067 /* NvARSceneFxOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BF128B4B4B500AE3067 /* NvARSceneFxOperator.m */; };
+		91049C2828B4B80D00AE3067 /* UIImage+NvARSceneImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BE428B4B4B400AE3067 /* UIImage+NvARSceneImage.m */; };
+		91049C2928B4B81100AE3067 /* NvARScenAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BE528B4B4B400AE3067 /* NvARScenAsset.m */; };
+		91049C2B28B4B81F00AE3067 /* NvARSceneBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BED28B4B4B400AE3067 /* NvARSceneBuffer.m */; };
+		91049C2C28B4B82400AE3067 /* NvARScenePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BD128B4B4B200AE3067 /* NvARScenePreview.m */; };
+		91049C2D28B4B82600AE3067 /* NvARSeceneCaptureFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BDC28B4B4B200AE3067 /* NvARSeceneCaptureFilterCell.m */; };
+		91049C2E28B4B82700AE3067 /* NvBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BDB28B4B4B200AE3067 /* NvBaseModel.m */; };
+		91049C2F28B4B82900AE3067 /* NvBeautySliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BDA28B4B4B200AE3067 /* NvBeautySliderView.m */; };
+		91049C3028B4B82A00AE3067 /* NvBeautyTypeCViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BD728B4B4B200AE3067 /* NvBeautyTypeCViewCell.m */; };
+		91049C3128B4B82B00AE3067 /* NvBeautyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BD628B4B4B200AE3067 /* NvBeautyView.m */; };
+		91049C3228B4B82C00AE3067 /* NvCaptureFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BDD28B4B4B200AE3067 /* NvCaptureFilterModel.m */; };
+		91049C3328B4B82D00AE3067 /* NvSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BD928B4B4B200AE3067 /* NvSwitchView.m */; };
+		91049C4128B4CBC200AE3067 /* whitenLut.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91049C4028B4CBC200AE3067 /* whitenLut.bundle */; };
+		91049C4228B4DF8600AE3067 /* NvARSceneAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BEA28B4B4B400AE3067 /* NvARSceneAssetManager.m */; };
+		91049C4728B5ED6A00AE3067 /* filter in Resources */ = {isa = PBXBuildFile; fileRef = 91049C4628B5ED6A00AE3067 /* filter */; };
+		91049C4828B5ED6A00AE3067 /* filter in Resources */ = {isa = PBXBuildFile; fileRef = 91049C4628B5ED6A00AE3067 /* filter */; };
+		91049C4E28B6223000AE3067 /* NvARSceneFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049C4C28B6223000AE3067 /* NvARSceneFilterView.m */; };
+		91049C4F28B6223000AE3067 /* NvARSceneFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049C4C28B6223000AE3067 /* NvARSceneFilterView.m */; };
+		91049C5228B62DFB00AE3067 /* NvARScenePreview.h in Headers */ = {isa = PBXBuildFile; fileRef = 91049BD828B4B4B200AE3067 /* NvARScenePreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91049C5328B62F0A00AE3067 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91049BB928B4B3BE00AE3067 /* ViewController.m */; };
+		91049C5428B6301300AE3067 /* whitenLut.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91049C4028B4CBC200AE3067 /* whitenLut.bundle */; };
+		91049C5528B6301500AE3067 /* beautyJson in Resources */ = {isa = PBXBuildFile; fileRef = 91049C0A28B4B50A00AE3067 /* beautyJson */; };
+		91049C5628B6301800AE3067 /* license.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91049C0B28B4B50A00AE3067 /* license.bundle */; };
+		91049C5728B6301A00AE3067 /* beautyShapeData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91049C0C28B4B50A00AE3067 /* beautyShapeData.bundle */; };
+		911664F328BDF4AF009D12A3 /* NvARSceneViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 911664F128BDF4AF009D12A3 /* NvARSceneViewController.h */; };
+		911664F428BDF4AF009D12A3 /* NvARSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911664F228BDF4AF009D12A3 /* NvARSceneViewController.m */; };
+		911664F528BDF4AF009D12A3 /* NvARSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911664F228BDF4AF009D12A3 /* NvARSceneViewController.m */; };
+		91A5D16A28C6F453007A8742 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D14A28C6F453007A8742 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		91A5D17428C6F453007A8742 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D15328C6F453007A8742 /* ViewController+MASAdditions.m */; };
+		91A5D17928C6F453007A8742 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D15728C6F453007A8742 /* MASCompositeConstraint.m */; };
+		91A5D17B28C6F453007A8742 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D15828C6F453007A8742 /* MASConstraintMaker.m */; };
+		91A5D17D28C6F453007A8742 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D15928C6F453007A8742 /* MASLayoutConstraint.m */; };
+		91A5D17F28C6F453007A8742 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D15A28C6F453007A8742 /* NSArray+MASAdditions.m */; };
+		91A5D18128C6F453007A8742 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D15B28C6F453007A8742 /* View+MASAdditions.m */; };
+		91A5D18528C6F453007A8742 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D15E28C6F453007A8742 /* MASConstraint.m */; };
+		91A5D18828C6F453007A8742 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D16028C6F453007A8742 /* MASViewConstraint.m */; };
+		91A5D18A28C6F453007A8742 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D16128C6F453007A8742 /* MASViewAttribute.m */; };
+		91A5D19528C6F6BF007A8742 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D19028C6F6BF007A8742 /* NSObject+YYModel.m */; };
+		91A5D19728C6F6BF007A8742 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5D19128C6F6BF007A8742 /* YYClassInfo.m */; };
+		91A6B03A28C0BEB50027295A /* NvStreamingSdkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A6B03528C0BD240027295A /* NvStreamingSdkCore.framework */; };
+		91A6B03B28C0BEB50027295A /* NvStreamingSdkCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A6B03528C0BD240027295A /* NvStreamingSdkCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A6B03C28C0BF730027295A /* NvStreamingSdkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A6B03528C0BD240027295A /* NvStreamingSdkCore.framework */; };
+		91A8C5FE28B63F2D00905B1C /* NvARSceneAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 91049BE628B4B4B400AE3067 /* NvARSceneAssetManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91A8C5FF28B63F3000905B1C /* NvARScenAsset.h in Headers */ = {isa = PBXBuildFile; fileRef = 91049BEB28B4B4B400AE3067 /* NvARScenAsset.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91A8C60028B63F3400905B1C /* NvARSceneFxOperator.h in Headers */ = {isa = PBXBuildFile; fileRef = 91049BF028B4B4B500AE3067 /* NvARSceneFxOperator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91A8C60128B63FF500905B1C /* NvARSceneMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 91049BE728B4B4B400AE3067 /* NvARSceneMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91A8C60428B6533E00905B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91049BBE28B4B3C300AE3067 /* Assets.xcassets */; };
+		91B291AE28B88DA600908482 /* NvARSceneMakeupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B291AD28B88DA600908482 /* NvARSceneMakeupView.m */; };
+		91B291B428B88E4100908482 /* NvARSceneMakeupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B291AD28B88DA600908482 /* NvARSceneMakeupView.m */; };
+		91B291B728B8950C00908482 /* CQMenuTabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 91B291B528B8950B00908482 /* CQMenuTabView.h */; };
+		91B291B828B8950C00908482 /* CQMenuTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B291B628B8950C00908482 /* CQMenuTabView.m */; };
+		91B291B928B8950C00908482 /* CQMenuTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B291B628B8950C00908482 /* CQMenuTabView.m */; };
+		91B291BB28B8A6CA00908482 /* beautyMakeupData in Resources */ = {isa = PBXBuildFile; fileRef = 91B291BA28B8A6CA00908482 /* beautyMakeupData */; };
+		91B291BC28B8A6CA00908482 /* beautyMakeupData in Resources */ = {isa = PBXBuildFile; fileRef = 91B291BA28B8A6CA00908482 /* beautyMakeupData */; };
+		91B291BF28B8C98200908482 /* NvMakeupCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 91B291BD28B8C98100908482 /* NvMakeupCell.h */; };
+		91B291C028B8C98200908482 /* NvMakeupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B291BE28B8C98200908482 /* NvMakeupCell.m */; };
+		91B291C128B8C98200908482 /* NvMakeupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B291BE28B8C98200908482 /* NvMakeupCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91049C1D28B4B7C000AE3067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91049BA728B4B3BE00AE3067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91049C1628B4B7C000AE3067;
+			remoteInfo = NvARSceneFx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91049BCE28B4B42700AE3067 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				91049C2028B4B7C000AE3067 /* NvARSceneFx.framework in Embed Frameworks */,
+				91A6B03B28C0BEB50027295A /* NvStreamingSdkCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0CA1B864292E1BC600174DE7 /* NvBeautyTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NvBeautyTypeModel.h; sourceTree = "<group>"; };
+		0CA1B865292E1BC600174DE7 /* NvBeautyTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NvBeautyTypeModel.m; sourceTree = "<group>"; };
+		0CA694312A08945400192B37 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0CA694342A08949200192B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0CA694352A08961300192B37 /* NvARLocalString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARLocalString.h; sourceTree = "<group>"; };
+		0CA694362A08961400192B37 /* NvARLocalString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvARLocalString.m; sourceTree = "<group>"; };
+		0CC1C201292B6D6A00E35F33 /* NvMakeupToolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvMakeupToolModel.h; sourceTree = "<group>"; };
+		0CC1C205292B6D6A00E35F33 /* NvMakeupToolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvMakeupToolModel.m; sourceTree = "<group>"; };
+		0CC1C20F292B6F8E00E35F33 /* NvMakeupToolMakeupModuler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvMakeupToolMakeupModuler.m; sourceTree = "<group>"; };
+		0CC1C210292B6F8F00E35F33 /* NvMakeupToolMakeupModuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvMakeupToolMakeupModuler.h; sourceTree = "<group>"; };
+		0CC1C216292B7D0800E35F33 /* EFPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPreview.h; sourceTree = "<group>"; };
+		0CC1C218292B7D0800E35F33 /* EFBGRAProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFBGRAProgram.m; sourceTree = "<group>"; };
+		0CC1C219292B7D0800E35F33 /* EFGLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFGLProgram.h; sourceTree = "<group>"; };
+		0CC1C21A292B7D0800E35F33 /* EFBGRAProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFBGRAProgram.h; sourceTree = "<group>"; };
+		0CC1C21B292B7D0800E35F33 /* EFGLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFGLProgram.m; sourceTree = "<group>"; };
+		0CC1C21C292B7D0800E35F33 /* EFPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPreview.m; sourceTree = "<group>"; };
+		0CC1C21E292B7D0900E35F33 /* EFCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCapture.m; sourceTree = "<group>"; };
+		0CC1C21F292B7D0900E35F33 /* EFCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCapture.h; sourceTree = "<group>"; };
+		91049BAF28B4B3BE00AE3067 /* NvARSceneFxModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NvARSceneFxModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91049BB228B4B3BE00AE3067 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		91049BB328B4B3BE00AE3067 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		91049BB528B4B3BE00AE3067 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		91049BB628B4B3BE00AE3067 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		91049BB828B4B3BE00AE3067 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		91049BB928B4B3BE00AE3067 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		91049BBC28B4B3BE00AE3067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91049BBE28B4B3C300AE3067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91049BC128B4B3C300AE3067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91049BC328B4B3C300AE3067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91049BC428B4B3C300AE3067 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		91049BD028B4B4B200AE3067 /* NvSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvSwitchView.h; sourceTree = "<group>"; };
+		91049BD128B4B4B200AE3067 /* NvARScenePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvARScenePreview.m; sourceTree = "<group>"; };
+		91049BD228B4B4B200AE3067 /* NvARSeceneCaptureFilterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARSeceneCaptureFilterCell.h; sourceTree = "<group>"; };
+		91049BD328B4B4B200AE3067 /* NvBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvBaseModel.h; sourceTree = "<group>"; };
+		91049BD428B4B4B200AE3067 /* NvBeautySliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvBeautySliderView.h; sourceTree = "<group>"; };
+		91049BD528B4B4B200AE3067 /* NvCaptureFilterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvCaptureFilterModel.h; sourceTree = "<group>"; };
+		91049BD628B4B4B200AE3067 /* NvBeautyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvBeautyView.m; sourceTree = "<group>"; };
+		91049BD728B4B4B200AE3067 /* NvBeautyTypeCViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvBeautyTypeCViewCell.m; sourceTree = "<group>"; };
+		91049BD828B4B4B200AE3067 /* NvARScenePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARScenePreview.h; sourceTree = "<group>"; };
+		91049BD928B4B4B200AE3067 /* NvSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvSwitchView.m; sourceTree = "<group>"; };
+		91049BDA28B4B4B200AE3067 /* NvBeautySliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvBeautySliderView.m; sourceTree = "<group>"; };
+		91049BDB28B4B4B200AE3067 /* NvBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvBaseModel.m; sourceTree = "<group>"; };
+		91049BDC28B4B4B200AE3067 /* NvARSeceneCaptureFilterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvARSeceneCaptureFilterCell.m; sourceTree = "<group>"; };
+		91049BDD28B4B4B200AE3067 /* NvCaptureFilterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvCaptureFilterModel.m; sourceTree = "<group>"; };
+		91049BDE28B4B4B200AE3067 /* NvBeautyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvBeautyView.h; sourceTree = "<group>"; };
+		91049BDF28B4B4B200AE3067 /* NvBeautyTypeCViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvBeautyTypeCViewCell.h; sourceTree = "<group>"; };
+		91049BE128B4B4B300AE3067 /* UIColor+NvColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NvColor.m"; sourceTree = "<group>"; };
+		91049BE228B4B4B300AE3067 /* UIColor+NvColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NvColor.h"; sourceTree = "<group>"; };
+		91049BE428B4B4B400AE3067 /* UIImage+NvARSceneImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NvARSceneImage.m"; sourceTree = "<group>"; };
+		91049BE528B4B4B400AE3067 /* NvARScenAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvARScenAsset.m; sourceTree = "<group>"; };
+		91049BE628B4B4B400AE3067 /* NvARSceneAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARSceneAssetManager.h; sourceTree = "<group>"; };
+		91049BE728B4B4B400AE3067 /* NvARSceneMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARSceneMacro.h; sourceTree = "<group>"; };
+		91049BE828B4B4B400AE3067 /* NvARSceneUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARSceneUtils.h; sourceTree = "<group>"; };
+		91049BE928B4B4B400AE3067 /* NvARSceneBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARSceneBuffer.h; sourceTree = "<group>"; };
+		91049BEA28B4B4B400AE3067 /* NvARSceneAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvARSceneAssetManager.m; sourceTree = "<group>"; };
+		91049BEB28B4B4B400AE3067 /* NvARScenAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARScenAsset.h; sourceTree = "<group>"; };
+		91049BEC28B4B4B400AE3067 /* UIImage+NvARSceneImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NvARSceneImage.h"; sourceTree = "<group>"; };
+		91049BED28B4B4B400AE3067 /* NvARSceneBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvARSceneBuffer.m; sourceTree = "<group>"; };
+		91049BEE28B4B4B400AE3067 /* NvARSceneUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvARSceneUtils.m; sourceTree = "<group>"; };
+		91049BF028B4B4B500AE3067 /* NvARSceneFxOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvARSceneFxOperator.h; sourceTree = "<group>"; };
+		91049BF128B4B4B500AE3067 /* NvARSceneFxOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvARSceneFxOperator.m; sourceTree = "<group>"; };
+		91049C0A28B4B50A00AE3067 /* beautyJson */ = {isa = PBXFileReference; lastKnownFileType = folder; path = beautyJson; sourceTree = "<group>"; };
+		91049C0B28B4B50A00AE3067 /* license.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = license.bundle; sourceTree = "<group>"; };
+		91049C0C28B4B50A00AE3067 /* beautyShapeData.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = beautyShapeData.bundle; sourceTree = "<group>"; };
+		91049C1728B4B7C000AE3067 /* NvARSceneFx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NvARSceneFx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91049C1928B4B7C000AE3067 /* NvARSceneFx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NvARSceneFx.h; sourceTree = "<group>"; };
+		91049C1A28B4B7C000AE3067 /* NvARSceneFx.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NvARSceneFx.docc; sourceTree = "<group>"; };
+		91049C4028B4CBC200AE3067 /* whitenLut.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = whitenLut.bundle; sourceTree = "<group>"; };
+		91049C4628B5ED6A00AE3067 /* filter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = filter; sourceTree = "<group>"; };
+		91049C4B28B6223000AE3067 /* NvARSceneFilterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NvARSceneFilterView.h; sourceTree = "<group>"; };
+		91049C4C28B6223000AE3067 /* NvARSceneFilterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NvARSceneFilterView.m; sourceTree = "<group>"; };
+		911664F128BDF4AF009D12A3 /* NvARSceneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NvARSceneViewController.h; sourceTree = "<group>"; };
+		911664F228BDF4AF009D12A3 /* NvARSceneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NvARSceneViewController.m; sourceTree = "<group>"; };
+		91A5D14928C6F453007A8742 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		91A5D14A28C6F453007A8742 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		91A5D14B28C6F453007A8742 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		91A5D14C28C6F453007A8742 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		91A5D14D28C6F453007A8742 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		91A5D14E28C6F453007A8742 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		91A5D14F28C6F453007A8742 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		91A5D15028C6F453007A8742 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		91A5D15128C6F453007A8742 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		91A5D15228C6F453007A8742 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		91A5D15328C6F453007A8742 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		91A5D15428C6F453007A8742 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		91A5D15528C6F453007A8742 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		91A5D15628C6F453007A8742 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		91A5D15728C6F453007A8742 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		91A5D15828C6F453007A8742 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		91A5D15928C6F453007A8742 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		91A5D15A28C6F453007A8742 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		91A5D15B28C6F453007A8742 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		91A5D15C28C6F453007A8742 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		91A5D15D28C6F453007A8742 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		91A5D15E28C6F453007A8742 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		91A5D15F28C6F453007A8742 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		91A5D16028C6F453007A8742 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		91A5D16128C6F453007A8742 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		91A5D18E28C6F6BF007A8742 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		91A5D18F28C6F6BF007A8742 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		91A5D19028C6F6BF007A8742 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		91A5D19128C6F6BF007A8742 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		91A5D19228C6F6BF007A8742 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		91A6B03528C0BD240027295A /* NvStreamingSdkCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NvStreamingSdkCore.framework; path = ../../../lib/ios/NvStreamingSdkCore.framework; sourceTree = "<group>"; };
+		91B291AC28B88DA600908482 /* NvARSceneMakeupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NvARSceneMakeupView.h; sourceTree = "<group>"; };
+		91B291AD28B88DA600908482 /* NvARSceneMakeupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NvARSceneMakeupView.m; sourceTree = "<group>"; };
+		91B291B528B8950B00908482 /* CQMenuTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQMenuTabView.h; sourceTree = "<group>"; };
+		91B291B628B8950C00908482 /* CQMenuTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQMenuTabView.m; sourceTree = "<group>"; };
+		91B291BA28B8A6CA00908482 /* beautyMakeupData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = beautyMakeupData; sourceTree = "<group>"; };
+		91B291BD28B8C98100908482 /* NvMakeupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvMakeupCell.h; sourceTree = "<group>"; };
+		91B291BE28B8C98200908482 /* NvMakeupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvMakeupCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91049BAC28B4B3BE00AE3067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91049C1F28B4B7C000AE3067 /* NvARSceneFx.framework in Frameworks */,
+				91A6B03A28C0BEB50027295A /* NvStreamingSdkCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91049C1428B4B7C000AE3067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A6B03C28C0BF730027295A /* NvStreamingSdkCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CC1C1FB292B6D6A00E35F33 /* NvMakeupToolNew */ = {
+			isa = PBXGroup;
+			children = (
+				0CC1C201292B6D6A00E35F33 /* NvMakeupToolModel.h */,
+				0CC1C205292B6D6A00E35F33 /* NvMakeupToolModel.m */,
+				0CC1C210292B6F8F00E35F33 /* NvMakeupToolMakeupModuler.h */,
+				0CC1C20F292B6F8E00E35F33 /* NvMakeupToolMakeupModuler.m */,
+			);
+			path = NvMakeupToolNew;
+			sourceTree = "<group>";
+		};
+		0CC1C214292B7C7E00E35F33 /* NvMakeup */ = {
+			isa = PBXGroup;
+			children = (
+				0CC1C1FB292B6D6A00E35F33 /* NvMakeupToolNew */,
+				91B291AB28B88D8F00908482 /* NvMakeupView */,
+			);
+			path = NvMakeup;
+			sourceTree = "<group>";
+		};
+		0CC1C215292B7D0800E35F33 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				0CC1C216292B7D0800E35F33 /* EFPreview.h */,
+				0CC1C21C292B7D0800E35F33 /* EFPreview.m */,
+				0CC1C217292B7D0800E35F33 /* Shader */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		0CC1C217292B7D0800E35F33 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				0CC1C21A292B7D0800E35F33 /* EFBGRAProgram.h */,
+				0CC1C218292B7D0800E35F33 /* EFBGRAProgram.m */,
+				0CC1C219292B7D0800E35F33 /* EFGLProgram.h */,
+				0CC1C21B292B7D0800E35F33 /* EFGLProgram.m */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		0CC1C21D292B7D0800E35F33 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				0CC1C21F292B7D0900E35F33 /* EFCapture.h */,
+				0CC1C21E292B7D0900E35F33 /* EFCapture.m */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		91049BA628B4B3BE00AE3067 = {
+			isa = PBXGroup;
+			children = (
+				91049BB128B4B3BE00AE3067 /* NvARSceneFxModule */,
+				91049C1828B4B7C000AE3067 /* NvARSceneFx */,
+				91049BB028B4B3BE00AE3067 /* Products */,
+				CDD9E4B61B1A38D2CC9CC147 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		91049BB028B4B3BE00AE3067 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91049BAF28B4B3BE00AE3067 /* NvARSceneFxModule.app */,
+				91049C1728B4B7C000AE3067 /* NvARSceneFx.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91049BB128B4B3BE00AE3067 /* NvARSceneFxModule */ = {
+			isa = PBXGroup;
+			children = (
+				91049C0928B4B4E800AE3067 /* Resources */,
+				91049BB228B4B3BE00AE3067 /* AppDelegate.h */,
+				91049BB328B4B3BE00AE3067 /* AppDelegate.m */,
+				91049BB528B4B3BE00AE3067 /* SceneDelegate.h */,
+				91049BB628B4B3BE00AE3067 /* SceneDelegate.m */,
+				91049BB828B4B3BE00AE3067 /* ViewController.h */,
+				91049BB928B4B3BE00AE3067 /* ViewController.m */,
+				911664F128BDF4AF009D12A3 /* NvARSceneViewController.h */,
+				911664F228BDF4AF009D12A3 /* NvARSceneViewController.m */,
+				0CA694302A08945400192B37 /* Localizable.strings */,
+				0CC1C21D292B7D0800E35F33 /* Capture */,
+				0CC1C215292B7D0800E35F33 /* Preview */,
+				0CC1C214292B7C7E00E35F33 /* NvMakeup */,
+				91A5D18D28C6F6BF007A8742 /* YYModel */,
+				91A5D14828C6F453007A8742 /* Masonry */,
+				91049BE028B4B4B300AE3067 /* Category */,
+				91049BEF28B4B4B500AE3067 /* NvNvARScene */,
+				91049BE328B4B4B400AE3067 /* NvUtils */,
+				91049BCF28B4B4B200AE3067 /* NvView */,
+				91049BBB28B4B3BE00AE3067 /* Main.storyboard */,
+				91049BBE28B4B3C300AE3067 /* Assets.xcassets */,
+				91049BC028B4B3C300AE3067 /* LaunchScreen.storyboard */,
+				91049BC328B4B3C300AE3067 /* Info.plist */,
+				91049BC428B4B3C300AE3067 /* main.m */,
+			);
+			path = NvARSceneFxModule;
+			sourceTree = "<group>";
+		};
+		91049BCF28B4B4B200AE3067 /* NvView */ = {
+			isa = PBXGroup;
+			children = (
+				91049C4B28B6223000AE3067 /* NvARSceneFilterView.h */,
+				91049C4C28B6223000AE3067 /* NvARSceneFilterView.m */,
+				91049BD828B4B4B200AE3067 /* NvARScenePreview.h */,
+				91049BD128B4B4B200AE3067 /* NvARScenePreview.m */,
+				91049BD228B4B4B200AE3067 /* NvARSeceneCaptureFilterCell.h */,
+				91049BDC28B4B4B200AE3067 /* NvARSeceneCaptureFilterCell.m */,
+				91049BD328B4B4B200AE3067 /* NvBaseModel.h */,
+				91049BDB28B4B4B200AE3067 /* NvBaseModel.m */,
+				0CA1B864292E1BC600174DE7 /* NvBeautyTypeModel.h */,
+				0CA1B865292E1BC600174DE7 /* NvBeautyTypeModel.m */,
+				91049BD428B4B4B200AE3067 /* NvBeautySliderView.h */,
+				91049BDA28B4B4B200AE3067 /* NvBeautySliderView.m */,
+				91049BDF28B4B4B200AE3067 /* NvBeautyTypeCViewCell.h */,
+				91049BD728B4B4B200AE3067 /* NvBeautyTypeCViewCell.m */,
+				91049BDE28B4B4B200AE3067 /* NvBeautyView.h */,
+				91049BD628B4B4B200AE3067 /* NvBeautyView.m */,
+				91049BD528B4B4B200AE3067 /* NvCaptureFilterModel.h */,
+				91049BDD28B4B4B200AE3067 /* NvCaptureFilterModel.m */,
+				91049BD028B4B4B200AE3067 /* NvSwitchView.h */,
+				91049BD928B4B4B200AE3067 /* NvSwitchView.m */,
+			);
+			path = NvView;
+			sourceTree = "<group>";
+		};
+		91049BE028B4B4B300AE3067 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				91049BE228B4B4B300AE3067 /* UIColor+NvColor.h */,
+				91049BE128B4B4B300AE3067 /* UIColor+NvColor.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		91049BE328B4B4B400AE3067 /* NvUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0CA694352A08961300192B37 /* NvARLocalString.h */,
+				0CA694362A08961400192B37 /* NvARLocalString.m */,
+				91049BEB28B4B4B400AE3067 /* NvARScenAsset.h */,
+				91049BE528B4B4B400AE3067 /* NvARScenAsset.m */,
+				91049BE628B4B4B400AE3067 /* NvARSceneAssetManager.h */,
+				91049BEA28B4B4B400AE3067 /* NvARSceneAssetManager.m */,
+				91049BE928B4B4B400AE3067 /* NvARSceneBuffer.h */,
+				91049BED28B4B4B400AE3067 /* NvARSceneBuffer.m */,
+				91049BE728B4B4B400AE3067 /* NvARSceneMacro.h */,
+				91049BE828B4B4B400AE3067 /* NvARSceneUtils.h */,
+				91049BEE28B4B4B400AE3067 /* NvARSceneUtils.m */,
+				91049BEC28B4B4B400AE3067 /* UIImage+NvARSceneImage.h */,
+				91049BE428B4B4B400AE3067 /* UIImage+NvARSceneImage.m */,
+			);
+			path = NvUtils;
+			sourceTree = "<group>";
+		};
+		91049BEF28B4B4B500AE3067 /* NvNvARScene */ = {
+			isa = PBXGroup;
+			children = (
+				91049BF028B4B4B500AE3067 /* NvARSceneFxOperator.h */,
+				91049BF128B4B4B500AE3067 /* NvARSceneFxOperator.m */,
+			);
+			path = NvNvARScene;
+			sourceTree = "<group>";
+		};
+		91049C0928B4B4E800AE3067 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91B291BA28B8A6CA00908482 /* beautyMakeupData */,
+				91049C4628B5ED6A00AE3067 /* filter */,
+				91049C4028B4CBC200AE3067 /* whitenLut.bundle */,
+				91049C0A28B4B50A00AE3067 /* beautyJson */,
+				91049C0C28B4B50A00AE3067 /* beautyShapeData.bundle */,
+				91049C0B28B4B50A00AE3067 /* license.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		91049C1828B4B7C000AE3067 /* NvARSceneFx */ = {
+			isa = PBXGroup;
+			children = (
+				91049C1928B4B7C000AE3067 /* NvARSceneFx.h */,
+				91049C1A28B4B7C000AE3067 /* NvARSceneFx.docc */,
+			);
+			path = NvARSceneFx;
+			sourceTree = "<group>";
+		};
+		91A5D14828C6F453007A8742 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				91A5D14928C6F453007A8742 /* MASCompositeConstraint.h */,
+				91A5D15728C6F453007A8742 /* MASCompositeConstraint.m */,
+				91A5D15528C6F453007A8742 /* MASConstraint.h */,
+				91A5D15E28C6F453007A8742 /* MASConstraint.m */,
+				91A5D14B28C6F453007A8742 /* MASConstraint+Private.h */,
+				91A5D14E28C6F453007A8742 /* MASConstraintMaker.h */,
+				91A5D15828C6F453007A8742 /* MASConstraintMaker.m */,
+				91A5D14C28C6F453007A8742 /* MASLayoutConstraint.h */,
+				91A5D15928C6F453007A8742 /* MASLayoutConstraint.m */,
+				91A5D15D28C6F453007A8742 /* Masonry.h */,
+				91A5D15128C6F453007A8742 /* MASUtilities.h */,
+				91A5D15228C6F453007A8742 /* MASViewAttribute.h */,
+				91A5D16128C6F453007A8742 /* MASViewAttribute.m */,
+				91A5D15428C6F453007A8742 /* MASViewConstraint.h */,
+				91A5D16028C6F453007A8742 /* MASViewConstraint.m */,
+				91A5D15028C6F453007A8742 /* NSArray+MASAdditions.h */,
+				91A5D15A28C6F453007A8742 /* NSArray+MASAdditions.m */,
+				91A5D14D28C6F453007A8742 /* NSArray+MASShorthandAdditions.h */,
+				91A5D15628C6F453007A8742 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				91A5D14A28C6F453007A8742 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				91A5D14F28C6F453007A8742 /* View+MASAdditions.h */,
+				91A5D15B28C6F453007A8742 /* View+MASAdditions.m */,
+				91A5D15C28C6F453007A8742 /* View+MASShorthandAdditions.h */,
+				91A5D15F28C6F453007A8742 /* ViewController+MASAdditions.h */,
+				91A5D15328C6F453007A8742 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		91A5D18D28C6F6BF007A8742 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				91A5D19228C6F6BF007A8742 /* NSObject+YYModel.h */,
+				91A5D19028C6F6BF007A8742 /* NSObject+YYModel.m */,
+				91A5D18E28C6F6BF007A8742 /* YYClassInfo.h */,
+				91A5D19128C6F6BF007A8742 /* YYClassInfo.m */,
+				91A5D18F28C6F6BF007A8742 /* YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		91B291AB28B88D8F00908482 /* NvMakeupView */ = {
+			isa = PBXGroup;
+			children = (
+				91B291BD28B8C98100908482 /* NvMakeupCell.h */,
+				91B291BE28B8C98200908482 /* NvMakeupCell.m */,
+				91B291B528B8950B00908482 /* CQMenuTabView.h */,
+				91B291B628B8950C00908482 /* CQMenuTabView.m */,
+				91B291AC28B88DA600908482 /* NvARSceneMakeupView.h */,
+				91B291AD28B88DA600908482 /* NvARSceneMakeupView.m */,
+			);
+			path = NvMakeupView;
+			sourceTree = "<group>";
+		};
+		CDD9E4B61B1A38D2CC9CC147 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91A6B03528C0BD240027295A /* NvStreamingSdkCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		91049C1228B4B7C000AE3067 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91049C1C28B4B7C000AE3067 /* NvARSceneFx.h in Headers */,
+				911664F328BDF4AF009D12A3 /* NvARSceneViewController.h in Headers */,
+				91B291B728B8950C00908482 /* CQMenuTabView.h in Headers */,
+				0CA694372A08961400192B37 /* NvARLocalString.h in Headers */,
+				91049C5228B62DFB00AE3067 /* NvARScenePreview.h in Headers */,
+				91B291BF28B8C98200908482 /* NvMakeupCell.h in Headers */,
+				91A8C60028B63F3400905B1C /* NvARSceneFxOperator.h in Headers */,
+				91A8C60128B63FF500905B1C /* NvARSceneMacro.h in Headers */,
+				91A8C5FF28B63F3000905B1C /* NvARScenAsset.h in Headers */,
+				91A8C5FE28B63F2D00905B1C /* NvARSceneAssetManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		91049BAE28B4B3BE00AE3067 /* NvARSceneFxModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91049BC828B4B3C300AE3067 /* Build configuration list for PBXNativeTarget "NvARSceneFxModule" */;
+			buildPhases = (
+				91049BAB28B4B3BE00AE3067 /* Sources */,
+				91049BAC28B4B3BE00AE3067 /* Frameworks */,
+				91049BAD28B4B3BE00AE3067 /* Resources */,
+				91049BCE28B4B42700AE3067 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91049C1E28B4B7C000AE3067 /* PBXTargetDependency */,
+			);
+			name = NvARSceneFxModule;
+			productName = NvARSceneFxModule;
+			productReference = 91049BAF28B4B3BE00AE3067 /* NvARSceneFxModule.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91049C1628B4B7C000AE3067 /* NvARSceneFx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91049C2328B4B7C000AE3067 /* Build configuration list for PBXNativeTarget "NvARSceneFx" */;
+			buildPhases = (
+				91A5D1AC28C715B1007A8742 /* ShellScript */,
+				91049C1228B4B7C000AE3067 /* Headers */,
+				91049C1328B4B7C000AE3067 /* Sources */,
+				91049C1428B4B7C000AE3067 /* Frameworks */,
+				91049C1528B4B7C000AE3067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NvARSceneFx;
+			productName = NvARSceneFx;
+			productReference = 91049C1728B4B7C000AE3067 /* NvARSceneFx.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91049BA728B4B3BE00AE3067 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = NvARScene;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					91049BAE28B4B3BE00AE3067 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					91049C1628B4B7C000AE3067 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 91049BAA28B4B3BE00AE3067 /* Build configuration list for PBXProject "NvARSceneFxModule" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 91049BA628B4B3BE00AE3067;
+			productRefGroup = 91049BB028B4B3BE00AE3067 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91049BAE28B4B3BE00AE3067 /* NvARSceneFxModule */,
+				91049C1628B4B7C000AE3067 /* NvARSceneFx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91049BAD28B4B3BE00AE3067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91049BC228B4B3C300AE3067 /* LaunchScreen.storyboard in Resources */,
+				91049BBF28B4B3C300AE3067 /* Assets.xcassets in Resources */,
+				91049C0D28B4B50A00AE3067 /* beautyJson in Resources */,
+				91049C0E28B4B50A00AE3067 /* license.bundle in Resources */,
+				91B291BB28B8A6CA00908482 /* beautyMakeupData in Resources */,
+				0CA694322A08945400192B37 /* Localizable.strings in Resources */,
+				91049C4728B5ED6A00AE3067 /* filter in Resources */,
+				91049C4128B4CBC200AE3067 /* whitenLut.bundle in Resources */,
+				91049BBD28B4B3BE00AE3067 /* Main.storyboard in Resources */,
+				91049C0F28B4B50A00AE3067 /* beautyShapeData.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91049C1528B4B7C000AE3067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91B291BC28B8A6CA00908482 /* beautyMakeupData in Resources */,
+				91049C5728B6301A00AE3067 /* beautyShapeData.bundle in Resources */,
+				91049C5428B6301300AE3067 /* whitenLut.bundle in Resources */,
+				91049C5628B6301800AE3067 /* license.bundle in Resources */,
+				91049C5528B6301500AE3067 /* beautyJson in Resources */,
+				0CA694332A08945400192B37 /* Localizable.strings in Resources */,
+				91A8C60428B6533E00905B1C /* Assets.xcassets in Resources */,
+				91049C4828B5ED6A00AE3067 /* filter in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91A5D1AC28C715B1007A8742 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#ftp\nsh NvARSceneFxModule/PullShell.sh\n\nstr1=cat `pwd`/NvARSceneFxModule/NvUtils/NvARSceneMacro.h\nstr2=\"#define USE_EFFECT_SDK_NO\"\n\nif cat `pwd`/NvARSceneFxModule/NvUtils/NvARSceneMacro.h | grep \"$str2\" > /dev/null\nthen\n    echo \"定义$str2已存在,使用streamingSDK\"\n    ./SwitchStreamingToEffect.sh 0\nelse\n    echo \"定义$str2不存在,使用effectSDK\"\n    ./SwitchStreamingToEffect.sh 1\nfi\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91049BAB28B4B3BE00AE3067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A5D19528C6F6BF007A8742 /* NSObject+YYModel.m in Sources */,
+				0CC1C223292B7D0900E35F33 /* EFCapture.m in Sources */,
+				91A5D18828C6F453007A8742 /* MASViewConstraint.m in Sources */,
+				0CC1C211292B6F8F00E35F33 /* NvMakeupToolMakeupModuler.m in Sources */,
+				91A5D18528C6F453007A8742 /* MASConstraint.m in Sources */,
+				91A5D17428C6F453007A8742 /* ViewController+MASAdditions.m in Sources */,
+				91A5D18A28C6F453007A8742 /* MASViewAttribute.m in Sources */,
+				0CC1C222292B7D0900E35F33 /* EFPreview.m in Sources */,
+				91049BFD28B4B4B600AE3067 /* NvBaseModel.m in Sources */,
+				91A5D18128C6F453007A8742 /* View+MASAdditions.m in Sources */,
+				91049BF928B4B4B600AE3067 /* NvBeautyView.m in Sources */,
+				0CC1C220292B7D0900E35F33 /* EFBGRAProgram.m in Sources */,
+				91049C0328B4B4B600AE3067 /* NvARSceneAssetManager.m in Sources */,
+				91A5D17B28C6F453007A8742 /* MASConstraintMaker.m in Sources */,
+				91049C0628B4B4B600AE3067 /* NvARSceneFxOperator.m in Sources */,
+				91049C0028B4B4B600AE3067 /* UIColor+NvColor.m in Sources */,
+				91049BFE28B4B4B600AE3067 /* NvARSeceneCaptureFilterCell.m in Sources */,
+				91049C4E28B6223000AE3067 /* NvARSceneFilterView.m in Sources */,
+				91049C0228B4B4B600AE3067 /* NvARScenAsset.m in Sources */,
+				91B291AE28B88DA600908482 /* NvARSceneMakeupView.m in Sources */,
+				911664F428BDF4AF009D12A3 /* NvARSceneViewController.m in Sources */,
+				91B291B828B8950C00908482 /* CQMenuTabView.m in Sources */,
+				91A5D17D28C6F453007A8742 /* MASLayoutConstraint.m in Sources */,
+				0CA1B866292E1BC600174DE7 /* NvBeautyTypeModel.m in Sources */,
+				91A5D17928C6F453007A8742 /* MASCompositeConstraint.m in Sources */,
+				91B291C028B8C98200908482 /* NvMakeupCell.m in Sources */,
+				91049BFC28B4B4B600AE3067 /* NvBeautySliderView.m in Sources */,
+				91049BFA28B4B4B600AE3067 /* NvBeautyTypeCViewCell.m in Sources */,
+				91049BFB28B4B4B600AE3067 /* NvSwitchView.m in Sources */,
+				91049BBA28B4B3BE00AE3067 /* ViewController.m in Sources */,
+				0CC1C20D292B6D6A00E35F33 /* NvMakeupToolModel.m in Sources */,
+				91A5D19728C6F6BF007A8742 /* YYClassInfo.m in Sources */,
+				91049BB428B4B3BE00AE3067 /* AppDelegate.m in Sources */,
+				91049C0428B4B4B600AE3067 /* NvARSceneBuffer.m in Sources */,
+				91049C0128B4B4B600AE3067 /* UIImage+NvARSceneImage.m in Sources */,
+				91A5D16A28C6F453007A8742 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				91049BFF28B4B4B600AE3067 /* NvCaptureFilterModel.m in Sources */,
+				91049BC528B4B3C300AE3067 /* main.m in Sources */,
+				91049BB728B4B3BE00AE3067 /* SceneDelegate.m in Sources */,
+				0CC1C221292B7D0900E35F33 /* EFGLProgram.m in Sources */,
+				0CA694382A08961400192B37 /* NvARLocalString.m in Sources */,
+				91A5D17F28C6F453007A8742 /* NSArray+MASAdditions.m in Sources */,
+				91049BF828B4B4B600AE3067 /* NvARScenePreview.m in Sources */,
+				91049C0528B4B4B600AE3067 /* NvARSceneUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91049C1328B4B7C000AE3067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91B291B428B88E4100908482 /* NvARSceneMakeupView.m in Sources */,
+				0CC1C226292B7DAD00E35F33 /* EFPreview.m in Sources */,
+				91049C2428B4B7FC00AE3067 /* UIColor+NvColor.m in Sources */,
+				91B291C128B8C98200908482 /* NvMakeupCell.m in Sources */,
+				91049C2728B4B80A00AE3067 /* NvARSceneFxOperator.m in Sources */,
+				0CA1B868292E40B800174DE7 /* EFCapture.m in Sources */,
+				0CC1C227292B7DB300E35F33 /* EFBGRAProgram.m in Sources */,
+				91049C2928B4B81100AE3067 /* NvARScenAsset.m in Sources */,
+				91049C4F28B6223000AE3067 /* NvARSceneFilterView.m in Sources */,
+				0CC1C213292B7B3700E35F33 /* NvMakeupToolMakeupModuler.m in Sources */,
+				91049C2D28B4B82600AE3067 /* NvARSeceneCaptureFilterCell.m in Sources */,
+				0CC1C228292B7DB500E35F33 /* EFGLProgram.m in Sources */,
+				91B291B928B8950C00908482 /* CQMenuTabView.m in Sources */,
+				91049C2828B4B80D00AE3067 /* UIImage+NvARSceneImage.m in Sources */,
+				91049C2E28B4B82700AE3067 /* NvBaseModel.m in Sources */,
+				0CA1B867292E1E1F00174DE7 /* NvBeautyTypeModel.m in Sources */,
+				91049C5328B62F0A00AE3067 /* ViewController.m in Sources */,
+				91049C2F28B4B82900AE3067 /* NvBeautySliderView.m in Sources */,
+				91049C2B28B4B81F00AE3067 /* NvARSceneBuffer.m in Sources */,
+				91049C3128B4B82B00AE3067 /* NvBeautyView.m in Sources */,
+				91049C3028B4B82A00AE3067 /* NvBeautyTypeCViewCell.m in Sources */,
+				0CA694392A08961400192B37 /* NvARLocalString.m in Sources */,
+				911664F528BDF4AF009D12A3 /* NvARSceneViewController.m in Sources */,
+				91049C3328B4B82D00AE3067 /* NvSwitchView.m in Sources */,
+				0CC1C229292B833200E35F33 /* NvARSceneUtils.m in Sources */,
+				91049C3228B4B82C00AE3067 /* NvCaptureFilterModel.m in Sources */,
+				91049C2C28B4B82400AE3067 /* NvARScenePreview.m in Sources */,
+				0CC1C212292B7B2900E35F33 /* NvMakeupToolModel.m in Sources */,
+				91049C4228B4DF8600AE3067 /* NvARSceneAssetManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91049C1E28B4B7C000AE3067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91049C1628B4B7C000AE3067 /* NvARSceneFx */;
+			targetProxy = 91049C1D28B4B7C000AE3067 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CA694302A08945400192B37 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CA694312A08945400192B37 /* zh-Hans */,
+				0CA694342A08949200192B37 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		91049BBB28B4B3BE00AE3067 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91049BBC28B4B3BE00AE3067 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91049BC028B4B3C300AE3067 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91049BC128B4B3C300AE3067 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91049BC628B4B3C300AE3067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		91049BC728B4B3C300AE3067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91049BC928B4B3C300AE3067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel\"",
+					"\"${PODS_ROOT}/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/TXLiteAVSDK_Professional/Professional\"",
+					"\"$(SRCROOT)/../../../lib/ios\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"${PODS_ROOT}/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional.framework/Headers/",
+					"\"$(SRCROOT)/../../../lib/ios/NvStreamingSdkCore.framework/Headers\"",
+					"\"$(SRCROOT)/../../../lib/ios/NvStreamingSdkCore.framework/Headers\"",
+				);
+				INFOPLIST_FILE = NvARSceneFxModule/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "摄像头";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "麦克风";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meishe.mseffectsdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		91049BCA28B4B3C300AE3067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel\"",
+					"\"${PODS_ROOT}/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/TXLiteAVSDK_Professional/Professional\"",
+					"\"$(SRCROOT)/../../../lib/ios\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"${PODS_ROOT}/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional.framework/Headers/",
+					"\"$(SRCROOT)/../../../lib/ios/NvStreamingSdkCore.framework/Headers\"",
+					"\"$(SRCROOT)/../../../lib/ios/NvStreamingSdkCore.framework/Headers\"",
+				);
+				INFOPLIST_FILE = NvARSceneFxModule/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "摄像头";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "麦克风";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meishe.mseffectsdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		91049C2128B4B7C000AE3067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel\"",
+					"\"${PODS_ROOT}/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/TXLiteAVSDK_Professional/Professional\"",
+					"\"$(SRCROOT)/../../../lib/ios\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"${PODS_ROOT}/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional.framework/Headers/",
+					"\"$(SRCROOT)/../../../../NvMediaCore/lib/ios/NvStreamingSdkCore.framework/Headers\"",
+					"\"$(SRCROOT)/../../../../NvMediaCore/lib/ios/NvStreamingSdkCore.framework\"",
+					"\"$(SRCROOT)/../../../../NvMediaCore/effectsdk/lib/ios/NvStreamingSdkCore.framework/Headers\"",
+					"\"$(SRCROOT)/../../../lib/ios/NvStreamingSdkCore.framework/Headers\"",
+					"\"$(SRCROOT)/../../../lib/ios/NvStreamingSdkCore.framework/Headers\"",
+				);
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meishe.NvARSceneFx;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91049C2228B4B7C000AE3067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel\"",
+					"\"${PODS_ROOT}/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/TXLiteAVSDK_Professional/Professional\"",
+					"\"$(SRCROOT)/../../../lib/ios\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"",
+					"${PODS_ROOT}/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional/TXLiteAVSDK_Professional.framework/Headers/",
+					"\"$(SRCROOT)/../../../../NvMediaCore/lib/ios/NvStreamingSdkCore.framework/Headers\"",
+					"\"$(SRCROOT)/../../../../NvMediaCore/lib/ios/NvStreamingSdkCore.framework\"",
+					"\"$(SRCROOT)/../../../../NvMediaCore/effectsdk/lib/ios/NvStreamingSdkCore.framework/Headers\"",
+					"\"$(SRCROOT)/../../../lib/ios/NvStreamingSdkCore.framework/Headers\"",
+					"\"$(SRCROOT)/../../../lib/ios/NvStreamingSdkCore.framework/Headers\"",
+				);
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meishe.NvARSceneFx;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91049BAA28B4B3BE00AE3067 /* Build configuration list for PBXProject "NvARSceneFxModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91049BC628B4B3C300AE3067 /* Debug */,
+				91049BC728B4B3C300AE3067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91049BC828B4B3C300AE3067 /* Build configuration list for PBXNativeTarget "NvARSceneFxModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91049BC928B4B3C300AE3067 /* Debug */,
+				91049BCA28B4B3C300AE3067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91049C2328B4B7C000AE3067 /* Build configuration list for PBXNativeTarget "NvARSceneFx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91049C2128B4B7C000AE3067 /* Debug */,
+				91049C2228B4B7C000AE3067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91049BA728B4B3BE00AE3067 /* Project object */;
+}

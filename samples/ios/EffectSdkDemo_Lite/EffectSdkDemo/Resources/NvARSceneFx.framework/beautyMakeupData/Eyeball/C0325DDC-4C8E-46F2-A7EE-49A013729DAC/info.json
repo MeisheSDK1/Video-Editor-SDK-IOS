@@ -1,0 +1,11 @@
+{
+    "className": "Makeup Eyeball Package Id",
+    "makeupId": "Eyeball",
+    "translation": [
+        {
+            "originalText": "Vintage",
+            "targetLanguage": "zh_CN",
+            "targetText": "银河"
+        }
+    ]
+}

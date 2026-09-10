@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  SDKDemo
+//
+//  Created by meicam on 2021/5/31.
+//  Copyright © 2021 meishe. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Masonry/Masonry.h>
+
+#import <NvSDKCommon/NvUtils.h>
+#import "NvButton.h"
+#import <NvBaseCommon/NvToast.h>
+#import <NvBaseCommon/UIButton+NvButton.h>
+#import <NvBaseCommon/UILabel+NvLabel.h>
+#import <NvBaseCommon/UIView+Dimension.h>
+#import <NvBaseCommon/UIColor+NvColor.h>
+#import <NvBaseCommon/NvToast.h>
+#import <NvSDKCommon/NvHDRManager.h>
+#import "UIView+Init.h"
+#import "UIView+Frame.h"
+#import "NSDictionary+safeAccess.h"
+#import "NSArray+safeAccess.h"
+#import "NSString+Utility.h"
+#import <NvBaseCommon/NSString+NvPath.h>
+#import <NvBaseCommon/UIAlertController+CustomAlert.h>
+#endif /* PrefixHeader_pch */

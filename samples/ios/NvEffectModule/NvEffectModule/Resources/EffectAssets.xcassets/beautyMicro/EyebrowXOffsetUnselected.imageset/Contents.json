@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "EyebrowXOffsetUnselected.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "EyebrowXOffsetUnselected@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "EyebrowXOffsetUnselected@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

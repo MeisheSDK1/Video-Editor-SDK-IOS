@@ -1,0 +1,18 @@
+platform :ios, '9.0'
+use_frameworks!
+use_modular_headers!
+inhibit_all_warnings!
+target 'NvTemplate_Example' do
+  pod 'NvBaseCommon', :path => '../../NvBaseCommon'
+  #pod 'NvSDKCommon', :path => '../../NvSDKCommon'
+
+  pod 'YYWebImage',    :git => 'https://gitee.com/mirrors/YYWebImage.git',:tag => '1.0.5'
+  pod 'YYCache',       :git => 'https://gitee.com/idol-group/YYCache.git',:tag => '1.0.4'
+  pod 'SnapKit',       :git => 'https://gitee.com/mirrors/SnapKit.git',:tag => '4.2.0'
+#  pod 'MLeaksFinder',  :git => 'https://gitee.com/shk123/MLeaksFinder.git',:tag => '1.0.0',:configurations => ['Debug']
+#  pod 'FBRetainCycleDetector',:git => 'https://gitee.com/shk123/FBRetainCycleDetector.git',:tag => '0.1.4',:configurations => ['Debug']
+  pod 'MJRefresh',     :git => 'https://gitee.com/mirrors/MJRefresh.git',:tag => '3.5.0'
+  pod 'AFNetworking',  :git => 'https://gitee.com/mirrors/AFNetworking.git'
+  pod 'HandyJSON',     :git => 'https://gitee.com/teenloong/HandyJSON.git',:tag => '5.0.2'
+  
+end

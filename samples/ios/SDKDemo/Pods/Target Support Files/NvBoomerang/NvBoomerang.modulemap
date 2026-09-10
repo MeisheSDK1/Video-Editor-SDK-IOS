@@ -1,0 +1,6 @@
+framework module NvBoomerang {
+  umbrella header "NvBoomerang-umbrella.h"
+
+  export *
+  module * { export * }
+}

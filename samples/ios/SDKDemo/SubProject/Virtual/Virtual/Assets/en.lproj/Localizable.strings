@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  SDKDemo
+
+  Created by ms20180425 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+//displayName
+"VirtualKeyer" = "Virtual Keyer";
+"Background" = "Background";
+"VirtualTip" = "Click on the color of the picture to be removed, then select a scene to record.";
+"VirtualSuggest" = "Suggest the background is the pure color";
+"Don't Tip" = "No Longer";
+"flip" = "Flip";
+"flash" = "Flash";
+"Background" = "Background";
+"Reset" = "Reset";
+"Tips" = "Tips";
+"Save Succecs!" = "Save Success!";
+"Album permissions" = "Album Permissions";
+"Know" = "Know";
+"camera.microphone.permissions" = "Need to open camera and microphone permissions.";
+"Picture" = "Picture";
+"Video" = "Video";
+"Scene" = "Scene";

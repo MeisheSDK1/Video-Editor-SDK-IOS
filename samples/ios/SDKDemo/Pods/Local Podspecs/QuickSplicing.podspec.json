@@ -1,0 +1,55 @@
+{
+  "name": "QuickSplicing",
+  "version": "0.1.0",
+  "summary": "A short description of QuickSplicing.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ms/QuickSplicing",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ms": "970028126@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/ms/QuickSplicing.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "QuickSplicing/Classes/**/*",
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  },
+  "resources": "QuickSplicing/Assets/*",
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios",
+      "$(SRCROOT)/../../../../../../../lib/ios",
+      "$(SRCROOT)/../../../../lib/ios"
+    ],
+    "HEADER_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../lib/ios/NvStreamingSdkCore.framework/Headers"
+    ]
+  },
+  "dependencies": {
+    "Masonry": [
+      "~> 1.1.0"
+    ],
+    "NvBaseCommon": [
+
+    ],
+    "NvSDKCommon": [
+
+    ],
+    "NvAlbum": [
+
+    ],
+    "YYWebImage": [
+      "~> 1.0.5"
+    ]
+  }
+}

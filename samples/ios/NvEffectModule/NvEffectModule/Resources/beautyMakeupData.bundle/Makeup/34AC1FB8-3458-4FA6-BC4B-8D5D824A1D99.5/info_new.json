@@ -1,0 +1,263 @@
+  {
+    "name": "Plain Boiled Water",
+    "uuid": "34AC1FB8-3458-4FA6-BC4B-8D5D824A1D99",
+    "version": 5,
+    "cover": "cover.png",
+    "minSdkVersion": "3.4.0",
+    "supportedAspectRatio": "9v16",
+    "translation": [
+      {
+        "originalText": "Plain Boiled Water",
+        "targetLanguage": "zh_CN",
+        "targetText": "白开水妆"
+      }
+    ],
+    "effectContent": {
+      "makeup": [
+        {
+          "type": "Blusher",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Blusher Package Id",
+				"value": "0432B106-538D-4D5F-9B2F-17351A943480",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Blusher Intensity",
+				"value": 0.6,
+				"type": "float"
+			  }
+          ]
+        },
+		{
+			"type": "Shadow",
+			"canReplace": 1,
+			"params": [
+			  {
+				"key": "Makeup Shadow Package Id",
+				"value": "051E2134-DE64-4888-BC3A-DDF9BE3D4D2E",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Shadow Intensity",
+				"value": 0.1,
+				"type": "float"
+			  }
+			]
+		},
+		{
+			"type": "Eyebrow",
+			"canReplace": 1,
+			"params": [
+			  {
+				"key": "Makeup Eyebrow Package Id",
+				"value": "56A052EA-CC4C-4232-A4DB-E5F9E0D8A475",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyebrow Intensity",
+				"value": 0.8,
+				"type": "float"
+			  }
+			]
+		},
+		{
+			"type": "Eyelash",
+			"canReplace": 1,
+			"params": [
+			  {
+				"key": "Makeup Eyelash Package Id",
+				"value": "3643C8CD-C019-4D04-A9EC-9B1A3FA5AA08",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyelash Intensity",
+				"value": 1,
+				"type": "float"
+			  }
+			]
+		},
+		{
+			"type": "Eyeshadow",
+			"canReplace": 1,
+			"params": [
+			  {
+				"key": "Makeup Eyeshadow Package Id",
+				"value": "19816E68-99E1-4A5D-9A11-68F217F63C9C",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyeshadow Intensity",
+				"value": 0.4,
+				"type": "float"
+			  }
+			]
+		},
+		{
+			"type": "Eyeliner",
+			"canReplace": 1,
+			"params": [
+			  {
+				"key": "Makeup Eyeliner Package Id",
+				"value": "DC8F4BEB-FC76-4A5A-9298-EC9AAB3F36F7",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyeliner Intensity",
+				"value": 0.8,
+				"type": "float"
+			  }
+			]
+		},
+		{
+			"type": "Lip",
+			"canReplace": 1,
+			"params": [
+			  {
+				"key": "Makeup Lip Package Id",
+				"value": "80AE1B76-0409-49FD-BE13-646AF324E719",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyeliner Intensity",
+				"value": 0.8,
+				"type": "float"
+			  }
+			]
+		}
+      ],
+    "beauty": [
+      {
+        "params": [
+         {
+            "key": "Beauty Effect",
+            "value": true,
+            "type": "boolean"
+         }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Advanced Beauty Enable",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "key": "Advanced Beauty Type",
+            "value": 0,
+            "type": "int"
+          },
+          {
+            "key": "Advanced Beauty Intensity",
+            "value": 0.6,
+            "type": "float"
+          }
+        ]
+      }
+    ],
+    "shape": [
+      {
+        "params": [
+         {
+            "key": "Face Mesh Internal Enabled",
+            "value": true,
+            "type": "boolean"
+         }
+        ]
+      },
+	  {
+        "type": "Face Size",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Face Mesh Face Size Custom Package Id",
+            "value": "383BF935-C597-4F6E-80E7-6B47AAF7A04F",
+            "type": "string"
+          },
+          {
+            "key": "Face Mesh Face Size Degree",
+            "value": 0.28,
+            "type": "float"
+          }
+        ]
+      },
+	  {
+        "type": "Eye Size",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Face Mesh Eye Size Custom Package Id",
+            "value": "AAD90D4A-F387-4E9E-B9C5-DA255398CA7E",
+            "type": "string"
+          },
+          {
+            "key": "Face Mesh Eye Size Degree",
+            "value": 0.4,
+            "type": "float"
+          }
+        ]
+      }
+    ],
+     "microShape": [
+      {
+          "params": [
+           {
+              "key": "Advanced Beauty Enable",
+              "value": true,
+              "type": "boolean"
+           }
+          ]
+      },
+      {
+          "params": [
+           {
+              "key": "Beauty Shape",
+              "value": true,
+              "type": "boolean"
+           },
+           {
+              "key": "Face Mesh Internal Enabled",
+              "value": true,
+              "type": "boolean"
+           }
+          ]
+      },
+      {
+        "type": "Remove Dark Circles",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Advanced Beauty Remove Dark Circles Intensity",
+            "value": 1,
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "type": "Remove Nasolabial Folds",
+        "canReplace": 0,
+        "params": [
+          {
+            "key": "Advanced Beauty Remove Nasolabial Folds Intensity",
+            "value": 1,
+            "type": "float"
+          }
+        ]
+      }
+    ],
+      "filter":[
+        {
+          "isBuiltIn": 0,
+          "canReplace": 1,
+          "uuid": "C9CE10F1-7C77-423C-BB7F-7F090C33D5C5",
+          "value": 0.3
+        }
+      ]
+    }
+  }
+
+
+

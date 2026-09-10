@@ -1,0 +1,12 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'NvBoomerang_Example' do
+  pod 'NvBaseCommon', :path => '../../../SubProject/NvBaseCommon/'
+  pod 'NvSDKCommon',  :path => '../../../SubProject/NvSDKCommon/'
+  pod 'NvBoomerang',  :path => '../'
+  pod 'Masonry',       :git => 'https://gitee.com/mirrors/ios-masonry.git',:tag => 'v1.1.0'
+  pod 'AFNetworking',  :git => 'https://gitee.com/mirrors/AFNetworking.git',:tag => '3.2.1'
+  
+end

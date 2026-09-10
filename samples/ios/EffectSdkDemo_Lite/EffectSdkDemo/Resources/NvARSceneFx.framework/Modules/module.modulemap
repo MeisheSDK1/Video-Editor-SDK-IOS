@@ -1,0 +1,6 @@
+framework module NvARSceneFx {
+  umbrella header "NvARSceneFx.h"
+
+  export *
+  module * { export * }
+}

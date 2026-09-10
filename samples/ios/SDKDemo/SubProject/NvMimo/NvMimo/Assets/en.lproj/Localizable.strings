@@ -1,0 +1,24 @@
+/* 
+  Localizable.string.strings
+  NvMimoDemo
+
+  Created by MS on 2019/9/10.
+  Copyright © 2019 MS. All rights reserved.
+*/
+"Crop" = "Trim";
+"Replace this part" = "Replace this part";
+"CompoundCaption" = "Compound Caption";
+"Compile" = "Compile";
+"Generated" = "Generated...";
+"Generated complete" = "Completed\nPlease view in album";
+"compile fiald" = "Compile Field";
+"storage" = "Please check the storage space";
+"Know" = "Got it";
+"Start making" = "Start Making";
+"Open the ending watermark" = "Open the ending watermark";
+"Downloading" = "Downloading";
+"CheckNetwork" = "Check Network";
+"Failed to load" = "Failed to load！";
+"Confirm" = "Confirm";
+"Next" = "Next";
+"Lack of material" = "Material is missing. Please add material to the available slots";

@@ -1,0 +1,6 @@
+framework module NvPackagingTemplate {
+  umbrella header "NvPackagingTemplate-umbrella.h"
+
+  export *
+  module * { export * }
+}

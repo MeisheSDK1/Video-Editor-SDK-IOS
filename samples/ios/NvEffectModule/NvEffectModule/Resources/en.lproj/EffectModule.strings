@@ -1,0 +1,106 @@
+/* 
+  Localizable.strings
+  MeicamLive
+
+  Created by ms20180425 on 2020/3/12.
+  Copyright © 2020 ms20180425. All rights reserved.
+*/
+//------------------------homePage--------------------------
+"Hot" = "Hot";
+"Live" = "·Live";
+"Replay" = "Replay";
+"cheer_together" = "Let is cheer together";
+"meishe_user" = "Meishe User";
+//------------------------push--------------------------
+"Start live" = "GO LIVE";
+"beauty" = "beauty";
+"beauty_prop" = "prop";
+"beauty_filter" = "filter";
+"beauty_markup" = "makeUp";
+"Matting" = "Matting";
+
+"skin_beauty" = "Skin";
+"facetype" = "Facetype";
+"small_change" = "small change";
+"beauty_close" = "Close";
+"beauty_open" = "Open";
+"beauty_shape_close" = "Close";
+"beauty_shape_open" = "Open";
+"small_shape_close" = "Close";
+"small_shape_open" = "Open";
+"reset" = "Reset";
+"back" = "Back";
+
+"strength" = "Strength";
+"strength_1" = "Strength 1";
+"advanced_strength_1" = "Advanced Strength 2";
+"advanced_strength_2" = "Advanced Strength 3";
+"advanced_strength_3" = "Advanced Strength 4";
+"advanced_strength_4" = "AI Concealer";
+"whitening" = "White";
+"whitening_A" = "White A";
+"whitening_B" = "White B";
+"quyouguang" = "Shiny";
+"ruddy" = "Rosy";
+"definition" = "definition";
+"sharpness" = "Sharpness";
+
+"cheek_thinning" = "Face";
+"eye_enlarging" = "Eyes";
+"intensity_forehead" = "Forhead";
+"intensity_chin" = "Chin";
+"intensity_nose" = "Nose";
+"intensity_mouth" = "Mouth";
+"face_small" = "FacLen";
+"face_thin" = "FacWid";
+"nose_long" = "LonNor";
+"eye_corner" = "EyeCor";
+"mouse_corner" = "MouCor";
+
+"head_size" = "HeadSize";
+"malar_size" = "MalarSize";
+"jaw_size" = "JawSize";
+"temple_width" = "TempleWidth";
+"beauty_nasolabial" = "Nasolabial";
+"beauty_dark_circles" = "dark circles";
+"beauty_brighten_eye" = "BrightenEye";
+"beauty_tooth" = "tooth";
+"eye_angel" = "eye angel";
+"eye_distance" = "eye distance";
+"philtrum_length" = "philtrum";
+"nose_bridge" = "wide nose bridge";
+"eye_height" = "eye height";
+"eye_width" = "eye width";
+"eye_arc" = "eye arc";
+"eye_y_offset" = "eye UP";
+"nose_head" = "nose head";
+"eyebrow_thickness" = "eyebrow thickness";
+"eyebrow_angle" = "eyebrow angle";
+"eyebrow_y_offset" = "eyebrow UD";
+"eyebrow_x_offset" = "eyebrow LR";
+
+"selectMusic" = "selectMusic";
+"MyMusic" = "My Music";
+"LocalMusic" = "Local Music";
+"add" = "add";
+"singing" = "singing";
+"suspended" = "suspended";
+"quit" = "quit";
+"No" = "No";
+"Ethereal" = "Ethereal";
+"Woman" = "Woman";
+"Cartoon" = "Cartoon";
+"Man" = "Man";
+"Monster" = "Monster";
+"KTV" = "KTV";
+"Hall" = "Hall";
+"Sound adjustment" = "Sound adjustment";
+"BGMVolume" = "BGMVolume";
+"MicVolume" = "MicVolume";
+"BGMPitch" = "BGMPitch";
+"Sticker" = "Sticker";
+"Caption" = "Caption";
+"Props" = "Props";
+"Drag here to delete" = "Drag here to delete";
+"Are you ready?" = "Are you ready?";
+//------------------------pull--------------------------

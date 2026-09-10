@@ -1,0 +1,108 @@
+/* 
+  Localizable.strings
+  MeicamLive
+
+  Created by ms20180425 on 2020/3/12.
+  Copyright © 2020 ms20180425. All rights reserved.
+*/
+//------------------------首页--------------------------
+"Hot" = "热门";
+"Live" = "·直播中";
+"Replay" = "回放";
+"cheer_together" = "我们一起加油";
+"meishe_user" = "美摄用户";
+//------------------------推流--------------------------
+"Start live" = "开始直播";
+"beauty" = "美颜";
+"beauty_prop" = "道具";
+"beauty_filter" = "滤镜";
+"beauty_markup" = "美妆";
+"Matting" = "抠像";
+
+"skin_beauty" = "美肤";
+"facetype" = "美型";
+"small_change" = "微整形";
+"beauty_close" = "美肤关闭";
+"beauty_open" = "美肤开启";
+"beauty_shape_close" = "美型关闭";
+"beauty_shape_open" = "美型开启";
+"small_shape_close" = "微整形关闭";
+"small_shape_open" = "微整形开启";
+"reset" = "重置";
+"back" = "返回";
+
+"strength" = "磨皮";
+"strength_1" = "磨皮1";
+"advanced_strength_1" = "磨皮2";
+"advanced_strength_2" = "磨皮3";
+"advanced_strength_3" = "磨皮4";
+"advanced_strength_4" = "AI磨皮";
+"whitening" = "美白";
+"whitening_A" = "美白A";
+"whitening_B" = "美白B";
+"quyouguang" = "去油光";
+"ruddy" = "红润";
+"definition" = "清晰度";
+"sharpness" = "锐度";
+
+"cheek_thinning" = "瘦脸";
+"eye_enlarging" = "大眼";
+"intensity_forehead" = "额头";
+"intensity_chin" = "下巴";
+"intensity_nose" = "瘦鼻";
+"intensity_mouth" = "嘴型";
+"face_small" = "小脸";
+"face_thin" = "窄脸";
+"nose_long" = "长鼻";
+"eye_corner" = "眼角";
+"mouse_corner" = "嘴角";
+
+"head_size" = "缩头";
+"malar_size" = "颧骨";
+"jaw_size" = "下颌";
+"temple_width" = "太阳穴";
+"beauty_nasolabial" = "法令纹";
+"beauty_dark_circles" = "黑眼圈";
+"beauty_brighten_eye" = "亮眼";
+"beauty_tooth" = "美牙";
+"eye_angel" = "眼角度";
+"eye_distance" = "眼距";
+"philtrum_length" = "人中";
+"nose_bridge" = "宽鼻梁";
+"eye_height" = "眼高度";
+"eye_width" = "眼宽度";
+"eye_arc" = "眼弧度";
+"eye_y_offset" = "眼上下";
+"nose_head" = "鼻头";
+"eyebrow_thickness" = "眉粗细";
+"eyebrow_angle" = "眉角度";
+"eyebrow_y_offset" = "眉上下";
+"eyebrow_x_offset" = "眉间距";
+
+"selectMusic" = "选择音乐";
+"MyMusic" = "我的音乐";
+"LocalMusic" = "本地音乐";
+"add" = "添加";
+"singing" = "演唱";
+"suspended" = "暂停";
+"quit" = "关闭";
+"No" = "无";
+"Ethereal" = "回声";
+"Woman" = "女声";
+"Cartoon" = "卡通";
+"Man" = "男声";
+"Monster" = "怪兽";
+"KTV" = "混响";
+"Hall" = "礼堂";
+"Sound adjustment" = "音效调节";
+"BGMVolume" = "伴奏";
+"MicVolume" = "人声";
+"BGMPitch" = "音调";
+"Sticker" = "贴纸";
+"Caption" = "字幕";
+"Props" = "人脸道具";
+"Drag here to delete" = "拖到这里删除";
+"Are you ready?" = "准备好了吗？";
+//------------------------拉流--------------------------
+
+

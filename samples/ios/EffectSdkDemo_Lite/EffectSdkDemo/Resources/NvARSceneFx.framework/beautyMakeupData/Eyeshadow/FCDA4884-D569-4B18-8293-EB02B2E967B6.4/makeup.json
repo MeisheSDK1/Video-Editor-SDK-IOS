@@ -1,0 +1,11 @@
+{
+	"translation": [
+		{
+			"originalText": "Dot mole eyeshadow",
+			"targetLanguage": "zh_CN",
+			"targetText": "点痣眼影"
+		}
+	],
+	"className": "Makeup Eyeshadow Package Id", 
+	"makeupId": "Eyeshadow"
+}

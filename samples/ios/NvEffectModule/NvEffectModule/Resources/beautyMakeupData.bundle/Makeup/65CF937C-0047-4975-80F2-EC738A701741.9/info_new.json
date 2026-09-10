@@ -1,0 +1,310 @@
+
+  {
+    "name": "Bean Paste",
+    "uuid": "65CF937C-0047-4975-80F2-EC738A701741",
+    "version": 9,
+    "cover": "cover.png",
+    "minSdkVersion": "3.4.0",
+    "supportedAspectRatio": "9v16",
+    "translation": [
+      {
+        "originalText": "Bean Paste",
+        "targetLanguage": "zh_CN",
+        "targetText": "微醺豆沙"
+      }
+    ],
+    "effectContent": {
+       "makeup": [
+        {
+          "type": "Blusher",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Blusher Package Id",
+				"value": "F75D58F0-51BE-4C8A-A27B-DB17CC5053AA",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Blusher Intensity",
+				"value": 0.5,
+				"type": "float"
+			  }
+          ]
+        },
+        {
+          "type": "Shadow",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Shadow Package Id",
+				"value": "17CE032E-3954-4722-94DD-799C9C8794A8",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Shadow Intensity",
+				"value": 0.2,
+				"type": "float"
+			  }
+          ]
+        },
+        {
+          "type": "Eyebrow",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Eyebrow Package Id",
+				"value": "8BE41F5F-CA8E-47DC-BCE0-184F92F825BF",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyebrow Intensity",
+				"value": 0.6,
+				"type": "float"
+			  }
+          ]
+        },
+        {
+          "type": "Eyelash",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Eyelash Package Id",
+				"value": "2749021F-F213-43FC-A926-41B13A085EE9",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyelash Intensity",
+				"value": 0.6,
+				"type": "float"
+			  }
+          ]
+        },
+        {
+          "type": "Eyeshadow",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Eyeshadow Package Id",
+				"value": "44FC8916-DBEC-4C3B-8511-72B2DF12459E",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyeshadow Intensity",
+				"value": 0.8,
+				"type": "float"
+			  }
+          ]
+        },
+        {
+          "type": "Brighten",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Brighten Package Id",
+				"value": "03CF45E5-3CB8-4E2A-9D5A-713AF511165D",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Brighten Intensity",
+				"value": 0.4,
+				"type": "float"
+			  }
+          ]
+        },
+        {
+          "type": "Eyeliner",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Eyeliner Package Id",
+				"value": "BE1EC1A0-64F3-439A-80F4-C9FBBFDFDF30",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Eyeliner Intensity",
+				"value": 0.7,
+				"type": "float"
+			  }
+          ]
+        },
+        {
+          "type": "Lip",
+          "canReplace": 1,
+          "params": [
+			  {
+				"key": "Makeup Lip Package Id",
+				"value": "D2E9C86B-6382-41BC-8598-C6663CC829C9",
+				"type": "string"
+			  },
+			  {
+				"key": "Makeup Lip Intensity",
+				"value": 0.8,
+				"type": "float"
+			  }
+          ]
+        }
+      ],
+    "beauty": [
+      {
+        "params": [
+         {
+            "key": "Beauty Effect",
+            "value": true,
+            "type": "boolean"
+         }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Advanced Beauty Enable",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "key": "Advanced Beauty Type",
+            "value": 0,
+            "type": "int"
+          },
+          {
+            "key": "Advanced Beauty Intensity",
+            "value": 0.6,
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Whitening Lut Enabled",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "key": "Whitening Lut File",
+            "value": "WhiteB.mslut",
+            "type": "path"
+          },
+          {
+            "key": "Beauty Whitening",
+            "value": 0.6,
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Beauty Reddening",
+            "value": 0.2,
+            "type": "float"
+          }
+        ]
+      }
+    ],
+    "shape": [
+      {
+        "params": [
+         {
+            "key": "Face Mesh Internal Enabled",
+            "value": true,
+            "type": "boolean"
+         }
+        ]
+      },
+	  {
+        "type": "Face Size",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Face Mesh Face Size Custom Package Id",
+            "value": "383BF935-C597-4F6E-80E7-6B47AAF7A04F",
+            "type": "string"
+          },
+          {
+            "key": "Face Mesh Face Size Degree",
+            "value": 0.28,
+            "type": "float"
+          }
+        ]
+      },
+	  {
+        "type": "Eye Size",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Face Mesh Eye Size Custom Package Id",
+            "value": "AAD90D4A-F387-4E9E-B9C5-DA255398CA7E",
+            "type": "string"
+          },
+          {
+            "key": "Face Mesh Eye Size Degree",
+            "value": 0.4,
+            "type": "float"
+          }
+        ]
+      }
+    ],
+     "microShape": [
+      {
+          "params": [
+           {
+              "key": "Advanced Beauty Enable",
+              "value": true,
+              "type": "boolean"
+           }
+          ]
+      },
+      {
+          "params": [
+           {
+              "key": "Beauty Shape",
+              "value": true,
+              "type": "boolean"
+           },
+           {
+              "key": "Face Mesh Internal Enabled",
+              "value": true,
+              "type": "boolean"
+           }
+          ]
+      },
+      {
+        "type": "Remove Dark Circles",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Advanced Beauty Remove Dark Circles Intensity",
+            "value": 1,
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "type": "Remove Nasolabial Folds",
+        "canReplace": 0,
+        "params": [
+          {
+            "key": "Advanced Beauty Remove Nasolabial Folds Intensity",
+            "value": 1,
+            "type": "float"
+          }
+        ]
+      }
+    ],
+      "filter":[
+        {
+          "isBuiltIn": 0,
+          "canReplace": 1,
+          "uuid": "7D4293F6-C128-4FD2-96A3-5F9194284C53",
+          "value": 0.4
+        }
+      ]
+    }
+  }
+
+
+

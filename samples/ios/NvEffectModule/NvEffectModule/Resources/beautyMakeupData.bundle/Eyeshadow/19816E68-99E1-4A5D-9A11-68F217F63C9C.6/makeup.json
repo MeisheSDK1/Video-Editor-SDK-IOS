@@ -1,0 +1,11 @@
+{
+	"translation": [
+		{
+			"originalText": "Water Eyeshadow",
+			"targetLanguage": "zh_CN",
+			"targetText": "白开水眼影"
+		}
+	],
+	"className": "Makeup Eyeshadow Package Id", 
+	"makeupId": "Eyeshadow"
+}

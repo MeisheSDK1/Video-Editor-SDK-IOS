@@ -1,0 +1,365 @@
+{
+    "cover": "cover.png",
+    "effectContent": {
+        "beauty": [
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Advanced Beauty Enable",
+                        "type": "boolean",
+                        "value": true
+                    },
+                    {
+                        "key": "Advanced Beauty Type",
+                        "type": "int",
+                        "value": 1
+                    },
+                    {
+                        "key": "Advanced Beauty Intensity",
+                        "type": "float",
+                        "value": 0.75
+                    }
+                ]
+            },
+            {
+            "canReplace": 1,
+            "params": [
+                {
+                "key": "Default Sharpen Enabled",
+                "value": true,
+                "type": "boolean"
+                }
+            ]
+            }
+        ],
+        "makeup": [
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Makeup Lip Package Id",
+                        "type": "string",
+                        "value": "7A3ED201-3DBB-427A-AA08-00B6D6B14E05"
+                    },
+                    {
+                        "key": "Makeup Lip Intensity",
+                        "type": "float",
+                        "value": 0.5
+                    }
+                ],
+                "type": "Lip"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Makeup Eyeshadow Package Id",
+                        "type": "string",
+                        "value": "82799E3F-0BB9-4C83-A4BE-1A08F10C12F1"
+                    },
+                    {
+                        "key": "Makeup Eyeshadow Intensity",
+                        "type": "float",
+                        "value": 0.4
+                    }
+                ],
+                "type": "Eyeshadow"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Makeup Eyebrow Package Id",
+                        "type": "string",
+                        "value": "8BE41F5F-CA8E-47DC-BCE0-184F92F825BF"
+                    },
+                    {
+                        "key": "Makeup Eyebrow Intensity",
+                        "type": "float",
+                        "value": 0.7
+                    }
+                ],
+                "type": "Eyebrow"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Makeup Eyelash Package Id",
+                        "type": "string",
+                        "value": "B0ADA7E3-1056-4C2D-97C6-8B43ECA1BE48"
+                    },
+                    {
+                        "key": "Makeup Eyelash Intensity",
+                        "type": "float",
+                        "value": 0.6
+                    }
+                ],
+                "type": "Eyelash"
+            },
+            {
+                "type": "Brighten",
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Makeup Brighten Package Id",
+                        "type": "string",
+                        "value": "361C49BE-4430-477B-B554-D232AC2AB0C3"
+                    },
+                    {
+                        "key": "Makeup Brighten Intensity",
+                        "type": "float",
+                        "value": 0.1
+                    }
+                ]
+            },
+            {
+                "type": "Blusher",
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Makeup Blusher Package Id",
+                        "type": "string",
+                        "value": "16FCAA77-1B45-4DDA-A2FA-CF4F6F09BCC9"
+                    },
+                    {
+                        "key": "Makeup Blusher Intensity",
+                        "type": "float",
+                        "value": 0.4
+                    }
+                ]
+            }
+        ],
+        "microShape": [
+            {
+                "params": [
+                    {
+                        "key": "Beauty Shape",
+                        "type": "boolean",
+                        "value": true
+                    },
+                    {
+                        "key": "Face Mesh Internal Enabled",
+                        "type": "boolean",
+                        "value": true
+                    }
+                ]
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Face Mesh Nose Bridge Width Custom Package Id",
+                        "type": "string",
+                        "value": "23A40970-CE6F-4684-AF57-F78A0CBB53D1"
+                    },
+                    {
+                        "key": "Face Mesh Nose Bridge Width Degree",
+                        "type": "float",
+                        "value": 0.8
+                    }
+                ],
+                "type": "Nose Bridge Width"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Face Mesh Malar Width Custom Package Id",
+                        "type": "string",
+                        "value": "3F5EEA8D-AEB4-4A1A-9950-DFDF85FFA887"
+                    },
+                    {
+                        "key": "Face Mesh Malar Width Degree",
+                        "type": "float",
+                        "value": 0.35
+                    }
+                ],
+                "type": "Malar Width"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Advanced Beauty Brighten Eyes Intensity",
+                        "type": "float",
+                        "value": 0.2
+                    }
+                ],
+                "type": "Brighten Eyes"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Advanced Beauty Remove Dark Circles Intensity",
+                        "type": "float",
+                        "value": 1
+                    }
+                ],
+                "type": "Remove Dark Circles"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Advanced Beauty Remove Nasolabial Folds Intensity",
+                        "type": "float",
+                        "value": 0.1
+                    }
+                ],
+                "type": "Remove Nasolabial Folds"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Advanced Beauty Whiten Teeth Intensity",
+                        "type": "float",
+                        "value": 0.7
+                    }
+                ],
+                "type": "Whiten Teeth"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Face Mesh Jaw Width Custom Package Id",
+                        "type": "string",
+                        "value": "1DED2984-2A01-42C8-8BB5-CD187B53CA21"
+                    },
+                    {
+                        "key": "Face Mesh Jaw Width Degree",
+                        "type": "float",
+                        "value": 0.15
+                    }
+                ],
+                "type": "Jaw Width"
+            }
+        ],
+        "shape": [
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Face Mesh Mouth Corner Lift Custom Package Id",
+                        "type": "string",
+                        "value": "8A256A1D-24CB-4E01-A59B-4CE7574DFA11"
+                    },
+                    {
+                        "key": "Face Mesh Mouth Corner Lift Degree",
+                        "type": "float",
+                        "value": 0.15
+                    }
+                ],
+                "type": "Mouth Corner Lift"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Face Mesh Nose Width Custom Package Id",
+                        "type": "string",
+                        "value": "4A88E44D-34AE-4708-A0CA-4D45BEDD095F"
+                    },
+                    {
+                        "key": "Face Mesh Nose Width Degree",
+                        "type": "float",
+                        "value": 0.45
+                    }
+                ],
+                "type": "Nose Width"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Face Mesh Eye Size Custom Package Id",
+                        "type": "string",
+                        "value": "F9E37F49-4A40-49D8-BA1B-383A29EF6DB1"
+                    },
+                    {
+                        "key": "Face Mesh Eye Size Degree",
+                        "type": "float",
+                        "value": 0.26
+                    }
+                ],
+                "type": "Eye Size"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Face Mesh Eye Corner Stretch Custom Package Id",
+                        "type": "string",
+                        "value": "569EB1E6-9C49-473C-9A90-017B27D791C9"
+                    },
+                    {
+                        "key": "Face Mesh Eye Corner Stretch Degree",
+                        "type": "float",
+                        "value": 0.1
+                    }
+                ],
+                "type": "Eye Corner Stretch"
+            },
+            {
+                "canReplace": 1,
+                "params": [
+                    {
+                        "key": "Face Mesh Face Size Custom Package Id",
+                        "type": "string",
+                        "value": "3D3AB6CE-0287-4065-A6F3-FC3F2803536F"
+                    },
+                    {
+                        "key": "Face Mesh Face Size Degree",
+                        "type": "float",
+                        "value": 0.36
+                    }
+                ],
+                "type": "Face Size"
+            },
+            {
+                "params": [
+                    {
+                        "key": "Beauty Shape",
+                        "type": "boolean",
+                        "value": true
+                    },
+                    {
+                        "key": "Face Mesh Internal Enabled",
+                        "type": "boolean",
+                        "value": true
+                    }
+                ]
+            }
+        ],
+        "filter": [
+            {
+            "isBuiltIn": 0,
+            "canReplace": 1,
+            "uuid": "E16C3D3A-C54F-4E02-A4C5-9E8C09AB09A9",
+            "value": 0.3
+            },
+            {
+            "isBuiltIn": 0,
+            "canReplace": 1,
+            "uuid": "7D091612-E66B-4443-B16E-19F5E1D5864E",
+            "value": 0.8
+            }
+        ]
+    },
+    "minSdkVersion": "3.4.0",
+    "name": "magazine",
+    "supportedAspectRatio": "9v16",
+    "translation": [
+        {
+            "originalText": "magazine",
+            "targetLanguage": "zh_CN",
+            "targetText": "日杂素颜"
+        }
+    ],
+    "uuid": "8B11185D-478E-4324-80C2-C8DC9034C115",
+    "version": 3
+}

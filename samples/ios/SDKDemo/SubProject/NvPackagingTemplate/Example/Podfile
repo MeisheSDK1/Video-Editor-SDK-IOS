@@ -1,0 +1,10 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'NvPackagingTemplate_Example' do
+  pod 'NvPackagingTemplate', :path => '../'
+  pod 'NvBaseCommon', :path => '../../../SubProject/NvBaseCommon/'
+
+  pod 'Masonry',       :git => 'https://gitee.com/mirrors/ios-masonry.git',:tag => 'v1.1.0'
+end

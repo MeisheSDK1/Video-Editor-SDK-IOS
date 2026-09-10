@@ -1,0 +1,5 @@
+framework module NvStreamingSdkCore {
+    umbrella header "NvStreamingSdkCore.h"
+    export *
+    module * { export * }
+}

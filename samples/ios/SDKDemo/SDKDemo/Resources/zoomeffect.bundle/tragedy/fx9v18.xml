@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1440">	
+	<track source=":1" clipStart="0" clipDuration="4080">
+		<effect name="transform">
+			<param name="anchorX" value="anchorXValue"/>
+			<param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+				<key time="0" value="1"/>
+				<key time="267" value="1"/>
+				<key time="300" value="1.001"/>
+				<key time="333" value="1.003"/>
+				<key time="367" value="1.005"/>
+				<key time="400" value="1.008"/>
+				<key time="433" value="1.011"/>
+				<key time="467" value="1.0145"/>
+				<key time="500" value="1.018"/>
+				<key time="533" value="1.022"/>
+				<key time="567" value="1.026"/>
+				<key time="600" value="1.0305"/>
+				<key time="633" value="1.035"/>
+				<key time="667" value="1.04"/>
+				<key time="700" value="1.045"/>
+				<key time="733" value="1.05"/>
+				<key time="766" value="1.055"/>
+				<key time="800" value="1.0605"/>
+				<key time="833" value="1.066"/>
+				<key time="867" value="1.0715"/>
+				<key time="900" value="1.077"/>
+				<key time="933" value="1.0825"/>
+				<key time="967" value="1.0885"/>
+				<key time="1000" value="1.094"/>
+				<key time="1033" value="1.1"/>
+				<key time="1067" value="1.106"/>
+				<key time="1100" value="1.112"/>
+				<key time="1133" value="1.118"/>
+				<key time="1167" value="1.124"/>
+				<key time="1200" value="1.13"/>
+				<key time="1233" value="1.136"/>
+				<key time="1267" value="1.142"/>
+				<key time="1300" value="1.148"/>
+				<key time="1333" value="1.1545"/>
+				<key time="1367" value="1.161"/>
+				<key time="1400" value="1.1675"/>
+				<key time="1433" value="1.174"/>
+				<key time="1467" value="1.1805"/>
+				<key time="1500" value="1.187"/>
+				<key time="1533" value="1.194"/>
+				<key time="1567" value="1.201"/>
+				<key time="1600" value="1.208"/>
+				<key time="1633" value="1.215"/>
+				<key time="1667" value="1.221"/>
+				<key time="1667" value="1.228"/>
+				<key time="1700" value="1.235"/>
+				<key time="1733" value="1.242"/>
+				<key time="1767" value="1.249"/>
+				<key time="1800" value="1.257"/>
+				<key time="1833" value="1.265"/>
+				<key time="4080" value="1.76"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="0" value="1"/>
+				<key time="267" value="1"/>
+				<key time="300" value="1.001"/>
+				<key time="333" value="1.003"/>
+				<key time="367" value="1.005"/>
+				<key time="400" value="1.008"/>
+				<key time="433" value="1.011"/>
+				<key time="467" value="1.0145"/>
+				<key time="500" value="1.018"/>
+				<key time="533" value="1.022"/>
+				<key time="567" value="1.026"/>
+				<key time="600" value="1.0305"/>
+				<key time="633" value="1.035"/>
+				<key time="667" value="1.04"/>
+				<key time="700" value="1.045"/>
+				<key time="733" value="1.05"/>
+				<key time="766" value="1.055"/>
+				<key time="800" value="1.0605"/>
+				<key time="833" value="1.066"/>
+				<key time="867" value="1.0715"/>
+				<key time="900" value="1.077"/>
+				<key time="933" value="1.0825"/>
+				<key time="967" value="1.0885"/>
+				<key time="1000" value="1.094"/>
+				<key time="1033" value="1.1"/>
+				<key time="1067" value="1.106"/>
+				<key time="1100" value="1.112"/>
+				<key time="1133" value="1.118"/>
+				<key time="1167" value="1.124"/>
+				<key time="1200" value="1.13"/>
+				<key time="1233" value="1.136"/>
+				<key time="1267" value="1.142"/>
+				<key time="1300" value="1.148"/>
+				<key time="1333" value="1.1545"/>
+				<key time="1367" value="1.161"/>
+				<key time="1400" value="1.1675"/>
+				<key time="1433" value="1.174"/>
+				<key time="1467" value="1.1805"/>
+				<key time="1500" value="1.187"/>
+				<key time="1533" value="1.194"/>
+				<key time="1567" value="1.201"/>
+				<key time="1600" value="1.208"/>
+				<key time="1633" value="1.215"/>
+				<key time="1667" value="1.221"/>
+				<key time="1667" value="1.228"/>
+				<key time="1700" value="1.235"/>
+				<key time="1733" value="1.242"/>
+				<key time="1767" value="1.249"/>
+				<key time="1800" value="1.257"/>
+				<key time="1833" value="1.265"/>
+				<key time="4080" value="1.76"/>
+			</animation>	
+		</effect>
+		<effect name="lut">
+			<param name="dataFileName" value="liangliang.mslut"/>
+			<animation paramName="intensity">
+				<key time="267" value="0"/>
+				<key time="1267" value="1"/>
+			</animation>
+		</effect>
+	</track>
+	<track source="yezi.caf" width="720" height="1520" clipStart="840" clipDuration="3240"/>
+</storyboard>	

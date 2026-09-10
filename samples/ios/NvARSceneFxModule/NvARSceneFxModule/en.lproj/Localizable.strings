@@ -1,0 +1,67 @@
+/* 
+  NvShortVideo.strings
+  NvShortVideo
+
+  Created by chengww on 2021/11/2.
+  
+*/
+"预览" = "preview";
+"滤镜" = "filter";
+"美妆" = "makeup";
+"半径" = "radius";
+"重置" = "reset";
+"关闭美颜" = "closed beauty";
+"关闭美型" = "closed beautyShape";
+"关闭微整形" = "closed microshaping";
+"开启美颜" = "open beauty";
+"开启美型" = "open beautyShape";
+"开启微整形" = "open microshaping";
+"强度" = "strength";
+
+"美颜" = "beauty";
+"磨皮1" = "skinning1";
+"磨皮2" = "skinning2";
+"磨皮3" = "skinning3";
+"磨皮4" = "skinning4";
+"美白A" = "whitening A";
+"美白B" = "whitening B";
+"去油光" = "matte";
+"红润" = "reddening";
+"校色" = "color correction";
+"锐度" = "sharpness";
+
+"美型" = "beautyShape";
+"窄脸" = "face Width";
+"小脸" = "face Length";
+"瘦脸" = "face Size";
+"额头" = "forehead Height";
+"下巴" = "chin Length";
+"大眼" = "eye Size";
+"眼角" = "corner Stretch";
+"瘦鼻" = "nose Width";
+"长鼻" = "nose Length";
+"嘴型" = "mouth Size";
+"嘴角" = "corner Lift";
+
+"微整形" = "microshaping";
+"缩头" = "retraction";
+"颧骨" = "malar Width";
+"下颌" = "jaw Width";
+"太阳穴" = "temple";
+"法令纹" = "nasolabial Folds";
+"黑眼圈" = "dark Circles";
+"亮眼" = "brighten Eyes";
+"美牙" = "whiten Teeth";
+"眼距" = "eye Distance";
+"眼角度" = "eye Angle";
+"人中" = "philtrum Length";
+"宽鼻梁" = "nose Bridge Width";
+"鼻头" = "nose Head Width";
+"眉毛粗细" = "eyebrow Thickness";
+"眉毛角度" = "eyebrow Angle";
+"眉毛上下" = "eyebrow Y Offset";
+"眉毛左右" = "eyebrow X Offset";
+"眼睛高度" = "eye Height";
+"眼睛弧度" = "eye Arc";
+"眼睛宽度" = "eye Width";
+"眼睛上下" = "eye Y Offset";

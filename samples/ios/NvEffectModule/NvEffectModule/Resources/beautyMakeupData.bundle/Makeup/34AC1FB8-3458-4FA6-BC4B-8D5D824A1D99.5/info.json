@@ -1,0 +1,127 @@
+
+  {
+    "name": "plain boiled water",
+    "uuid": "34AC1FB8-3458-4FA6-BC4B-8D5D824A1D99",
+    "version": 5,
+    "cover": "cover.png",
+    "minSdkVersion": "3.4.0",
+    "supportedAspectRatio": "9v16",
+    "translation": [
+      {
+        "originalText": "plain boiled water",
+        "targetLanguage": "zh_CN",
+        "targetText": "白开水妆"
+      }
+    ],
+    "effectContent": {
+      "makeupArgs": [
+        {
+          "type": "Blusher",
+          "canReplace": 1,
+          "className": "Makeup Blusher Package Id",
+          "uuid": "0432B106-538D-4D5F-9B2F-17351A943480",
+          "value": 0.6
+        },
+        {
+          "type": "Shadow",
+          "canReplace": 1,
+          "className": "Makeup Shadow Package Id",
+          "uuid": "051E2134-DE64-4888-BC3A-DDF9BE3D4D2E",
+          "value": 0.1
+        },
+        {
+          "type": "Eyebrow",
+          "canReplace": 1,
+          "className": "Makeup Eyebrow Package Id",
+          "uuid": "56A052EA-CC4C-4232-A4DB-E5F9E0D8A475",
+          "value": 0.8
+        },
+        {
+          "type": "Eyelash",
+          "canReplace": 1,
+          "className": "Makeup Eyelash Package Id",
+          "uuid": "3643C8CD-C019-4D04-A9EC-9B1A3FA5AA08",
+          "value": 1
+        },
+        {
+          "type": "Eyeshadow",
+          "canReplace": 1,
+          "className": "Makeup Eyeshadow Package Id",
+          "uuid": "19816E68-99E1-4A5D-9A11-68F217F63C9C",
+          "value": 0.4
+        },
+        {
+          "type": "Eyeliner",
+          "canReplace": 1,
+          "className": "Makeup Eyeliner Package Id",
+          "uuid": "DC8F4BEB-FC76-4A5A-9298-EC9AAB3F36F7",
+          "value": 0.8
+        },
+        {
+          "type": "Lip",
+          "canReplace": 1,
+          "className": "Makeup Lip Package Id",
+          "uuid": "80AE1B76-0409-49FD-BE13-646AF324E719",
+          "value": 0.8
+        }
+      ],
+      "beauty": [
+        {
+          "Advanced Beauty Enable": 1,
+          "Advanced Beauty Type":1,
+          "canReplace": 1,
+          "value": 1
+        },
+        {
+          "className": "Beauty Whitening", 
+          "Whitening Lut Enabled": 1,
+          "canReplace": 1,
+          "value": 1
+        },
+        {
+          "className": "Beauty Reddening",
+          "canReplace": 1,
+          "value": 0.2
+        },
+        {
+          "className": "Default Beauty Enabled",
+          "canReplace": 1,
+          "value": 0.5 
+        },
+        {
+          "className": "Default Sharpen Enabled",
+          "canReplace": 1,
+          "value": 0                         
+        }
+      ],
+      "shape": [
+          {
+            "uuid": "AAD90D4A-F387-4E9E-B9C5-DA255398CA7E",
+            "type":"Eye Size",
+            "className": "Face Mesh Eye Size Custom Package Id",
+            "degreeName":"Face Mesh Eye Size Degree",
+            "canReplace": 1,
+            "value": 0.4
+          },
+          {
+            "uuid": "383BF935-C597-4F6E-80E7-6B47AAF7A04F",
+            "type":"Face Size",
+            "className": "Face Mesh Face Size Custom Package Id",
+            "degreeName":"Face Mesh Face Size Degree",
+            "canReplace": 1,
+            "value": 0.8
+          }
+      ],
+      "filter":[
+        {
+          "isBuiltIn": 0,
+          "canReplace": 1,
+          "uuid": "C9CE10F1-7C77-423C-BB7F-7F090C33D5C5",
+          "value": 0.3
+        }
+      ]
+    }
+  }
+
+
+

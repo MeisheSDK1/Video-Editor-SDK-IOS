@@ -1,0 +1,28 @@
+/* 
+  NvShortVideo.strings
+  NvShortVideo
+
+  Created by chengww on 2021/11/2.
+  
+*/
+"photo" = "拍摄";
+"shoot" = "视频";
+"Caption" = "字幕";
+"capture.beauty" = "美颜";
+"Filter" = "滤镜";
+"More" = "更多";
+"zoom" = "焦距";
+"exposure" = "曝光";
+"flash" = "闪光灯";
+"Props" = "道具";
+"Stickers" = "贴纸";
+"CompoundCaption" = "复合字幕";
+"Transition" = "转场";
+"Makeup" = "美妆";
+"Picture zoom" = "画面变焦";
+"Exposure compensation" = "曝光补偿";
+"cancel" = "取消";
+"choose" = "选择";
+"CaptionText" = "请输入字幕";
+"Sure" = "确认";
+

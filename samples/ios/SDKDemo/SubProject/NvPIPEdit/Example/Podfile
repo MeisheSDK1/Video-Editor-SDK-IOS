@@ -1,0 +1,17 @@
+use_frameworks!
+use_modular_headers!
+inhibit_all_warnings!
+
+platform :ios, '8.0'
+
+target 'NvPIPEdit_Example' do
+  
+  pod 'NvPIPEdit', :path => '../'
+  pod 'NvBaseCommon', :path => '../../../SubProject/NvBaseCommon/'
+  pod 'NvAlbum', :path => '../../../SubProject/NvAlbum/'
+
+  pod 'Masonry',       :git => 'https://gitee.com/mirrors/ios-masonry.git',:tag => 'v1.1.0'
+  pod 'MBProgressHUD', :git => 'https://gitee.com/mirrors/MBProgressHUD.git',:tag => '1.1.0'
+  pod 'AFNetworking',  :git => 'https://gitee.com/mirrors/AFNetworking.git',:tag => '3.2.1'
+  
+end

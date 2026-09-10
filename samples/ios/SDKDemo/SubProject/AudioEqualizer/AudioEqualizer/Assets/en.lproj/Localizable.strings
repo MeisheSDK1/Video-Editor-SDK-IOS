@@ -1,0 +1,32 @@
+/*
+ Localizable.strings
+  Pods
+
+  Created by rongwf on 2021/7/14.
+  
+*/
+
+"Audio equalizer" = "Audio Equalizer";
+"volume" = "Volume";
+"frequency band" = "Frequency Band";
+"Low frequency band" = "Low Frequency Band";
+"Intermediate frequency band" = "Intermediate Frequency Band";
+"Medium and high frequency band" = "Medium and High Frequency Band";
+"High frequency band" = "High Frequency Band";
+"Compile" = "Compile";
+"Tips" = "Tips";
+"Select up to 2 materials" = "Select up to 2 materials";
+"Know" = "Got It";
+"Popular" = "Popular";
+"Dance music" = "Dance Music";
+"Blues" = "Blues";
+"Classical" = "Classical";
+"Jazz" = "Jazz";
+"Slow song" = "Slow Song";
+"Electronic music" = "Electronic Music";
+"Rock" = "Rock";
+"Rural" = "Rural";
+"voice" = "Voice";
+"Custom" = "Custom";
+"30 segment equalizer" = "30 Segment Equalizer";
+"Equalizer preset" = "Equalizer Preset";

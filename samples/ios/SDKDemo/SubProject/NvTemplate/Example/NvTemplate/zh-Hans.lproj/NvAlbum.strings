@@ -1,0 +1,31 @@
+/* 
+  NvAlbum.strings
+  NvTemplateModule
+
+  Created by chengww on 2021/2/1.
+  
+*/
+"album.selectContent" = "选择内容";
+"album.selectImage" = "选择图片";
+"album.selectVideo" = "选择视频";
+"album.select" = "已选择";
+"album.selectNum" = "已选%ld项";
+"album.all" = "全部";
+"album.video" = "视频";
+"album.image" = "图片";
+"album.startmake" = "开始制作";
+"album.ratio" = "选择制作比例";
+"album.today" = "今天";
+"album.selectall" = "全选";
+"album.deselectall" = "反全选";
+"album.Tips" = "提示";
+"album.TipPermission" = "需要打开相册权限 请在手机设置中进行允许";
+"album.Know" = "知道了";
+"album.assetFromiCloud" = "资源在iCloud";
+"album.download" = "是否要开始下载";
+"album.ok" = "确定";
+"album.cancel" = "取消";
+"album.finish" = "下载成功";
+"album.faild" = "下载失败";
+"album.loadingIndex" = "正在下载";
+"album.selectAssets" = "素材选择";

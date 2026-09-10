@@ -1,0 +1,56 @@
+/* 
+  NvTemplate.strings
+  NvTemplateModule
+
+  Created by chengww on 2021/2/1.
+  
+*/
+//-----------剪同款-------------//
+"Template" = "Meishe Template";
+"Default" = "Default";
+"To use" = "To Use";
+"Template Downloading" = "Template Downloading";
+"Material installing" = "Material Installing";
+"Material installation failed" = "Material installation failed";
+"Upend error" = "Upend Error";
+"Please check your network" = "Please check your network";
+"Select Aspect Ratio"="Select Aspect Ratio";
+"No template data display"="No template data display";
+"Replace" = "Replace";
+"Cropp" = "Crop";
+"Volume" = "Volume";
+"Complete" = "Complete";
+"Edit" = "Edit";
+"Compile" = "Compile";
+"VideoEdit"="Video Edit";
+"TextEdit"="Text Edit";
+"Click Edit"="Click Edit";
+"Cancel"="Cancel";
+"Compile Success"="Compile Success";
+"File size is approximately"="File size is approximately";
+"Compile failed"="Compile Failed";
+"Saved to album"="Saved to Album";
+"Select Resolution"="Select Resolution";
+"Confirm Compile"="Confirm Compile";
+"Confirm"="Confirm";
+"Please do not lock the screen or switch to other apps"="Please do not lock the screen or switch to other apps";
+"Unlimited"="Unlimited";
+"Only Image"="Only Image";
+"Only Video"="Only Video";
+"Next"="Next";
+"Support only image export"="Support only image export";
+"VideoClip duration lower"="Video Clip duration lower";
+"Support only video export"="Support only video export";
+"Application failed"="Application Failed";
+"Standard formwork" = "Standard";
+"Adaptation duration" = "Adaptation Duration";
+"AE Conversion Template" = "AE Conversion Template";
+"Enter the keyword search template" = "Enter the keyword search template";
+"Please enter the search content" = "Please enter the search content";
+"Usage amount" = "Usage Amount";
+"Duration" = "Duration";
+"Clip" = "Clip";
+"Duration: Auto Usage amount：" = "Duration: Auto Usage Amount：";
+"Clip： unlimited" = "Clip：Unlimited";
+"Clip Duration" = "Clip Duration";
+"Created by Meishe" = "Created by Meishe";

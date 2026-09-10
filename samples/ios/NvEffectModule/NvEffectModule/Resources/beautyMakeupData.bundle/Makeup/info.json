@@ -1,0 +1,59 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "labelColorStr":"#DBD8DAFF",
+        "bgColorStr":"#A9A9A9FF",
+        "hasBgColor":1,
+        "packagePath":"",
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"玫瑰妆",
+        "displayName":"Rose makeup",
+        "labelColorStr":"#CFC1FFFF",
+        "hasBgColor":1,
+        "packagePath":"Makeup/1F8EFE07-7967-413A-BEB7-A1FF4CAB9172.6",
+        "coverImage":"Makeup/1F8EFE07-7967-413A-BEB7-A1FF4CAB9172.png"
+    },
+    {
+        "displayNameZhCn":"日杂素颜",
+        "displayName":"magazine",
+        "labelColorStr":"#CFC1FFFF",
+        "hasBgColor":1,
+        "packagePath":"Makeup/8B11185D-478E-4324-80C2-C8DC9034C115.3",
+        "coverImage":"Makeup/8B11185D-478E-4324-80C2-C8DC9034C115.png"
+    },
+    {
+        "displayNameZhCn":"白开水妆",
+        "displayName":"Plain Boiled Water",
+        "labelColorStr":"#CFC1FFFF",
+        "hasBgColor":1,
+        "packagePath":"Makeup/34AC1FB8-3458-4FA6-BC4B-8D5D824A1D99.5",
+        "coverImage":"Makeup/34AC1FB8-3458-4FA6-BC4B-8D5D824A1D99.png"
+    },
+    {
+        "displayNameZhCn":"微醺豆沙",
+        "displayName":"Bean Paste",
+        "labelColorStr":"#CFC1FFFF",
+        "hasBgColor":1,
+        "packagePath":"Makeup/65CF937C-0047-4975-80F2-EC738A701741.9",
+        "coverImage":"Makeup/65CF937C-0047-4975-80F2-EC738A701741.png"
+    },
+    {
+        "displayNameZhCn":"蜜桃",
+        "displayName":"Peach",
+        "labelColorStr":"#CFC1FFFF",
+        "hasBgColor":1,
+        "packagePath":"Makeup/A60B820B-1EC8-4EC6-93AC-B4B06F6B905E.5",
+        "coverImage":"Makeup/A60B820B-1EC8-4EC6-93AC-B4B06F6B905E.png"
+    },
+    {
+        "displayNameZhCn":"粉黛",
+        "displayName":"Pink Fairy",
+        "labelColorStr":"#CFC1FFFF",
+        "hasBgColor":1,
+        "packagePath":"Makeup/C251CA84-7213-4595-A14D-011D2ED361B3.4",
+        "coverImage":"Makeup/C251CA84-7213-4595-A14D-011D2ED361B3.png"
+    }
+]

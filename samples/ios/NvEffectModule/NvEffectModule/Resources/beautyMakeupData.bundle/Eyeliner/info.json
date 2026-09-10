@@ -1,0 +1,29 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"白开水眼线",
+        "displayName":"Water Eyeliner",
+        "packagePath":"Eyeliner/DC8F4BEB-FC76-4A5A-9298-EC9AAB3F36F7.5",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"微醺豆沙眼线",
+        "displayName":"Bean Paste Eyeliner",
+        "packagePath":"Eyeliner/BE1EC1A0-64F3-439A-80F4-C9FBBFDFDF30.4",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    }
+]

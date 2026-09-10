@@ -1,0 +1,29 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"白开水阴影",
+        "displayName":"Water Shadow",
+        "packagePath":"Shadow/051E2134-DE64-4888-BC3A-DDF9BE3D4D2E.5",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"微醺豆沙阴影",
+        "displayName":"Bean Paste Shadow",
+        "packagePath":"Shadow/17CE032E-3954-4722-94DD-799C9C8794A8.3",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    }
+]

@@ -1,0 +1,35 @@
+/* 
+  NvAlbum.strings
+  NvAlbum
+
+  Created by 刘东旭 on 2018/12/10.
+  Copyright © 2018年 刘东旭. All rights reserved.
+*/
+"album.selectContent" = "Select Assets";
+"album.selectImage" = "Select Image";
+"album.selectVideo" = "Select Video";
+"album.live" = "LivePhoto";
+"album.select" = "Selected";
+"album.selectNum" = "%ld Assets";
+"album.all" = "All";
+"album.video" = "Video";
+"album.image" = "Image";
+"album.startmake" = "Start Making";
+"album.ratio" = "Choose Ratio";
+"album.today" = "Today";
+"album.selectall" = "Select";
+"album.deselectall" = "Deselect";
+"album.Tips" = "Tips";
+"album.TipPermission" = "Need to open album permission Please allow permission in phone settings";
+"album.Know" = "Know";
+"album.assetFromiCloud" = "Asset in iCloud";
+"album.download" = "Download?";
+"album.ok" = "OK";
+"album.cancel" = "Cancel";
+"album.finish" = "Finish";
+"album.faild" = "Failed";
+"album.loadingIndex" = "Downloading the";
+"album.selectAssets" = "Select Assets";
+"album.cancelBackground" = "Cancel Background";
+"album.cancelselect" = "The selected video parameters are inconsistent and cannot be spliced quickly";
+"album.nextStep" = "Next";

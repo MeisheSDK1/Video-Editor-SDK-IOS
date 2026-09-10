@@ -1,0 +1,29 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"微醺豆沙提亮",
+        "displayName":"Bean Paste Brighten",
+        "packagePath":"Brighten/03CF45E5-3CB8-4E2A-9D5A-713AF511165D.3",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"蜜桃提亮",
+        "displayName":"Peach Brighten",
+        "packagePath":"Brighten/45B72658-AE83-4C50-B059-BA34BF99A3CE.2",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    }
+]

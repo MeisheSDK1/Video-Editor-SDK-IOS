@@ -1,0 +1,134 @@
+
+{
+"name": "Rose makeup",
+"uuid": "1F8EFE07-7967-413A-BEB7-A1FF4CAB9172",
+"version": 6,
+"cover": "cover.png",
+"minSdkVersion": "3.4.0",
+"supportedAspectRatio": "9v16",
+"translation": [
+  {
+	"originalText": "Rose makeup",
+	"targetLanguage": "zh_CN",
+	"targetText": "玫瑰妆"
+  }
+],
+"effectContent": {
+  "makeupArgs": [
+	{
+	  "type": "Blusher",
+	  "canReplace": 1,
+	  "className": "Makeup Blusher Package Id",
+	  "uuid": "D5EECFB9-51A6-4233-A51A-DF37C73CE20D",
+	  "value": 0.8
+	},
+	{
+	  "type": "Brighten",
+	  "canReplace": 1,
+	  "className": "Makeup Brighten Package Id",
+	  "uuid": "8DC606A4-2C36-4620-A181-20053D88FEE3",
+	  "value": 0.7
+	},
+	{
+	  "type": "Eyebrow",
+	  "canReplace": 1,
+	  "className": "Makeup Eyebrow Package Id",
+	  "uuid": "034740A6-BE61-442C-81D2-BBB41BFFF178",
+	  "value": 0.6
+	},
+	{
+	  "type": "Eyeshadow",
+	  "canReplace": 1,
+	  "className": "Makeup Eyeshadow Package Id",
+	  "uuid": "D745D138-B658-4D4C-89CA-53F4A07C98EB",
+	  "value": 0.8
+	},
+	{
+	  "type": "Eyelash",
+	  "canReplace": 1,
+	  "className": "Makeup Eyelash Package Id",
+	  "uuid": "FE3928F6-B8B3-4357-A2F0-86A9112FE9E3",
+	  "value": 1
+	},
+	{
+	  "type": "Eyeliner",
+	  "canReplace": 1,
+	  "className": "Makeup Eyeliner Package Id",
+	  "uuid": "087D0D26-C695-45F5-9225-096F8AEF0E79",
+	  "value": 0.6
+	},
+	{
+	  "type": "Shadow",
+	  "canReplace": 1,
+	  "className": "Makeup Shadow Package Id",
+	  "uuid": "778B9863-48D9-40FD-AEBA-7C5DDB171AB1",
+	  "value": 0.8
+	},
+
+	{
+	  "type": "Lip",
+	  "canReplace": 1,
+	  "className": "Makeup Lip Package Id",
+	  "uuid": "30176895-6CF1-42B8-B78C-70062CBED0AF",
+	  "value": 0.6
+	}
+  ],
+  "beauty": [
+	{
+	  "Advanced Beauty Enable": 1,
+	  "Advanced Beauty Type":0,
+	  "canReplace": 1,
+	  "value": 0.8
+	},
+	{
+	  "className": "Beauty Whitening", 
+	  "Whitening Lut Enabled": 1,
+	  "canReplace": 1,
+	  "value": 0.4
+	},
+	{
+	  "className": "Beauty Reddening",
+	  "canReplace": 1,
+	  "value": 0.2
+	},
+	{
+	  "className": "Default Beauty Enabled",
+	  "canReplace": 1,
+	  "value": 0.5 
+	},
+	{
+	  "className": "Default Sharpen Enabled",
+	  "canReplace": 1,
+	  "value": 0                         
+	}
+  ],
+  "shape": [
+	  {
+          "type":"Eye Size",
+		  "uuid": "24617671-0458-4C9F-89A1-AE8E2D87C1B8",
+		  "className": "Face Mesh Eye Size Custom Package Id",
+          "degreeName":"Face Mesh Eye Size Degree",
+		  "canReplace": 1,
+		  "value": 1
+	  },
+	  {
+          "type":"Face Size",
+		  "uuid": "40E19727-C166-4F85-9E34-7D6D0F4821F4",
+		  "className": "Face Mesh Face Size Custom Package Id",
+          "degreeName":"Face Mesh Face Size Degree",
+		  "canReplace": 1,
+		  "value": 1
+	  }
+  ],
+  "filter":[
+	{
+	  "isBuiltIn": 0,
+	  "canReplace": 1,
+	  "uuid": "37533B00-706C-4BEF-8013-9591729A4EFF",
+	  "value": 0.5
+	}
+  ]
+}
+}
+
+

@@ -1,0 +1,19 @@
+[
+    {
+        "displayNameZhCn":"原图",
+        "displayName":"原图",
+        "labelColorStr":"#DBD8DAFF",
+        "bgColorStr":"#A9A9A9FF",
+        "hasBgColor":1,
+        "packagePath":"",
+        "coverImage":"nv_makeup_none"
+    },
+    {
+        "displayNameZhCn":"雪媚娘",
+        "displayName":"雪媚娘",
+        "labelColorStr":"#CFC1FFFF",
+        "hasBgColor":1,
+        "packagePath":"Makeup/8716DEB0-21EA-4249-8FD7-FA3817F48FD1.1",
+        "coverImage":"Makeup/8716DEB0-21EA-4249-8FD7-FA3817F48FD1.png"
+    }
+]

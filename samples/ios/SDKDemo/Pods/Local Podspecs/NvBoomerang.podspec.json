@@ -1,0 +1,66 @@
+{
+  "name": "NvBoomerang",
+  "version": "0.1.0",
+  "summary": "A short description of NvBoomerang.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chuyang009@163.com/NvBoomerang",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chuyang009@163.com": "liudongxu@meishesdk.com"
+  },
+  "source": {
+    "git": "https://github.com/chuyang009@163.com/NvBoomerang.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "NvBoomerang/Classes/**/*",
+  "resources": "NvBoomerang/Assets/*",
+  "public_header_files": "Pod/Classes/**/*.h",
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  },
+  "libraries": [
+    "c++",
+    "z",
+    "NvBoomerangLib"
+  ],
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios",
+      "$(SRCROOT)/../../../../../../../lib/ios",
+      "$(SRCROOT)/../../../../lib/ios"
+    ],
+    "HEADER_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../lib/ios/NvStreamingSdkCore.framework/Headers",
+      "$(SRCROOT)/../../../../../../extrasdk/sdk/ios/NvBoomerangLib/include",
+      "$(SRCROOT)/../../../../../../../extrasdk/sdk/ios/NvBoomerangLib/include",
+      "$(SRCROOT)/../../../../extrasdk/sdk/ios/NvBoomerangLib/include"
+    ],
+    "LIBRARY_SEARCH_PATHS": [
+      "$(SRCROOT)/../../../../../../extrasdk/sdk/ios",
+      "$(SRCROOT)/../../../../extrasdk/sdk/ios",
+      "$(SRCROOT)/../../../../../../../extrasdk/sdk/ios"
+    ]
+  },
+  "dependencies": {
+    "NvBaseCommon": [
+
+    ],
+    "NvSDKCommon": [
+
+    ],
+    "Masonry": [
+      "1.1.0"
+    ],
+    "AFNetworking": [
+
+    ]
+  }
+}

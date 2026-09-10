@@ -1,0 +1,69 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+use_frameworks!
+#use_modular_headers!
+inhibit_all_warnings!
+
+target 'SDKDemo' do
+  # Pods for SDKDemo
+  #基础依赖
+  pod 'NvBaseCommon',     :path => 'SubProject/NvBaseCommon/'
+  pod 'NvSDKCommon',      :path => 'SubProject/NvSDKCommon/'
+  
+  #相册组件
+  pod 'NvAlbum',          :path => 'SubProject/NvAlbum/'
+  
+  #首页模块
+  pod 'NvTemplate',       :path => 'SubProject/NvTemplate/'
+  pod 'NvMimo',           :path => 'SubProject/NvMimo/'
+  pod 'NvFlashEffect',    :path => 'SubProject/NvFlashEffect/'
+  pod 'NvBoomerang',      :path => 'SubProject/NvBoomerang/'
+  pod 'AudioEqualizer',   :path => 'SubProject/AudioEqualizer/'
+  pod 'NvPackagingTemplate',  :path => 'SubProject/NvPackagingTemplate/'
+  pod 'Virtual',          :path => 'SubProject/Virtual/'
+  pod 'QuickSplicing',          :path => 'SubProject/QuickSplicing/'
+  
+  #pod 'Particles',  	 :path => 'SubProject/Particles/'
+
+#TODO: 制作中
+#  pod 'PIPEdit',    :path => 'SubProject/PIPEdit/'
+  
+  pod 'JXCategoryView', :git => 'https://gitee.com/liaoyp/JXCategoryView.git'
+  pod 'JXPagingView/Pager',:git => 'https://gitee.com/liaoyp/JXPagingView.git'
+  pod 'MBProgressHUD', :git => 'https://gitee.com/mirrors/MBProgressHUD.git',:tag => '1.1.0'
+  pod 'Masonry',       :git => 'https://gitee.com/mirrors/ios-masonry.git',:tag => 'v1.1.0'
+  pod 'YYModel',       :git => 'https://gitee.com/mirrors/YYModel.git',:tag => '1.0.4'
+  pod 'YYWebImage',    :git => 'https://gitee.com/mirrors/YYWebImage.git',:tag => '1.0.5'
+  pod 'YYImage/WebP',  :git => 'https://gitee.com/idol-group/YYImage.git',:tag => '1.0.4'
+  pod 'YYCache',       :git => 'https://gitee.com/idol-group/YYCache.git',:tag => '1.0.4'
+  pod 'SnapKit',       :git => 'https://gitee.com/mirrors/SnapKit.git',:tag => '4.2.0'
+#  pod 'MLeaksFinder',  :git => 'https://gitee.com/shk123/MLeaksFinder.git',:tag => '1.0.0',:configurations => ['Debug']
+#  pod 'FBRetainCycleDetector',:git => 'https://gitee.com/shk123/FBRetainCycleDetector.git',:tag => '0.1.4',:configurations => ['Debug']
+  pod 'SSZipArchive',  :git => 'https://github.com/ZipArchive/ZipArchive.git',:tag => '2.2.2'
+  pod 'MJRefresh',     :git => 'https://gitee.com/mirrors/MJRefresh.git',:tag => '3.5.0'
+  pod 'Reachability',  :git => 'https://gitee.com/mirrors/Reachability.git',:tag => 'v3.2'
+  pod 'AFNetworking', :git => 'https://gitee.com/mirrors/AFNetworking.git'  
+  pod 'IQKeyboardManager'
+
+  #添加测试工具（正式环境不要放开）
+  #pod 'FMDB', :git => 'https://gitee.com/chuyang009/fmdb.git'
+  #pod 'GCDWebServer', :git => 'https://gitee.com/mirrors/GCDWebServer.git'
+  #pod 'DoraemonKit/Core', :git => 'https://gitee.com/didiopensource/DoraemonKit.git'
+  #友盟的pod仓库好像在国内服务器
+  pod 'UMCommon'
+  pod 'UMDevice'
+  pod 'UMAPM'
+  
+  post_install do |installer|
+      installer.pods_project.targets.each do |target|
+          #puts target #debug vars
+          target.build_configurations.each do |config|
+              config.build_settings['ARCHS'] = 'arm64'
+              config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+          end
+      end
+  end
+  
+end
+
+

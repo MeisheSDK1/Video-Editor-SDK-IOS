@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1280">	
+	<track source=":1" clipStart="0" clipDuration="833">	
+		<effect name="transform">
+			<param name="anchorX" value="anchorXValue"/>
+			<param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+				<key time="466" value="1"/>
+				<key time="500" value="1.01"/>
+				<key time="533" value="1.02"/>
+				<key time="567" value="1.034"/>
+				<key time="600" value="1.055"/>
+				<key time="633" value="1.085"/>
+				<key time="667" value="1.125"/>
+				<key time="700" value="1.18"/>
+				<key time="733" value="1.26"/>
+				<key time="767" value="1.383"/>
+				<key time="800" value="1.67"/>
+				<key time="833" value="1.9"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="466" value="1"/>
+				<key time="500" value="1.01"/>
+				<key time="533" value="1.02"/>
+				<key time="567" value="1.034"/>
+				<key time="600" value="1.055"/>
+				<key time="633" value="1.085"/>
+				<key time="667" value="1.125"/>
+				<key time="700" value="1.18"/>
+				<key time="733" value="1.26"/>
+				<key time="767" value="1.383"/>
+				<key time="800" value="1.67"/>
+				<key time="833" value="1.9"/>
+			</animation>
+		</effect>
+	</track>
+	<track source=":1" clipStart="833" clipDuration="3247">
+		<effect name="lut">
+			<param name="dataFileName" value="jingsong.mslut"/>
+		</effect>
+		<effect name="horror"/>
+		<effect name="transform">
+			<param name="anchorX" value="anchorXValue"/>
+			<param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+				<key time="0" value="1.9"/>
+				<key time="3247" value="2.25"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="0" value="1.9"/>
+				<key time="3247" value="2.25"/>
+			</animation>
+		</effect>	
+	</track>
+	<track source="line.png" width="720" height="1520" clipStart="833" clipDuration="3247">
+		<effect name="transform">
+			<animation paramName="scaleX">
+				<key time="0" value="1"/>
+				<key time="3247" value="1.35"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="0" value="1"/>
+				<key time="3247" value="1.35"/>
+			</animation>
+		</effect>
+	</track>
+</storyboard>	

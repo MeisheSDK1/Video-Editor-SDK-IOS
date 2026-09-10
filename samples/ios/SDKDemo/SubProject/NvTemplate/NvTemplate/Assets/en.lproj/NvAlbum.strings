@@ -1,0 +1,36 @@
+/* 
+  NvAlbum.strings
+  NvTemplateModule
+
+  Created by chengww on 2021/2/1.
+  
+*/
+"album.selectContent" = "Select Assets";
+"album.selectImage" = "Select Image";
+"album.selectVideo" = "Select Video";
+"album.select" = "Selected";
+"album.selectNum" = "%ld Assets";
+"album.all" = "All";
+"album.video" = "Video";
+"album.image" = "Image";
+"album.startmake" = "Start Making";
+"album.ratio" = "Choose Making Ratio";
+"album.today" = "Today";
+"album.selectall" = "Select";
+"album.deselectall" = "Deselect";
+"album.Tips" = "Tips";
+"album.TipPermission" = "Need to open album permission. Please allow in phone settings";
+"album.Know" = "Know";
+"album.assetFromiCloud" = "Asset in iCloud";
+"album.download" = "Download?";
+"album.ok" = "OK";
+"album.cancel" = "Cancel";
+"album.finish" = "Finish";
+"album.faild" = "Failed";
+"album.loadingIndex" = "Downloading the";
+"album.selectAssets" = "Select Assets";
+"album.imported" = "Imported";
+"album.selectClip" = "Select";
+"album.clip" = "Clip";
+"album.pleaseSelect" = "Please select a video or picture to use";
+"album.suggestionClip" = "Mark fragments of the same color, it is recommended to fill in the same photo";

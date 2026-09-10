@@ -1,0 +1,6 @@
+framework module NvMimo {
+  umbrella header "NvMimo-umbrella.h"
+
+  export *
+  module * { export * }
+}

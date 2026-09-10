@@ -1,0 +1,30 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"日杂口红",
+        "displayName":"Magazine Lip",
+        "packagePath":"lip/7A3ED201-3DBB-427A-AA08-00B6D6B14E05.1",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"白开水口红",
+        "displayName":"Water Lip",
+        "packagePath":"lip/80AE1B76-0409-49FD-BE13-646AF324E719.6",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    }
+]
+ 

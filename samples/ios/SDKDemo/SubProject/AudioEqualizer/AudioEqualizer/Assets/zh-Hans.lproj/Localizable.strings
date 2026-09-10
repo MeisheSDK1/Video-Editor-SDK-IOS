@@ -1,0 +1,32 @@
+/* 
+ Localizable.strings
+  Pods
+
+  Created by rongwf on 2021/7/14.
+  
+*/
+
+"Audio equalizer" = "音频均衡器";
+"volume" = "音量";
+"frequency band" = "频段";
+"Low frequency band" = "低频段";
+"Intermediate frequency band" = "中频段";
+"Medium and high frequency band" = "中高频段";
+"High frequency band" = "高频段";
+"Compile" = "生成";
+"Tips" = "提示";
+"Select up to 2 materials" = "最多选2个素材";
+"Know" = "知道了";
+"Popular" = "流行";
+"Dance music" = "舞曲";
+"Blues" = "蓝调";
+"Classical" = "古典";
+"Jazz" = "爵士";
+"Slow song" = "慢歌";
+"Electronic music" = "电子乐";
+"Rock" = "摇滚";
+"Rural" = "乡村";
+"voice" = "人声";
+"Custom" = "自定义";
+"30 segment equalizer" = "30段均衡器";
+"Equalizer preset" = "均衡器预设";

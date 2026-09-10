@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  NveEffectKitDemo
+
+  Created by meishe on 2023/5/9.
+  
+*/
+
+"shoot" = "录制";
+"photo" = "拍摄";
+"flash" = "补光";
+"zoom" = "变焦";
+"exposure" = "曝光";
+"zoom_1" = "画面变焦";
+"exposure_1" = "曝光补偿";
+
+"Props" = "道具";
+
+"capture.beauty" = "美颜";
+"Filter" = "滤镜";
+"Makeup" = "美妆";
+"Know" = "知道了";
+"Tips" = "提示";
+"camera.microphone.permissions" = "需要打开摄像头和麦克风权限 请在手机设置中进行允许";

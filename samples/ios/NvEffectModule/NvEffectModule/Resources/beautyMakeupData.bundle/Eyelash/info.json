@@ -1,0 +1,29 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"日杂睫毛",
+        "displayName":"magazine",
+        "packagePath":"Eyelash/B0ADA7E3-1056-4C2D-97C6-8B43ECA1BE48.1",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"白开水睫毛",
+        "displayName":"Water Eyelash",
+        "packagePath":"Eyelash/3643C8CD-C019-4D04-A9EC-9B1A3FA5AA08.9",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    }
+]

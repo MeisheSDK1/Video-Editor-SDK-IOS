@@ -1,0 +1,26 @@
+${PODS_ROOT}/Target Support Files/Pods-SDKDemo/Pods-SDKDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/AudioEqualizer/AudioEqualizer.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
+${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework
+${BUILT_PRODUCTS_DIR}/JXPagingView/JXPagingView.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/NvAlbum/NvAlbum.framework
+${BUILT_PRODUCTS_DIR}/NvBaseCommon/NvBaseCommon.framework
+${BUILT_PRODUCTS_DIR}/NvBoomerang/NvBoomerang.framework
+${BUILT_PRODUCTS_DIR}/NvFlashEffect/NvFlashEffect.framework
+${BUILT_PRODUCTS_DIR}/NvMimo/NvMimo.framework
+${BUILT_PRODUCTS_DIR}/NvPackagingTemplate/NvPackagingTemplate.framework
+${BUILT_PRODUCTS_DIR}/NvSDKCommon/NvSDKCommon.framework
+${BUILT_PRODUCTS_DIR}/NvTemplate/NvTemplate.framework
+${BUILT_PRODUCTS_DIR}/QuickSplicing/QuickSplicing.framework
+${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework
+${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/Virtual/Virtual.framework
+${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework
+${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework
+${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework
+${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework

@@ -1,0 +1,29 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"白开水腮红",
+        "displayName":"Water Blusher",
+        "packagePath":"Blusher/0432B106-538D-4D5F-9B2F-17351A943480.5",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"微醺豆沙腮红",
+        "displayName":"Bean Paste Blusher",
+        "packagePath":"Blusher/F75D58F0-51BE-4C8A-A27B-DB17CC5053AA.3",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    }
+]

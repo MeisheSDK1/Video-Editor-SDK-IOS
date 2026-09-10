@@ -1,0 +1,24 @@
+/* 
+  Localizable.string.strings
+  NvMimoDemo
+
+  Created by MS on 2019/9/10.
+  Copyright © 2019 MS. All rights reserved.
+*/
+"Crop" = "裁剪";
+"Replace this part" = "替换此段";
+"CompoundCaption" = "组合字幕";
+"Compile" = "生成";
+"Generated" = "生成中...";
+"Generated complete" = "已完成\n请在相册中查看";
+"compile fiald" = "生成失败";
+"storage" = "请检查手机存储空间";
+"Know" = "知道了";
+"Start making" = "开始制作";
+"Open the ending watermark" = "开启结尾水印";
+"Downloading" = "模板正在下载";
+"CheckNetwork" = "请检查网络是否连接";
+"Failed to load" = "加载失败！";
+"Confirm" = "使用";
+"Next" = "下一步";
+"Lack of material" = "缺少素材, 请添加素材到可用槽位";

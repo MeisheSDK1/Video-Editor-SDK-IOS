@@ -1,0 +1,19 @@
+//
+//  EffectSdkDemo-Prefix.pch
+//  EffectSdkDemo
+//
+//  Created by 美摄 on 2019/12/12.
+//  Copyright © 2019 美摄. All rights reserved.
+//
+
+#ifndef EffectSdkDemo_Prefix_pch
+#define EffectSdkDemo_Prefix_pch
+
+#import "NvUtils.h"
+
+//#define USE_EFFECT_SDK
+
+//#define UseARScene_ST
+
+
+#endif /* EffectSdkDemo_Prefix_pch */

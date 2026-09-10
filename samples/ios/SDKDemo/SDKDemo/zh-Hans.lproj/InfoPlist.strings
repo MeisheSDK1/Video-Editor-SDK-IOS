@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  SDKDemo
+
+  Created by 刘东旭 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+CFBundleDisplayName = "美摄";
+NSMicrophoneUsageDescription = "若不允许，您将无法在美摄中拍摄带有声音的视频，或者录音，也无法给制作的视频添加配音";
+NSCameraUsageDescription = "若不允许，您将无法在美摄中拍摄视频或照片";
+NSPhotoLibraryUsageDescription = "若不允许，您将无法存储美摄拍摄或制作的视频，也无法导入自己的照片或视频到美摄";
+NSPhotoLibraryAddUsageDescription = "若不允许，您将无法存储美摄拍摄或制作的视频，也无法导入自己的照片或视频到美摄";
+NSAppleMusicUsageDescription = "若不允许，您将无法在美摄中导入自己的音乐，作为制作视频的背景音乐";

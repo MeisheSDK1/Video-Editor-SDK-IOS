@@ -1,0 +1,862 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C252D4F2DDF14C90036D15B /* NvTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C252D4E2DDF14C90036D15B /* NvTipsView.m */; };
+		586D73A32DE0257D001677EB /* PullResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 586D73A12DE0257D001677EB /* PullResources.m */; };
+		586D73A42DE0257D001677EB /* PullResources.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 586D73A02DE0257D001677EB /* PullResources.h */; };
+		74FEFC4303D9CC803709DCC6 /* Pods_NveEffectKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549C06E35520C45DC2466D9C /* Pods_NveEffectKitDemo.framework */; };
+		DD13F5AE2A5E7EE300A7E9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD13F5AD2A5E7EE300A7E9D5 /* Assets.xcassets */; };
+		DD13F5B22A5E7FE500A7E9D5 /* meishesdk.lic in Resources */ = {isa = PBXBuildFile; fileRef = DD13F5B12A5E7FE500A7E9D5 /* meishesdk.lic */; };
+		DD4308262A29CECD00710414 /* NveEffectKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4308252A29CECD00710414 /* NveEffectKit.framework */; };
+		DD4308272A29CECD00710414 /* NveEffectKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD4308252A29CECD00710414 /* NveEffectKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DDAF05AF2A24C4B500DA0738 /* NvCapturePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF047C2A24C4B400DA0738 /* NvCapturePopupView.m */; };
+		DDAF05B02A24C4B500DA0738 /* EFContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF047F2A24C4B400DA0738 /* EFContentView.m */; };
+		DDAF05B12A24C4B500DA0738 /* NvPsTitleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04812A24C4B400DA0738 /* NvPsTitleCollectionViewCell.m */; };
+		DDAF05B22A24C4B500DA0738 /* NvCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04832A24C4B400DA0738 /* NvCaptureViewController.m */; };
+		DDAF05B52A24C4B500DA0738 /* EFCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF048C2A24C4B400DA0738 /* EFCapture.m */; };
+		DDAF05B62A24C4B500DA0738 /* EFFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF048F2A24C4B400DA0738 /* EFFileWriter.m */; };
+		DDAF05B72A24C4B500DA0738 /* EFBufferDisplayView+NveEffectKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04962A24C4B400DA0738 /* EFBufferDisplayView+NveEffectKit.m */; };
+		DDAF05B82A24C4B500DA0738 /* EFPreview+NveEffectKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04972A24C4B400DA0738 /* EFPreview+NveEffectKit.m */; };
+		DDAF05B92A24C4B500DA0738 /* EFBufferDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF049A2A24C4B400DA0738 /* EFBufferDisplayView.m */; };
+		DDAF05BA2A24C4B500DA0738 /* NvDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF049B2A24C4B400DA0738 /* NvDisplayView.m */; };
+		DDAF05BB2A24C4B500DA0738 /* EFBGRAProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF049D2A24C4B400DA0738 /* EFBGRAProgram.m */; };
+		DDAF05BC2A24C4B500DA0738 /* EFGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04A02A24C4B400DA0738 /* EFGLProgram.m */; };
+		DDAF05BD2A24C4B500DA0738 /* EFPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04A12A24C4B400DA0738 /* EFPreview.m */; };
+		DDAF05C02A24C4B500DA0738 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDAF04A72A24C4B400DA0738 /* Localizable.strings */; };
+		DDAF05C22A24C4B500DA0738 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04AD2A24C4B400DA0738 /* ViewController.m */; };
+		DDAF05C32A24C4B500DA0738 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04AE2A24C4B400DA0738 /* SceneDelegate.m */; };
+		DDAF05C42A24C4B500DA0738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAF04AF2A24C4B400DA0738 /* LaunchScreen.storyboard */; };
+		DDAF05C52A24C4B500DA0738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDAF04B12A24C4B400DA0738 /* Main.storyboard */; };
+		DDAF05C62A24C4B500DA0738 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04B32A24C4B400DA0738 /* main.m */; };
+		DDAF05C72A24C4B500DA0738 /* NvNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04B42A24C4B400DA0738 /* NvNavigationController.m */; };
+		DDAF05C82A24C4B500DA0738 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF04B52A24C4B400DA0738 /* AppDelegate.m */; };
+		DDAF06722A24C4B500DA0738 /* NveRenderInput+Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF05A82A24C4B500DA0738 /* NveRenderInput+Capture.m */; };
+		DDAF06732A24C4B500DA0738 /* NvGraphicBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF05A92A24C4B500DA0738 /* NvGraphicBtn.m */; };
+		DDB4F9532EEAA599005013E1 /* verify_meishesdk.lic in Resources */ = {isa = PBXBuildFile; fileRef = DDB4F9522EEAA599005013E1 /* verify_meishesdk.lic */; };
+		DDD887D02EB1FF5700C4D4C7 /* NvStreamingSdkCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD887CF2EB1FF5700C4D4C7 /* NvStreamingSdkCore.framework */; };
+		DDD887D12EB1FF5700C4D4C7 /* NvStreamingSdkCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDD887CF2EB1FF5700C4D4C7 /* NvStreamingSdkCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		586D738E2DE01F0E001677EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDAF04542A24C43F00DA0738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 586D73822DE01EFA001677EB;
+			remoteInfo = PullResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		586D73812DE01EFA001677EB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				586D73A42DE0257D001677EB /* PullResources.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAF06782A24C53E00DA0738 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DD4308272A29CECD00710414 /* NveEffectKit.framework in Embed Frameworks */,
+				DDD887D12EB1FF5700C4D4C7 /* NvStreamingSdkCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C252D4D2DDF14C90036D15B /* NvTipsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NvTipsView.h; sourceTree = "<group>"; };
+		3C252D4E2DDF14C90036D15B /* NvTipsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NvTipsView.m; sourceTree = "<group>"; };
+		549C06E35520C45DC2466D9C /* Pods_NveEffectKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NveEffectKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		586D73832DE01EFA001677EB /* libPullResources.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPullResources.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		586D73A02DE0257D001677EB /* PullResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullResources.h; sourceTree = "<group>"; };
+		586D73A12DE0257D001677EB /* PullResources.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullResources.m; sourceTree = "<group>"; };
+		8D51DCFF94BBB833CB663D3B /* Pods-NveEffectKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NveEffectKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-NveEffectKitDemo/Pods-NveEffectKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B311D4A37DEB0AC3ED2670AB /* Pods-NveEffectKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NveEffectKitDemo.release.xcconfig"; path = "Target Support Files/Pods-NveEffectKitDemo/Pods-NveEffectKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DD13F5AD2A5E7EE300A7E9D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD13F5B12A5E7FE500A7E9D5 /* meishesdk.lic */ = {isa = PBXFileReference; lastKnownFileType = file; name = meishesdk.lic; path = NveEffectKitDemo/meishesdk.lic; sourceTree = SOURCE_ROOT; };
+		DD4308252A29CECD00710414 /* NveEffectKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NveEffectKit.framework; path = ../../../lib/ios/NveEffectKit.framework; sourceTree = "<group>"; };
+		DD4D982A2A28346C00EDFD3D /* NvStreamingSdkCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NvStreamingSdkCore.framework; path = ../../../lib/ios/NvStreamingSdkCore.framework; sourceTree = "<group>"; };
+		DDAF045C2A24C43F00DA0738 /* NveEffectKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NveEffectKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDAF04702A24C44000DA0738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDAF047A2A24C4B400DA0738 /* EFContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFContentView.h; sourceTree = "<group>"; };
+		DDAF047C2A24C4B400DA0738 /* NvCapturePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvCapturePopupView.m; sourceTree = "<group>"; };
+		DDAF047D2A24C4B400DA0738 /* NvPsTitleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvPsTitleCollectionViewCell.h; sourceTree = "<group>"; };
+		DDAF047F2A24C4B400DA0738 /* EFContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFContentView.m; sourceTree = "<group>"; };
+		DDAF04802A24C4B400DA0738 /* NvCapturePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvCapturePopupView.h; sourceTree = "<group>"; };
+		DDAF04812A24C4B400DA0738 /* NvPsTitleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvPsTitleCollectionViewCell.m; sourceTree = "<group>"; };
+		DDAF04832A24C4B400DA0738 /* NvCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvCaptureViewController.m; sourceTree = "<group>"; };
+		DDAF04842A24C4B400DA0738 /* NvCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvCaptureViewController.h; sourceTree = "<group>"; };
+		DDAF048C2A24C4B400DA0738 /* EFCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCapture.m; sourceTree = "<group>"; };
+		DDAF048D2A24C4B400DA0738 /* EFCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCapture.h; sourceTree = "<group>"; };
+		DDAF048F2A24C4B400DA0738 /* EFFileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFFileWriter.m; sourceTree = "<group>"; };
+		DDAF04902A24C4B400DA0738 /* EFFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFFileWriter.h; sourceTree = "<group>"; };
+		DDAF04922A24C4B400DA0738 /* NvDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvDisplayView.h; sourceTree = "<group>"; };
+		DDAF04942A24C4B400DA0738 /* EFBufferDisplayView+NveEffectKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFBufferDisplayView+NveEffectKit.h"; sourceTree = "<group>"; };
+		DDAF04952A24C4B400DA0738 /* EFPreview+NveEffectKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFPreview+NveEffectKit.h"; sourceTree = "<group>"; };
+		DDAF04962A24C4B400DA0738 /* EFBufferDisplayView+NveEffectKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EFBufferDisplayView+NveEffectKit.m"; sourceTree = "<group>"; };
+		DDAF04972A24C4B400DA0738 /* EFPreview+NveEffectKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EFPreview+NveEffectKit.m"; sourceTree = "<group>"; };
+		DDAF04982A24C4B400DA0738 /* EFBufferDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFBufferDisplayView.h; sourceTree = "<group>"; };
+		DDAF04992A24C4B400DA0738 /* EFPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPreview.h; sourceTree = "<group>"; };
+		DDAF049A2A24C4B400DA0738 /* EFBufferDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFBufferDisplayView.m; sourceTree = "<group>"; };
+		DDAF049B2A24C4B400DA0738 /* NvDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvDisplayView.m; sourceTree = "<group>"; };
+		DDAF049D2A24C4B400DA0738 /* EFBGRAProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFBGRAProgram.m; sourceTree = "<group>"; };
+		DDAF049E2A24C4B400DA0738 /* EFGLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFGLProgram.h; sourceTree = "<group>"; };
+		DDAF049F2A24C4B400DA0738 /* EFBGRAProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFBGRAProgram.h; sourceTree = "<group>"; };
+		DDAF04A02A24C4B400DA0738 /* EFGLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFGLProgram.m; sourceTree = "<group>"; };
+		DDAF04A12A24C4B400DA0738 /* EFPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPreview.m; sourceTree = "<group>"; };
+		DDAF04A82A24C4B400DA0738 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DDAF04A92A24C4B400DA0738 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DDAF04AA2A24C4B400DA0738 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DDAF04AB2A24C4B400DA0738 /* NvNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvNavigationController.h; sourceTree = "<group>"; };
+		DDAF04AD2A24C4B400DA0738 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DDAF04AE2A24C4B400DA0738 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		DDAF04B02A24C4B400DA0738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DDAF04B22A24C4B400DA0738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDAF04B32A24C4B400DA0738 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDAF04B42A24C4B400DA0738 /* NvNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvNavigationController.m; sourceTree = "<group>"; };
+		DDAF04B52A24C4B400DA0738 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DDAF04B62A24C4B400DA0738 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DDAF04B72A24C4B400DA0738 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		DDAF05A82A24C4B500DA0738 /* NveRenderInput+Capture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NveRenderInput+Capture.m"; sourceTree = "<group>"; };
+		DDAF05A92A24C4B500DA0738 /* NvGraphicBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvGraphicBtn.m; sourceTree = "<group>"; };
+		DDAF05AB2A24C4B500DA0738 /* NveRenderInput+Capture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NveRenderInput+Capture.h"; sourceTree = "<group>"; };
+		DDAF05AC2A24C4B500DA0738 /* NvGraphicBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvGraphicBtn.h; sourceTree = "<group>"; };
+		DDAF06872A24C6F600DA0738 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		DDAF06882A24C6F800DA0738 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		DDB4F9522EEAA599005013E1 /* verify_meishesdk.lic */ = {isa = PBXFileReference; lastKnownFileType = file; path = verify_meishesdk.lic; sourceTree = "<group>"; };
+		DDD887CF2EB1FF5700C4D4C7 /* NvStreamingSdkCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NvStreamingSdkCore.framework; path = ../../../lib/ios/NvStreamingSdkCore.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		586D73802DE01EFA001677EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAF04592A24C43F00DA0738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4308262A29CECD00710414 /* NveEffectKit.framework in Frameworks */,
+				DDD887D02EB1FF5700C4D4C7 /* NvStreamingSdkCore.framework in Frameworks */,
+				74FEFC4303D9CC803709DCC6 /* Pods_NveEffectKitDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		557DF3F3C984565F7F3A894B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D51DCFF94BBB833CB663D3B /* Pods-NveEffectKitDemo.debug.xcconfig */,
+				B311D4A37DEB0AC3ED2670AB /* Pods-NveEffectKitDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		586D73A22DE0257D001677EB /* PullResources */ = {
+			isa = PBXGroup;
+			children = (
+				586D73A02DE0257D001677EB /* PullResources.h */,
+				586D73A12DE0257D001677EB /* PullResources.m */,
+			);
+			path = PullResources;
+			sourceTree = "<group>";
+		};
+		DDAF04532A24C43F00DA0738 = {
+			isa = PBXGroup;
+			children = (
+				DDAF045E2A24C43F00DA0738 /* NveEffectKitDemo */,
+				586D73A22DE0257D001677EB /* PullResources */,
+				DDAF045D2A24C43F00DA0738 /* Products */,
+				DDAF06742A24C53E00DA0738 /* Frameworks */,
+				557DF3F3C984565F7F3A894B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		DDAF045D2A24C43F00DA0738 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF045C2A24C43F00DA0738 /* NveEffectKitDemo.app */,
+				586D73832DE01EFA001677EB /* libPullResources.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDAF045E2A24C43F00DA0738 /* NveEffectKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DD13F5B12A5E7FE500A7E9D5 /* meishesdk.lic */,
+				DDB4F9522EEAA599005013E1 /* verify_meishesdk.lic */,
+				DDAF05A62A24C4B500DA0738 /* Category */,
+				DDAF04782A24C4B400DA0738 /* Capture */,
+				DDAF048A2A24C4B400DA0738 /* Helper */,
+				DDAF04A22A24C4B400DA0738 /* AppDelegate */,
+				DDAF04702A24C44000DA0738 /* Info.plist */,
+			);
+			path = NveEffectKitDemo;
+			sourceTree = "<group>";
+		};
+		DDAF04782A24C4B400DA0738 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF04792A24C4B400DA0738 /* View */,
+				DDAF04822A24C4B400DA0738 /* ViewController */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		DDAF04792A24C4B400DA0738 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C252D4D2DDF14C90036D15B /* NvTipsView.h */,
+				3C252D4E2DDF14C90036D15B /* NvTipsView.m */,
+				DDAF047A2A24C4B400DA0738 /* EFContentView.h */,
+				DDAF047F2A24C4B400DA0738 /* EFContentView.m */,
+				DDAF04802A24C4B400DA0738 /* NvCapturePopupView.h */,
+				DDAF047C2A24C4B400DA0738 /* NvCapturePopupView.m */,
+				DDAF047D2A24C4B400DA0738 /* NvPsTitleCollectionViewCell.h */,
+				DDAF04812A24C4B400DA0738 /* NvPsTitleCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDAF04822A24C4B400DA0738 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF04842A24C4B400DA0738 /* NvCaptureViewController.h */,
+				DDAF04832A24C4B400DA0738 /* NvCaptureViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DDAF048A2A24C4B400DA0738 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF048B2A24C4B400DA0738 /* CaptureDevice */,
+				DDAF048E2A24C4B400DA0738 /* Writer */,
+				DDAF04912A24C4B400DA0738 /* Preview */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DDAF048B2A24C4B400DA0738 /* CaptureDevice */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF048D2A24C4B400DA0738 /* EFCapture.h */,
+				DDAF048C2A24C4B400DA0738 /* EFCapture.m */,
+			);
+			path = CaptureDevice;
+			sourceTree = "<group>";
+		};
+		DDAF048E2A24C4B400DA0738 /* Writer */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF04902A24C4B400DA0738 /* EFFileWriter.h */,
+				DDAF048F2A24C4B400DA0738 /* EFFileWriter.m */,
+			);
+			path = Writer;
+			sourceTree = "<group>";
+		};
+		DDAF04912A24C4B400DA0738 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF049C2A24C4B400DA0738 /* Shader */,
+				DDAF04932A24C4B400DA0738 /* Category */,
+				DDAF04982A24C4B400DA0738 /* EFBufferDisplayView.h */,
+				DDAF049A2A24C4B400DA0738 /* EFBufferDisplayView.m */,
+				DDAF04992A24C4B400DA0738 /* EFPreview.h */,
+				DDAF04A12A24C4B400DA0738 /* EFPreview.m */,
+				DDAF04922A24C4B400DA0738 /* NvDisplayView.h */,
+				DDAF049B2A24C4B400DA0738 /* NvDisplayView.m */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		DDAF04932A24C4B400DA0738 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF04942A24C4B400DA0738 /* EFBufferDisplayView+NveEffectKit.h */,
+				DDAF04962A24C4B400DA0738 /* EFBufferDisplayView+NveEffectKit.m */,
+				DDAF04952A24C4B400DA0738 /* EFPreview+NveEffectKit.h */,
+				DDAF04972A24C4B400DA0738 /* EFPreview+NveEffectKit.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DDAF049C2A24C4B400DA0738 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF049D2A24C4B400DA0738 /* EFBGRAProgram.m */,
+				DDAF049E2A24C4B400DA0738 /* EFGLProgram.h */,
+				DDAF049F2A24C4B400DA0738 /* EFBGRAProgram.h */,
+				DDAF04A02A24C4B400DA0738 /* EFGLProgram.m */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		DDAF04A22A24C4B400DA0738 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF04AB2A24C4B400DA0738 /* NvNavigationController.h */,
+				DDAF04B42A24C4B400DA0738 /* NvNavigationController.m */,
+				DD13F5AD2A5E7EE300A7E9D5 /* Assets.xcassets */,
+				DDAF04B72A24C4B400DA0738 /* SceneDelegate.h */,
+				DDAF04AE2A24C4B400DA0738 /* SceneDelegate.m */,
+				DDAF04B62A24C4B400DA0738 /* ViewController.h */,
+				DDAF04AD2A24C4B400DA0738 /* ViewController.m */,
+				DDAF04AA2A24C4B400DA0738 /* AppDelegate.h */,
+				DDAF04B52A24C4B400DA0738 /* AppDelegate.m */,
+				DDAF04B12A24C4B400DA0738 /* Main.storyboard */,
+				DDAF04AF2A24C4B400DA0738 /* LaunchScreen.storyboard */,
+				DDAF04A72A24C4B400DA0738 /* Localizable.strings */,
+				DDAF04B32A24C4B400DA0738 /* main.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DDAF05A62A24C4B500DA0738 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF05AB2A24C4B500DA0738 /* NveRenderInput+Capture.h */,
+				DDAF05A82A24C4B500DA0738 /* NveRenderInput+Capture.m */,
+				DDAF05AC2A24C4B500DA0738 /* NvGraphicBtn.h */,
+				DDAF05A92A24C4B500DA0738 /* NvGraphicBtn.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DDAF06742A24C53E00DA0738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDD887CF2EB1FF5700C4D4C7 /* NvStreamingSdkCore.framework */,
+				DD4308252A29CECD00710414 /* NveEffectKit.framework */,
+				DD4D982A2A28346C00EDFD3D /* NvStreamingSdkCore.framework */,
+				549C06E35520C45DC2466D9C /* Pods_NveEffectKitDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		586D73822DE01EFA001677EB /* PullResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 586D738A2DE01EFA001677EB /* Build configuration list for PBXNativeTarget "PullResources" */;
+			buildPhases = (
+				586D738D2DE01F01001677EB /* ShellScript */,
+				586D737F2DE01EFA001677EB /* Sources */,
+				586D73802DE01EFA001677EB /* Frameworks */,
+				586D73812DE01EFA001677EB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PullResources;
+			productName = PullResources;
+			productReference = 586D73832DE01EFA001677EB /* libPullResources.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DDAF045B2A24C43F00DA0738 /* NveEffectKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDAF04752A24C44000DA0738 /* Build configuration list for PBXNativeTarget "NveEffectKitDemo" */;
+			buildPhases = (
+				5470F67E95ABB2A4924D73DF /* [CP] Check Pods Manifest.lock */,
+				586D737E2DE01EB1001677EB /* ShellScript */,
+				DDAF04582A24C43F00DA0738 /* Sources */,
+				DDAF04592A24C43F00DA0738 /* Frameworks */,
+				DDAF045A2A24C43F00DA0738 /* Resources */,
+				DDAF06782A24C53E00DA0738 /* Embed Frameworks */,
+				A3CDBA91B61409C91226CA9F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				586D738F2DE01F0E001677EB /* PBXTargetDependency */,
+			);
+			name = NveEffectKitDemo;
+			productName = NveEffectKitDemo;
+			productReference = DDAF045C2A24C43F00DA0738 /* NveEffectKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDAF04542A24C43F00DA0738 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					586D73822DE01EFA001677EB = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					DDAF045B2A24C43F00DA0738 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = DDAF04572A24C43F00DA0738 /* Build configuration list for PBXProject "NveEffectKitDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = DDAF04532A24C43F00DA0738;
+			productRefGroup = DDAF045D2A24C43F00DA0738 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDAF045B2A24C43F00DA0738 /* NveEffectKitDemo */,
+				586D73822DE01EFA001677EB /* PullResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDAF045A2A24C43F00DA0738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD13F5B22A5E7FE500A7E9D5 /* meishesdk.lic in Resources */,
+				DDAF05C02A24C4B500DA0738 /* Localizable.strings in Resources */,
+				DDAF05C52A24C4B500DA0738 /* Main.storyboard in Resources */,
+				DDB4F9532EEAA599005013E1 /* verify_meishesdk.lic in Resources */,
+				DD13F5AE2A5E7EE300A7E9D5 /* Assets.xcassets in Resources */,
+				DDAF05C42A24C4B500DA0738 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5470F67E95ABB2A4924D73DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NveEffectKitDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		586D737E2DE01EB1001677EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which clang-format > /dev/null; then\n    for file in `find ./ -name '*.[mh]'`\n    do\n        #echo $file\n        clang-format -i $file\n    done\nelse\n    echo \"warning: clang-format not installed\"\nfi\n";
+		};
+		586D738D2DE01F01001677EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"hello\"\necho `pwd`\nchmod +x PullShell.sh\nsh PullShell.sh\necho \"world\"\n";
+		};
+		A3CDBA91B61409C91226CA9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NveEffectKitDemo/Pods-NveEffectKitDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NveEffectKitDemo/Pods-NveEffectKitDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NveEffectKitDemo/Pods-NveEffectKitDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		586D737F2DE01EFA001677EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586D73A32DE0257D001677EB /* PullResources.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAF04582A24C43F00DA0738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAF05C22A24C4B500DA0738 /* ViewController.m in Sources */,
+				DDAF05B12A24C4B500DA0738 /* NvPsTitleCollectionViewCell.m in Sources */,
+				3C252D4F2DDF14C90036D15B /* NvTipsView.m in Sources */,
+				DDAF05B82A24C4B500DA0738 /* EFPreview+NveEffectKit.m in Sources */,
+				DDAF05B92A24C4B500DA0738 /* EFBufferDisplayView.m in Sources */,
+				DDAF05BD2A24C4B500DA0738 /* EFPreview.m in Sources */,
+				DDAF05AF2A24C4B500DA0738 /* NvCapturePopupView.m in Sources */,
+				DDAF05B72A24C4B500DA0738 /* EFBufferDisplayView+NveEffectKit.m in Sources */,
+				DDAF05BB2A24C4B500DA0738 /* EFBGRAProgram.m in Sources */,
+				DDAF05C62A24C4B500DA0738 /* main.m in Sources */,
+				DDAF05BA2A24C4B500DA0738 /* NvDisplayView.m in Sources */,
+				DDAF05B22A24C4B500DA0738 /* NvCaptureViewController.m in Sources */,
+				DDAF05C72A24C4B500DA0738 /* NvNavigationController.m in Sources */,
+				DDAF05B62A24C4B500DA0738 /* EFFileWriter.m in Sources */,
+				DDAF06732A24C4B500DA0738 /* NvGraphicBtn.m in Sources */,
+				DDAF06722A24C4B500DA0738 /* NveRenderInput+Capture.m in Sources */,
+				DDAF05C32A24C4B500DA0738 /* SceneDelegate.m in Sources */,
+				DDAF05BC2A24C4B500DA0738 /* EFGLProgram.m in Sources */,
+				DDAF05B52A24C4B500DA0738 /* EFCapture.m in Sources */,
+				DDAF05B02A24C4B500DA0738 /* EFContentView.m in Sources */,
+				DDAF05C82A24C4B500DA0738 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		586D738F2DE01F0E001677EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 586D73822DE01EFA001677EB /* PullResources */;
+			targetProxy = 586D738E2DE01F0E001677EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDAF04A72A24C4B400DA0738 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDAF04A82A24C4B400DA0738 /* zh-Hans */,
+				DDAF04A92A24C4B400DA0738 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DDAF04AF2A24C4B400DA0738 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDAF04B02A24C4B400DA0738 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DDAF04B12A24C4B400DA0738 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDAF04B22A24C4B400DA0738 /* Base */,
+				DDAF06872A24C6F600DA0738 /* en */,
+				DDAF06882A24C6F800DA0738 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		586D738B2DE01EFA001677EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		586D738C2DE01EFA001677EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DDAF04732A24C44000DA0738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DDAF04742A24C44000DA0738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDAF04762A24C44000DA0738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D51DCFF94BBB833CB663D3B /* Pods-NveEffectKitDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel\"",
+					"\"$(SRCROOT)/../../../lib/ios\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NveEffectKitDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "使用相机";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用麦克风";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "使用相册";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.16.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meishe.mseffectsdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDAF04772A24C44000DA0738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B311D4A37DEB0AC3ED2670AB /* Pods-NveEffectKitDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_TEAM = GURX554A9Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel\"",
+					"\"$(SRCROOT)/../../../lib/ios\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NveEffectKitDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "使用相机";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用麦克风";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "使用相册";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.16.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meishe.mseffectsdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		586D738A2DE01EFA001677EB /* Build configuration list for PBXNativeTarget "PullResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				586D738B2DE01EFA001677EB /* Debug */,
+				586D738C2DE01EFA001677EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDAF04572A24C43F00DA0738 /* Build configuration list for PBXProject "NveEffectKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAF04732A24C44000DA0738 /* Debug */,
+				DDAF04742A24C44000DA0738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDAF04752A24C44000DA0738 /* Build configuration list for PBXNativeTarget "NveEffectKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAF04762A24C44000DA0738 /* Debug */,
+				DDAF04772A24C44000DA0738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDAF04542A24C43F00DA0738 /* Project object */;
+}

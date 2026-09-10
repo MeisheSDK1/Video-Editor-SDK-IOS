@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  SDKDemo
+
+  Created by ms20180425 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+//displayName
+"VirtualKeyer" = "背景抠像";
+"Background" = "背景";
+"VirtualTip" = "点选要去除的画面颜色，再选择一个场景进行录制";
+"VirtualSuggest" = "建议拍摄背景为单一颜色";
+"Don't Tip" = "不再提醒";
+"flip" = "切换";
+"flash" = "补光灯";
+"Background" = "背景";
+"Reset" = "重置";
+"Tips" = "提示";
+"Save Succecs!" = "保存成功！";
+"Album permissions" = "您还没有允许相册访问权限";
+"Know" = "知道了";
+"camera.microphone.permissions" = "需要打开摄像头和麦克风权限 请在手机设置中进行允许";
+"Picture" = "图片";
+"Video" = "视频";
+"Scene" = "场景";

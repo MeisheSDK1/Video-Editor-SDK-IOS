@@ -1,0 +1,45 @@
+# General library/executable directory
+.libs
+bin/
+debug/
+release/
+meishesdk_libpath.conf
+ipa/
+extrasdk/
+lib/*
+*/lib/ios/*
+lib/ios/*
+Example/*
+*/Example/*
+
+# Unix library/executable related
+*.o
+*.lo
+*.la
+*.al
+*.so.[0-9]*
+*.a
+*.aar
+Podfile.lock
+Pods/
+*.xcworkspace
+
+# Android studio
+.gradle
+.idea
+*.iml
+*.hprof
+local.properties
+build/
+debug/
+
+# xcode
+*.xcuserstate
+*xcuserdata
+include
+
+# others
+.DS_Store
+[Tt]humbs.db
+Makefile
+*.xcworkspace

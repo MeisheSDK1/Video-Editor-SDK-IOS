@@ -1,0 +1,31 @@
+/* 
+  NvAlbum.strings
+  NvTemplateModule
+
+  Created by chengww on 2021/2/1.
+  
+*/
+"album.selectContent" = "Select Assets";
+"album.selectImage" = "Select Image";
+"album.selectVideo" = "Select Video";
+"album.select" = "Selected";
+"album.selectNum" = "%ld Assets";
+"album.all" = "All";
+"album.video" = "Video";
+"album.image" = "Image";
+"album.startmake" = "Start Making";
+"album.ratio" = "Choose making ratio";
+"album.today" = "Today";
+"album.selectall" = "Select";
+"album.deselectall" = "Deselect";
+"album.Tips" = "Tips";
+"album.TipPermission" = "Need to open album permission Please allow in phone settings";
+"album.Know" = "Know";
+"album.assetFromiCloud" = "asset in iCloud";
+"album.download" = "download?";
+"album.ok" = "OK";
+"album.cancel" = "Cancel";
+"album.finish" = "finish";
+"album.faild" = "faild";
+"album.loadingIndex" = "downloading the";
+"album.selectAssets" = "Select Assets";

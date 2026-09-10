@@ -1,0 +1,70 @@
+//
+//  NvMaskAssetCell.m
+//  SDKDemo
+//
+//  Created by ms on 2021/3/5.
+//  Copyright © 2021 meishe. All rights reserved.
+//
+
+#import "NvMaskAssetCell.h"
+#import "NVHeader.h"
+@implementation NvMaskAssetModel
+
+@end
+
+@interface NvMaskAssetCell()
+
+@property (nonatomic, strong) UILabel *timeLabel;
+@end
+
+@implementation NvMaskAssetCell
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.coverImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.width)];
+        self.coverImage.contentMode = UIViewContentModeScaleAspectFill;
+        self.coverImage.layer.masksToBounds = YES;
+        [self.contentView addSubview:self.coverImage];
+        self.coverImage.clipsToBounds = YES;
+        self.coverImage.layer.cornerRadius = 3.0f;
+        self.coverImage.layer.borderWidth = 2.0f;
+        [self.coverImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(@0);
+        }];
+        
+        
+        self.timeLabel = [UILabel new];
+        self.timeLabel.textColor = UIColor.whiteColor;
+        self.timeLabel.font = [NvUtils fontWithSize:10 * SCREENSCALE];
+        self.timeLabel.textAlignment = NSTextAlignmentRight;
+        self.timeLabel.text = @"4s";
+        [self.contentView addSubview:self.timeLabel];
+        [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.contentView).offset(-3*SCREENSCALE);
+            make.bottom.equalTo(self.contentView).offset(-3*SCREENSCALE);
+            make.height.mas_equalTo(10*SCREENSCALE);
+            make.width.mas_equalTo(30*SCREENSCALE);
+        }];
+        
+        self.contentView.layer.cornerRadius = 3.0f;
+        self.contentView.clipsToBounds = YES;
+    }
+    return self;
+}
+
+-(void)setModel:(NvMaskAssetModel *)model{
+    _model = model;
+
+    self.timeLabel.hidden = NO;
+    self.timeLabel.text = [NSString stringWithFormat:@"%.0fs", roundf((model.trimOut - model.trimIn) / NV_TIME_BASE)];
+    
+    self.coverImage.image = model.thumImage;
+    
+    if (model.isSelected) {
+        self.coverImage.layer.borderColor = [UIColor nv_colorWithHexRGB:@"#63ABFF"].CGColor;
+    }else{
+        self.coverImage.layer.borderColor = UIColor.clearColor.CGColor;
+    }
+  
+}
+@end

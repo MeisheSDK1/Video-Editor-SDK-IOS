@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storyboard sceneWidth="720" sceneHeight="1280">	
+	<!--di-->
+	<track source=":1" clipStart="0" clipDuration="4080">
+		<effect name="colorRemap">
+			<animation paramName="curveRGB">
+				<key time="0" value="(0,0),(0,0),(0,0),(0.5,0.5),(0.5,0.5),(0.5,0.5),(1,1),(1,1),(1,1)"/>
+				<key time="679" value="(0,0),(0,0),(0,0),(0.5,0.5),(0.5,0.5),(0.5,0.5),(1,1),(1,1),(1,1)"/>
+				<key time="680" value="(0,0),(0,0),(0,0),(0.5,0.635135),(0.333333,0.468468),(0.666667,0.801802),(1,1),(1,1),(1,1)"/>
+				<key time="1800" value="(0,0),(0,0),(0,0),(0.553846,0.445946),(0.192308,-0.056757),(0.691466,0.6373),(1,1),(1,1),(1,1)"/>
+			</animation>
+			<animation paramName="saturation">
+				<key time="0" value="1"/>
+				<key time="680" value="1"/>
+				<key time="960" value="0.3"/>
+				<key time="1800" value="0"/>
+			</animation>
+			<animation paramName="maxInputRGB">
+				<key time="0" value="1"/>
+				<key time="679" value="1"/>
+				<key time="680" value="0.48"/>
+				<key time="1440" value="1"/>
+			</animation>
+		</effect>
+		<effect name="transform">
+			<param name="anchorX" value="anchorXValue"/>
+			<param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+				<key time="0" value="1"/>
+				<key time="679" value="1"/>
+				<key time="680" value="1.09"/>
+				<key time="720" value="1.15"/>
+				<key time="760" value="1.198"/>
+				<key time="800" value="1.237"/>
+				<key time="840" value="1.27"/>
+				<key time="880" value="1.297"/>
+				<key time="920" value="1.319"/>
+				<key time="960" value="1.335"/>
+				<key time="1000" value="1.346"/>
+				<key time="1040" value="1.352"/>
+				<key time="1080" value="1.363"/>
+				<key time="1120" value="1.367"/>
+				<key time="1160" value="1.371"/>
+				<key time="1240" value="1.375"/>
+				<key time="1280" value="1.379"/>
+				<key time="1320" value="1.383"/>
+				<key time="1360" value="1.387"/>
+				<key time="1400" value="1.390"/>
+				<key time="1440" value="1.393"/>
+				<key time="1480" value="1.397"/>
+				<key time="1520" value="1.400"/>
+				<key time="1560" value="1.403"/>
+				<key time="1600" value="1.406"/>
+				<key time="1640" value="1.409"/>
+				<key time="1680" value="1.411"/>				
+				<key time="1720" value="1.414"/>
+				<key time="1760" value="1.417"/>
+				<key time="1800" value="1.418"/>
+				<key time="1840" value="1.418"/>
+				<key time="2800" value="1.44"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="0" value="1"/>
+				<key time="679" value="1"/>
+				<key time="680" value="1.09"/>
+				<key time="720" value="1.15"/>
+				<key time="760" value="1.198"/>
+				<key time="800" value="1.237"/>
+				<key time="840" value="1.27"/>
+				<key time="880" value="1.297"/>
+				<key time="920" value="1.319"/>
+				<key time="960" value="1.335"/>
+				<key time="1000" value="1.346"/>
+				<key time="1040" value="1.352"/>
+				<key time="1080" value="1.363"/>
+				<key time="1120" value="1.367"/>
+				<key time="1160" value="1.371"/>
+				<key time="1240" value="1.375"/>
+				<key time="1280" value="1.379"/>
+				<key time="1320" value="1.383"/>
+				<key time="1360" value="1.387"/>
+				<key time="1400" value="1.390"/>
+				<key time="1440" value="1.393"/>
+				<key time="1480" value="1.397"/>
+				<key time="1520" value="1.400"/>
+				<key time="1560" value="1.403"/>
+				<key time="1600" value="1.406"/>
+				<key time="1640" value="1.409"/>
+				<key time="1680" value="1.411"/>				
+				<key time="1720" value="1.414"/>
+				<key time="1760" value="1.417"/>
+				<key time="1800" value="1.418"/>
+				<key time="1840" value="1.418"/>
+				<key time="2800" value="1.44"/>
+			</animation>
+			
+		</effect>
+		<effect name="fastBlur">
+			<animation paramName="radius">
+				<key time="0" value="0"/>
+				<key time="2040" value="0"/>
+				<key time="3680" value="17"/>
+				<key time="4080" value="17"/>
+			</animation>
+		</effect>
+	</track>
+	<!--暗角-->
+	<track source="anjiao.png" width="720" height="1280" clipStart="0" clipDuration="4080"  blendingMode="multiply">	
+		<effect name="transform">
+			<animation paramName="opacity">
+				<key time="0" value="0"/>
+				<key time="679" value="0"/>
+				<key time="680" value="0"/>
+				<key time="1680" value="1"/>
+				<key time="2800" value="1"/>
+			</animation>
+		</effect>
+	</track>	
+	
+	<!--前层叠加-->
+	<track source=":1" clipStart="0" clipDuration="4080" blendModle="screen">
+		<effect name="colorRemap">
+			<animation paramName="curveRGB">
+				<key time="679" value="(0,0),(0,0),(0,0),(0.5,0.5),(0.5,0.5),(0.5,0.5),(1,1),(1,1),(1,1)"/>
+				<key time="680" value="(0,0),(0,0),(0,0),(0.5,0.635135),(0.333333,0.468468),(0.666667,0.801802),(1,1),(1,1),(1,1)"/>
+				<key time="1800" value="(0,0),(0,0),(0,0),(0.553846,0.445946),(0.192308,-0.056757),(0.691466,0.6373),(1,1),(1,1),(1,1)"/>
+			</animation>
+			<animation paramName="saturation">
+				<key time="0" value="1"/>
+				<key time="680" value="1"/>
+				<key time="960" value="0.3"/>
+				<key time="1800" value="0"/>
+			</animation>
+			<animation paramName="maxInputRGB">
+				<key time="0" value="1"/>
+				<key time="679" value="1"/>
+				<key time="680" value="0.388"/>
+				<key time="1440" value="1"/>
+			</animation>
+		</effect>
+		<effect name="fastBlur">
+			<animation paramName="radius">
+				<key time="0" value="17"/>
+				<key time="679" value="17"/>
+				<key time="680" value="17"/>
+				<key time="2160" value="0"/>
+			</animation>	
+		</effect>
+		<effect name="transform">
+			<param name="anchorX" value="anchorXValue"/>
+			<param name="anchorY" value="anchorYValue"/>
+			<animation paramName="scaleX">
+				<key time="0" value="1"/>
+				<key time="679" value="1"/>
+				<key time="680" value="1.09"/>
+				<key time="720" value="1.15"/>
+				<key time="760" value="1.198"/>
+				<key time="800" value="1.237"/>
+				<key time="840" value="1.27"/>
+				<key time="880" value="1.297"/>
+				<key time="920" value="1.319"/>
+				<key time="960" value="1.335"/>
+				<key time="1000" value="1.346"/>
+				<key time="1040" value="1.352"/>
+				<key time="1080" value="1.363"/>
+				<key time="1120" value="1.367"/>
+				<key time="1160" value="1.371"/>
+				<key time="1240" value="1.375"/>
+				<key time="1280" value="1.379"/>
+				<key time="1320" value="1.383"/>
+				<key time="1360" value="1.387"/>
+				<key time="1400" value="1.390"/>
+				<key time="1440" value="1.393"/>
+				<key time="1480" value="1.397"/>
+				<key time="1520" value="1.400"/>
+				<key time="1560" value="1.403"/>
+				<key time="1600" value="1.406"/>
+				<key time="1640" value="1.409"/>
+				<key time="1680" value="1.411"/>				
+				<key time="1720" value="1.414"/>
+				<key time="1760" value="1.417"/>
+				<key time="1800" value="1.418"/>
+				<key time="1840" value="1.418"/>
+				<key time="2800" value="1.44"/>
+			</animation>
+			<animation paramName="scaleY">
+				<key time="0" value="1"/>
+				<key time="679" value="1"/>
+				<key time="680" value="1.09"/>
+				<key time="720" value="1.15"/>
+				<key time="760" value="1.198"/>
+				<key time="800" value="1.237"/>
+				<key time="840" value="1.27"/>
+				<key time="880" value="1.297"/>
+				<key time="920" value="1.319"/>
+				<key time="960" value="1.335"/>
+				<key time="1000" value="1.346"/>
+				<key time="1040" value="1.352"/>
+				<key time="1080" value="1.363"/>
+				<key time="1120" value="1.367"/>
+				<key time="1160" value="1.371"/>
+				<key time="1240" value="1.375"/>
+				<key time="1280" value="1.379"/>
+				<key time="1320" value="1.383"/>
+				<key time="1360" value="1.387"/>
+				<key time="1400" value="1.390"/>
+				<key time="1440" value="1.393"/>
+				<key time="1480" value="1.397"/>
+				<key time="1520" value="1.400"/>
+				<key time="1560" value="1.403"/>
+				<key time="1600" value="1.406"/>
+				<key time="1640" value="1.409"/>
+				<key time="1680" value="1.411"/>				
+				<key time="1720" value="1.414"/>
+				<key time="1760" value="1.417"/>
+				<key time="1800" value="1.418"/>
+				<key time="1840" value="1.418"/>
+				<key time="2800" value="1.44"/>
+			</animation>
+			<animation paramName="opacity">
+				<key time="0" value="0"/>
+				<key time="679" value="0"/>
+				<key time="680" value="1"/>
+				<key time="2160" value="0"/>
+			</animation>
+		</effect>
+	</track>	
+	<track source="Game Over.png" width="720" height="1280" clipStart="2880" clipDuration="1200"/>
+</storyboard>	

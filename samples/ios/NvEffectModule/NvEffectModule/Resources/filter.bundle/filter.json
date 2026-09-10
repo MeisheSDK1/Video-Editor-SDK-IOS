@@ -1,0 +1,79 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName": "No",
+        "value":0,
+        "packagePath":"",
+        "coverName":"NvsFilterNone.png"
+    },
+    {
+        "displayNameZhCn":"日系02",
+        "displayName": "Japanese Freshness02",
+        "value":1,
+        "packagePath":"5C51AF9A-344F-4947-ADFE-4CB89FC5857F.1.videofx",
+        "coverName":"5C51AF9A-344F-4947-ADFE-4CB89FC5857F.png"
+    },
+    {
+        "displayNameZhCn":"冷白皮",
+        "displayName": "Cold white",
+        "value":1,
+        "packagePath":"5D46772A-FB5F-4CEF-801C-CBD4A394CD54.2.videofx",
+        "coverName":"5D46772A-FB5F-4CEF-801C-CBD4A394CD54.png"
+    },
+    {
+        "displayNameZhCn":"浪漫闪闪",
+        "displayName": "Romantic",
+        "value":1,
+        "packagePath":"7A4E1046-7C6F-4D53-A544-471C23F51179.2.videofx",
+        "coverName":"7A4E1046-7C6F-4D53-A544-471C23F51179.webp"
+    },
+    {
+        "displayNameZhCn":"美食02",
+        "displayName": "Foodie 02",
+        "value":1,
+        "packagePath":"188B64F2-9D27-425B-ABF5-A1B0EE1BBBCB.1.videofx",
+        "coverName":"188B64F2-9D27-425B-ABF5-A1B0EE1BBBCB.png"
+    },
+    {
+        "displayNameZhCn":"彩虹幻影",
+        "displayName": "Rainbow3",
+        "value":1,
+        "packagePath":"518B63E3-B83C-4871-A42A-C3F8E809BB3E.5.videofx",
+        "coverName":"518B63E3-B83C-4871-A42A-C3F8E809BB3E.webp"
+    },
+    {
+        "displayNameZhCn":"kirakira",
+        "displayName": "kirakira",
+        "value":1,
+        "packagePath":"2704F14B-43A5-413B-9E5C-D1DB229BC0C7.5.videofx",
+        "coverName":"2704F14B-43A5-413B-9E5C-D1DB229BC0C7.webp"
+    },
+    {
+        "displayNameZhCn":"水嫩",
+        "displayName": "Teal Orange",
+        "value":1,
+        "packagePath":"10879ED0-E320-44B5-939E-49616A5A40CE.3.videofx",
+        "coverName":"10879ED0-E320-44B5-939E-49616A5A40CE.png"
+    },
+    {
+        "displayNameZhCn":"水嫩 JM",
+        "displayName": "Moisturize2",
+        "value":1,
+        "packagePath":"44558C36-56B1-412D-A385-0BFFA754E52C.2.videofx",
+        "coverName":"44558C36-56B1-412D-A385-0BFFA754E52C.png"
+    },
+    {
+        "displayNameZhCn":"电影06",
+        "displayName": "Movie 06",
+        "value":1,
+        "packagePath":"D7CF1C93-DF2C-419B-A36A-A79749AEB0A5.1.videofx",
+        "coverName":"D7CF1C93-DF2C-419B-A36A-A79749AEB0A5.png"
+    },
+    {
+        "displayNameZhCn":"星星下坠02",
+        "displayName": "Fallen Star 02",
+        "value":1,
+        "packagePath":"FDFBFEA1-5EBD-4337-9C32-E4AC95CEE86C.3.videofx",
+        "coverName":"FDFBFEA1-5EBD-4337-9C32-E4AC95CEE86C.webp"
+    }
+]

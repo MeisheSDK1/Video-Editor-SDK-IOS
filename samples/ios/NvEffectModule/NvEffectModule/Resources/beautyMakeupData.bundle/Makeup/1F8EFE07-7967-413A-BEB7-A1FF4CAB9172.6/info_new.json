@@ -1,0 +1,276 @@
+{
+  "name": "Rose makeup",
+  "uuid": "1F8EFE07-7967-413A-BEB7-A1FF4CAB9172",
+  "version": 6,
+  "cover": "cover.jpg",
+  "minSdkVersion": "3.4.0",
+  "supportedAspectRatio": "9v16",
+  "translation": [
+    {
+      "originalText": "Rose makeup",
+      "targetLanguage": "zh_CN",
+      "targetText": "玫瑰妆"
+    }
+  ],
+  "effectContent": {
+    "makeup": [
+      {
+        "type": "Blusher",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Makeup Blusher Package Id",
+            "value": "D5EECFB9-51A6-4233-A51A-DF37C73CE20D",
+            "type": "string"
+          },
+          {
+            "key": "Makeup Blusher Intensity",
+            "value": 0.8,
+            "type": "float"
+          }
+        ]
+      },
+	   {
+        "type": "Shadow",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Makeup Shadow Package Id",
+            "value": "778B9863-48D9-40FD-AEBA-7C5DDB171AB1",
+            "type": "string"
+          },
+          {
+            "key": "Makeup Shadow Intensity",
+            "value": 0.8,
+            "type": "float"
+          }
+		   
+        ]
+      },
+	  {
+        "type": "Eyebrow",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Makeup Eyebrow Package Id",
+            "value": "034740A6-BE61-442C-81D2-BBB41BFFF178",
+            "type": "string"
+          },
+          {
+            "key": "Makeup Eyebrow Intensity",
+            "value": 0.6,
+            "type": "float"
+          }
+		  ]
+      },
+	   {
+        "type": "Eyeshadow",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Makeup Eyeshadow Package Id",
+            "value": "D745D138-B658-4D4C-89CA-53F4A07C98EB",
+            "type": "string"
+          },
+          {
+            "key": "Makeup Eyeshadow Intensity",
+            "value": 0.8,
+            "type": "float"
+          }
+		  ]
+      },
+	    {
+        "type": "Eyelash",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Makeup Eyelash Package Id",
+            "value": "FE3928F6-B8B3-4357-A2F0-86A9112FE9E3",
+            "type": "string"
+          },
+          {
+            "key": "Makeup Eyelash Intensity",
+            "value": 1,
+            "type": "float"
+          }
+		  ]
+      },
+		 {
+        "type": "Eyeliner",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Makeup Eyeliner Package Id",
+            "value": "087D0D26-C695-45F5-9225-096F8AEF0E79",
+            "type": "string"
+          },
+          {
+            "key": "Makeup Eyeliner Intensity",
+            "value": 0.6,
+            "type": "float"
+          }		 
+		  ]
+      },
+	  {
+        "type": "Brighten",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Makeup Brighten Package Id",
+            "value": "8DC606A4-2C36-4620-A181-20053D88FEE3",
+            "type": "string"
+          },
+          {
+            "key": "Makeup Brighten Intensity",
+            "value": 0.7,
+            "type": "float"
+          }		 
+		  ]
+      },
+		 {
+        "type": "Lip",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Makeup Lip Package Id",
+            "value": "30176895-6CF1-42B8-B78C-70062CBED0AF",
+            "type": "string"
+          },
+          {
+            "key": "Makeup Lip Intensity",
+            "value": 0.6,
+            "type": "float"
+          }
+		   
+        ]
+      }
+    ],
+    "beauty": [
+      {
+        "params": [
+         {
+            "key": "Beauty Effect",
+            "value": true,
+            "type": "boolean"
+         }
+        ]
+      },
+      {
+        "type": "ColorCorrect",
+        "uuid": "65521195-92A4-41CA-9DB5-6AB19C9321B5",
+        "value": 0.5,
+        "canReplace": 1
+      },
+      {
+        "canReplace": 1,
+        "params": [
+           {
+            "key": "Advanced Beauty Enable",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "key": "Advanced Beauty Type",
+            "value": 1,
+            "type": "int"
+          },
+          {
+            "key": "Advanced Beauty Intensity",
+            "value": 0.8,
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [         {
+            "key": "Whitening Lut Enabled",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "key": "Whitening Lut File",
+            "value": "WhiteB.mslut",
+            "type": "path"
+          },
+          {
+            "key": "Beauty Whitening",
+            "value": 0.4,
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Beauty Reddening",
+            "value": 0.2,
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Default Sharpen Enabled",
+            "value": false,
+            "type": "boolean"
+          }
+        ]
+      }
+    ],
+    "shape": [
+      {
+        "params": [
+         {
+            "key": "Face Mesh Internal Enabled",
+            "value": true,
+            "type": "boolean"
+         }
+        ]
+      },
+      {
+        "type": "Face Size",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Face Mesh Face Size Custom Package Id",
+            "value": "40E19727-C166-4F85-9E34-7D6D0F4821F4",
+            "type": "string"
+          },
+          {
+            "key": "Face Mesh Face Size Degree",
+            "value": 1,
+            "type": "float"
+          }
+        ]
+      },
+	  {
+        "type": "Eye Size",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Face Mesh Eye Size Custom Package Id",
+            "value": "24617671-0458-4C9F-89A1-AE8E2D87C1B8",
+            "type": "string"
+          },
+          {
+            "key": "Face Mesh Eye Size Degree",
+            "value": 1,
+            "type": "float"
+          }
+        ]
+      }
+    ],
+    "filter": [
+      {
+        "isBuiltIn": 0,
+        "canReplace": 1,
+        "uuid": "37533B00-706C-4BEF-8013-9591729A4EFF",
+        "value": 0.5
+      }
+    ]
+  }
+}

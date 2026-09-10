@@ -1,0 +1,6 @@
+framework module NvSDKCommon {
+  umbrella header "NvSDKCommon-umbrella.h"
+
+  export *
+  module * { export * }
+}

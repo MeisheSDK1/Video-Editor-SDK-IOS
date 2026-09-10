@@ -1,0 +1,29 @@
+[
+    {
+        "displayNameZhCn":"无",
+        "displayName":"No",
+        "packagePath":"",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":"nv_makeup_none_b"
+    },
+    {
+        "displayNameZhCn":"微醺豆沙眉毛",
+        "displayName":"Bean Paste Eyebrow",
+        "packagePath":"Eyebrow/8BE41F5F-CA8E-47DC-BCE0-184F92F825BF.3",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    },
+    {
+        "displayNameZhCn":"白开水眉毛",
+        "displayName":"Water Eyebrow",
+        "packagePath":"Eyebrow/56A052EA-CC4C-4232-A4DB-E5F9E0D8A475.5",
+        "hasBgColor":0,
+        "textColorStr":"#A9A9A9FF",
+        "conLevel":1,
+        "coverImage":""
+    }
+]

@@ -1,0 +1,11 @@
+{
+	"translation": [
+		{
+			"originalText": "Water Shadow",
+			"targetLanguage": "zh_CN",
+			"targetText": "白开水阴影"
+		}
+	],
+	"className": "Makeup Shadow Package Id", 
+	"makeupId": "Shadow"
+}

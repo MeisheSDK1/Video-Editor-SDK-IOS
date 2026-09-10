@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  NveEffectKitDemo
+
+  Created by meishe on 2023/5/9.
+  
+*/
+
+"shoot" = "Video";
+"photo" = "Photo";
+"flash" = "Flash";
+"zoom" = "Zoom";
+"exposure" = "Exposure";
+"zoom_1" = "Zoom";
+"exposure_1" = "Exposure";
+
+"Caption" = "Caption";
+"More" = "More";
+
+
+"Props" = "Props";
+"Makeup" = "Makeup";
+"capture.beauty" = "Beauty";
+"Filter" = "Filter";
+"Know" = "Know";
+"Tips" = "Tips";
+"camera.microphone.permissions" = "camera.microphone.permissions";

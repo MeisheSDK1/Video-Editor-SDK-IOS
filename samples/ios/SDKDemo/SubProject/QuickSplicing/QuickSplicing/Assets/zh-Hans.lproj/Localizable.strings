@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  SDKDemo
+
+  Created by ms20180425 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+//displayName
+"Quick splicing" = "快速拼接";
+"Drag here to delete" = "拖动到此处删除";
+"File Passthrough" = "文件直通";
+"Generated complete" = "已完成\n请在相册中查看";
+"Generated failed" = "生成失败";
+"storage" = "请检查手机存储空间";
+"Know" = "知道了";
+"Save video to album failed" = "保存视频到相册失败";
+"Range Selection" = "区间选取";
+

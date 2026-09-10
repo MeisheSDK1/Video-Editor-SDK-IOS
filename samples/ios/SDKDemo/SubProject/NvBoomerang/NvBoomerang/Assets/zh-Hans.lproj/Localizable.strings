@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  SDKDemo
+
+  Created by ms20180425 on 2018/12/11.
+  Copyright © 2018年 meishe. All rights reserved.
+*/
+//displayName
+"CFBundleDisplayName" = "美摄";
+//------------------------拍摄--------------------------
+"flash" = "补光灯";
+"Flash back" = "闪回";
+"flip" = "切换";
+"Save failed" = "保存失败";
+"Album permissions" = "您还没有允许相册访问权限";
+"Know" = "知道了";
+"Tips" = "提示";
+"camera.microphone.permissions" = "需要打开摄像头和麦克风权限 请在手机设置中进行允许";
+"Generated" = "生成中...";
+"Generated complete" = "已完成\n请在相册中查看";
